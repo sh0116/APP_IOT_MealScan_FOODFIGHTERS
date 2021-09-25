@@ -1,0 +1,1 @@
+/workspaces/APP_IOT_AI_MilitaryCafeteria_FOODFIGHTERS/osam2021_provider/android/app/src/main/kotlin/com/example/osam2021/MainActivity.kt
