@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>246941624727-0ik23ksrepntoq8ssucu0s97dt73guak.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.246941624727-0ik23ksrepntoq8ssucu0s97dt73guak</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDc0j1O0XyjK_paAw42xJph6sXw_QwA4QY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>246941624727</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.codegemz.uiLayouts</string>
+	<key>PROJECT_ID</key>
+	<string>military-cafeteria</string>
+	<key>STORAGE_BUCKET</key>
+	<string>military-cafeteria.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:246941624727:ios:be2d36c9c03f141cf73cd2</string>
+</dict>
+</plist>
