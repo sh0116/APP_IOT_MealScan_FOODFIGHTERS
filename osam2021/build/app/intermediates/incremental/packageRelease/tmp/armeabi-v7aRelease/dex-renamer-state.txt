@@ -1,4 +1,0 @@
-#Fri Sep 24 19:01:14 UTC 2021
-base.0=/workspaces/APP_IOT_AI_MilitaryCafeteria_FOODFIGHTERS/osam2021/build/app/intermediates/transforms/r8/release/0/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
