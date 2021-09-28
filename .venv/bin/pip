@@ -1,4 +1,4 @@
-#!/workspaces/APP_IOT_AI_MilitaryCafeteria_FOODFIGHTERS/.venv/bin/python3
+#!/workspaces/APP_IOT_AI_MilitaryCafeteria_FOODFIGHTERS/.venv/bin/python3.8
 # -*- coding: utf-8 -*-
 import re
 import sys
