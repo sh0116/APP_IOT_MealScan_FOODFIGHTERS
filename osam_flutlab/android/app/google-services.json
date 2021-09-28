@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "246941624727",
+    "firebase_url": "https://military-cafeteria-default-rtdb.firebaseio.com",
     "project_id": "military-cafeteria",
     "storage_bucket": "military-cafeteria.appspot.com"
   },
@@ -29,6 +30,13 @@
             {
               "client_id": "246941624727-tvl886m2g9kupi550crad8k9jbe52j7g.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "246941624727-0ik23ksrepntoq8ssucu0s97dt73guak.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.codegemz.uiLayouts"
+              }
             }
           ]
         }
