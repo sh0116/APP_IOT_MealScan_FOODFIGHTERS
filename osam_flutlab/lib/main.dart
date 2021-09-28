@@ -17,7 +17,6 @@ void main() {
 //https://stackoverflow.com/questions/56840994/how-to-show-icon-in-text-widget-in-flutter
 //https://stackoverflow.com/questions/51825779/blur-background-behind-dialog-flutter
 //https://flutter.dev/docs/cookbook/gestures/dismissible
-//https://flutter.dev/docs/cookbook/navigation/returning-data
 //animate plus to check
 //profile : https://github.com/flutter-coder/flutter-ui-book1/blob/master/flutter_profile/lib/components/profile_buttons.dart
 //figma: https://www.figma.com/file/p1Ln3TPyICmkYXUJTXS2bI/Untitled?node-id=0%3A1
