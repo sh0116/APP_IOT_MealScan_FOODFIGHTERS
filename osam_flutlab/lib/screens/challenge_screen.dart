@@ -3,7 +3,7 @@ import 'package:osam2021/components/challenge_menu.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ChallengeScreen extends StatelessWidget {
-  int selectedIndex = 0;
+  final int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

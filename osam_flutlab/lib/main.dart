@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
           appBarTheme: AppBarTheme(
             elevation: 0.0,
             backgroundColor: Colors.white,
+            // ignore: deprecated_member_use
             textTheme: TextTheme(
               headline6: TextStyle(color: Colors.black, fontSize: 24),
             ),

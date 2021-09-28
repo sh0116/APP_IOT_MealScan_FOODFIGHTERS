@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:osam2021/assets/colors.dart';
 
 class DataScreen extends StatelessWidget {
-  int selectedIndex = 0;
+  final int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

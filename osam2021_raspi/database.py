@@ -9,7 +9,6 @@ def test():
     test_id = "20-71209876"
     test_food1 = '김치'
     test_food1_amount = 36.7
-    print(True)
     # Create a dictionary to store the data before sending to the database
     data_to_upload = {
         'ID' : test_id,
