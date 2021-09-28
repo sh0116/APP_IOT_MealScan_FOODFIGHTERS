@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
 import glob
-def processLog(filename):
-    images = cv2.imread(filename);
+def processLog(images):
+    #images = cv2.imread(img)
     # Open this image and make a Numpy version for easy processing
     imnp = np.array(images)
     h, w = imnp.shape[:2]
