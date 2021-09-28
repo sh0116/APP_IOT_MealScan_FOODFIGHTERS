@@ -5,9 +5,8 @@ import sys
 
 # Create the connection to our Firebase database - don't forget to change the URL!
 FBConn = firebase.FirebaseApplication('https://military-cafeteria-default-rtdb.firebaseio.com/', None)
-
 def test():
-    test_id = "20-71209910"
+    test_id = "20-71209876"
     test_food1 = '김치'
     test_food1_amount = 36.7
     print(True)
@@ -24,7 +23,8 @@ def test():
 
     # Print the returned unique identifier
     print(result)
-    exit(0)
-
+    return result
+test()
+    #exit(0)
     # Close the serial connection
     #ser.close()
