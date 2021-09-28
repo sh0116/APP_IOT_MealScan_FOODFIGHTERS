@@ -33,12 +33,7 @@ dependencies:
   provider: ^5.0.0
   flutter_login: ^2.2.1
   fl_chart: ^0.40.0
-
-
-
-
-
-
+  swipeable_card_stack: ^0.0.3
 
 
 dev_dependencies:

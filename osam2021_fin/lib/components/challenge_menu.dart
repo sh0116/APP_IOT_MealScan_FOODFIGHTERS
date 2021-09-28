@@ -74,9 +74,10 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
     return Padding(
       padding: const EdgeInsets.only(left: 30, right: 30, top: 10, bottom: 30),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           _buildHeaderSelectorButton(0, "참가 중"),
+          SizedBox(width: 10),
           _buildHeaderSelectorButton(1, "진행 중"),
         ],
       ),
@@ -97,11 +98,11 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
       child: Container(
         alignment: Alignment.center,
         width: 60,
-        height: 21,
+        height: 25,
         child: Text(
           '$t',
           style: TextStyle(
-            color: id == selectedId ? Colors.white : Colors.black,
+            color: id == selectedId ? Colors.white : Colors.black, fontWeight: FontWeight.bold
           ),
         ),
         decoration: BoxDecoration(
