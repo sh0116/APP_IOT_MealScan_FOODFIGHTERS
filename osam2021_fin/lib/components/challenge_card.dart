@@ -17,7 +17,7 @@ class ChallengeCard extends StatefulWidget {
   @override
   _ChallengeCardState createState() => _ChallengeCardState();
 }
-
+//https://pub.dev/packages/flip_card
 //https://sergiandreplace.com/planets-flutter-creating-a-planet-card/
 //https://flutterawesome.com/a-flutter-widget-with-the-goal-of-simplifying-styling-and-to-reduce-nesting/
 class _ChallengeCardState extends State<ChallengeCard> {
@@ -59,25 +59,88 @@ class _ChallengeCardState extends State<ChallengeCard> {
         //     ],
         //   ),
         // ),
-        Card(
-            child: InkWell(
-          onTap: () {
-            if (widget.added) {
-              _navigateToInfoScreen(context);
-            } else {
-              _navigateToChallengeInfo(context);
-            }
-          },
-          child: ListTile(
-            title: Text(widget.challenge.name, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
-            subtitle: _buildCardSubtitles(defaultDuration, defaultPadding),
-            trailing: widget.challenge.added ? Icon(FontAwesomeIcons.checkCircle) : Icon(FontAwesomeIcons.chevronRight),
-            isThreeLine: true,
-          ),
-        )),
+        // Card(
+        //     child: InkWell(
+        //   onTap: () {
+        //     if (widget.added) {
+        //       _navigateToInfoScreen(context);
+        //     } else {
+        //       _navigateToChallengeInfo(context);
+        //     }
+        //   },
+        //   child: ListTile(
+        //     title: Text(widget.challenge.name, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+        //     subtitle: _buildCardSubtitles(defaultDuration, defaultPadding),
+        //     trailing: widget.challenge.added ? Icon(FontAwesomeIcons.checkCircle) : Icon(FontAwesomeIcons.chevronRight),
+        //     isThreeLine: true,
+        //   ),
+        // )),
+      _createCard(),
+        
         SizedBox(height: 30)
       ],
     );
+  }
+
+  Widget _createCard() {
+    return Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 220,
+                  child: Container(
+                      padding: const EdgeInsets.only(left: 20, top: 25, right: 20),
+                      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                        Text("Next workout",
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.white,
+                            )),
+                        SizedBox(height: 5),
+                        Text("Legs Toning",
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.white,
+                            )),
+                        SizedBox(height: 5),
+                        Text("and Glutes Workout",
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.white,
+                            )),
+                        SizedBox(height: 25),
+                        Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
+                          Row(children: [
+                            Icon(Icons.timer, size: 20, color: Colors.white),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text("60 min",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.white,
+                                )),
+                          ]),
+                          Expanded(child: Container()),
+                          Container(
+                              decoration: BoxDecoration(borderRadius: BorderRadius.circular(60), boxShadow: [
+                                BoxShadow(color: Color(0xff0f17ad), blurRadius: 10, offset: Offset(4, 8))
+                              ]),
+                              child: Icon(Icons.play_circle_fill, color: Colors.white, size: 60))
+                        ]),
+                      ])),
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(colors: [
+                        Color(0xff0f17ad).withOpacity(0.8),
+                        Color(0xFF6985e8).withOpacity(0.9),
+                      ], begin: Alignment.bottomLeft, end: Alignment.centerRight),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        bottomLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(10),
+                        topRight: Radius.circular(80),
+                      ),
+                      boxShadow: [
+                        BoxShadow(offset: Offset(5, 10), blurRadius: 20, color: Color(0xFF6985e8).withOpacity(0.2))
+                      ]));
   }
 
   Widget _buildCardSubtitles(Duration duration, var padding) {
