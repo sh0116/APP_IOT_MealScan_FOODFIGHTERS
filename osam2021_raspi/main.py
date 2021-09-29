@@ -39,7 +39,7 @@ class main_process():
                 elif self.state=="plate":
                     #database의 args에 self.qr_data
                     database.test()
-                    init_processing.Image_Processing(a)
+                    init_processing.Image_Processing(a,self.qr_data)
                     self.state = "qr"
             
     def webcam(self):
