@@ -8,7 +8,7 @@ from skimage.morphology import watershed
 from scipy import ndimage
 import imutils
 
-import utill
+from src import utill
 '''
 draw = cv2.rectangle(draw, (50, 50), (430, 270), (0, 255, 0), 2)
 draw = cv2.rectangle(draw, (245, 155), (420, 260), (0, 255, 0), 2)
