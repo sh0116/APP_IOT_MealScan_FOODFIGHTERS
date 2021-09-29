@@ -22,7 +22,7 @@ class main_process():
         self.webcam()
 
 
-    def process_click(event, x, y, flags, params):
+    def process_click(self, event, x, y, flags, params):
         # check if the click is within the dimensions of the self.button
         if event == cv2.EVENT_LBUTTONDOWN:
             if y > self.button[0] and y < self.button[1] and x > self.button[2] and x < self.button[3]: 
