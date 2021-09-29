@@ -23,7 +23,8 @@ def test():
     # Print the returned unique identifier
     print(result)
     return result
-test()
+if __name__=="__main__":
+    test()
     #exit(0)
     # Close the serial connection
     #ser.close()
