@@ -45,7 +45,7 @@ class main_process():
     def webcam(self):
         # create a window and attach a mousecallback and a trackbar
         cv2.namedWindow('Control')
-        cv2.setMouseCallback('Control',process_click)
+        cv2.setMouseCallback('Control',self.process_click)
         # create button image
         control_image = np.zeros((80,300), np.uint8)
         control_image[self.button[0]:self.button[1],self.button[2]:self.button[3]] = 180
