@@ -33,53 +33,100 @@ class _ChallengeCardState extends State<ChallengeCard> {
     const defaultPadding = EdgeInsets.symmetric(horizontal: 10, vertical: 3);
     return Column(
       children: [
-        // Padding(
-        //   padding: const EdgeInsets.only(left: 8.0),
-        //   child: Row(
-        //     mainAxisAlignment: MainAxisAlignment.start,
-        //     children: [
-        //       SlideCountdown(
-        //         duration: defaultDuration,
-        //         padding: defaultPadding,
-        //         slideDirection: SlideDirection.up,
-        //         fade: true,
-        //         decoration: BoxDecoration(
-        //           color: Colors.black,
-        //           borderRadius: BorderRadius.all(Radius.circular(5)),
-        //         ),
-        //         icon: Padding(
-        //           padding: EdgeInsets.only(right: 5),
-        //           child: Icon(
-        //             Icons.alarm,
-        //             color: Colors.white,
-        //             size: 15,
-        //           ),
-        //         ),
-        //       ),
-        //     ],
-        //   ),
-        // ),
-        // Card(
-        //     child: InkWell(
-        //   onTap: () {
-        //     if (widget.added) {
-        //       _navigateToInfoScreen(context);
-        //     } else {
-        //       _navigateToChallengeInfo(context);
-        //     }
-        //   },
-        //   child: ListTile(
-        //     title: Text(widget.challenge.name, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
-        //     subtitle: _buildCardSubtitles(defaultDuration, defaultPadding),
-        //     trailing: widget.challenge.added ? Icon(FontAwesomeIcons.checkCircle) : Icon(FontAwesomeIcons.chevronRight),
-        //     isThreeLine: true,
-        //   ),
-        // )),
-      _createCard(),
+        Padding(
+          padding: const EdgeInsets.only(left: 8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SlideCountdown(
+                duration: defaultDuration,
+                padding: defaultPadding,
+                slideDirection: SlideDirection.up,
+                fade: true,
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.all(Radius.circular(5)),
+                ),
+                icon: Padding(
+                  padding: EdgeInsets.only(right: 5),
+                  child: Icon(
+                    Icons.alarm,
+                    color: Colors.white,
+                    size: 15,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Card(
+            child: InkWell(
+          onTap: () {
+            if (widget.added) {
+              _navigateToInfoScreen(context);
+            } else {
+              _navigateToChallengeInfo(context);
+            }
+          },
+          child: ListTile(
+            title: Text(widget.challenge.name, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+            subtitle: _buildCardSubtitles(defaultDuration, defaultPadding),
+            trailing: widget.challenge.added ? Icon(FontAwesomeIcons.checkCircle) : Icon(FontAwesomeIcons.chevronRight),
+            isThreeLine: true,
+          ),
+        )),
+      // _createCard(),
         
         SizedBox(height: 30)
       ],
     );
+  }
+
+  Widget _newCard() {
+    String date = widget.challenge.date;
+    return InkWell(
+      onTap: () {
+        if (widget.added) {
+            _navigateToInfoScreen(context);
+        } else {
+            _navigateToChallengeInfo(context);
+        }
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(offset: Offset(5, 10), blurRadius: 20, color: Color(0xFF6985e8).withOpacity(0.2))
+          ]
+        ),
+        width: MediaQuery.of(context).size.width,
+        height: 150,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(children: [Text("259대대 잔반경연", style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold)),]),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Row(
+                  children: [
+                    Icon(Icons.timer, size: 20, color: Colors.white),
+                    SizedBox(
+                       width: 10,
+                    ),
+                    Text("$date",
+                        style: TextStyle(fontSize: 14, color: Colors.white,)
+                    ),                    
+                  ]
+                ),
+                Expanded(child: Container()),
+                Icon(FontAwesomeIcons.chevronRight, color: Colors.white),
+              ]
+            )
+          ]
+        ),
+      ),
+    );
+
   }
 
   Widget _createCard() {
@@ -117,7 +164,7 @@ class _ChallengeCardState extends State<ChallengeCard> {
                                 style: TextStyle(
                                   fontSize: 14,
                                   color: Colors.white,
-                                )),
+                            )),
                           ]),
                           Expanded(child: Container()),
                           Container(

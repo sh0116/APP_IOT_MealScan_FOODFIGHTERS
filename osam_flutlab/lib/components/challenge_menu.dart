@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:osam2021/main.dart';
 import 'package:osam2021/notifiers.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:tcard/tcard.dart';
+
 
 
 
@@ -68,70 +68,15 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
                 children: List.generate(notifiers.added.length, (index) => ChallengeCard(challenge: notifiers.added[index], added: true, notifyParent: refresh)), //List.generate
               )) //
 
-        : _buildSwipableCards(context);
+        : 
         
-        //  ListView( //OPEN
-        //     scrollDirection: Axis.vertical,
-        //     shrinkWrap: true,
-        //     children: List.generate(notifiers.opened.length, (index) => ChallengeCard(challenge: notifiers.opened[index], added: false, notifyParent: refresh)), //List.generate
-        //   ); 
+         ListView( //OPEN
+            scrollDirection: Axis.vertical,
+            shrinkWrap: true,
+            children: List.generate(notifiers.opened.length, (index) => ChallengeCard(challenge: notifiers.opened[index], added: false, notifyParent: refresh)), //List.generate
+          ); 
   }
 
-  Widget _buildSwipableCards(BuildContext context) {
-      final notifiers = context.watch<Notifiers>();
-      TCardController _controller = TCardController();
-  //             if (counter <= 20) {
-  //               //_cardController.addItem(CardView(text: "Card $counter"));
-  //               counter++;
-  //             }
-      return Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TCard(
-              cards: List.generate(notifiers.opened.length, 
-              (index) => ChallengeCard(challenge: notifiers.opened[index], added: false, notifyParent: refresh)),
-              size: Size(360, 480),
-              controller: _controller,
-              onForward: (index, info) {
-                print(index);
-              },
-              onBack: (index, info) {
-                print(index);
-              },
-              onEnd: () {
-                print('end');
-              },
-            ),
-            SizedBox(
-              height: 40,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                OutlinedButton(
-                  onPressed: () {
-                    print(_controller);
-                    _controller.back();
-                  },
-                  child: Text('Back'),
-                ),
-                OutlinedButton(
-                  onPressed: () {
-                    _controller.reset();
-                  },
-                  child: Text('Reset'),
-                ),
-                OutlinedButton(
-                  onPressed: () {
-                    _controller.forward();
-                  },
-                  child: Text('Forward'),
-                ),
-              ],
-            ),
-          ],
-        );
-    }
 
   Widget _buildScreenSelector() {
     return Padding(
