@@ -19,7 +19,7 @@ class main_process():
         # function that handles the mousclicks
         #state : init, qr, plate
         self.state = "init"
-        webcam()
+        self.webcam()
 
 
     def process_click(event, x, y, flags, params):
