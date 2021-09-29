@@ -46,10 +46,12 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
   Widget _buildSubtitle() {
     return Wrap(
       children: [
-        Icon(FontAwesomeIcons.solidClock, color: Color(0xff5B5555), size: 10),
+        Icon(FontAwesomeIcons.solidClock, color: Color(0xff5B5555), size: 15),
+        SizedBox(width: 4,),
         Text(widget.challenge.date + "   "),
-        Icon(FontAwesomeIcons.solidUser, color: Color(0xff5B5555), size: 10),
-        Text(widget.challenge.attendants),
+        Icon(FontAwesomeIcons.solidUser, color: Color(0xff5B5555), size: 15),
+        SizedBox(width: 4,),
+        Text(widget.challenge.attendants, style: TextStyle(color: Color(0xff5B5555))),
       ],
     );
   }
@@ -60,8 +62,8 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
       children: [
         Wrap(
           children: [
-            Icon(FontAwesomeIcons.bullhorn, color: Color(0xff5B5555), size: 12),
-            Text(' 지휘관 전파사항:'),
+            Icon(FontAwesomeIcons.bullhorn, color: Color(0xff5B5555), size: 15),
+            Text(' 지휘관 전파사항:', style: TextStyle(color: Color(0xff5B5555))),
           ],
         ),
       ],
@@ -69,15 +71,17 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
   }
 
   Widget _drawPrize() {
+    String prize = widget.challenge.prize;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Wrap(
           children: [
-            Icon(FontAwesomeIcons.award, color: Color(0xff5B5555), size: 12),
-            Text(' 포상:'),
+            Icon(FontAwesomeIcons.award, color: Color(0xff5B5555), size: 15),
+            Text(' 포상', style: TextStyle(color: Color(0xff5B5555))),
           ],
         ),
+        Text('$prize', style: TextStyle(color: Color(0xff5B5555)))
       ],
     );
   }
@@ -88,7 +92,7 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
         return Row(children: [
           TextButton(
             style: TextButton.styleFrom(
-              textStyle: const TextStyle(fontSize: 20),
+              textStyle: const TextStyle(fontSize: 20, color: Color(0xff5B5555)),
             ),
             onPressed: () {
               notifiers.addChallenge(widget.challenge);
@@ -100,7 +104,7 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
           ),
           TextButton(
             style: TextButton.styleFrom(
-              textStyle: const TextStyle(fontSize: 20),
+              textStyle: const TextStyle(fontSize: 20, color: Color(0xff5B5555)),
             ),
             onPressed: () {
               Navigator.of(context).pop();
