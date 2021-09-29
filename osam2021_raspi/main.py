@@ -80,13 +80,7 @@ class main_process():
                     cv2.imshow('qr', draw)
                 a = b
                 b = c
-        
-                if cv2.waitKey(1) & 0xFF == 27:
-                    ret, c = self.cap.read()
-                    cv2.imwrite("1.png", c)
-                    time.sleep(1)
 
-        cv2.waitKey(0)
         cv2.destroyAllWindows()
 
 
