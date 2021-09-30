@@ -8,7 +8,7 @@ from skimage.morphology import watershed
 from scipy import ndimage
 import imutils
 
-from src import utill
+import utill
 '''
 draw = cv2.rectangle(draw, (50, 50), (430, 270), (0, 255, 0), 2)
 draw = cv2.rectangle(draw, (245, 155), (420, 260), (0, 255, 0), 2)
@@ -30,7 +30,8 @@ while True:
     _, img = cap.read()
     # get bounding box coords and data
     data, bbox, _ = detector.detectAndDecode(img)
-    
+
+    print(data)
     # if there is a bounding box, draw one, along with the data
     if(bbox is not None):
         for i in range(len(bbox)):
