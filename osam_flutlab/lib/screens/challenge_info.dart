@@ -48,7 +48,7 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
       children: [
         Icon(FontAwesomeIcons.solidClock, color: Color(0xff5B5555), size: 15),
         SizedBox(width: 4,),
-        Text(widget.challenge.date + "   "),
+        Text(widget.challenge.date + " 종료   "),
         Icon(FontAwesomeIcons.solidUser, color: Color(0xff5B5555), size: 15),
         SizedBox(width: 4,),
         Text(widget.challenge.attendants, style: TextStyle(color: Color(0xff5B5555))),
