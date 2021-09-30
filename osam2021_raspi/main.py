@@ -33,13 +33,21 @@ class main_process():
                     self.state = "qr"
                     
                 elif self.state=="qr":
-                    self.qr_data = qr_processing.Image_Processing(a)
-                    self.state = "plate"
+                    self.qr = qr_processing.Image_Processing(a)
+                    self.qr_data = self.qr.Data()
+                    if self.qr_data != "empty data":
+                        self.state = "plate"
 
                 elif self.state=="plate":
-                    #database의 args에 self.qr_data
-                    database.test()
-                    init_processing.Image_Processing(a,self.qr_data)
+                    process_class = image_processing.Image_Processing(a)
+                    result = database.firebase_post(self.qr_data, process_class.DataList )
+                    '''
+                    if result == "failed":
+                        print("retry")
+                    else:
+                        print("ok")
+                        self.state = "qr"
+                    '''
                     self.state = "qr"
             
     def webcam(self):
