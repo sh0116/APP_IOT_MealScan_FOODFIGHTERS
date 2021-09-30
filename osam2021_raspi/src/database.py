@@ -3,7 +3,7 @@ import datetime
 import time
 import sys
 
-# Create the connection to our Firebase database - don't forget to change the URL!
+# Create the connection to our Firebase database 
 FBConn = firebase.FirebaseApplication('https://military-cafeteria-default-rtdb.firebaseio.com/', None)
 def test():
     test_id = "20-71209876"
