@@ -38,7 +38,7 @@ def firebase_post(id, DataList):
     }
 
     # Post the data to the appropriate folder/branch within your database
-    result = FBConn.post(test_id,data_to_upload)
+    result = FBConn.post(id,data_to_upload)
 
 
     # Print the returned unique identifier

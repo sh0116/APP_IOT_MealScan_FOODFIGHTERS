@@ -27,10 +27,7 @@ class Image_Processing:
 
 		for self.box in self.dish:
 			self.backProjection()
-			self.cnt+=1			
-
-		return database.firebase_post(qr_data, self.DataList)
-		
+			self.cnt+=1					
 		
 
 
