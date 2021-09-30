@@ -19,10 +19,10 @@ class main_process():
         # function that handles the mousclicks
         #state : init, qr, plate
         self.state = "init"
-        webcam()
+        self.webcam()
 
 
-    def process_click(event, x, y, flags, params):
+    def process_click(self, event, x, y, flags, params):
         # check if the click is within the dimensions of the self.button
         if event == cv2.EVENT_LBUTTONDOWN:
             if y > self.button[0] and y < self.button[1] and x > self.button[2] and x < self.button[3]: 
@@ -39,13 +39,13 @@ class main_process():
                 elif self.state=="plate":
                     #database의 args에 self.qr_data
                     database.test()
-                    init_processing.Image_Processing(a)
+                    init_processing.Image_Processing(a,self.qr_data)
                     self.state = "qr"
             
     def webcam(self):
         # create a window and attach a mousecallback and a trackbar
         cv2.namedWindow('Control')
-        cv2.setMouseCallback('Control',process_click)
+        cv2.setMouseCallback('Control',self.process_click)
         # create button image
         control_image = np.zeros((80,300), np.uint8)
         control_image[self.button[0]:self.button[1],self.button[2]:self.button[3]] = 180
@@ -80,13 +80,7 @@ class main_process():
                     cv2.imshow('qr', draw)
                 a = b
                 b = c
-        
-                if cv2.waitKey(1) & 0xFF == 27:
-                    ret, c = self.cap.read()
-                    cv2.imwrite("1.png", c)
-                    time.sleep(1)
 
-        cv2.waitKey(0)
         cv2.destroyAllWindows()
 
 
