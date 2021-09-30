@@ -85,48 +85,73 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
     );
   }
 
-  // Widget _buildIntro() {
-  //   return ();
-  // }
   Widget _buildLeaderboard() {
     return Container(
-      child: _rankItem(), //Row
-    ); //Container;
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(children: [_createRanksSpecial('1', '본부포대', '87%'), _createRanksSpecial('2', '3포대', '84%'), _createRanks('3', '2포대', '79%'), 
+        _createRanks('4', '1포대', '73%')].expand((x) => x).toList()),
+      ), 
+    ); 
   }
 
-  Widget _rankItem() {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Column(children: _createChildrenRanks()),
-    );
-  }
-
-  List<Row> _createChildrenRanks() {
-    List<Row> childrenRanks = [];
-    for (var i = 0; i < ranks.length; i++) {
-      int realIndex = i + 1;
-      String name = ranks[i];
-      childrenRanks.add(Row(children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-          child: Text('$realIndex', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0)),
-        ), // padding
-        Padding(
-            padding: const EdgeInsets.only(left: 8.0),
-            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: <Widget>[
-              Text('$name', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0)),
-              SizedBox(height: 4.0),
-              Text("%%%", style: TextStyle(color: Colors.grey))
-            ])), //Column
-        Spacer(),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-          child: Icon(FontAwesomeIcons.arrowUp, color: Colors.green, size: 10.0),
+  List<Widget> _createRanks(String rank, String name, String percentage) {
+    List<Widget> ranks = [];
+    ranks.add(Container(
+      decoration: BoxDecoration(
+          color: Color(0xfffafafa), 
+          borderRadius: BorderRadius.circular(10),
         ),
-      ]));
+      child: ListTile(
+        leading: Text("$rank", style: TextStyle(color: widget.challenge.bgColor, fontSize: 20),),
+        title: Text("$name", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18)),
+        trailing: Container(child: Text("$percentage", style: TextStyle(color: widget.challenge.bgColor2, fontSize: 18))),),)
+    );
+    ranks.add(SizedBox(height: 13));
+    return ranks;
+  } 
+
+  List<Widget> _createRanksSpecial(String rank, String name, String percentage) {
+    List<Widget> ranks = [];
+    Icon arrow;
+    Widget rankWidget;
+    Widget trailingWidget;
+    Widget tooltipText = Wrap(
+      children: [
+        Text("$percentage", style: TextStyle(color: widget.challenge.bgColor2, fontSize: 18)),
+        Icon(FontAwesomeIcons.questionCircle, size: 8)
+      ],
+    );
+    if (name == "본부포대") {
+      arrow = Icon(FontAwesomeIcons.sortUp, color: Colors.green, size: 10.0);
+      rankWidget = Padding(
+        padding: const EdgeInsets.only(top: 4, bottom: 6),
+        child: Icon(FontAwesomeIcons.medal, color: Color(0xffd4af37), size: 15),
+      );
+      trailingWidget = Tooltip(message: '누적 잔반 비움 비율을 나타냅니다.', child: tooltipText,);
+    } else {
+      arrow = Icon(FontAwesomeIcons.sortDown, color: Colors.red, size: 10.0);
+      rankWidget = Text("$rank", style: TextStyle(color: widget.challenge.bgColor, fontSize: 20));
+      trailingWidget = Text("$percentage", style: TextStyle(color: widget.challenge.bgColor2, fontSize: 18));
     }
-    return childrenRanks;
-  }
+    ranks.add(Container(
+      decoration: BoxDecoration(
+          color: Color(0xfffafafa), 
+          borderRadius: BorderRadius.circular(10),
+        ),
+      child: ListTile(
+        leading: Padding(
+          padding: const EdgeInsets.only(top: 10.0),
+          child: Column(children: [rankWidget,arrow,]),
+        ),
+        title: Text("$name", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18)),
+        trailing: trailingWidget,),)
+    );
+    ranks.add(SizedBox(height: 13));
+    return ranks;
+  } 
+
+//https://dribbble.com/shots/11563041-Challenge-019
 
   Widget _buildHeaderSelectorButton(int id, String t) {
     return InkWell(
