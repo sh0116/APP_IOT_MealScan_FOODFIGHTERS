@@ -36,7 +36,7 @@ class _ChallengeCardState extends State<ChallengeCard> {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 8.0),
+          padding: const EdgeInsets.all(10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -79,7 +79,7 @@ class _ChallengeCardState extends State<ChallengeCard> {
         // )),
        //_openCard(),
       // _createCard(),
-
+      SizedBox(height: 10),
       _selectCard(),
         
         SizedBox(height: 30)
