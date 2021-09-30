@@ -18,7 +18,6 @@ draw = cv2.rectangle(draw, (60, 60), (175, 145), (0, 255, 0), 2)
 draw = cv2.rectangle(draw, (185, 60), (300, 145), (0, 255, 0), 2)
 draw = cv2.rectangle(draw, (310, 60), (420, 145), (0, 255, 0), 2)
 '''
-import cv2
 
 # set up camera object
 cap = cv2.VideoCapture(0)
