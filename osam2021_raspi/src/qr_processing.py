@@ -30,8 +30,9 @@ while True:
     _, img = cap.read()
     # get bounding box coords and data
     data, bbox, _ = detector.detectAndDecode(img)
-
-    print(data)
+    if data:
+            print("data found: ", data)
+>>>>>>> 06cb738f7d0f39f885f8973ad23fe2b7c43705f0
     # if there is a bounding box, draw one, along with the data
     if(bbox is not None):
         for i in range(len(bbox)):
