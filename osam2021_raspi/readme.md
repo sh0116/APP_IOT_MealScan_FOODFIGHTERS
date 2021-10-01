@@ -1,7 +1,7 @@
 <h1>IoT 부분</h1>
 장병들의 잔반을 측정하고 Back-End 서버 DB에 데이터를 넣어주는 IoT System
-
-
+<div align="center">
+<img src="../asset/rasp.png">
 </div>
 
 <div align="left">
