@@ -1,9 +1,20 @@
-database.py
-    - database.py에 firebase_post() 한번 봐줘 내가 firebase에 못들어가서 쿼리를 어떻게 짜야하는지 모르겠네 저 밑에 데이터가 다 들어가야해
-    - side 1~3이 반찬 3개 rice, soup가 국,밥 이야 
-    - image_processing.py -> utill.py (return) -> database.py 순서로 import하고 클래스 사용해 
+<h1>IoT 부분</h1>
+장병들의 잔반을 측정하고 Back-End 서버 DB에 데이터를 넣어주는 IoT System
 
-utill.py
-    - 17번줄 보면 return하는 값임 이걸 image_processing.py에서 리스트로 추가하고 
-    - 총 5개의 확률값을 모은 list를 database.py를 통해서 보내는 flow임
 
+</div>
+
+<div align="left">
+ 
+<h2> Process 구조 </h2>
+<h3>Main</h3>
+<h3>init_processing</h3>
+<h3>image_processing</h3>
+<h3>qr_processing</h3>
+<h3>utill & database</h3>
+    
+<h2> FlowChart </h2>
+
+
+
+</div>
