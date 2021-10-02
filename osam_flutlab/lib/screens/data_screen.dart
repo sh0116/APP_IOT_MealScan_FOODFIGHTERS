@@ -4,7 +4,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:osam2021/components/data_menu.dart';
 import 'package:osam2021/components/pie_chart.dart';
 
-
 class DataScreen extends StatelessWidget {
   final int selectedIndex = 0;
   @override
@@ -22,45 +21,50 @@ class DataScreen extends StatelessWidget {
           ],
           elevation: 0.0,
         ),
-        body: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
+        body: Container(
           padding: const EdgeInsets.only(left: 30, right: 30),
-          child: Container(
-            height: 5000,
-            child: Column(
-              children: [
-                Row(children: [
-                  Text(
-                    "식단 추천",
-                    style: TextStyle(fontSize: 20, color: Color(0xFF414160), fontWeight: FontWeight.w700), //TextStyle
-                  ),
-                ]),
-                SizedBox(
-                  height: 20,
+          child: ListView(
+            children: [
+              Row(children: [
+                Text(
+                  "식단 추천",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Color(0xFF414160),
+                      fontWeight: FontWeight.w700), //TextStyle
                 ),
-                DataMenu(),
-                SizedBox(height: 30),
-                Row(children: [
-                  Text(
-                    "일별 평균 잔반량",
-                    style: TextStyle(fontSize: 20, color: Color(0xFF414160), fontWeight: FontWeight.w700), //TextStyle
-                  ),
-                ]),
-                SizedBox(
-                  height: 20,
+              ]),
+              SizedBox(
+                height: 20,
+              ),
+              DataMenu(),
+              SizedBox(height: 30),
+              Row(children: [
+                Text(
+                  "일별 평균 잔반량",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Color(0xFF414160),
+                      fontWeight: FontWeight.w700), //TextStyle
                 ),
-                LeftoverBarchart(),
-                SizedBox(height: 30),
-                Row(children: [
-                  Text(
-                    "선호 / 비선호 메뉴",
-                    style: TextStyle(fontSize: 20, color: Color(0xFF414160), fontWeight: FontWeight.w700), //TextStyle
-                  ),
-                ]),
-                SizedBox(height:20),
-                LeftoverPieChart()
-              ],
-            ),
+              ]),
+              SizedBox(
+                height: 20,
+              ),
+              LeftoverBarchart(),
+              SizedBox(height: 30),
+              Row(children: [
+                Text(
+                  "선호 / 비선호 메뉴",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Color(0xFF414160),
+                      fontWeight: FontWeight.w700), //TextStyle
+                ),
+              ]),
+              SizedBox(height: 20),
+              LeftoverPieChart()
+            ],
           ),
         )); //scaffold
   }

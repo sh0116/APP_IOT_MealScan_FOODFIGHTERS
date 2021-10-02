@@ -33,6 +33,11 @@ class MyApp extends StatelessWidget {
           appBarTheme: AppBarTheme(
             elevation: 0.0,
             backgroundColor: Colors.white,
+            titleTextStyle: TextStyle(
+              color: Colors.black,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
             iconTheme: IconThemeData(color: Colors.black),
           ),
         ),
