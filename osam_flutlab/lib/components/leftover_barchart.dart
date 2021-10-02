@@ -2,6 +2,8 @@ import 'dart:async';
 import 'dart:math';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:animated_widgets/animated_widgets.dart';
+
 
 class LeftoverBarchart extends StatefulWidget {
   final List<Color> availableColors = [
@@ -19,7 +21,7 @@ class LeftoverBarchart extends StatefulWidget {
 
 class LeftoverBarchartState extends State<LeftoverBarchart> {
   final Color barBackgroundColor = const Color(0xff72d8bf);
-  final Duration animDuration = const Duration(milliseconds: 250);
+  final Duration animDuration = const Duration(milliseconds: 1000);
 
   int touchedIndex = -1;
 
@@ -61,7 +63,7 @@ class LeftoverBarchartState extends State<LeftoverBarchart> {
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: 
                         BarChart(
-                        isPlaying ? randomData() : mainBarData(),
+                        isPlaying ? mainBarData() : initData(),
                         swapAnimationDuration: animDuration,
                       ),
                     ),
@@ -76,23 +78,26 @@ class LeftoverBarchartState extends State<LeftoverBarchart> {
               padding: const EdgeInsets.all(8.0),
               child: Align(
                 alignment: Alignment.topRight,
-                child: IconButton(
-                  icon: Icon(
-                    isPlaying ? Icons.pause : Icons.play_arrow,
-                    color: const Color(0xff0f4a3c),
+                child: isPlaying ? SizedBox(height: 0) : 
+                ShakeAnimatedWidget(
+                  enabled: true,
+                  shakeAngle: Rotation.deg(z: 30),
+                  curve: Curves.linear,
+                  child: IconButton(
+                    icon: Icon(
+                      isPlaying ? Icons.pause : Icons.play_circle_fill,
+                      color: const Color(0xff0f4a3c),
+                      size: 30
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        isPlaying = !isPlaying;
+                        if (isPlaying) {
+                          refreshState();
+                        }
+                      });
+                    },
                   ),
-                  onPressed: () {
-                    if (counter == 0) {
-                      counter = 1;
-                    }
-                    setState(() {
-                      isPlaying = !isPlaying;
-                      if (isPlaying) {
-                        refreshState();
-
-                      }
-                    });
-                  },
                 ),
               ),
             )
@@ -399,13 +404,9 @@ class LeftoverBarchartState extends State<LeftoverBarchart> {
 
   Future<dynamic> refreshState() async {
     setState(() {});
+
     await Future<dynamic>.delayed(animDuration + const Duration(milliseconds: 50));
     if (isPlaying) {
-      Timer(Duration(seconds: 3), () {
-        setState(() {
-          isPlaying = !isPlaying;
-        });
-      });
       await refreshState();
     }
   }
