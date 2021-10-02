@@ -26,28 +26,28 @@ class Image_Processing:
 		self.cnt=0
 		self.DataList = list()
 
-		for self.box_1 in self.side_rect:
-			self.temp = list()
-			for self.box_2 in self.side_rect:
-				self.temp.append(self.backProjection())
-				self.cnt+=1		
-			self.DataList.append(self.temp)
+		for _ in self.side_rect:
+			temp = list()
+			for self.box in self.side_rect:
+				temp.append(self.backProjection())
+			self.DataList.append(temp)
+			self.cnt+=1		
 
 		self.find_side_dish()
 
 
-		for self.box_1 in self.main_rect:
-			self.backProjection()
+		for self.box in self.main_rect:
+			self.DataList.append(self.backProjection())
 			self.cnt+=1						
 		
 	def find_side_dish(self):
-		self.DataList
-"""
-50 40 30
-40 50 30
-30 40 50
-"""
+		#전체 경우의 수
+		temp_sum, temp_idx = 301.0, 0
+		for idx,i1,i2,i3 in [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]:
+			if temp_sum<sum( [ self.DataList[0][i1],self.DataList[1][i2],self.DataList[2][i3] ] ):
+				temp_idx,temp_sum = [i1,i2,i3],sum( [ self.DataList[0][i1],self.DataList[1][i2],self.DataList[2][i3] ] )
 
+		self.DataList = temp_idx
 
 	# backProjection Function
 	def backProjection(self):
