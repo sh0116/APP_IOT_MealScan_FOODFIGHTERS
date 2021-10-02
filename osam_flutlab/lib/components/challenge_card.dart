@@ -193,7 +193,6 @@ class _ChallengeCardState extends State<ChallengeCard> {
                       Icon(Icons.hourglass_bottom, size: 16, color: Colors.black),
                       SizedBox(
                          width: 10,
-<<<<<<< HEAD
                       ),
                       Text("$date",
                           style: TextStyle(fontSize: 14, color: Colors.black,)
@@ -212,26 +211,6 @@ class _ChallengeCardState extends State<ChallengeCard> {
                       SizedBox(
                          width: 10,
                       ),
-=======
-                      ),
-                      Text("$date",
-                          style: TextStyle(fontSize: 14, color: Colors.black,)
-                      ),                    
-                    ]
-                  ),
-                  Expanded(child: Container()),
-                  Icon(FontAwesomeIcons.chevronRight, color: Color(0xff999999), size: 30),
-                ]
-              ),
-              SizedBox(height:3),
-               Row(
-                    children: [
-                      SizedBox(width: 4),
-                      Icon(FontAwesomeIcons.users, size: 16, color: Colors.black),
-                      SizedBox(
-                         width: 10,
-                      ),
->>>>>>> 03cb8207fe4ba2e5f539bf602c584198a648a235
                       Text("$attendant",
                           style: TextStyle(fontSize: 14, color: Colors.black,)
                       ),                    

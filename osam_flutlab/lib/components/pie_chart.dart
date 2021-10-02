@@ -143,8 +143,4 @@ class LeftoverPieChartState extends State {
       }
     });
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 03cb8207fe4ba2e5f539bf602c584198a648a235

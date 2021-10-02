@@ -46,6 +46,8 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
                   notifier.deleteChallenge(widget.challenge);
                   notifier.openChallenge(widget.challenge);
                   Navigator.pop(context, true);
+                  ScaffoldMessenger.of(context)
+                    .showSnackBar(SnackBar(content: Text('등록 완료! 참가 중 탭에서 확인하세요.')));
                 },
               ),
               SizedBox(width: 20)
@@ -86,7 +88,6 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
   }
 
   Widget _buildLeaderboard() {
-<<<<<<< HEAD
     return Column(
       children: [
         Row(mainAxisAlignment: MainAxisAlignment.center, 
@@ -101,14 +102,6 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
           ), 
         ),
       ],
-=======
-    return Container(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(children: [_createRanksSpecial('1', '본부포대', '87%'), _createRanksSpecial('2', '3포대', '84%'), _createRanks('3', '2포대', '79%'), 
-        _createRanks('4', '1포대', '73%')].expand((x) => x).toList()),
-      ), 
->>>>>>> 03cb8207fe4ba2e5f539bf602c584198a648a235
     ); 
   }
 
@@ -136,11 +129,7 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
     Widget tooltipText = Wrap(
       children: [
         Text("$percentage", style: TextStyle(color: widget.challenge.bgColor2, fontSize: 18)),
-<<<<<<< HEAD
         Icon(FontAwesomeIcons.solidQuestionCircle, size: 8)
-=======
-        Icon(FontAwesomeIcons.questionCircle, size: 8)
->>>>>>> 03cb8207fe4ba2e5f539bf602c584198a648a235
       ],
     );
     if (name == "본부포대") {
@@ -171,11 +160,6 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
     ranks.add(SizedBox(height: 13));
     return ranks;
   } 
-<<<<<<< HEAD
-=======
-
-//https://dribbble.com/shots/11563041-Challenge-019
->>>>>>> 03cb8207fe4ba2e5f539bf602c584198a648a235
 
   Widget _buildHeaderSelectorButton(int id, String t) {
     return InkWell(

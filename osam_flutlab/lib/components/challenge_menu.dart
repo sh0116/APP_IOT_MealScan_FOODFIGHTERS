@@ -6,10 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:osam2021/main.dart';
 import 'package:osam2021/notifiers.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-<<<<<<< HEAD
 import 'package:animated_widgets/animated_widgets.dart';
-=======
->>>>>>> 03cb8207fe4ba2e5f539bf602c584198a648a235
 
 
 class ChallengeMenu extends StatefulWidget {
@@ -92,10 +89,6 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
               },))
 
         : 
-<<<<<<< HEAD
-=======
-
->>>>>>> 03cb8207fe4ba2e5f539bf602c584198a648a235
             ListView.builder(
               shrinkWrap: true,
               itemCount: openItems.length,
@@ -116,10 +109,6 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
                   child: item);
               },);
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> 03cb8207fe4ba2e5f539bf602c584198a648a235
 
   Widget _buildScreenSelector() {
     return Padding(
