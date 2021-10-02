@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:osam2021/components/leftover_barchart.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:osam2021/components/data_menu.dart';
+import 'package:osam2021/components/pie_chart.dart';
+
 
 class DataScreen extends StatelessWidget {
   final int selectedIndex = 0;
@@ -22,9 +24,9 @@ class DataScreen extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
-          padding: const EdgeInsets.only(top: 70, left: 30, right: 30),
+          padding: const EdgeInsets.only(left: 30, right: 30),
           child: Container(
-            height:10000,
+            height: 5000,
             child: Column(
               children: [
                 Row(children: [
@@ -55,6 +57,8 @@ class DataScreen extends StatelessWidget {
                     style: TextStyle(fontSize: 20, color: Color(0xFF414160), fontWeight: FontWeight.w700), //TextStyle
                   ),
                 ]),
+                SizedBox(height:20),
+                LeftoverPieChart()
               ],
             ),
           ),
