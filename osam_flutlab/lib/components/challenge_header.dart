@@ -17,9 +17,11 @@ class ChallengeHeader extends StatelessWidget {
       Row(mainAxisAlignment: MainAxisAlignment.center, children: [
         Wrap(
           children: [
-            Icon(FontAwesomeIcons.solidClock, color: Color(0xff5B5555), size: 10),
+            Icon(FontAwesomeIcons.solidClock, color: Color(0xff5B5555), size: 15),
+            SizedBox(width: 4,),
             Text(challenge.date + " 종료   "),
-            Icon(FontAwesomeIcons.solidUser, color: Color(0xff5B5555), size: 10),
+            Icon(FontAwesomeIcons.solidUser, color: Color(0xff5B5555), size: 15),
+            SizedBox(width: 4,),
             Text(challenge.attendants),
           ],
         )

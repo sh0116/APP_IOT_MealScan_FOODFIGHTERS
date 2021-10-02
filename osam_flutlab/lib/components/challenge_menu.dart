@@ -6,8 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:osam2021/main.dart';
 import 'package:osam2021/notifiers.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-
+import 'package:animated_widgets/animated_widgets.dart';
 
 
 class ChallengeMenu extends StatefulWidget {
@@ -36,7 +35,8 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
         "지금 참가하여 상점, 전투휴무 등 다양한\n"
         "포상 획득하세요.\n";
 
-    List<Challenge> addedChallenges = open.where((f) => f.added == true).toList();
+    final addedItems = List.generate(notifiers.added.length, (index) => ChallengeCard(challenge: notifiers.added[index], added: true, notifyParent: refresh));
+    final openItems = List.generate(notifiers.opened.length, (index) => ChallengeCard(challenge: notifiers.opened[index], added: false, notifyParent: refresh));
 
     return selectedId == 0
         ? (notifiers.added.length == 0 //ADDED
@@ -46,37 +46,69 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
                   noChallengeText,
                   textAlign: TextAlign.center,
                 ),
-                MaterialButton(
-                  onPressed: () {
-                    setState(() {
-                      selectedId = 1;
-                    });
-                  },
-                  color: Color(0xff4dd0e1),
-                  child: Icon(
-                    Icons.add,
-                    size: 20,
-                    color: Colors.black,
+                ShakeAnimatedWidget(
+                  enabled: true,
+                  shakeAngle: Rotation.deg(z: 40),
+                  curve: Curves.linear,
+                  child: MaterialButton(
+                    onPressed: () {
+                      setState(() {
+                        selectedId = 1;
+                      });
+                    },
+                    color: Color(0xff4dd0e1),
+                    child: Icon(
+                      Icons.add,
+                      size: 20,
+                      color: Colors.black,
+                    ),
+                    padding: EdgeInsets.all(16),
+                    shape: CircleBorder(),
                   ),
-                  padding: EdgeInsets.all(16),
-                  shape: CircleBorder(),
                 )
               ]))
-            : ListView(
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
-                children: List.generate(notifiers.added.length, (index) => ChallengeCard(challenge: notifiers.added[index], added: true, notifyParent: refresh)), //List.generate
-              )) //
+            : 
+            ListView.builder(
+              shrinkWrap: true,
+              itemCount: addedItems.length,
+              itemBuilder: (context, index) {
+                final item = addedItems[index];
+                return Dismissible(
+                  key: Key(notifiers.added[index].name),
+                  onDismissed: (direction) {
+                    notifiers.openChallenge(notifiers.added[index]);
+                    notifiers.deleteChallenge(notifiers.added[index]);
+                    setState(() {
+                      addedItems.removeAt(index);
+                    });
+                    ScaffoldMessenger.of(context)
+                      .showSnackBar(SnackBar(content: Text('삭제 완료! 진행 중 탭에서 확인하세요.')));
+                  },
+                  background: Container(color: Colors.red),
+                  child: item);
+              },))
 
         : 
-        
-         ListView( //OPEN
-            scrollDirection: Axis.vertical,
-            shrinkWrap: true,
-            children: List.generate(notifiers.opened.length, (index) => ChallengeCard(challenge: notifiers.opened[index], added: false, notifyParent: refresh)), //List.generate
-          ); 
+            ListView.builder(
+              shrinkWrap: true,
+              itemCount: openItems.length,
+              itemBuilder: (context, index) {
+                final item = openItems[index];
+                return Dismissible(
+                  key: Key(notifiers.opened[index].name),
+                  onDismissed: (direction) {
+                    notifiers.addChallenge(notifiers.opened[index]);
+                    notifiers.closeChallenge(notifiers.opened[index]);
+                    setState(() {
+                      openItems.removeAt(index);
+                    });
+                    ScaffoldMessenger.of(context)
+                      .showSnackBar(SnackBar(content: Text('등록 완료! 참가 중 탭에서 확인하세요.')));
+                  },
+                  background: Container(color: Colors.green),
+                  child: item);
+              },);
   }
-
 
   Widget _buildScreenSelector() {
     return Padding(

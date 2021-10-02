@@ -46,10 +46,12 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
   Widget _buildSubtitle() {
     return Wrap(
       children: [
-        Icon(FontAwesomeIcons.solidClock, color: Color(0xff5B5555), size: 10),
-        Text(widget.challenge.date + "   "),
-        Icon(FontAwesomeIcons.solidUser, color: Color(0xff5B5555), size: 10),
-        Text(widget.challenge.attendants),
+        Icon(FontAwesomeIcons.solidClock, color: Color(0xff5B5555), size: 15),
+        SizedBox(width: 4,),
+        Text(widget.challenge.date + " 종료   "),
+        Icon(FontAwesomeIcons.solidUser, color: Color(0xff5B5555), size: 15),
+        SizedBox(width: 4,),
+        Text(widget.challenge.attendants, style: TextStyle(color: Color(0xff5B5555))),
       ],
     );
   }
@@ -60,8 +62,8 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
       children: [
         Wrap(
           children: [
-            Icon(FontAwesomeIcons.bullhorn, color: Color(0xff5B5555), size: 12),
-            Text(' 지휘관 전파사항:'),
+            Icon(FontAwesomeIcons.bullhorn, color: Color(0xff5B5555), size: 15),
+            Text(' 지휘관 전파사항:', style: TextStyle(color: Color(0xff5B5555))),
           ],
         ),
       ],
@@ -69,15 +71,17 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
   }
 
   Widget _drawPrize() {
+    String prize = widget.challenge.prize;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Wrap(
           children: [
-            Icon(FontAwesomeIcons.award, color: Color(0xff5B5555), size: 12),
-            Text(' 포상:'),
+            Icon(FontAwesomeIcons.award, color: Color(0xff5B5555), size: 15),
+            Text(' 포상', style: TextStyle(color: Color(0xff5B5555))),
           ],
         ),
+        Text('$prize', style: TextStyle(color: Color(0xff5B5555)))
       ],
     );
   }
@@ -88,19 +92,20 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
         return Row(children: [
           TextButton(
             style: TextButton.styleFrom(
-              textStyle: const TextStyle(fontSize: 20),
+              textStyle: const TextStyle(fontSize: 20, color: Color(0xff5B5555)),
             ),
             onPressed: () {
               notifiers.addChallenge(widget.challenge);
               notifiers.closeChallenge(widget.challenge);
               Navigator.of(context).pop();
-              MyDialog.of(context).toast('참가 중 탭에서 확인하세요', iconType: IconType.success);
+              ScaffoldMessenger.of(context)
+                      .showSnackBar(SnackBar(content: Text('참가등록 완료! 참가 중 탭에서 확인하세요.')));
             },
             child: const Text('참가하기'),
           ),
           TextButton(
             style: TextButton.styleFrom(
-              textStyle: const TextStyle(fontSize: 20),
+              textStyle: const TextStyle(fontSize: 20, color: Color(0xff5B5555)),
             ),
             onPressed: () {
               Navigator.of(context).pop();

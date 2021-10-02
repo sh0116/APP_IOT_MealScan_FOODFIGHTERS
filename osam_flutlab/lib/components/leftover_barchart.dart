@@ -2,6 +2,8 @@ import 'dart:async';
 import 'dart:math';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:animated_widgets/animated_widgets.dart';
+
 
 class LeftoverBarchart extends StatefulWidget {
   final List<Color> availableColors = [
@@ -19,7 +21,7 @@ class LeftoverBarchart extends StatefulWidget {
 
 class LeftoverBarchartState extends State<LeftoverBarchart> {
   final Color barBackgroundColor = const Color(0xff72d8bf);
-  final Duration animDuration = const Duration(milliseconds: 250);
+  final Duration animDuration = const Duration(milliseconds: 1000);
 
   int touchedIndex = -1;
 
@@ -27,6 +29,7 @@ class LeftoverBarchartState extends State<LeftoverBarchart> {
 
   @override
   Widget build(BuildContext context) {
+    int counter = 0;
     return AspectRatio(
       aspectRatio: 1,
       child: Card(
@@ -58,8 +61,9 @@ class LeftoverBarchartState extends State<LeftoverBarchart> {
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: BarChart(
-                        isPlaying ? randomData() : mainBarData(),
+                      child: 
+                        BarChart(
+                        isPlaying ? mainBarData() : initData(),
                         swapAnimationDuration: animDuration,
                       ),
                     ),
@@ -74,19 +78,26 @@ class LeftoverBarchartState extends State<LeftoverBarchart> {
               padding: const EdgeInsets.all(8.0),
               child: Align(
                 alignment: Alignment.topRight,
-                child: IconButton(
-                  icon: Icon(
-                    isPlaying ? Icons.pause : Icons.play_arrow,
-                    color: const Color(0xff0f4a3c),
+                child: isPlaying ? SizedBox(height: 0) : 
+                ShakeAnimatedWidget(
+                  enabled: true,
+                  shakeAngle: Rotation.deg(z: 30),
+                  curve: Curves.linear,
+                  child: IconButton(
+                    icon: Icon(
+                      isPlaying ? Icons.pause : Icons.play_circle_fill,
+                      color: const Color(0xff0f4a3c),
+                      size: 30
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        isPlaying = !isPlaying;
+                        if (isPlaying) {
+                          refreshState();
+                        }
+                      });
+                    },
                   ),
-                  onPressed: () {
-                    setState(() {
-                      isPlaying = !isPlaying;
-                      if (isPlaying) {
-                        refreshState();
-                      }
-                    });
-                  },
                 ),
               ),
             )
@@ -120,7 +131,7 @@ class LeftoverBarchartState extends State<LeftoverBarchart> {
           borderSide: isTouched ? BorderSide(color: Colors.yellow, width: 1) : BorderSide(color: Colors.white, width: 0),
           backDrawRodData: BackgroundBarChartRodData(
             show: true,
-            y: 20,
+            y: 100,
             colors: [
               barBackgroundColor
             ],
@@ -152,6 +163,75 @@ class LeftoverBarchartState extends State<LeftoverBarchart> {
         }
       });
 
+
+  BarChartData initData() {
+    return BarChartData(
+      barTouchData: BarTouchData(
+        enabled: false,
+      ),
+      titlesData: FlTitlesData(
+          show: true,
+          bottomTitles: SideTitles(
+            showTitles: true,
+            getTextStyles: (context, value) => const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
+            margin: 16,
+            getTitles: (double value) {
+              switch (value.toInt()) {
+                case 0:
+                  return '월';
+                case 1:
+                  return '화';
+                case 2:
+                  return '수';
+                case 3:
+                  return '목';
+                case 4:
+                  return '금';
+                case 5:
+                  return '토';
+                case 6:
+                  return '일';
+                default:
+                  return '';
+              }
+            },
+          ),
+          leftTitles: SideTitles(
+            showTitles: false,
+          ),
+          topTitles: SideTitles(
+            showTitles: false,
+          ),
+          rightTitles: SideTitles(
+            showTitles: false,
+          )),
+      borderData: FlBorderData(
+        show: false,
+      ),
+      barGroups: List.generate(7, (i) {
+        switch (i) {
+          case 0:
+            return makeGroupData(0, 0, barColor: widget.availableColors[Random().nextInt(widget.availableColors.length)]);
+          case 1:
+            return makeGroupData(1, 0, barColor: widget.availableColors[Random().nextInt(widget.availableColors.length)]);
+          case 2:
+            return makeGroupData(2, 0, barColor: widget.availableColors[Random().nextInt(widget.availableColors.length)]);
+          case 3:
+            return makeGroupData(3, 0, barColor: widget.availableColors[Random().nextInt(widget.availableColors.length)]);
+          case 4:
+            return makeGroupData(4, 0, barColor: widget.availableColors[Random().nextInt(widget.availableColors.length)]);
+          case 5:
+            return makeGroupData(5, 0, barColor: widget.availableColors[Random().nextInt(widget.availableColors.length)]);
+          case 6:
+            return makeGroupData(6, 0, barColor: widget.availableColors[Random().nextInt(widget.availableColors.length)]);
+          default:
+            return throw Error();
+        }
+      }),
+      gridData: FlGridData(show: false),
+    );
+  }    
+
   BarChartData mainBarData() {
     return BarChartData(
       barTouchData: BarTouchData(
@@ -161,25 +241,25 @@ class LeftoverBarchartState extends State<LeftoverBarchart> {
               String weekDay;
               switch (group.x.toInt()) {
                 case 0:
-                  weekDay = 'Monday';
+                  weekDay = '월요일';
                   break;
                 case 1:
-                  weekDay = 'Tuesday';
+                  weekDay = '화요일';
                   break;
                 case 2:
-                  weekDay = 'Wednesday';
+                  weekDay = '수요일';
                   break;
                 case 3:
-                  weekDay = 'Thursday';
+                  weekDay = '목요일';
                   break;
                 case 4:
-                  weekDay = 'Friday';
+                  weekDay = '금요일';
                   break;
                 case 5:
-                  weekDay = 'Saturday';
+                  weekDay = '토요일';
                   break;
                 case 6:
-                  weekDay = 'Sunday';
+                  weekDay = '일요일';
                   break;
                 default:
                   throw Error();
@@ -224,19 +304,19 @@ class LeftoverBarchartState extends State<LeftoverBarchart> {
           getTitles: (double value) {
             switch (value.toInt()) {
               case 0:
-                return 'M';
+                return '월';
               case 1:
-                return 'T';
+                return '화';
               case 2:
-                return 'W';
+                return '수';
               case 3:
-                return 'T';
+                return '목';
               case 4:
-                return 'F';
+                return '금';
               case 5:
-                return 'S';
+                return '토';
               case 6:
-                return 'S';
+                return '일';
               default:
                 return '';
             }
@@ -268,19 +348,19 @@ class LeftoverBarchartState extends State<LeftoverBarchart> {
             getTitles: (double value) {
               switch (value.toInt()) {
                 case 0:
-                  return 'M';
+                  return '월';
                 case 1:
-                  return 'T';
+                  return '화';
                 case 2:
-                  return 'W';
+                  return '수';
                 case 3:
-                  return 'T';
+                  return '목';
                 case 4:
-                  return 'F';
+                  return '금';
                 case 5:
-                  return 'S';
+                  return '토';
                 case 6:
-                  return 'S';
+                  return '일';
                 default:
                   return '';
               }
@@ -324,6 +404,7 @@ class LeftoverBarchartState extends State<LeftoverBarchart> {
 
   Future<dynamic> refreshState() async {
     setState(() {});
+
     await Future<dynamic>.delayed(animDuration + const Duration(milliseconds: 50));
     if (isPlaying) {
       await refreshState();
