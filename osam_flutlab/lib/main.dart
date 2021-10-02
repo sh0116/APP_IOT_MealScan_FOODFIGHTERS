@@ -29,12 +29,10 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+          fontFamily: 'SpoqaHanSansNeo',
           appBarTheme: AppBarTheme(
             elevation: 0.0,
             backgroundColor: Colors.white,
-            textTheme: TextTheme(
-              headline6: TextStyle(color: Colors.black, fontSize: 24),
-            ),
             iconTheme: IconThemeData(color: Colors.black),
           ),
         ),
