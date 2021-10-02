@@ -24,7 +24,7 @@ STL파일 제작 및 3D 도면 제작은 오픈소스 Tinkercad를 사용해서 
 <h2>부속품 소개</h2>
 <h3>top.stl</h3>
 라즈베리파이와 카메라가 올라가는 부속품, <br>
-구조물의 최상단의 위치해 지붕의 역할
+구조물의 최상단의 위치해 지붕의 역할<br>
 <img src="/3D_printing/asset/top.png">
 <h3>bottom.stl</h3>
 식판을 놓고, 구조물을 지탱하는 부분 <br>
