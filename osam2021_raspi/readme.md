@@ -13,8 +13,8 @@
 <h3>qr_processing</h3>
 <h3>utill & database</h3>
     
-<h2> FlowChart </h2>
-
+<h2> Sequence Diagram </h2>
+<img src="../asset/Sequence.png">
 
 
 </div>
