@@ -9,7 +9,7 @@ class ChallengeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("챌린지"),
+        title: Text("Challenge"),
         actions: [
           IconButton(
             icon: Icon(FontAwesomeIcons.bell),
@@ -19,10 +19,10 @@ class ChallengeScreen extends StatelessWidget {
         ],
         elevation: 0.0,
       ),
-      body: Column(
-        children: [
+      body: Container(
+        padding: const EdgeInsets.only(left: 30, right: 30),
+        child: 
           ChallengeMenu(),
-        ],
       ),
     ); //scaffold
   }
