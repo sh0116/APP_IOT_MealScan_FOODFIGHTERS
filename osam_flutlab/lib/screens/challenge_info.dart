@@ -98,7 +98,8 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
               notifiers.addChallenge(widget.challenge);
               notifiers.closeChallenge(widget.challenge);
               Navigator.of(context).pop();
-              MyDialog.of(context).toast('참가 중 탭에서 확인하세요', iconType: IconType.success);
+              ScaffoldMessenger.of(context)
+                      .showSnackBar(SnackBar(content: Text('참가등록 완료! 참가 중 탭에서 확인하세요.')));
             },
             child: const Text('참가하기'),
           ),
