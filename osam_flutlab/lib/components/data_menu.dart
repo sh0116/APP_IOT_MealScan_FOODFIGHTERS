@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
 
+
 class DataMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,7 @@ class DataMenu extends StatelessWidget {
         children: [
           Text('$mealType'),
           SizedBox(height: 7),
-          Text('$menu'),
+          Text('$menu',style: TextStyle(fontFamily: 'SpoqaHanSansNeo')),
           Text('\u{1F616} 적게 드세요: $disliked', style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold))
         ],
       ),
