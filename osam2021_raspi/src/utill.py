@@ -13,7 +13,8 @@ def processLog(images):
     count = counts[0]
     proportion = (100 * count) / (h * w)
     colour = [0,0,0]
-    print(f"   Colour: {colour}, count: {count}, proportion: {proportion:.2f}%")
+    #print(f"   Colour: {colour}, count: {count}, proportion: {proportion:.2f}%")
+    return 100.0 - proportion
 # Iterate over all images called "log*png" in current directory
 def main():
     for filename in ["result2.png","result3.png","result5.png","result6.png","result4.png"]:

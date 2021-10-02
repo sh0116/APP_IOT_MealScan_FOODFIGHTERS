@@ -1,2 +1,20 @@
-init만 완성인데 전체적으로 다 같이 동작해야 의미있고 실행안될꺼야 그니까 그냥 qr만 고쳐서 main에서 돌려봐 하드코딩으로 주석처리한담에 그리고 qr인식되면 
-qr만 따로 올려 main이랑 나머지 고치지말구!!
+<h1>IoT 부분</h1>
+장병들의 잔반을 측정하고 Back-End 서버 DB에 데이터를 넣어주는 IoT System
+<div align="center">
+<img src="../asset/rasp.png">
+</div>
+
+<div align="left">
+ 
+<h2> Process 구조 </h2>
+<h3>Main</h3>
+<h3>init_processing</h3>
+<h3>image_processing</h3>
+<h3>qr_processing</h3>
+<h3>utill & database</h3>
+    
+<h2> Sequence Diagram </h2>
+<img src="../asset/Sequence.png">
+
+
+</div>

@@ -21,11 +21,11 @@ class Image_Processing:
 		dish_tag = ["side_1","side_2","side_3","rice","soup"]
 		self.cnt=0
 		for self.box in np.array(self·side_dish):
-			cv2.imwrite("../asset/{}.png".format(dish_tag[cnt]), self.image[self.box[1][1]+5:self.box[0][1]-5,self.box[1][0]+5:self.box[2][0]-5].copy() )
+			cv2.imwrite("../asset/{}.png".format(dish_tag[self.cnt]), self.image[self.box[1][1]+5:self.box[0][1]-5,self.box[1][0]+5:self.box[2][0]-5].copy() )
 			self.cnt+=1
 
 		for self.box in np.array(self.main_dish):
-			cv2.imwrite("../asset/{}.png".format(dish_tag[cnt]), self.image[self.box[1][1]+10:self.box[0][1]-10,self.box[1][0]+10:self.box[2][0]-10].copy() )
+			cv2.imwrite("../asset/{}.png".format(dish_tag[self.cnt]), self.image[self.box[1][1]+10:self.box[0][1]-10,self.box[1][0]+10:self.box[2][0]-10].copy() )
 			self.cnt+=1
 
 if __name__=="__main__":
