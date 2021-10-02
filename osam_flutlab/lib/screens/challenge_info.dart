@@ -21,14 +21,18 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
     return BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         child: Dialog(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
-          backgroundColor: Color(0x00ffffff),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
+          //elevation: 0,
+          backgroundColor: Colors.white,
           child: new Container(
             height: 350.0,
             padding: const EdgeInsets.all(20.0),
             child: Column(
               children: [
-                Text(widget.challenge.name, style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+                Text(widget.challenge.name,
+                    style:
+                        TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
                 SizedBox(height: 5),
                 _buildSubtitle(),
                 SizedBox(height: 15),
@@ -47,11 +51,16 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
     return Wrap(
       children: [
         Icon(FontAwesomeIcons.solidClock, color: Color(0xff5B5555), size: 15),
-        SizedBox(width: 4,),
+        SizedBox(
+          width: 4,
+        ),
         Text(widget.challenge.date + " 종료   "),
         Icon(FontAwesomeIcons.solidUser, color: Color(0xff5B5555), size: 15),
-        SizedBox(width: 4,),
-        Text(widget.challenge.attendants, style: TextStyle(color: Color(0xff5B5555))),
+        SizedBox(
+          width: 4,
+        ),
+        Text(widget.challenge.attendants,
+            style: TextStyle(color: Color(0xff5B5555))),
       ],
     );
   }
@@ -92,20 +101,22 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
         return Row(children: [
           TextButton(
             style: TextButton.styleFrom(
-              textStyle: const TextStyle(fontSize: 20, color: Color(0xff5B5555)),
+              textStyle:
+                  const TextStyle(fontSize: 20, color: Color(0xff5B5555)),
             ),
             onPressed: () {
               notifiers.addChallenge(widget.challenge);
               notifiers.closeChallenge(widget.challenge);
               Navigator.of(context).pop();
-              ScaffoldMessenger.of(context)
-                      .showSnackBar(SnackBar(content: Text('참가등록 완료! 참가 중 탭에서 확인하세요.')));
+              ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text('참가등록 완료! 참가 중 탭에서 확인하세요.')));
             },
             child: const Text('참가하기'),
           ),
           TextButton(
             style: TextButton.styleFrom(
-              textStyle: const TextStyle(fontSize: 20, color: Color(0xff5B5555)),
+              textStyle:
+                  const TextStyle(fontSize: 20, color: Color(0xff5B5555)),
             ),
             onPressed: () {
               Navigator.of(context).pop();
