@@ -35,32 +35,7 @@ class _ChallengeCardState extends State<ChallengeCard> {
     const defaultPadding = EdgeInsets.symmetric(horizontal: 10, vertical: 3);
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(10),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              SlideCountdown(
-              duration: defaultDuration,
-              padding: defaultPadding,
-              slideDirection: SlideDirection.up,
-              fade: true,
-              decoration: BoxDecoration(
-              color: widget.challenge.bgColor,
-              borderRadius: BorderRadius.all(Radius.circular(5)),
-                 ),
-                 icon: Padding(
-                   padding: EdgeInsets.only(right: 5),
-                   child: Icon(
-                     Icons.alarm,
-                     color: Colors.white,
-                     size: 15,
-                   ),
-                 ),
-               ),
-            ],
-          ),
-        ),
+        
         // Card(
         //     child: InkWell(
         //   onTap: () {
@@ -79,7 +54,6 @@ class _ChallengeCardState extends State<ChallengeCard> {
         // )),
        //_openCard(),
       // _createCard(),
-      SizedBox(height: 10),
       _selectCard(),
         
         SizedBox(height: 30)
@@ -92,7 +66,7 @@ class _ChallengeCardState extends State<ChallengeCard> {
   }
 
   Widget _addedCard() {
-        DateFormat format = DateFormat("hh:mm:ss");
+    DateFormat format = DateFormat("hh:mm:ss");
     int estimateTs = DateTime.parse(widget.challenge.date).millisecondsSinceEpoch;
     int now = DateTime.now().millisecondsSinceEpoch;
     Duration remaining = Duration(milliseconds: estimateTs - now);
@@ -100,42 +74,69 @@ class _ChallengeCardState extends State<ChallengeCard> {
     var date = formattedRemaining.split(":");
     Duration defaultDuration = Duration(days: remaining.inDays, hours: int.parse(date[1]), minutes: int.parse(date[2]));
     const defaultPadding = EdgeInsets.symmetric(horizontal: 10, vertical: 3);
-        String name = widget.challenge.name;
+    String name = widget.challenge.name;
     return Container(
       child: InkWell(
         onTap: () {
           _navigateToAddedInfoScreen(context);
         },
-        child: Container(
-            padding: const EdgeInsets.only(left: 20, top: 25, right: 20),
-            decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [
-                          widget.challenge.bgColor.withOpacity(0.8),
-                          widget.challenge.bgColor2.withOpacity(0.9),
-                        ], begin: Alignment.bottomLeft, end: Alignment.centerRight),
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(10),
-                          bottomLeft: Radius.circular(10),
-                          bottomRight: Radius.circular(10),
-                          topRight: Radius.circular(55),
-                        ),
-                        boxShadow: [
-                          BoxShadow(offset: Offset(5, 10), blurRadius: 20, color: widget.challenge.bgColor2.withOpacity(0.2))
-                        ]),
-          width: MediaQuery.of(context).size.width,
-          height: 90,
-          child: 
-          Column(
-            children: [
-              Row(children:
-               [Text("$name", style: TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold)),
-                Icon(FontAwesomeIcons.chevronRight, color: Color(0xff999999), size: 30),
-               ],
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-               ),
-            ],
-          ),
-
+        child: Column(
+          children: [
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SlideCountdown(
+                      duration: defaultDuration,
+                      padding: defaultPadding,
+                      slideDirection: SlideDirection.up,
+                      fade: true,
+                      decoration: BoxDecoration(
+                        color: widget.challenge.bgColor.withOpacity(0.8),
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
+                      ),
+                      icon: Padding(
+                        padding: EdgeInsets.only(right: 5),
+                          child: Icon(
+                                    Icons.alarm,
+                                    color: Colors.white,
+                                    size: 15,
+                                  ),
+                      ),
+                    ),
+                  ],
+                ),
+            SizedBox(height: 3),
+            Container(
+                padding: const EdgeInsets.only(left: 20, top: 25, right: 20),
+                decoration: BoxDecoration(
+                            gradient: LinearGradient(colors: [
+                              widget.challenge.bgColor.withOpacity(0.8),
+                              widget.challenge.bgColor2.withOpacity(0.9),
+                            ], begin: Alignment.bottomLeft, end: Alignment.centerRight),
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(10),
+                              bottomLeft: Radius.circular(10),
+                              bottomRight: Radius.circular(10),
+                              topRight: Radius.circular(55),
+                            ),
+                            boxShadow: [
+                              BoxShadow(offset: Offset(5, 10), blurRadius: 20, color: widget.challenge.bgColor2.withOpacity(0.2))
+                            ]),
+              width: MediaQuery.of(context).size.width,
+              height: 90,
+              child: 
+                Column(
+                  children: [
+                    Row(children:
+                    [Text("$name", style: TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold)),
+                      Icon(FontAwesomeIcons.chevronRight, color: Color(0xff999999), size: 30),
+                    ],
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    ),
+                  ],
+                ),
+            ),
+          ],
         ),
       ),
     );   
@@ -162,7 +163,6 @@ class _ChallengeCardState extends State<ChallengeCard> {
         },
         child: Container(
                     padding: const EdgeInsets.only(left: 20, top: 25, right: 20),
-                  
                     decoration: BoxDecoration(
                         gradient: LinearGradient(colors: [
                           widget.challenge.bgColor.withOpacity(0.8),
