@@ -13,13 +13,13 @@ import glob
 class Image_Processing:
 	def __init__(self):
 		self.per_list = ["70_per","50_per","30_per","0_per"]
-		self.dish_tag = ["_side_1","_side_2","_side_3","_rice","_soup"]
+		self.dish_tag = ["_side_1","_side_2","_side_3","_soup","_rice"]
 		self.DataList = list()
 
 
 		for self.per in self.per_list:
 			print("{} : result ".format(self.per))
-			print(" side_1 | side_2 | side_3 |  rice  |  soup  |")
+			print(" side_1 | side_2 | side_3 |  soup  |  rice  |")
 			for self.tag in self.dish_tag:
 				#print("{}{}.png".format(self.per,self.tag))
 				print( " {:.2f}  |".format(float(self.backProjection())) ,end="") 
@@ -33,14 +33,22 @@ class Image_Processing:
 		imgs = cv2.imread("asset/test_image/{}/{}{}.png".format(self.per,self.per,self.tag), cv2.IMREAD_COLOR)
 		hsvt = cv2.cvtColor(imgs, cv2.COLOR_BGR2HSV)
 
-		roihist = cv2.calcHist([hsv],[0,1],None,[180,256],[0,180,0,256]) 
-		cv2.normalize(roihist,roihist,0,255,cv2.NORM_MINMAX) 
-		dst = cv2.calcBackProject([hsvt],[0,1],roihist,[0,180,0,256],1) 
+		if self.tag == "_rice":
+			roihist = cv2.calcHist([hsv],[0,1],None,[200,256],[0,200,0,256]) 
+			nomal_roihist = cv2.normalize(cv2.log(roihist+2),roihist,0,255,cv2.NORM_MINMAX,cv2.CV_8U)
+			dst = cv2.calcBackProject([hsvt],[0,1],nomal_roihist,[0,200,0,256],1) 
+		else:
+			roihist = cv2.calcHist([hsv],[0,1],None,[180,256],[0,180,0,256]) 
+			nomal_roihist = cv2.normalize(roihist,roihist,0,255,cv2.NORM_MINMAX)
+			dst = cv2.calcBackProject([hsvt],[0,1],nomal_roihist,[0,180,0,256],1)  
+		#cv2.normalize(roihist,roihist,0,255,cv2.NORM_MINMAX) 
+		#dst = cv2.calcBackProject([hsvt],[0,1],nomal_roihist,[0,180,0,256],1) 
 
 		if self.tag == "_rice":
 			disc = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(10,10)) 
 		else:
 			disc = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(5,5)) 
+
 		cv2.filter2D(dst,-1,disc,dst) 
 		
 		thr = cv2.threshold(dst,50,255,0)[1]
