@@ -36,8 +36,11 @@ class Image_Processing:
 		roihist = cv2.calcHist([hsv],[0,1],None,[180,256],[0,180,0,256]) 
 		cv2.normalize(roihist,roihist,0,255,cv2.NORM_MINMAX) 
 		dst = cv2.calcBackProject([hsvt],[0,1],roihist,[0,180,0,256],1) 
-		
-		disc = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(5,5)) 
+
+		if self.tag == "_rice":
+			disc = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(10,10)) 
+		else:
+			disc = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(5,5)) 
 		cv2.filter2D(dst,-1,disc,dst) 
 		
 		thr = cv2.threshold(dst,50,255,0)[1]
@@ -46,6 +49,7 @@ class Image_Processing:
 		cv2.imwrite('asset/result_test_image/result_{}{}.png'.format(self.per,self.tag), res)
 		
 		return self.processLog(res)
+
    
    
 	def processLog(self,images):
