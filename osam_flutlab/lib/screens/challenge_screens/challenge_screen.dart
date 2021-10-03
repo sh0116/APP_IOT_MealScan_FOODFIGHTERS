@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:osam2021/components/challenge_menu.dart';
+import 'package:osam2021/components/challenge_components/challenge_menu.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ChallengeScreen extends StatelessWidget {
@@ -9,7 +9,7 @@ class ChallengeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("챌린지"),
+        title: Text("챌린지", style: TextStyle(fontSize: 20)),
         actions: [
           IconButton(
             icon: Icon(FontAwesomeIcons.bell),

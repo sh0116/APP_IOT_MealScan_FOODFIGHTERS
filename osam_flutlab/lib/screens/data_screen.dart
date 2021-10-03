@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:osam2021/components/leftover_barchart.dart';
+import 'package:osam2021/components/data_components/leftover_barchart.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:osam2021/components/data_menu.dart';
-import 'package:osam2021/components/pie_chart.dart';
+import 'package:osam2021/components/data_components/data_menu.dart';
+import 'package:osam2021/components/data_components/pie_chart.dart';
 
 class DataScreen extends StatelessWidget {
   final int selectedIndex = 0;
@@ -11,7 +11,7 @@ class DataScreen extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          title: Text("나의 잔반"),
+          title: Text("나의 잔반", style: TextStyle(fontSize: 20)),
           actions: [
             IconButton(
               icon: Icon(FontAwesomeIcons.bell),

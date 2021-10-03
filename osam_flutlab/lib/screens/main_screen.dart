@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'challenge_screen.dart';
+import 'challenge_screens/challenge_screen.dart';
 import 'data_screen.dart';
 import 'more_screen.dart';
 import 'onboarding_screen.dart';
@@ -37,11 +37,11 @@ class _MainScreenState extends State<MainScreen> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(FontAwesomeIcons.trophy),
-            label: "Challenge",
+            label: "챌린지",
           ),
           BottomNavigationBarItem(
             icon: Icon(FontAwesomeIcons.chartBar),
-            label: "My data",
+            label: "내 잔반",
           ),
           BottomNavigationBarItem(
             icon: Icon(FontAwesomeIcons.user),

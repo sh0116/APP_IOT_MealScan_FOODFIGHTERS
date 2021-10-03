@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:osam2021/components/challenge_card.dart';
+import 'package:osam2021/components/challenge_components/challenge_card.dart';
 import 'package:provider/provider.dart';
 import 'package:osam2021/notifiers.dart';
 import 'package:animated_widgets/animated_widgets.dart';
