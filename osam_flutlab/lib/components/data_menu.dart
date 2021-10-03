@@ -45,6 +45,7 @@ class DataMenu extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(10)),
           color: c,
-        ));
+        )
+    );
   }
 }

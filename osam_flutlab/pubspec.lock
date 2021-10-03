@@ -36,6 +36,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
+  carousel_slider:
+    dependency: "direct main"
+    description:
+      name: carousel_slider
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.0.0"
   characters:
     dependency: transitive
     description:
@@ -64,6 +71,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.15.0"
+  cool_stepper:
+    dependency: "direct main"
+    description:
+      name: cool_stepper
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.1"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -179,20 +193,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.1"
-  ranked_list:
-    dependency: "direct main"
-    description:
-      name: ranked_list
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.2"
-  shirne_dialog:
-    dependency: "direct main"
-    description:
-      name: shirne_dialog
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.5.1"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -254,13 +254,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.4.2"
-  time_remaining:
-    dependency: "direct main"
-    description:
-      name: time_remaining
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.2"
   typed_data:
     dependency: transitive
     description:

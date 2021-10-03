@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'challenge_screen.dart';
 import 'data_screen.dart';
 import 'more_screen.dart';
+import 'onboarding_screen.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -19,7 +20,7 @@ class _MainScreenState extends State<MainScreen> {
         children: [
           ChallengeScreen(),
           DataScreen(),
-          MoreScreen(),
+          OnboardingScreen(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

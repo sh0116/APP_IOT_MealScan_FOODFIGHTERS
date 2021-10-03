@@ -18,35 +18,13 @@ class ChallengeCard extends StatefulWidget {
 }
 //https://pub.dev/packages/buttons_tabbar
 //https://pub.dev/packages/animated_button_bar
-//https://sergiandreplace.com/planets-flutter-creating-a-planet-card/
-//https://flutterawesome.com/a-flutter-widget-with-the-goal-of-simplifying-styling-and-to-reduce-nesting/
+
 class _ChallengeCardState extends State<ChallengeCard> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        
-        // Card(
-        //     child: InkWell(
-        //   onTap: () {
-        //     if (widget.added) {
-        //       _navigateToInfoScreen(context);
-        //     } else {
-        //       _navigateToChallengeInfo(context);
-        //     }
-        //   },
-        //   child: ListTile(
-        //     title: Text(widget.challenge.name, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
-        //     subtitle: _buildCardSubtitles(defaultDuration, defaultPadding),
-        //     trailing: widget.challenge.added ? Icon(FontAwesomeIcons.checkCircle) : Icon(FontAwesomeIcons.chevronRight),
-        //     isThreeLine: true,
-        //   ),
-        // )),
-       //_openCard(),
-      // _createCard(),
-      _selectCard(),
-        
-        SizedBox(height: 30)
+        _selectCard(),
       ],
     );
   }
@@ -65,6 +43,7 @@ class _ChallengeCardState extends State<ChallengeCard> {
     Duration defaultDuration = Duration(days: remaining.inDays, hours: int.parse(date[1]), minutes: int.parse(date[2]));
     const defaultPadding = EdgeInsets.symmetric(horizontal: 10, vertical: 3);
     String name = widget.challenge.name;
+
     return Container(
       child: InkWell(
         onTap: () {
@@ -86,11 +65,11 @@ class _ChallengeCardState extends State<ChallengeCard> {
                       ),
                       icon: Padding(
                         padding: EdgeInsets.only(right: 5),
-                          child: Icon(
-                                    Icons.alarm,
-                                    color: Colors.white,
-                                    size: 15,
-                                  ),
+                        child: Icon(
+                                  Icons.alarm,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
                       ),
                     ),
                   ],
@@ -135,7 +114,6 @@ class _ChallengeCardState extends State<ChallengeCard> {
   Widget _openCard() {
     String name = widget.challenge.name;
     String attendant = widget.challenge.attendants + "명 참가 중";
-
     var dest = DateTime.parse(widget.challenge.date);
     var today = DateTime.now();
     var from = DateTime(dest.year, dest.month, dest.day);
@@ -194,18 +172,18 @@ class _ChallengeCardState extends State<ChallengeCard> {
                 ]
               ),
               SizedBox(height:3),
-               Row(
-                    children: [
-                      SizedBox(width: 4),
-                      Icon(FontAwesomeIcons.users, size: 16, color: Colors.black),
-                      SizedBox(
-                         width: 10,
-                      ),
-                      Text("$attendant",
-                          style: TextStyle(fontSize: 14, color: Colors.black,)
-                      ),                    
-                    ]
+              Row(
+                children: [
+                  SizedBox(width: 4),
+                  Icon(FontAwesomeIcons.users, size: 16, color: Colors.black),
+                  SizedBox(
+                    width: 10,
                   ),
+                  Text("$attendant",
+                    style: TextStyle(fontSize: 14, color: Colors.black,)
+                  ),
+                ]
+              ),
             ]
           ),
         ),

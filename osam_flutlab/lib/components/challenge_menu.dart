@@ -21,7 +21,6 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
       children: [
         _buildScreenSelector(),
         _buildItems(context),
-        // _buildSwipableCards(context),
       ],
     );
   }
@@ -35,8 +34,8 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
     final addedItems = List.generate(notifiers.added.length, (index) => ChallengeCard(challenge: notifiers.added[index], added: true, notifyParent: refresh));
     final openItems = List.generate(notifiers.opened.length, (index) => ChallengeCard(challenge: notifiers.opened[index], added: false, notifyParent: refresh));
 
-    return selectedId == 0
-        ? (notifiers.added.length == 0 //ADDED
+    return selectedId == 0 // 참가 중 탭 설정
+        ? (notifiers.added.length == 0 
             ? Center(
                 child: Column(children: [
                 Text(
@@ -65,7 +64,7 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
                 )
               ]))
             : 
-            ListView.builder(
+            ListView.separated(
               shrinkWrap: true,
               itemCount: addedItems.length,
               itemBuilder: (context, index) {
@@ -83,10 +82,17 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
                   },
                   background: Container(color: Colors.red),
                   child: item);
-              },))
+              },
+              separatorBuilder: (BuildContext context, int index) {
+                return SizedBox(
+                  height: 30
+                );
+              }
+            )
+          )
 
         : 
-            ListView.builder(
+            ListView.separated(
               shrinkWrap: true,
               itemCount: openItems.length,
               itemBuilder: (context, index) {
@@ -104,7 +110,13 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
                   },
                   background: Container(color: Colors.green),
                   child: item);
-              },);
+              },
+              separatorBuilder: (BuildContext context, int index) {
+                return SizedBox(
+                  height: 30
+                );
+              }
+            );
   }
 
   Widget _buildScreenSelector() {
