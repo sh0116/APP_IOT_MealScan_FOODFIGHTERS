@@ -5,8 +5,6 @@ import 'package:osam2021/screens/added_challenge_info.dart';
 import 'package:osam2021/screens/challenge_info.dart';
 import 'package:intl/intl.dart';
 import 'package:slide_countdown/slide_countdown.dart';
-import 'package:osam2021/notifiers.dart';
-import 'package:provider/provider.dart';
 
 
 class ChallengeCard extends StatefulWidget {
@@ -25,14 +23,6 @@ class ChallengeCard extends StatefulWidget {
 class _ChallengeCardState extends State<ChallengeCard> {
   @override
   Widget build(BuildContext context) {
-    DateFormat format = DateFormat("hh:mm:ss");
-    int estimateTs = DateTime.parse(widget.challenge.date).millisecondsSinceEpoch;
-    int now = DateTime.now().millisecondsSinceEpoch;
-    Duration remaining = Duration(milliseconds: estimateTs - now);
-    String formattedRemaining = '${remaining.inDays}:${format.format(DateTime.fromMillisecondsSinceEpoch(remaining.inMilliseconds))}';
-    var date = formattedRemaining.split(":");
-    Duration defaultDuration = Duration(days: remaining.inDays, hours: int.parse(date[1]), minutes: int.parse(date[2]));
-    const defaultPadding = EdgeInsets.symmetric(horizontal: 10, vertical: 3);
     return Column(
       children: [
         
@@ -222,44 +212,6 @@ class _ChallengeCardState extends State<ChallengeCard> {
       ),
     );
 
-  }
-
-
-  Widget _buildCardSubtitles(Duration duration, var padding) {
-    return Row(children: [
-      SlideCountdown(
-        duration: duration,
-        padding: padding,
-        slideDirection: SlideDirection.up,
-        fade: true,
-        decoration: BoxDecoration(
-          color: Colors.black,
-          borderRadius: BorderRadius.all(Radius.circular(5)),
-        ),
-        icon: Padding(
-          padding: EdgeInsets.only(right: 5),
-          child: Icon(
-            Icons.alarm,
-            color: Colors.white,
-            size: 15,
-          ),
-        ),
-      ),
-      Chip(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(5))),
-        avatar: Icon(FontAwesomeIcons.users, color: Colors.white, size: 13),
-        label: Text(
-          widget.challenge.attendants,
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-        backgroundColor: Colors.black,
-        elevation: 6.0,
-        shadowColor: Colors.grey[60],
-        padding: padding,
-      ),
-    ]);
   }
 
   _navigateToChallengeInfo(BuildContext context) async {

@@ -29,7 +29,6 @@ class LeftoverBarchartState extends State<LeftoverBarchart> {
 
   @override
   Widget build(BuildContext context) {
-    int counter = 0;
     return AspectRatio(
       aspectRatio: 1,
       child: Card(

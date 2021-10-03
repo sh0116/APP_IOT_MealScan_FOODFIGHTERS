@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:osam2021/models/challenge.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'dart:ui';
-import 'package:shirne_dialog/shirne_dialog.dart';
 import 'package:provider/provider.dart';
-import 'package:osam2021/main.dart';
 import 'package:osam2021/notifiers.dart';
 
 class ChallengeInfo extends StatefulWidget {

@@ -3,7 +3,6 @@ import 'package:osam2021/models/challenge.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:osam2021/components/challenge_header.dart';
 import 'package:provider/provider.dart';
-import 'package:osam2021/main.dart';
 import 'package:osam2021/notifiers.dart';
 
 class AddedChallengeInfo extends StatefulWidget {
