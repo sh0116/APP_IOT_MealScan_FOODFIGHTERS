@@ -18,16 +18,18 @@ class Image_Processing:
 
 
 		for self.per in self.per_list:
+			print("{} : result ".format(self.per))
+			print(" side_1 | side_2 | side_3 |  rice  |  soup  |")
 			for self.tag in self.dish_tag:
-				print("{}{}.png".format(self.per,self.tag))
-				print(self.backProjection())
+				#print("{}{}.png".format(self.per,self.tag))
+				print( " {:.2f}  |".format(float(self.backProjection())) ,end="") 
+			print("\n")
 
 
 	# backProjection Function
 	def backProjection(self):
 		img = cv2.imread('asset/test_image/100_per/100_per{}.png'.format(self.tag), cv2.IMREAD_COLOR)
 		hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-		#print("asset/test_image/{}/{}{}.png".format(self.per,self.per,self.tag))
 		imgs = cv2.imread("asset/test_image/{}/{}{}.png".format(self.per,self.per,self.tag), cv2.IMREAD_COLOR)
 		hsvt = cv2.cvtColor(imgs, cv2.COLOR_BGR2HSV)
 
@@ -41,7 +43,8 @@ class Image_Processing:
 		thr = cv2.threshold(dst,50,255,0)[1]
 		thr = cv2.merge((thr,thr,thr)) 
 		res = cv2.bitwise_and(imgs,thr)
-		#cv2.imwrite('result{}.png'.format(self.cnt), res[self.box[1][1]:self.box[0][1],self.box[1][0]:self.box[2][0]])
+		cv2.imwrite('asset/result_test_image/result_{}{}.png'.format(self.per,self.tag), res)
+		
 		return self.processLog(res)
    
    
@@ -53,7 +56,10 @@ class Image_Processing:
 		count = counts[0]
 		proportion = (100 * count) / (h * w)
 		colour = [0,0,0]
+		
+
 		return 100.0 - proportion
+
 if __name__=="__main__":
 	Image_Processing()
 
