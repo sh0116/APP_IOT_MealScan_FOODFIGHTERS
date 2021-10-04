@@ -49,6 +49,10 @@
 >>>   행렬의 Max Weight를 찾는 연산을 하여 Max Weight와 Init data를 Mapping해 양 측정 알고리즘으로 넘긴다.<br>
 >> <br>
 >> 💡 Test Process에는 분류 알고리즘이 들어가지않는다. 자세한 내용은 아래 📌를 참고
+
+<div align="center" >
+<img src="../asset/rasp_table_1.png" >
+</div>
 <details>
 <summary>📌</summary>
  
@@ -61,11 +65,29 @@
  >> 하지만 Test Image의 음식 배치는 조절할 수 있기 때문에 분류 알고리즘을 넣을 필요성이 없다.<br>
 
 </details>
-<div align="center" >
-<img src="../asset/rasp_table_1.png" >
-</div>
+ 
  
 ### 양 측정 알고리즘
+ 
+>> 위 음식 분류 알고리즘을 통해 init data와 target data가 정상적으로 Mapping된 상태이다.<br>
+>> 양 측정 알고리즘은 역투영(BackProjection)을 기반으로 만들어진 알고리즘으로 Init data와 Target data를 비교하여<br>
+>> 잔반의 양을 측정하는 알고리즘이다<br><br>
+>> 양 측정 알고리즘은 총 3가지 과정으로 이루어졌다.
+ >>> **1. BackProjection**<br>
+ >>>　　역투영 알고리즘을 적용하는 단계이다 Mapping된 두 Image데이터를 역투영하여 1차 RESULT값을 출력한다. <br>
+ >>>　　1차 RESULT값은 역투영으로 매핑된 부분을 제외한 부분들을 반환하는 값이다.<br>
+ >>> **2. Masking**<br>
+ >>>　　위에서 만들어진 1차 RESULT값들을 threshold함수를 통해 모두 검정색(0,0,0)으로 바꿔주고 thr로 반환한다.<br>
+ >>>　　Target image와 thr을 bitwise_and함수를 통해 Masking 작업 해준다.<br>
+ >>> **3. 비율 측정**<br>
+ >>>　　마스킹된 즉 Image중 RGB(0,0,0)인 부분은 잔반으로 감지가 안된 부분이다. <br>
+ >>>　　따라서 전체 픽셀의 갯수와 RGB(0,0,0)인 픽셀의 갯수를 비교하여 백분율값을 출력하면 잔반을 남긴 양이 된다. <br>
+ <div align="center">
+ <img src="../asset/expression_1.png">
+ <br>
+ 
+ <img src="../asset/masking.png">
+  </div>
  ___
  
 <h3> 음식 분류 알고리즘 및 양 측정 알고리즘 테스트 결과 </h3>
