@@ -4,6 +4,11 @@
 <img src="../asset/rasp.png">
 </div>
 
+## 🗃목차
+### [1.🛠Process 구조](#main)
+### [2.📋Jupyter Notebook(colab)](#음식-분류-알고리즘-및-양-측정-알고리즘-테스트)
+### [3.📊Sequence Diagram](#sequence-diagram)
+
 <div align="left">
 
  
@@ -13,9 +18,10 @@
 <h3>image_processing</h3>
 <h3>qr_processing</h3>
 <h3>utill & database</h3>
- 
-<h2> 📋Jupyter Notebook(colab) </h2>
-<h3> ● 음식 분류 알고리즘 및 양 측정 알고리즘 테스트</h3>
+
+## 📋Jupyter Notebook(colab) 
+### 음식 분류 알고리즘 및 양 측정 알고리즘 테스트
+
 
  ___
  
@@ -31,8 +37,13 @@
 <br> <br>
 
 Jupyter Notebook을 직접 실행하려면, Colab에서 [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/blob/master/osam2021_raspi/test_ImageProcess%20.ipynb) 를 실행하세요!
+ 
 <h2> 📊Sequence Diagram </h2>
+<div align="center">
+ 
+### Sequence Diagram 
+ 
 <img src="../asset/Sequence.png">
-
+</div>
 
 </div>
