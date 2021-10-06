@@ -55,7 +55,7 @@ class LeftoverPieChartState extends State {
               children: const <Widget>[
                 Indicator(
                   color: Color(0xff0293ee),
-                  text: 'First',
+                  text: '꽈리고추멸치볶음',
                   isSquare: true,
                 ),
                 SizedBox(
@@ -63,7 +63,7 @@ class LeftoverPieChartState extends State {
                 ),
                 Indicator(
                   color: Color(0xfff8b250),
-                  text: 'Second',
+                  text: '햄감자채볶음',
                   isSquare: true,
                 ),
                 SizedBox(
@@ -71,7 +71,7 @@ class LeftoverPieChartState extends State {
                 ),
                 Indicator(
                   color: Color(0xff845bef),
-                  text: 'Third',
+                  text: '쇠고기 무국',
                   isSquare: true,
                 ),
                 SizedBox(
@@ -79,7 +79,7 @@ class LeftoverPieChartState extends State {
                 ),
                 Indicator(
                   color: Color(0xff13d38e),
-                  text: 'Fourth',
+                  text: '기타',
                   isSquare: true,
                 ),
                 SizedBox(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:osam2021/components/onboarding_components/onboarding_carousel.dart';
+import 'package:osam2021/screens/onboarding_screens/onboarding_questions.dart';
 
 class OnboardingScreen extends StatelessWidget {
   final int selectedIndex = 0;
@@ -21,7 +22,11 @@ class OnboardingScreen extends StatelessWidget {
               color: Colors.black,
               child: 
                 Text("시작하기", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18, color: Colors.white)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute<void>(builder: (BuildContext context) {
+                  return OnboardingQuestions();
+                }));
+              },
               height: 60,
               shape: RoundedRectangleBorder(
                 side: BorderSide(color: Colors.black),

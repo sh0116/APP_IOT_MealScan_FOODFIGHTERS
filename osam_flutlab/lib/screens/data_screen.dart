@@ -55,7 +55,7 @@ class DataScreen extends StatelessWidget {
               SizedBox(height: 30),
               Row(children: [
                 Text(
-                  "선호 / 비선호 메뉴",
+                  "저번 달 비선호 메뉴",
                   style: TextStyle(
                       fontSize: 20,
                       color: Color(0xFF414160),
