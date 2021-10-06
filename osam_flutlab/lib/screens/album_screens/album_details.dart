@@ -51,9 +51,7 @@ class AlbumDetails extends StatelessWidget {
           ],
       ),
       body: Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
+        child: ListView(
           children: <Widget>[
             Expanded(
               child: Hero(
@@ -72,7 +70,6 @@ class AlbumDetails extends StatelessWidget {
               ),
             ),
             Container(
-              height: 260,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
