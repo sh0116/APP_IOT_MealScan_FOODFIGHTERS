@@ -1,5 +1,4 @@
 import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:cool_stepper/cool_stepper.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -36,9 +35,10 @@ class _OnboardingQuestionsState extends State<OnboardingQuestions> {
                   },
                   decoration: InputDecoration(
                       labelText: '이름',
-                      labelStyle: TextStyle(color: Colors.black),
+                      labelStyle: TextStyle(color: Colors.black38, fontSize: 12),
                       focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black))),
+                          borderSide: BorderSide(color: Colors.black))
+                  ),
                   validator: (value) {
                     if (value!.isEmpty) {
                       return '이름은 필수로 입력해주세요.';
@@ -58,7 +58,7 @@ class _OnboardingQuestionsState extends State<OnboardingQuestions> {
                   },
                   decoration: InputDecoration(
                       labelText: '군번 (- 포함)',
-                      labelStyle: TextStyle(color: Colors.black),
+                      labelStyle: TextStyle(color: Colors.black38, fontSize: 12),
                       focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.black))),
                   validator: (value) {
@@ -99,7 +99,7 @@ class _OnboardingQuestionsState extends State<OnboardingQuestions> {
                   },
                   decoration: InputDecoration(
                       labelText: '부대 고유코드',
-                      labelStyle: TextStyle(color: Colors.black),
+                      labelStyle: TextStyle(color: Colors.black38, fontSize: 12),
                       focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.black))),
                   validator: (value) {
@@ -142,8 +142,8 @@ class _OnboardingQuestionsState extends State<OnboardingQuestions> {
           ofText: '/',
           headerColor: Color(0xfffafafa),
           titleTextStyle: TextStyle(
-              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18)),
+              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20)),
     );
-    return Scaffold(body: Container(child: stepper));
+    return Scaffold(body: Container(padding: EdgeInsets.only(top: 30), child: stepper));
   }
 }

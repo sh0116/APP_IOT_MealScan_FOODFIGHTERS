@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'challenge_screens/challenge_screen.dart';
 import 'data_screen.dart';
 import 'album_screens/album_screen.dart';
-import 'onboarding_screen.dart';
+import 'onboarding_screens/onboarding_screen.dart';
 
 class MainScreen extends StatefulWidget {
   @override
