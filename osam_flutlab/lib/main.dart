@@ -1,9 +1,12 @@
 import 'package:osam2021/screens/main_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:osam2021/screens/onboarding_screens/onboarding_two.dart';
 import 'package:provider/provider.dart';
 import 'package:osam2021/notifiers.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -27,7 +30,7 @@ class MyApp extends StatelessWidget {
             iconTheme: IconThemeData(color: Colors.black),
           ),
         ),
-        home: MainScreen(),
+        home: OnboardingTwo(),
       ),
     );
   }

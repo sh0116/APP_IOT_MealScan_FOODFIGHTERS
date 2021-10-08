@@ -1,6 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:cool_stepper/cool_stepper.dart';
-
+import 'package:osam2021/models/user/user_provider.dart';
+import 'package:provider/provider.dart';
 
 class OnboardingTwo extends StatefulWidget {
   @override
@@ -11,9 +13,17 @@ class OnboardingTwo extends StatefulWidget {
 class _OnboardingTwoState extends State<OnboardingTwo> {
   final _formKey = GlobalKey<FormState>();
   String? selectedRole = 'Writer';
+  String? name;
+  String? service_no;
+  String? password;
   final TextEditingController _nameCtrl = TextEditingController();
   final TextEditingController _numCtrl = TextEditingController();
   final TextEditingController _codeCtrl = TextEditingController();
+  var p;
+  void initState() {
+    p = Provider.of<UserProvider>(context, listen: false);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +51,7 @@ class _OnboardingTwoState extends State<OnboardingTwo> {
                   if (value!.isEmpty) {
                     return '군번은 필수로 입력해주세요.';
                   }
-                  
+
                   return null;
                 },
                 controller: _numCtrl,
@@ -53,7 +63,7 @@ class _OnboardingTwoState extends State<OnboardingTwo> {
           if (!_formKey.currentState!.validate()) {
             return '필수 정보를 입력해주세요.';
           }
-          
+
           return null;
         },
       ),
@@ -85,30 +95,29 @@ class _OnboardingTwoState extends State<OnboardingTwo> {
             return '부대 고유코드를 입력해주세요. 코드 없이는 챌린지에 참여할 수 없습니다.';
           }
           return null;
-        }, 
+        },
       ),
     ];
-    final stepper = CoolStepper(
-      showErrorSnackbar: false,
-      onCompleted: () {
-        print('Steps completed!');
-      },
-      steps: steps,
-      config: CoolStepperConfig(
-        backText: '이전',
-        nextText: '다음',
-        finalText: '완료하기'
-      ),
-    );
-    return Scaffold(
-      body: Container(
-        child: stepper
-      )
-
-    );
+    final stepper = GestureDetector(
+        child: CoolStepper(
+          showErrorSnackbar: false,
+          onCompleted: () {
+            print('Steps completed!');
+          },
+          steps: steps,
+          config: CoolStepperConfig(
+              backText: '이전', nextText: '다음', finalText: '완료하기'),
+        ),
+        onTap: () async {
+          name = _nameCtrl.text;
+          service_no = _numCtrl.text;
+          password = _codeCtrl.text;
+          p.send(name, service_no, password);
+        });
+    return Scaffold(body: Container(child: stepper));
   }
 
-    Widget _buildTextField({
+  Widget _buildTextField({
     String? labelText,
     FormFieldValidator<String>? validator,
     TextEditingController? controller,

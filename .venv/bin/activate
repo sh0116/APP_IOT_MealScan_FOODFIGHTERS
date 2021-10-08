@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/workspaces/APP_IOT_AI_MilitaryCafeteria_FOODFIGHTERS/.venv"
+VIRTUAL_ENV="/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/.venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
