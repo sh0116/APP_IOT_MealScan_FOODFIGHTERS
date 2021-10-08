@@ -44,7 +44,7 @@ class _MainScreenState extends State<MainScreen> {
             label: "내 잔반",
           ),
           BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.user),
+            icon: Icon(FontAwesomeIcons.images),
             label: "앨범",
           ),
         ],

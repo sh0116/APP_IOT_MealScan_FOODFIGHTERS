@@ -34,6 +34,8 @@ dependencies:
   cool_stepper: ^1.2.1
   flutter_swiper_plus:
   carousel_slider: ^4.0.0
+  syncfusion_flutter_gauges: 
+
 
 dev_dependencies:
   flutter_test:

@@ -1,7 +1,7 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
 export "FLUTTER_ROOT=/home/codespace/opt/flutter"
-export "FLUTTER_APPLICATION_PATH=/workspaces/APP_IOT_AI_MilitaryCafeteria_FOODFIGHTERS/osam_flutlab"
+export "FLUTTER_APPLICATION_PATH=/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam_flutlab"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_TARGET=lib/main.dart"
 export "FLUTTER_BUILD_DIR=build"

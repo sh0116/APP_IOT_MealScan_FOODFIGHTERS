@@ -1,4 +1,3 @@
-import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:cool_stepper/cool_stepper.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -30,6 +29,7 @@ class _OnboardingQuestionsState extends State<OnboardingQuestions> {
               Padding(
                 padding: const EdgeInsets.only(bottom: 20.0),
                 child: TextFormField(
+                  style: TextStyle(fontSize: 20),
                   onSaved: (value) {
                     print("이름");
                   },
@@ -53,6 +53,7 @@ class _OnboardingQuestionsState extends State<OnboardingQuestions> {
               Padding(
                 padding: const EdgeInsets.only(bottom: 20.0),
                 child: TextFormField(
+                  style: TextStyle(fontSize: 20),
                   onSaved: (value) {
                     print("군번");
                   },
@@ -94,6 +95,7 @@ class _OnboardingQuestionsState extends State<OnboardingQuestions> {
               Padding(
                 padding: const EdgeInsets.only(bottom: 20.0),
                 child: TextFormField(
+                  style: TextStyle(fontSize: 20),
                   onSaved: (value) {
                     print("고유코드");
                   },

@@ -3,6 +3,7 @@ import 'package:osam2021/components/data_components/leftover_barchart.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:osam2021/components/data_components/data_menu.dart';
 import 'package:osam2021/components/data_components/pie_chart.dart';
+import 'package:osam2021/components/data_components/gauge.dart';
 
 class DataScreen extends StatelessWidget {
   final int selectedIndex = 0;
@@ -25,6 +26,10 @@ class DataScreen extends StatelessWidget {
           padding: const EdgeInsets.only(left: 30, right: 30),
           child: ListView(
             children: [
+              Row(children: [
+                
+              ]),
+              Gauge(),
               Row(children: [
                 Text(
                   "식단 추천",
