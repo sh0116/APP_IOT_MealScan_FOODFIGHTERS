@@ -35,7 +35,6 @@ class DataScreen extends StatelessWidget {
                   "식단 추천",
                   style: TextStyle(
                       fontSize: 20,
-                      color: Color(0xFF414160),
                       fontWeight: FontWeight.w700), //TextStyle
                 ),
               ]),
@@ -49,7 +48,6 @@ class DataScreen extends StatelessWidget {
                   "일별 평균 잔반량",
                   style: TextStyle(
                       fontSize: 20,
-                      color: Color(0xFF414160),
                       fontWeight: FontWeight.w700), //TextStyle
                 ),
               ]),
@@ -63,7 +61,6 @@ class DataScreen extends StatelessWidget {
                   "저번 달 비선호 메뉴",
                   style: TextStyle(
                       fontSize: 20,
-                      color: Color(0xFF414160),
                       fontWeight: FontWeight.w700), //TextStyle
                 ),
               ]),
