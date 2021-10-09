@@ -102,7 +102,7 @@
  
 <br> <br>
 
-Jupyter Notebook을 직접 실행하려면, Colab에서 [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/blob/master/osam2021_raspi/test_ImageProcess%20.ipynb) 를 실행하세요!
+Jupyter Notebook을 직접 실행하려면, Colab에서 [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/blob/master/osam2021_raspi/test_ImageProcess%20.ipynb) [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing) 를 실행하세요!
  
 <h2> 📊Sequence Diagram </h2>
 <div align="center">
