@@ -1,4 +1,4 @@
-#!/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/.venv/bin/python3.8
+#!/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/.venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
