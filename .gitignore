@@ -2,3 +2,4 @@
 .packages
 build/
 pubspec.lock # Except for application packages
+osam_flutlab/.flutter-plugins-dependencies
