@@ -18,5 +18,6 @@ class UserProvider extends ChangeNotifier {
         .collection(USER)
         .doc(now.toString())
         .set(User(name, service_no, password, now).toJson());
+    print("sent");
   }
 }
