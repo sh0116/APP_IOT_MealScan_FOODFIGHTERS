@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.white,
             titleTextStyle: TextStyle(
               color: Colors.black,
-              fontSize: 18,
+              fontSize: 30,
               fontWeight: FontWeight.bold,
             ),
             iconTheme: IconThemeData(color: Colors.black),

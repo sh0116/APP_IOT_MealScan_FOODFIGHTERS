@@ -3,6 +3,7 @@ import 'package:osam2021/components/data_components/leftover_barchart.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:osam2021/components/data_components/data_menu.dart';
 import 'package:osam2021/components/data_components/pie_chart.dart';
+import 'package:osam2021/components/data_components/gauge.dart';
 
 class DataScreen extends StatelessWidget {
   final int selectedIndex = 0;
@@ -26,11 +27,14 @@ class DataScreen extends StatelessWidget {
           child: ListView(
             children: [
               Row(children: [
+                
+              ]),
+              Gauge(),
+              Row(children: [
                 Text(
                   "식단 추천",
                   style: TextStyle(
                       fontSize: 20,
-                      color: Color(0xFF414160),
                       fontWeight: FontWeight.w700), //TextStyle
                 ),
               ]),
@@ -44,7 +48,6 @@ class DataScreen extends StatelessWidget {
                   "일별 평균 잔반량",
                   style: TextStyle(
                       fontSize: 20,
-                      color: Color(0xFF414160),
                       fontWeight: FontWeight.w700), //TextStyle
                 ),
               ]),
@@ -55,10 +58,9 @@ class DataScreen extends StatelessWidget {
               SizedBox(height: 30),
               Row(children: [
                 Text(
-                  "선호 / 비선호 메뉴",
+                  "저번 달 비선호 메뉴",
                   style: TextStyle(
                       fontSize: 20,
-                      color: Color(0xFF414160),
                       fontWeight: FontWeight.w700), //TextStyle
                 ),
               ]),

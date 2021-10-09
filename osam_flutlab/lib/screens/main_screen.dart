@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'challenge_screens/challenge_screen.dart';
 import 'data_screen.dart';
-import 'more_screen.dart';
-import 'onboarding_screen.dart';
+import 'album_screens/album_screen.dart';
+import 'onboarding_screens/onboarding_screen.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -20,7 +20,7 @@ class _MainScreenState extends State<MainScreen> {
         children: [
           ChallengeScreen(),
           DataScreen(),
-          OnboardingScreen(),
+          AlbumScreen(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -44,8 +44,8 @@ class _MainScreenState extends State<MainScreen> {
             label: "내 잔반",
           ),
           BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.user),
-            label: "More",
+            icon: Icon(FontAwesomeIcons.images),
+            label: "앨범",
           ),
         ],
       ),
