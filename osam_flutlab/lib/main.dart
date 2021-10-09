@@ -1,5 +1,6 @@
 import 'package:osam2021/screens/main_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:osam2021/screens/onboarding_screens/onboarding_questions.dart';
 import 'package:osam2021/screens/onboarding_screens/onboarding_two.dart';
 import 'package:provider/provider.dart';
 import 'package:osam2021/notifiers.dart';

@@ -16,15 +16,9 @@ class _OnboardingTwoState extends State<OnboardingTwo> {
   String? name;
   String? service_no;
   String? password;
-  final TextEditingController _nameCtrl = TextEditingController();
-  final TextEditingController _numCtrl = TextEditingController();
-  final TextEditingController _codeCtrl = TextEditingController();
-  var p;
-  void initState() {
-    p = Provider.of<UserProvider>(context, listen: false);
-    super.initState();
-  }
-
+  TextEditingController _nameCtrl = TextEditingController();
+  TextEditingController _numCtrl = TextEditingController();
+  TextEditingController _codeCtrl = TextEditingController();
   @override
   Widget build(BuildContext context) {
     final steps = [
@@ -108,11 +102,14 @@ class _OnboardingTwoState extends State<OnboardingTwo> {
           config: CoolStepperConfig(
               backText: '이전', nextText: '다음', finalText: '완료하기'),
         ),
-        onTap: () async {
+        onTap: () async {          
+          var p = Provider.of<UserProvider>(context);
           name = _nameCtrl.text;
           service_no = _numCtrl.text;
           password = _codeCtrl.text;
+          print("test1");
           p.send(name, service_no, password);
+          print("test2");
         });
     return Scaffold(body: Container(child: stepper));
   }
