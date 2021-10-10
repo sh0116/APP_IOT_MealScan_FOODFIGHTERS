@@ -20,7 +20,7 @@ def get_menu(base_code):
     elif meal_type == 2:
         df = df.iloc[0:5,3]
     else:
-        df = df.iloc[0:5,6]
+        df = df.iloc[0:5,5]
     #remove unneeded parts
     final = [i.split("(")[0] for i in df.tolist()]
     return final
