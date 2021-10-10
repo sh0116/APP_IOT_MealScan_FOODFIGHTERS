@@ -102,7 +102,7 @@
  
 <br> <br>
 
-Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/blob/master/osam2021_raspi/test_ImageProcess%20.ipynb) 또는 [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing) 에서 실행해보세요!
+Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/blob/master/osam2021_raspi/test_ImageProcess%20.ipynb) 또는 [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing)에서 실행해보세요!
  
 <h2> 📊Sequence Diagram </h2>
 <div align="center">
