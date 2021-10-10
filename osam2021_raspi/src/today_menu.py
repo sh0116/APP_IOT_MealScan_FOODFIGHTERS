@@ -23,6 +23,8 @@ def get_menu(base_code):
         df = df.iloc[0:5,5]
     #remove unneeded parts
     final = [i.split("(")[0] for i in df.tolist()]
+    #sorted for processing purposes
+    final = sorted(final[2:]) + final[0:2]
     return final
 
 #Function returning today's date and meal type(1: breakfast, 2: lunch, 3: dinner)
