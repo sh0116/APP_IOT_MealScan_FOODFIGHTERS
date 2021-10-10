@@ -5,8 +5,14 @@ import 'package:osam2021/components/data_components/data_menu.dart';
 import 'package:osam2021/components/data_components/pie_chart.dart';
 import 'package:osam2021/components/data_components/gauge.dart';
 
-class DataScreen extends StatelessWidget {
+class DataScreen extends StatefulWidget {
+  @override
+  State<DataScreen> createState() => _DataScreenState();
+}
+
+class _DataScreenState extends State<DataScreen> {
   final int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,8 +21,10 @@ class DataScreen extends StatelessWidget {
           title: Text("나의 잔반", style: TextStyle(fontSize: 20)),
           actions: [
             IconButton(
-              icon: Icon(FontAwesomeIcons.bell),
-              onPressed: () {},
+              icon: Icon(FontAwesomeIcons.sync),
+              onPressed: () {
+                setState((){});
+              },
             ),
             SizedBox(width: 16),
           ],
