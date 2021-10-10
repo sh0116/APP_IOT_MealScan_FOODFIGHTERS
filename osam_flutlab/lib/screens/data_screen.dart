@@ -21,7 +21,7 @@ class _DataScreenState extends State<DataScreen> {
           title: Text("나의 잔반", style: TextStyle(fontSize: 20)),
           actions: [
             IconButton(
-              icon: Icon(FontAwesomeIcons.sync),
+              icon: Icon(FontAwesomeIcons.sync, size: 12),
               onPressed: () {
                 setState((){});
               },

@@ -38,7 +38,7 @@ class DataMenu extends StatelessWidget {
             SizedBox(height: 15),
             Text('$menu'),
             SizedBox(height: 25),
-            Text('\u{1F616} 적게 드세요: $disliked',
+            Text('\u{1F616} 적게 받으세요: $disliked',
                 style:
                     TextStyle(color: Colors.red, fontWeight: FontWeight.bold))
           ],
