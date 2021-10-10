@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:photo_view/photo_view.dart';
 
 class AlbumDetails extends StatelessWidget {
   final String imagePath;
   final String date;
   final String mealType;
-  final String price;
+  final String percentage;
   final String details;
   final int index;
 
@@ -14,18 +15,21 @@ class AlbumDetails extends StatelessWidget {
       {required this.imagePath,
       required this.date,
       required this.mealType,
-      required this.price,
+      required this.percentage,
       required this.details,
       required this.index});
       
   @override
   Widget build(BuildContext context) {
+    var splitDate = date.split('-');
+    var photoDescription = splitDate[0] + "년 " + splitDate[1] + "월 " + splitDate[2] +"일 (" + mealType + ") - " + percentage;
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
           iconTheme: IconThemeData(
             color: Color(0xff999999),
           ),
-          backgroundColor: Colors.transparent,
+          elevation: 0,
           leading: 
             IconButton(
               icon: Icon(
@@ -37,6 +41,7 @@ class AlbumDetails extends StatelessWidget {
                 Navigator.pop(context, true);
               },
             ),
+          title: Text(photoDescription, style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15)),
           actions: [
             IconButton(
               icon: Icon(
@@ -51,7 +56,7 @@ class AlbumDetails extends StatelessWidget {
           ],
       ),
       body: Container(
-        child: ListView(
+        child: Column(
           children: <Widget>[
             Expanded(
               child: Hero(
@@ -61,59 +66,14 @@ class AlbumDetails extends StatelessWidget {
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(30),
                         bottomRight: Radius.circular(30)),
-                    image: DecorationImage(
-                      image: AssetImage(imagePath),
-                      fit: BoxFit.cover,
-                    ),
                   ),
+                  child: PhotoView(
+                    imageProvider: AssetImage(imagePath),
+                    backgroundDecoration: BoxDecoration(
+                      color: Colors.white
+                    ),
+                  )
                 ),
-              ),
-            ),
-            Container(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          date,
-                          style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        Text(
-                          '$mealType',
-                          style: TextStyle(
-                            fontSize: 10,
-                          ),
-                        ),
-                        Text(
-                          price,
-                          style: TextStyle(
-                            color: Colors.lightBlueAccent,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          details,
-                          style: TextStyle(
-                            fontSize: 14,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
               ),
             ),
           ],

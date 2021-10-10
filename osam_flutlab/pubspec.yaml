@@ -38,6 +38,8 @@ dependencies:
   cloud_firestore:
   firebase_web:
   syncfusion_flutter_gauges: 
+  photo_view: ^0.13.0
+
 
 
 dev_dependencies:
@@ -87,13 +89,13 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
-    - lib/assets/images/
+    - assets/images/
 
 
   fonts:
     - family: SpoqaHanSansNeo
       fonts:
-        - asset: lib/assets/font/SpoqaHanSansNeo-Bold.ttf
-        - asset: lib/assets/font/SpoqaHanSansNeo-Light.ttf
-        - asset: lib/assets/font/SpoqaHanSansNeo-Medium.ttf
-        - asset: lib/assets/font/SpoqaHanSansNeo-Regular.ttf
+        - asset: assets/font/SpoqaHanSansNeo-Bold.ttf
+        - asset: assets/font/SpoqaHanSansNeo-Light.ttf
+        - asset: assets/font/SpoqaHanSansNeo-Medium.ttf
+        - asset: assets/font/SpoqaHanSansNeo-Regular.ttf

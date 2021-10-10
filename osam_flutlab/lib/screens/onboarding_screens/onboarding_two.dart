@@ -108,7 +108,7 @@ class _OnboardingTwoState extends State<OnboardingTwo> {
           service_no = _numCtrl.text;
           password = _codeCtrl.text;
           print("test1");
-          p.send(name, service_no, password);
+          await p.send(name, service_no, password);
           print("test2");
         });
     return Scaffold(body: Container(child: stepper));

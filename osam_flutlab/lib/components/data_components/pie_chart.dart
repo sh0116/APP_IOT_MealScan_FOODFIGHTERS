@@ -14,7 +14,7 @@ class LeftoverPieChartState extends State {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 1.3,
+      aspectRatio: 1.8,
       child: Card(
         color: Colors.white,
         child: Row(

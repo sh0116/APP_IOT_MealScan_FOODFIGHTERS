@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:cool_stepper/cool_stepper.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:osam2021/models/user/user_provider.dart';
+import 'package:provider/provider.dart';
 
 class OnboardingQuestions extends StatefulWidget {
   @override
@@ -129,13 +131,14 @@ class _OnboardingQuestionsState extends State<OnboardingQuestions> {
       ),
     ];
 
-    final stepper = CoolStepper(
-      showErrorSnackbar: true,
-      onCompleted: () {
-        print('Steps completed!');
-      },
-      steps: steps,
-      config: CoolStepperConfig(
+    final stepper = GestureDetector(
+      child: CoolStepper(
+        showErrorSnackbar: true,
+        onCompleted: () {
+          print('Steps completed!');
+        },
+        steps: steps,
+        config: CoolStepperConfig(
           icon: Icon(FontAwesomeIcons.circle, size: 1),
           backText: '이전',
           nextText: '다음',
@@ -144,7 +147,14 @@ class _OnboardingQuestionsState extends State<OnboardingQuestions> {
           ofText: '/',
           headerColor: Color(0xfffafafa),
           titleTextStyle: TextStyle(
-              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20)),
+            color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20
+          )
+        ),
+      ),
+      onTap: () async {          
+        var p = Provider.of<UserProvider>(context);
+        await p.send(name, serialNum, codeNum);
+      }
     );
     return Scaffold(body: Container(padding: EdgeInsets.only(top: 30), child: stepper));
   }

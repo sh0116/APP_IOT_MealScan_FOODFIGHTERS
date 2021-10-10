@@ -39,10 +39,10 @@ class DataScreen extends StatelessWidget {
                 ),
               ]),
               SizedBox(
-                height: 20,
+                height: 30,
               ),
               DataMenu(),
-              SizedBox(height: 30),
+              SizedBox(height: 50),
               Row(children: [
                 Text(
                   "일별 평균 잔반량",
@@ -52,10 +52,10 @@ class DataScreen extends StatelessWidget {
                 ),
               ]),
               SizedBox(
-                height: 20,
+                height: 30,
               ),
               LeftoverBarchart(),
-              SizedBox(height: 30),
+              SizedBox(height: 50),
               Row(children: [
                 Text(
                   "저번 달 비선호 메뉴",
@@ -64,7 +64,7 @@ class DataScreen extends StatelessWidget {
                       fontWeight: FontWeight.w700), //TextStyle
                 ),
               ]),
-              SizedBox(height: 20),
+              SizedBox(height: 30),
               LeftoverPieChart()
             ],
           ),
