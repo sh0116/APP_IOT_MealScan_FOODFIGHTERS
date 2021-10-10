@@ -16,8 +16,6 @@ class ChallengeCard extends StatefulWidget {
   @override
   _ChallengeCardState createState() => _ChallengeCardState();
 }
-//https://pub.dev/packages/buttons_tabbar
-//https://pub.dev/packages/animated_button_bar
 
 class _ChallengeCardState extends State<ChallengeCard> {
   @override
@@ -89,7 +87,7 @@ class _ChallengeCardState extends State<ChallengeCard> {
                               topRight: Radius.circular(55),
                             ),
                             boxShadow: [
-                              BoxShadow(offset: Offset(5, 10), blurRadius: 20, color: widget.challenge.bgColor2.withOpacity(0.2))
+                              BoxShadow(offset: Offset(0, 3), blurRadius: 4, spreadRadius: 4, color: widget.challenge.bgColor2.withOpacity(0.5))
                             ]),
               width: MediaQuery.of(context).size.width,
               height: 90,
@@ -143,7 +141,7 @@ class _ChallengeCardState extends State<ChallengeCard> {
                           topRight: Radius.circular(80),
                         ),
                         boxShadow: [
-                          BoxShadow(offset: Offset(5, 10), blurRadius: 20, color: widget.challenge.bgColor2.withOpacity(0.2))
+                          BoxShadow(offset: Offset(0, 3), blurRadius: 4, spreadRadius: 4, color: widget.challenge.bgColor2.withOpacity(0.5))
                         ]),
           width: MediaQuery.of(context).size.width,
           height: 130,
