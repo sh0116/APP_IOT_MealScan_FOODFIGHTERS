@@ -8,6 +8,10 @@ import time
 import sys
 import dropbox
 import wget
+
+'''
+Firebase credential path: 'military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json'  
+'''
 # initialize  the connection to our Firebase database 
 cred = credentials.Certificate('military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
 firebase_admin.initialize_app(cred)
@@ -17,61 +21,37 @@ db = firestore.client()
 date, meal_type = today_menu.get_date_meal()
 date_meal = date[2:] + '-'+str(meal_type)
 
-def send_image_firebase(id, image_address):
+#Function to send today's menu to firebase according to base code from init
+def firebase_send_meal(base_code):
+    menu = today_menu.get_menu(base_code)
     data = {
-    u'IMAGE_ADDRESS': image_address,
+    u'1ITEMNAME': menu[0],
+    u'2ITEMNAME': menu[1],
+    u'3ITEMNAME': menu[2],
+    u'4ITEMNAME': menu[3],
+    u'5ITEMNAME': menu[4]
+    }
+    db.collection(u'MEALPLANS').document(str(base_code)).collection(u'MEALS').document(date_meal).set(data)
+
+#Function to send image address saved in dropbox to firebase
+def firebase_send_image(id, image_address):
+    data = {
+    u'IMAGE_ADDRESS': image_address
     }
     db.collection(u'IMAGES').document(id).collection(u'WASTE_IMAGES').document(date_meal).set(data)
     
-
-def test():
-    test_id = "20-71209876"
-    test_food1 = '김치'
-    test_food1_amount = 36.7
-    # Create a dictionary to store the data before sending to the database
-    data_to_upload = {
-        'ID' : test_id,
-        'Food1': test_food1,
-        'Food1_Amount': test_food1_amount
+def firebase_send_user_waste(id, waste_list):
+    #get total waste amount to the nearest number by averaging
+    list_mean = round(sum(waste_list)/len(waste_list),2)
+    data = {
+    u'1ITEMAMOUNT': waste_list[0],
+    u'2ITEMAMOUNT': waste_list[1],
+    u'3ITEMAMOUNT': waste_list[2],
+    u'4ITEMAMOUNT': waste_list[3],
+    u'5ITEMAMOUNT': waste_list[4],
+    u'TOTALAMOUNT': list_mean
     }
-
-    # Post the data to the appropriate folder/branch within your database
-    result = FBConn.post(test_id,data_to_upload)
-
-
-    # Print the returned unique identifier
-    print(result)
-    return result
-
-def firebase_post(id, DataList):
-    # Create a dictionary to store the data before sending to the database
-    if 10 >= int(time.strftime('%H')) >= 6:
-        cnt  = 1
-    elif 15 >= int(time.strftime('%H')) >= 11:
-        cnt  = 2
-    else:
-        cnt  = 3
-
-    now_time = time.strftime('%y-%m-%d %H:%M:%S')
-    now_time2 = time.strftime('%y-%m-%d_') + str(cnt)
-    data_to_upload = \
-    {'ID': id ,
-        "item" : {
-            'Time' : now_time,
-            'Item_1': DataList[0],
-            'Item_2': DataList[1],
-            'Item_3': DataList[2],
-            'Item_4'  : DataList[3],
-            'Item_5'  : DataList[4],
-            }
-    }
-
-    # Post the data to the appropriate folder/branch within your database
-    result = FBConn.post(now_time2,data_to_upload)
-
-
-    # Print the returned unique identifier
-    return result
+    db.collection(u'USER_FOOD_WASTE').document(id).collection(date_meal[3:5]).document(date_meal).set(data)
 
 '''
 App key
@@ -101,11 +81,11 @@ class DropBoxManager:
 
 
 if __name__=="__main__":
-    #firebase_post("21-76012345",[11.1,22.2,33.3,44.4,55.5])
     #dr = DropBoxManager()
     #dr.UpLoadFile()
     #print(dr.GetFileLink())
-    send_image_firebase('20-71209928', 'https://www.dropbox.com/s/ykv4pxtj9drmo2u/242400462_1373290829734827_6153053469246703892_n.jpg?dl=0')
+    firebase_send_meal(2)
+    firebase_send_user_waste('20-71209928',[20.22, 10.11, 30.33, 40.32, 10.22])
     #wget.download(dr.GetFileLink())
     #exit(0)
     # Close the serial connection

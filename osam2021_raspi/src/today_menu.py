@@ -4,7 +4,7 @@ import pytz
 from datetime import date, datetime
 
 #dictionary for mapping base code to menu code 
-dic = {1 : 3389, 3033: 6176}
+dic = {1 : 3389, 2: 6176, 3:1691}
 
 #Function returing user's meal as a list
 def get_menu(base_code): 
