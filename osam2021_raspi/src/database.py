@@ -1,12 +1,28 @@
 from firebase import firebase
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
+import today_menu
 import datetime
 import time
 import sys
-
 import dropbox
 import wget
-# Create the connection to our Firebase database 
-FBConn = firebase.FirebaseApplication('https://military-cafeteria-default-rtdb.firebaseio.com/', None)
+# initialize  the connection to our Firebase database 
+cred = credentials.Certificate('military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
+firebase_admin.initialize_app(cred)
+db = firestore.client()
+
+#get date and meal_type
+date, meal_type = today_menu.get_date_meal()
+date_meal = date[2:] + '-'+str(meal_type)
+
+def send_image_firebase(id, image_address):
+    data = {
+    u'IMAGE_ADDRESS': image_address,
+    }
+    db.collection(u'IMAGES').document(id).collection(u'WASTE_IMAGES').document(date_meal).set(data)
+    
 
 def test():
     test_id = "20-71209876"
@@ -31,8 +47,8 @@ def firebase_post(id, DataList):
     # Create a dictionary to store the data before sending to the database
     if 10 >= int(time.strftime('%H')) >= 6:
         cnt  = 1
-    elif 13 >= int(time.strftime('%H')) >= 11:
-        cnt  = 1
+    elif 15 >= int(time.strftime('%H')) >= 11:
+        cnt  = 2
     else:
         cnt  = 3
 
@@ -86,9 +102,10 @@ class DropBoxManager:
 
 if __name__=="__main__":
     #firebase_post("21-76012345",[11.1,22.2,33.3,44.4,55.5])
-    dr = DropBoxManager()
+    #dr = DropBoxManager()
     #dr.UpLoadFile()
-    print(dr.GetFileLink())
+    #print(dr.GetFileLink())
+    send_image_firebase('20-71209928', 'https://www.dropbox.com/s/ykv4pxtj9drmo2u/242400462_1373290829734827_6153053469246703892_n.jpg?dl=0')
     #wget.download(dr.GetFileLink())
     #exit(0)
     # Close the serial connection
