@@ -18,7 +18,7 @@ firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 #get date and meal_type
-date, meal_type = today_menu.get_date_meal()
+date, meal_type = today_menu.get_date_meal_type()
 date_meal = date[2:] + '-'+str(meal_type)
 
 #Function to send today's menu to firebase according to base code from init
@@ -33,13 +33,7 @@ def firebase_send_meal(base_code):
     }
     db.collection(u'MEALPLANS').document(str(base_code)).collection(u'MEALS').document(date_meal).set(data)
 
-#Function to send image address saved in dropbox to firebase
-def firebase_send_image(id, image_address):
-    data = {
-    u'IMAGE_ADDRESS': image_address
-    }
-    db.collection(u'IMAGES').document(id).collection(u'WASTE_IMAGES').document(date_meal).set(data)
-    
+#Function to send user waste to firebase 
 def firebase_send_user_waste(id, waste_list):
     #get total waste amount to the nearest number by averaging
     list_mean = round(sum(waste_list)/len(waste_list),2)
@@ -53,6 +47,13 @@ def firebase_send_user_waste(id, waste_list):
     }
     db.collection(u'USER_FOOD_WASTE').document(id).collection(date_meal[3:5]).document(date_meal).set(data)
 
+#Function to send image address saved in dropbox to firebase
+def firebase_send_image(id, image_address):
+    data = {
+    u'IMAGE_ADDRESS': image_address
+    }
+    db.collection(u'IMAGES').document(id).collection(u'WASTE_IMAGES').document(date_meal).set(data)
+    
 '''
 App key
 h18mokh27adozq8
@@ -84,8 +85,9 @@ if __name__=="__main__":
     #dr = DropBoxManager()
     #dr.UpLoadFile()
     #print(dr.GetFileLink())
-    firebase_send_meal(2)
     firebase_send_user_waste('20-71209928',[20.22, 10.11, 30.33, 40.32, 10.22])
+    firebase_send_image('20-71209928', 'https://www.dropbox.com/sh/nviozz69jq2fk2g/AAABjrsDoTppFd5-Ob2RRLGXa?dl=0&fbclid=IwAR2b7YFYHxw6g-ZsRu9EzTtBlULSRArFZ_nrxjYLHT-FPiuRQEaVOZ9DX8o&preview=100per.png')
+    firebase_send_meal(2)
     #wget.download(dr.GetFileLink())
     #exit(0)
     # Close the serial connection
