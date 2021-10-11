@@ -156,7 +156,7 @@ class _OnboardingQuestionsState extends State<OnboardingQuestions> {
       //to-do: make it so that data gets sent only when the final submit button is clicked.
       onTap: () async {          
         var now = (DateTime.now().millisecondsSinceEpoch).toString();
-        var test = "fas";
+        var test = 'fas';
         final f = FirebaseFirestore.instance;
         await f
         .collection('USER')
