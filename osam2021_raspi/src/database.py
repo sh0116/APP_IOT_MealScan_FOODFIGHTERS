@@ -3,6 +3,8 @@ import datetime
 import time
 import sys
 
+import dropbox
+import wget
 # Create the connection to our Firebase database 
 FBConn = firebase.FirebaseApplication('https://military-cafeteria-default-rtdb.firebaseio.com/', None)
 
@@ -55,8 +57,39 @@ def firebase_post(id, DataList):
     # Print the returned unique identifier
     return result
 
+'''
+App key
+h18mokh27adozq8
+App secret
+iieazt3mrgs02uv
+'''
+
+class DropBoxManager:
+    def __init__(self):
+        #public repo 하면 안됨 토큰값 -> 보안상의 목적으로는 환경변수로 등록하고 환경변수의 값을 불러오는 형태로 해야함.
+        #편의상 올려놓음 주의바람
+        self.token = "sl.A6IL75RRqHngbTKqYBErVIYQFtla37lnn95H4FhILVxoyfTYBDhZAQcoUeIbNAflVVOXJNcQ2sauvNle8guzsGVKW7fnwZX2jsGyyJTj6Mn4dkDY30Sx3Dg8RDo0Boj87JmJqzTJ7qJC"
+        self.fileName = "/workspaces/APP_IOT_AI_MilitaryCafeteria_FOODFIGHTERS/osam2021_raspi/asset/test_image/100_per/100per.png"
+        self.pathName = "/{}/100per.png".format(time.strftime('%y_%m_%d'))
+ 
+    def UpLoadFile(self):
+        dbx = dropbox.Dropbox(self.token,timeout=900)
+        with open(self.fileName, "rb") as f:
+            dbx.files_upload(f.read(), self.pathName, mode=dropbox.files.WriteMode.overwrite)
+ 
+    def GetFileLink(self):
+        dbx = dropbox.Dropbox(self.token,timeout=900)
+        shared_URL = dbx.sharing_create_shared_link_with_settings("/monthly_menu_base/제1691부대 식단 정보_월별.csv").url
+        modified_URL = shared_URL[:-1] + '1'
+        return modified_URL
+
+
 if __name__=="__main__":
-    firebase_post("21-76012345",[11.1,22.2,33.3,44.4,55.5])
+    #firebase_post("21-76012345",[11.1,22.2,33.3,44.4,55.5])
+    dr = DropBoxManager()
+    #dr.UpLoadFile()
+    print(dr.GetFileLink())
+    #wget.download(dr.GetFileLink())
     #exit(0)
     # Close the serial connection
     #ser.close()
