@@ -42,11 +42,11 @@ class _MyHomePageState extends State<MyHomePage> {
       itemBuilder: (BuildContext context, int index) {
         return ListTile(
           title: Text(
-            dataList[index]["BASE_CODE"].toString()
+            dataList[index]["test3"]
           ),
-          subtitle:  Text(dataList[index]["FIRST_ITEM_AMOUNT"]),
+          subtitle:  Text(dataList[index]["test1"]),
           trailing: Text(
-            dataList[index]["UPLOAD_MEAL"],
+            dataList[index]["test2"],
           ),
         );
       });

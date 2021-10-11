@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 class FireStoreDataBase {
   List usersList = [];
   final CollectionReference collectionRef =
-      FirebaseFirestore.instance.collection("USER_FOOD_WASTE");
+      FirebaseFirestore.instance.collection("Test");
 
    Future getData() async {
     try {
