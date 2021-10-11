@@ -1,8 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:cool_stepper/cool_stepper.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:osam2021/models/user/user_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:osam2021/models/user/user_model.dart';
 
 class OnboardingQuestions extends StatefulWidget {
   @override
@@ -151,9 +153,15 @@ class _OnboardingQuestionsState extends State<OnboardingQuestions> {
           )
         ),
       ),
+      //to-do: make it so that data gets sent only when the final submit button is clicked.
       onTap: () async {          
-        var p = Provider.of<UserProvider>(context);
-        await p.send(name, serialNum, codeNum);
+        var now = (DateTime.now().millisecondsSinceEpoch).toString();
+        var test = "fas";
+        final f = FirebaseFirestore.instance;
+        await f
+        .collection('USER')
+        .doc(test)
+        .set({'test':'pass'});
       }
     );
     return Scaffold(body: Container(padding: EdgeInsets.only(top: 30), child: stepper));

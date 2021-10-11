@@ -12,12 +12,14 @@ class UserProvider extends ChangeNotifier {
   final String? password;
 
   Future send(name, service_no, password) async {
+    
+    final g = FirebaseFirestore.instance;
+    await g.collection('USER').doc('test').set({'123':'456'});
     var now = DateTime.now().millisecondsSinceEpoch;
     final f = FirebaseFirestore.instance;
     await f
         .collection(USER)
-        .doc(now.toString())
+        .doc('now.toString()')
         .set(User(name, service_no, password, now).toJson());
-    print("sent");
   }
 }
