@@ -2,20 +2,22 @@ import cv2
 import numpy as np
 import glob
 def processLog(images):
-    #images = cv2.imread(img)
-    # Open this image and make a Numpy version for easy processing
+    # transfer image to numpy array
     imnp = np.array(images)
     h, w = imnp.shape[:2]
+
     # Get list of unique colours...
     # Arrange all pixels into a tall column of 3 RGB values and find unique rows (colours)
     colours, counts = np.unique(imnp.reshape(-1,3), axis=0, return_counts=1)
     # Iterate through unique colours
-    count = counts[0]
-    proportion = (100 * count) / (h * w)
-    colour = [0,0,0]
-    #print(f"   Colour: {colour}, count: {count}, proportion: {proportion:.2f}%")
+
+    # counts[0] is RGB(0,0,0)
+    # RGB(0,0,0) is masking area
+    # 100*counts[0]) / total size
+    proportion = (100 * counts[0]) / (h * w)
+
     return 100.0 - proportion
-# Iterate over all images called "log*png" in current directory
-def main():
+
+if __name__=="__main__":
     for filename in ["result2.png","result3.png","result5.png","result6.png","result4.png"]:
         processLog(filename)
