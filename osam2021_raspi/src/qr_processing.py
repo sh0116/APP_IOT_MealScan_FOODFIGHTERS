@@ -1,13 +1,15 @@
 import cv2
 import numpy as np
 
-
+# qr process class
 class Image_Processing:
     def __init__(self, image):
         # QR code detection object
         self.detector = cv2.QRCodeDetector()
-        self.data, self.bbox, _ = self.detector.detectAndDecode(image)
-
+        # data is User info
+        self.data, _, _ = self.detector.detectAndDecode(image)
+        
+    # get data info function
     def Data(self):
         if not self.data:
             self.data = "empty data"
