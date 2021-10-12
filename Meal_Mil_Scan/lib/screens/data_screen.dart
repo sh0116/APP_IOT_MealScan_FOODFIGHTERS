@@ -1,3 +1,4 @@
+/// 유저의 잔반 데이터 분석 후 잔반 클리어률, 저번 주 일별 잔반 클리어률, 선호/비선호 메뉴를 보여주는 데이터 스크린.
 import 'package:flutter/material.dart';
 import 'package:osam2021/components/data_components/leftover_barchart.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -21,7 +22,7 @@ class _DataScreenState extends State<DataScreen> {
           title: Text("나의 잔반", style: TextStyle(fontSize: 20)),
           actions: [
             IconButton(
-              icon: Icon(FontAwesomeIcons.sync, size: 12),
+              icon: Icon(FontAwesomeIcons.sync, size: 18),
               onPressed: () {
                 setState((){});
               },

@@ -1,3 +1,6 @@
+///챌린지 스크린에 보이는 참가 중 + 진행 중 화면을 모두 다루고 있음.
+///셀렉터를 통하여 두 화면 사이 toggle 가능함
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:osam2021/components/challenge_components/challenge_card.dart';
@@ -27,15 +30,18 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
 
   Widget _buildItems(BuildContext context) {
     final notifiers = context.watch<Notifiers>();
-    final String noChallengeText = "참가 중인 챌린지가 없네요.\n"
+    final String noChallengeText = "참가 중인 챌린지가 없네요.\n" // 참가중인 챌린지가 없을시 보이는 참가독려 텍스트
         "지금 참가하여 상점, 전투휴무 등 다양한\n"
         "포상 획득하세요.\n";
 
+    /// Provider에 기록된 참가중, 진행중 챌린지들을 불러내어 챌린지 카드로 만듬. 
+    /// 챌린지 카드로 참가중/진행중 여부 (added)를 pass하고, 챌린지 스크린 UI에 업데이트된 provider
+    /// 데이터로 최신화할 수 있도록 setState을 유도하는 function 또한 전달함.
     final addedItems = List.generate(notifiers.added.length, (index) => ChallengeCard(challenge: notifiers.added[index], added: true, notifyParent: refresh));
     final openItems = List.generate(notifiers.opened.length, (index) => ChallengeCard(challenge: notifiers.opened[index], added: false, notifyParent: refresh));
 
-    return selectedId == 0 // 참가 중 탭 설정
-        ? (notifiers.added.length == 0 
+    return selectedId == 0 // 디폴트로 참가 중 페이지가 설정되어있음
+        ? (notifiers.added.length == 0 //참가 중인 챌린지가 없을 시 보이는 화면: 참가 독려 텍스트와 아이콘이 보임.
             ? Center(
                 child: Column(children: [
                 Text(
@@ -47,7 +53,7 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
                   shakeAngle: Rotation.deg(z: 40),
                   curve: Curves.linear,
                   child: MaterialButton(
-                    onPressed: () {
+                    onPressed: () { // 참가 독려 아이콘 탭할 시 진행 중 탭 화면으로 전환.
                       setState(() {
                         selectedId = 1;
                       });
@@ -63,13 +69,13 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
                   ),
                 )
               ]))
-            : 
+            : // 참가 중인 챌린지가 있는 경우, 참가 중 탭 화면에서 보여줌.
             ListView.separated(
               shrinkWrap: true,
               itemCount: addedItems.length,
               itemBuilder: (context, index) {
                 final item = addedItems[index];
-                return Dismissible(
+                return Dismissible( // swipe하여 챌린지 삭제 가능
                   key: Key(notifiers.added[index].name),
                   onDismissed: (direction) {
                     notifiers.openChallenge(notifiers.added[index]);
@@ -90,14 +96,13 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
               }
             )
           )
-
-        : 
+        : //진행 중 탭으로 전환된 경우: 참여가능한 챌린지 리스트를 보여줌.
             ListView.separated(
               shrinkWrap: true,
               itemCount: openItems.length,
               itemBuilder: (context, index) {
                 final item = openItems[index];
-                return Dismissible(
+                return Dismissible( //swipe하여 참가 가능
                   key: Key(notifiers.opened[index].name),
                   onDismissed: (direction) {
                     notifiers.addChallenge(notifiers.opened[index]);
@@ -119,6 +124,7 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
             );
   }
 
+/// '참가 중', '진행 중' 챌린지 사이에서 셀렉터로 toggle 가능.
   Widget _buildScreenSelector() {
     return Padding(
       padding: const EdgeInsets.only(left: 30, right: 30, top: 10, bottom: 30),
@@ -137,6 +143,7 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
     setState(() {});
   }
 
+/// 셀렉터의 버튼을 만듬. 선택된 버튼을 검은색 배경으로 바뀜. 
   Widget _buildHeaderSelectorButton(int id, String t) {
     return InkWell(
       onTap: () {
