@@ -2,13 +2,15 @@ import cv2
 import numpy as np
 import os
 
+# init process class
 class Image_Processing:
 	def __init__(self, image):
+		# get image from main_process
 		self.image = image
 		self.images = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
 		self.image_lenght_x,self.image_lenght_y,_ =  self.image.shape
-		#cv2.imwrite("1.png", self.image)
 
+		# split image (x,y)point
 		dish = list()
 		rect_range = [[245,420,155,260],[60,235,155,260],[60,175,60,145],[185,300,60,145],[310,420,60,145]]
 		for x1,x2,y1,y2 in rect_range:
@@ -17,7 +19,7 @@ class Image_Processing:
 		# split main,side dish
 		self.main_dish,self·side_dish  = dish[:2], dish[2:]
 
-
+		# split image save in local (Path : ~/asset/*.png)
 		dish_tag = ["side_1","side_2","side_3","rice","soup"]
 		self.cnt=0
 		for self.box in np.array(self·side_dish):
