@@ -1,3 +1,5 @@
+// 챌린지 카드를 눌렀을 시 팝업으로 뜨는 다이얼로그를 다루고 있음.
+// 챌린지 관련 정보 (마감일, 지휘관 전파사항, 포상)을 보여줌
 import 'package:flutter/material.dart';
 import 'package:osam2021/models/challenge.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -12,7 +14,7 @@ class ChallengeInfo extends StatefulWidget {
   @override
   _ChallengeInfoState createState() => _ChallengeInfoState();
 }
-
+/// 다이얼로그 생성.
 class _ChallengeInfoState extends State<ChallengeInfo> {
   @override
   Widget build(BuildContext context) {
@@ -36,7 +38,6 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
                     ),
                     SizedBox(height: 5),
                     _buildSubtitle(),
-                    SizedBox(height: 10)
                   ],
                 ),
                 Column(
@@ -56,13 +57,15 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
   }
 
   Widget _buildSubtitle() {
+    var splitDate = widget.challenge.date.split('-');
+    var formattedDate = splitDate[0] + "년 " + splitDate[1] + "월 " + splitDate[2].substring(0, 2) +"일";
     return Wrap(
       children: [
         Icon(FontAwesomeIcons.solidClock, color: Color(0xff5B5555), size: 15),
         SizedBox(
           width: 4,
         ),
-        Text(widget.challenge.date + " 종료   ", style: TextStyle(color: Color(0xff5B5555))),
+        Text(formattedDate + " 종료   ", style: TextStyle(color: Color(0xff5B5555))),
         Icon(FontAwesomeIcons.solidUser, color: Color(0xff5B5555), size: 15),
         SizedBox(
           width: 4,
@@ -82,9 +85,10 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
           children: [
             Icon(FontAwesomeIcons.bullhorn, color: Color(0xff5B5555), size: 15),
             Text('  지휘관 전파사항', style: TextStyle(color: Color(0xff5B5555),)),
-            Text('  $announcement', style: TextStyle(color: Color(0xff000000)))
           ],
         ),
+        SizedBox(height: 5),
+        Text('  $announcement', style: TextStyle(color: Color(0xff000000))),
         SizedBox(height: 10),
         
       ],
@@ -102,7 +106,7 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
             Text(' 포상', style: TextStyle(color: Color(0xff5B5555))),
           ],
         ),
-        SizedBox(height: 10),
+        SizedBox(height: 5),
         Text('  $prize', style: TextStyle(color: Color(0xff000000)))
       ],
     );
@@ -130,7 +134,8 @@ class _ChallengeInfoState extends State<ChallengeInfo> {
                 textStyle:
                     const TextStyle(fontSize: 20),
               ),
-              onPressed: () {
+              // 참가하기 버튼 누를 시 스낵바가 등장하여 유저를 참가중 탭으로 가이드함
+              onPressed: () { 
                 notifiers.addChallenge(widget.challenge);
                 notifiers.closeChallenge(widget.challenge);
                 Navigator.of(context).pop();

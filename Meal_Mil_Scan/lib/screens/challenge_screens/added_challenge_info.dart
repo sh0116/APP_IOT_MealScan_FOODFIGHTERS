@@ -40,7 +40,7 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
                   FontAwesomeIcons.trashAlt,
                   size: 20,
                   color: Color(0xff999999),
-                ), // Icon
+                ),
                 onPressed: () {
                   notifier.deleteChallenge(widget.challenge);
                   notifier.openChallenge(widget.challenge);

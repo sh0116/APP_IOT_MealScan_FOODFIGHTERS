@@ -1,3 +1,6 @@
+//참가 중 및 진행 중 챌린지 화면에 보이는 챌린지 카드
+//챌린지 관련 기본 정보를 담고 있음
+
 import 'package:flutter/material.dart';
 import 'package:osam2021/models/challenge.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -8,9 +11,11 @@ import 'package:slide_countdown/slide_countdown.dart';
 
 
 class ChallengeCard extends StatefulWidget {
-  final Function() notifyParent;
-  final Challenge challenge;
-  final bool added;
+  ///유저가 챌린지에 참가하거나 삭제했을 때 챌린지 화면이 최신화 될수 있도록함
+  final Function() notifyParent; 
+  final Challenge challenge; 
+  /// 참가중인 챌린지인지 여부
+  final bool added; 
   const ChallengeCard({required this.notifyParent, required this.challenge, required this.added});
 
   @override
