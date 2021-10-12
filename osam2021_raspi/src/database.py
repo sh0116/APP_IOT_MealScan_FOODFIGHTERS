@@ -2,6 +2,8 @@ from firebase import firebase
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
+from pydrive.auth import GoogleAuth
+from pydrive.drive import GoogleDrive
 import today_menu
 import datetime
 import time
