@@ -74,7 +74,8 @@ if __name__=="__main__":
     b_code = 1
     w_list = [20.22, 10.11, 30.33, 40.32, 10.22]
     i_address = "/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/test_image/100_per/100per.png"
-    firebase_send_meal(b_code)
+    #Currently not working in raspi
+    # firebase_send_meal(b_code)
     firebase_send_user_waste(id,w_list)
     firestore_send_image(id, i_address)
     
