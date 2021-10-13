@@ -9,7 +9,7 @@ dic = {1 : 3389, 2: 6176, 3:1691}
 #Function returing user's meal as a list
 def get_menu(base_code): 
     #get path of csv file 
-    path = '/osam/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/monthly_menu_base/base_'+ str(dic[base_code]) +'.csv'
+    path = '~/osam/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/monthly_menu_base/base_'+ str(dic[base_code]) +'.csv'
     #make a dataframe of user's menu
     df = pd.read_csv(path, encoding='euc-kr')
     today_date, meal_type = get_date_meal_type()
