@@ -74,7 +74,7 @@ if __name__=="__main__":
     b_code = 1
     w_list = [20.22, 10.11, 30.33, 40.32, 10.22]
     #path for raspi
-    i_address = '~/osam/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/test_image/100_per/100per.png'
+    i_address = '/home/pi/osam/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/test_image/100_per/100per.png'
     #path for codespace
     #i_address = "/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/test_image/100_per/100per.png"
     #Currently not working in raspi
