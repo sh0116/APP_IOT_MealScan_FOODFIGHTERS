@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:osam2021/models/challenge.dart';
+import 'package:osam2021/models/challenge/challenge.dart';
+import 'package:osam2021/models/challenge/challenge_provider.dart';
+import 'firebase/database_challenge.dart';
 
 class Notifiers extends ChangeNotifier {
   final List<Challenge> _added = [];
-  final List<Challenge> _opened = open;
+  final List<Challenge> _opened = [];
 
   void addChallenge(Challenge challenge) {
     added.add(challenge);

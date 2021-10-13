@@ -1,7 +1,7 @@
 // 챌린지 카드를 눌렀을 시 팝업으로 뜨는 다이얼로그를 다루고 있음.
 // 챌린지 관련 정보 (마감일, 지휘관 전파사항, 포상)을 보여줌
 import 'package:flutter/material.dart';
-import 'package:osam2021/models/challenge.dart';
+import 'package:osam2021/models/challenge/challenge.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'dart:ui';
 import 'package:provider/provider.dart';
