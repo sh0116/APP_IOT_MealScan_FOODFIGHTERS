@@ -10,7 +10,7 @@ dic = {1 : 3389, 2: 6176, 3:1691}
 def get_menu(base_code): 
     #get path of csv file 
     #path for raspi
-    path = '~/osam/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/monthly_menu_base/base_'+ str(dic[base_code]) +'.csv'
+    path = '/home/pi/osam/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/monthly_menu_base/base_'+ str(dic[base_code]) +'.csv'
     #path for codespace
     #path = '/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/monthly_menu_base/base_'+ str(dic[base_code]) +'.csv'
     #make a dataframe of user's menu
