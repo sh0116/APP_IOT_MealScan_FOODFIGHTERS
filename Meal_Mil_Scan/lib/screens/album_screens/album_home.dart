@@ -15,23 +15,23 @@ import 'package:firebase_core/firebase_core.dart';
 //    FirebaseStorage.instance.ref().child('20-71209928/21-10-13-2.png');
 //String url = (ref.getDownloadURL()).toString();
 
-Future<String> getFileData() async {
-    final ref = FirebaseStorage.instance.ref().child('20-71209928/21-10-13-2.png');
-    var url = await ref.getDownloadURL();
-    return url.toString();
-  }
+//Future<String> getFileData() async {
+//    final ref = FirebaseStorage.instance.ref().child('20-71209928/21-10-13-2.png');
+//    var url = await ref.getDownloadURL();
+//    return url.toString();
+//  }
 
-final m = getFileData();
+//final m = getFileData();
 List<ImageDetails> _images = [
   ImageDetails(
-    imagePath: m,
+    imagePath: 'assets/images/meal1.jpg',
     percentage: '80%',
     mealType: '조식',
     date: '2021-11-29',
     details: '',
   ),
   ImageDetails(
-    imagePath: m,
+    imagePath: 'assets/images/meal2.jpg',
     percentage: '65%',
     mealType: '중식',
     date: '2021-11-30',
@@ -85,7 +85,7 @@ class AlbumHome extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           image: DecorationImage(
-                            image: Image.network(_images[index].imagePath).image,
+                            image: AssetImage(_images[index].imagePath),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -173,7 +173,7 @@ class AlbumHome extends StatelessWidget {
 }
 
 class ImageDetails {
-  final <Future>String imagePath;
+  final String imagePath;
   final String percentage;
   final String mealType;
   final String date;
