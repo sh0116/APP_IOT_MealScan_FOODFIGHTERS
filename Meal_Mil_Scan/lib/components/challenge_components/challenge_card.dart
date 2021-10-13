@@ -2,7 +2,7 @@
 //챌린지 관련 기본 정보를 담고 있음
 
 import 'package:flutter/material.dart';
-import 'package:osam2021/models/challenge.dart';
+import 'package:osam2021/models/challenge/challenge.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:osam2021/screens/challenge_screens/added_challenge_info.dart';
 import 'package:osam2021/screens/challenge_screens/challenge_info.dart';

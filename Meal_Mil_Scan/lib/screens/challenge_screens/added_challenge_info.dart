@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:osam2021/models/challenge.dart';
+import 'package:osam2021/models/challenge/challenge.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:osam2021/components/challenge_components/challenge_header.dart';
 import 'package:provider/provider.dart';

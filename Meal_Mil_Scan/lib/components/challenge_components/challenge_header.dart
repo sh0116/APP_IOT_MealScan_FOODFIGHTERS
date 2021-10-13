@@ -1,6 +1,6 @@
 /// 참가 중 챌린지 페이지에 들어가는 챌린지 헤더
 import 'package:flutter/material.dart';
-import 'package:osam2021/models/challenge.dart';
+import 'package:osam2021/models/challenge/challenge.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ChallengeHeader extends StatelessWidget {
