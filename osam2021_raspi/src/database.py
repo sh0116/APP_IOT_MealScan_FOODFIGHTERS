@@ -56,7 +56,7 @@ def firebase_send_user_waste(id, waste_list):
     #send to Firebase Firestore Database
     db.collection(u'USER_FOOD_WASTE').document(id).collection(date_meal[3:5]).document(date_meal).set(data)
 
-#Function to send image to Firebase Storage
+#Function to send image to Firebase Storage and send image path to Firebase Firestore
 def firestore_send_image(id, image_address):
     #set image path in Firebase Storage
     blob = bucket.blob(id +'/'+date_meal +'.png')
@@ -66,6 +66,15 @@ def firestore_send_image(id, image_address):
     blob.metadata = metadata
     #upload image to Firebase Storage
     blob.upload_from_filename(image_address)
+    #make blob public for simple access
+    blob.make_public()
+    #get url and set data
+    blob_url = blob.public_url
+    data = {
+        u'IMAGE_ADDRESS': blob_url
+    }
+    #send to Firebase Firestore Database
+    db.collection(u'IMAGES').document(id).collection('WASTE_IMAGES').document(date_meal).set(data)
 
 
 
@@ -76,25 +85,12 @@ if __name__=="__main__":
     #path for raspi
     i_address = '/home/pi/osam/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/test_image/100_per/100per.png'
     #path for codespace
-    #i_address = "/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/test_image/100_per/100per.png"
-    #Currently not working in raspi
+    #i_address = "/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/Meal_Mil_Scan/assets/images/meal2.jpg"
     firebase_send_meal(b_code)
     firebase_send_user_waste(id,w_list)
     firestore_send_image(id, i_address)
-    print("Successfully send data to Firebase")
-    
+    print("Successfully sent data to Firebase")
 
-
-
-"""
-어차피 firestore써서 필요없을듯 
-#Function to send image address saved in dropbox to Firebase Firestore Database
-def firebase_send_image_address(id, image_address):
-    data = {
-    u'IMAGE_ADDRESS': image_address
-    }
-    db.collection(u'IMAGES').document(id).collection(u'WASTE_IMAGES').document(date_meal).set(data)
-"""
 '''
 App key
 h18mokh27adozq8
