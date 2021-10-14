@@ -1,5 +1,5 @@
 import 'package:osam2021/firebase/database_challenge.dart';
-import 'package:osam2021/firebase/database_manager.dart';
+import 'package:osam2021/firebase/database_images.dart';
 import 'package:flutter/material.dart';
 import 'package:osam2021/models/challenge/challenge_provider.dart';
 
