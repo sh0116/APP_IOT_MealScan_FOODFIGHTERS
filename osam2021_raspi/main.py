@@ -15,8 +15,6 @@ class main_process():
     def __init__(self):
        
         #self.cap = cv2.VideoCapture(0)
-        self.cap = PiCamera()
-        self.cap.resolution = (480, 360)
         # cv2.show size
         #self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 600)
         #self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 600)
@@ -68,6 +66,8 @@ class main_process():
         # show 'control panel'
         cv2.imshow('Control', control_image)
         '''
+        self.cap = PiCamera()
+        self.cap.resolution = (480, 360)
         self.cap.framerate = 32
         raw_capture = PiRGBArray(self.cap, size=(480, 360))
         time.sleep(0.1)
