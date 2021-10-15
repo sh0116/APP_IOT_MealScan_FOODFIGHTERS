@@ -4,6 +4,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:osam2021/components/challenge_components/challenge_card.dart';
+import 'package:osam2021/firebase/database_challenge.dart';
+import 'package:osam2021/models/challenge/challenge.dart';
 import 'package:provider/provider.dart';
 import 'package:osam2021/notifiers.dart';
 import 'package:animated_widgets/animated_widgets.dart';
@@ -17,26 +19,46 @@ class ChallengeMenu extends StatefulWidget {
 class _ChallengeMenuState extends State<ChallengeMenu> {
   int selectedId = 0;
   int counter = 0;
+  List challengeList = [];
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        _buildScreenSelector(),
-        _buildItems(context),
-      ],
+    return Scaffold(
+      body: FutureBuilder(
+        future: ChallengeDataBase().getData(),
+        builder: (context, snapshot) {
+          if (snapshot.hasError) {
+            return const Text(
+              "Something went wrong",
+            );
+          }
+          if (snapshot.connectionState == ConnectionState.done) {
+            challengeList = snapshot.data as List;
+            return Column(
+              children: [
+                _buildScreenSelector(),
+                _buildItems(context, challengeList),
+              ],
+            );
+          }
+          return const Center(child: CircularProgressIndicator());
+        },
+      ),
     );
   }
 
-  Widget _buildItems(BuildContext context) {
+  Widget _buildItems(BuildContext context, List dataList) {
     final notifiers = context.watch<Notifiers>();
     final String noChallengeText = "참가 중인 챌린지가 없네요.\n" // 참가중인 챌린지가 없을시 보이는 참가독려 텍스트
         "지금 참가하여 상점, 전투휴무 등 다양한\n"
         "포상 획득하세요.\n";
-
+    if (!notifiers.initialized) {
+      initializeNotifier(dataList, notifiers);
+    }
     /// Provider에 기록된 참가중, 진행중 챌린지들을 불러내어 챌린지 카드로 만듬. 
     /// 챌린지 카드로 참가중/진행중 여부 (added)를 pass하고, 챌린지 스크린 UI에 업데이트된 provider
     /// 데이터로 최신화할 수 있도록 setState을 유도하는 function 또한 전달함.
+    
     final addedItems = List.generate(notifiers.added.length, (index) => ChallengeCard(challenge: notifiers.added[index], added: true, notifyParent: refresh));
     final openItems = List.generate(notifiers.opened.length, (index) => ChallengeCard(challenge: notifiers.opened[index], added: false, notifyParent: refresh));
 
