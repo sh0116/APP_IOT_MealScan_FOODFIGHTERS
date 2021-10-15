@@ -39,6 +39,30 @@ def firebase_send_meal(base_code):
     }
     #send to Firebase Firestore Database
     db.collection(u'MEALPLANS').document(str(base_code)).collection(u'MEALS').document(date_meal).set(data)
+from random import randint
+
+def random_with_N_digits(n):
+    range_start = 10**(n-1)
+    range_end = (10**n)-1
+    return randint(range_start, range_end)
+
+def firebase_data():
+    participants = []
+    for i in range(0, 14):
+        num = '20-' +str(random_with_N_digits(8))
+        food_waste_array = [30 + i] *7
+        avg = str(30+i)+'%'
+        data = {
+            u'WASTE_AVG': avg,
+            u'WASTE_ARR': food_waste_array}
+        db.collection(u'USER_FOOD_WASTE_AVG').document(num).set(data)
+        participants += [num]
+        update1 = db.collection(u'CHALLENGE_RANK').document(u'1').collection(u'1').document(u'RANK')
+        num = num+'_AVG'
+        update1.update({num: avg, u'PARTICIPANTS': participants})
+
+#def test(id):
+
 
 #Function to send user waste to Firebase Firestore Database
 def firebase_send_user_waste(id, waste_list):
@@ -57,7 +81,7 @@ def firebase_send_user_waste(id, waste_list):
     db.collection(u'USER_FOOD_WASTE').document(id).collection(date_meal[3:5]).document(date_meal).set(data)
 
 #Function to send image to Firebase Storage and send image path to Firebase Firestore
-def firestore_send_image(id, image_address):
+def firestore_send_image(id, image_address, waste_list):
     #set image path in Firebase Storage
     blob = bucket.blob(id +'/'+date_meal +'.png')
     #set accesstoken and metadata
@@ -70,8 +94,20 @@ def firestore_send_image(id, image_address):
     blob.make_public()
     #get url and set data
     blob_url = blob.public_url
+    #get meal type in korean
+    if meal_type == 1:
+        meal_type_kor = '조식' 
+    elif meal_type == 2:
+        meal_type_kor = '중식'
+    else:
+        meal_type_kor = '석식'
+    #get total waste amount to the nearest number by averaging
+    list_mean = str(round(sum(waste_list)/len(waste_list),2)) + '%'
     data = {
-        u'IMAGE_ADDRESS': blob_url
+        u'IMAGE_ADDRESS': blob_url,
+        u'DATE': date,
+        u'MEALTYPE': meal_type_kor,
+        u'PERCENTAGE': list_mean
     }
     #send to Firebase Firestore Database
     db.collection(u'IMAGES').document(id).collection('WASTE_IMAGES').document(date_meal).set(data)
@@ -83,12 +119,13 @@ if __name__=="__main__":
     b_code = 1
     w_list = [20.33, 10.11, 30.33, 40.32, 10.22]
     #path for raspi
-    i_address = '/home/pi/osam/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/test_image/100_per/100per.png'
+    #i_address = '/home/pi/osam/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/test_image/100_per/100per.png'
     #path for codespace
-    #i_address = "/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/Meal_Mil_Scan/assets/images/meal2.jpg"
-    firebase_send_meal(b_code)
-    firebase_send_user_waste(id,w_list)
-    firestore_send_image(id, i_address)
+    i_address = "/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/Meal_Mil_Scan/assets/images/meal2.jpg"
+    #firebase_send_meal(b_code)
+    #firebase_send_user_waste(id,w_list)
+    #firestore_send_image(id, i_address, w_list)
+    firebase_data()
     print("Successfully sent data to Firebase")
 
 '''
