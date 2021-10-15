@@ -16,7 +16,7 @@ def processLog(images):
     # 100*counts[0]) / total size
     proportion = (100 * counts[0]) / (h * w)
 
-    return 100.0 - proportion
+    return proportion
 
 if __name__=="__main__":
     for filename in ["result2.png","result3.png","result5.png","result6.png","result4.png"]:

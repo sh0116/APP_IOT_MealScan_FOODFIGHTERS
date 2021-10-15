@@ -13,8 +13,8 @@ class main_process():
        
         self.cap = cv2.VideoCapture(0)
         # cv2.show size
-        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 480)
-        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 320)
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 600)
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 600)
         # button point x1,y1,x2,y2
         self.button = [20,60,50,250]
         # fist state
@@ -52,6 +52,7 @@ class main_process():
                     self.state = "qr"
             
     def webcam(self):
+        '''
         # create a window and attach a mousecallback and a trackbar
         cv2.namedWindow('Control')
         cv2.setMouseCallback('Control',self.process_click)
@@ -61,43 +62,41 @@ class main_process():
         cv2.putText(control_image, 'Click',(100,50),cv2.FONT_HERSHEY_PLAIN, 2,(0),3)
         # show 'control panel'
         cv2.imshow('Control', control_image)
+        '''
 
         # open camera
-        if self.cap.isOpened():
+        while(self.cap.isOpened()):
             ret, a = self.cap.read()
-            ret, b = self.cap.read()
-            # camera still open
-            while ret:
-                ret, c = self.cap.read()
-                draw = c.copy()
-                # close camera
-                if not ret:
-                    break
-                # cv2.show() in rectangle() show plate area
-                if self.state!="qr":
-                    draw = cv2.rectangle(draw, (50, 50), (430, 270), (0, 255, 0), 2)
-                    draw = cv2.rectangle(draw, (245, 155), (420, 260), (0, 255, 0), 2)
-                    draw = cv2.rectangle(draw, (60, 155), (235, 260), (0, 255, 0), 2)
+            draw = a.copy()
+            # cv2.show() in rectangle() show plate area
 
-                    draw = cv2.rectangle(draw, (60, 60), (175, 145), (0, 255, 0), 2)
-                    draw = cv2.rectangle(draw, (185, 60), (300, 145), (0, 255, 0), 2)
-                    draw = cv2.rectangle(draw, (310, 60), (420, 145), (0, 255, 0), 2)
+            #if self.state!="qr":
+            #draw = cv2.rectangle(draw, (50, 50), (430, 270), (0, 255, 0), 2)
+            #draw = cv2.rectangle(draw, (245, 155), (420, 260), (0, 255, 0), 2)
+            #draw = cv2.rectangle(draw, (60, 155), (235, 260), (0, 255, 0), 2)
 
-                    if self.state!="init":
-                        cv2.imshow('init process', draw)
-                    else:
-                        cv2.imshow('plate', draw)
+            #draw = cv2.rectangle(draw, (60, 60), (175, 145), (0, 255, 0), 2)
+            #draw = cv2.rectangle(draw, (185, 60), (300, 145), (0, 255, 0), 2)
+            #draw = cv2.rectangle(draw, (310, 60), (420, 145), (0, 255, 0), 2)
 
-                # cv2.show() in rectangle() show qr area
-                else:
-                    draw = cv2.rectangle(draw, (190 , 110 ), (290, 210), (0, 255, 0), 2)
-                    cv2.imshow('qr', draw)
+            # cv2.show() in rectangle() show qr area
+            '''
+            else:
+                draw = cv2.rectangle(draw, (190 , 110 ), (290, 210), (0, 255, 0), 2)
+            '''
+            cv2.imshow("main",a)
 
-                a = b
-                b = c
         # close window
         cv2.destroyAllWindows()
 
 
 if __name__=="__main__":
-    main_process()
+    #main_process()
+    cap = cv2.VideoCapture(0)
+    while(cap.isOpened()) :
+        ret, frame = cap.read()
+        if(ret):
+            cv2.imshow('result', frame)
+
+    cap.release()
+    cv2.destroyAllWindows()
