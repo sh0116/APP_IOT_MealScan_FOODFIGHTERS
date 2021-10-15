@@ -84,7 +84,7 @@ class main_process():
             else:
                 draw = cv2.rectangle(draw, (190 , 110 ), (290, 210), (0, 255, 0), 2)
             '''
-            cv2.imshow("main",a)
+            cv2.imshow("main",draw)
 
         # close window
         cv2.destroyAllWindows()
@@ -92,7 +92,7 @@ class main_process():
 
 if __name__=="__main__":
     #main_process()
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(1)
     while(cap.isOpened()) :
         ret, frame = cap.read()
         if(ret):
