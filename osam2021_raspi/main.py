@@ -7,14 +7,19 @@ from src import init_processing
 from src import qr_processing
 from src import database
 
+from picamera.array import PiRGBArray # Generates a 3D RGB array
+from picamera import PiCamera # Provides a Python interface for the RPi Camera Module
+
 # main process
 class main_process():
     def __init__(self):
        
-        self.cap = cv2.VideoCapture(1)
+        #self.cap = cv2.VideoCapture(0)
+        self.cap = PiCamera()
+        self.cap.resolution = (480, 360)
         # cv2.show size
-        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 600)
-        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 600)
+        #self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 600)
+        #self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 600)
         # button point x1,y1,x2,y2
         self.button = [20,60,50,250]
         # fist state
@@ -29,7 +34,7 @@ class main_process():
             if y > self.button[0] and y < self.button[1] and x > self.button[2] and x < self.button[3]: 
                 print('Clicked on Button!')
                 # check image capture
-                ret, a = self.cap.read()
+                a = self.image
 
                 # state init 
                 if self.state=="init":
@@ -63,41 +68,34 @@ class main_process():
         # show 'control panel'
         cv2.imshow('Control', control_image)
         '''
-
+        self.cap.framerate = 32
+        raw_capture = PiRGBArray(self.cap, size=(480, 360))
+        time.sleep(0.1)
         # open camera
-        while(self.cap.isOpened()):
-            ret, a = self.cap.read()
-            draw = a.copy()
+        for frame in self.cap.capture_continuous(raw_capture, format="bgr", use_video_port=True):
+            # Grab the raw NumPy array representing the image
+            self.image = frame.array
+            
+            # Clear the stream in preparation for the next frame
+            raw_capture.truncate(0)
             # cv2.show() in rectangle() show plate area
+            if self.state!="qr":
+                self.image = cv2.rectangle(self.image, (50, 50), (430, 270), (0, 255, 0), 2)
+                self.image = cv2.rectangle(self.image, (245, 155), (420, 260), (0, 255, 0), 2)
+                self.image = cv2.rectangle(self.image, (60, 155), (235, 260), (0, 255, 0), 2)
 
-            #if self.state!="qr":
-            #draw = cv2.rectangle(draw, (50, 50), (430, 270), (0, 255, 0), 2)
-            #draw = cv2.rectangle(draw, (245, 155), (420, 260), (0, 255, 0), 2)
-            #draw = cv2.rectangle(draw, (60, 155), (235, 260), (0, 255, 0), 2)
-
-            #draw = cv2.rectangle(draw, (60, 60), (175, 145), (0, 255, 0), 2)
-            #draw = cv2.rectangle(draw, (185, 60), (300, 145), (0, 255, 0), 2)
-            #draw = cv2.rectangle(draw, (310, 60), (420, 145), (0, 255, 0), 2)
+                self.image = cv2.rectangle(self.image, (60, 60), (175, 145), (0, 255, 0), 2)
+                self.image = cv2.rectangle(self.image, (185, 60), (300, 145), (0, 255, 0), 2)
+                self.image = cv2.rectangle(self.image, (310, 60), (420, 145), (0, 255, 0), 2)
 
             # cv2.show() in rectangle() show qr area
-            '''
             else:
-                draw = cv2.rectangle(draw, (190 , 110 ), (290, 210), (0, 255, 0), 2)
-            '''
-            draw = cv2.flip(draw, 0)
-            cv2.imshow("main",draw)
+                self.image = cv2.rectangle(self.image, (190 , 110 ), (290, 210), (0, 255, 0), 2)
+            cv2.imshow("main",self.image)
 
         # close window
         cv2.destroyAllWindows()
 
 
 if __name__=="__main__":
-    #main_process()
-    cap = cv2.VideoCapture(0)
-    while(cap.isOpened()) :
-        ret, frame = cap.read()
-        if(ret):
-            cv2.imshow('result', frame)
-
-    cap.release()
-    cv2.destroyAllWindows()
+    main_process()
