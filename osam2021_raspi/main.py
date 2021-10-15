@@ -80,18 +80,18 @@ class main_process():
             raw_capture.truncate(0)
             # cv2.show() in rectangle() show plate area
             if self.state!="qr":
-                image = cv2.rectangle(image, (50, 50), (430, 270), (0, 255, 0), 2)
-                image = cv2.rectangle(image, (245, 155), (420, 260), (0, 255, 0), 2)
-                image = cv2.rectangle(image, (60, 155), (235, 260), (0, 255, 0), 2)
+                self.image = cv2.rectangle(self.image, (50, 50), (430, 270), (0, 255, 0), 2)
+                self.image = cv2.rectangle(self.image, (245, 155), (420, 260), (0, 255, 0), 2)
+                self.image = cv2.rectangle(self.image, (60, 155), (235, 260), (0, 255, 0), 2)
 
-                image = cv2.rectangle(image, (60, 60), (175, 145), (0, 255, 0), 2)
-                image = cv2.rectangle(image, (185, 60), (300, 145), (0, 255, 0), 2)
-                image = cv2.rectangle(image, (310, 60), (420, 145), (0, 255, 0), 2)
+                self.image = cv2.rectangle(self.image, (60, 60), (175, 145), (0, 255, 0), 2)
+                self.image = cv2.rectangle(self.image, (185, 60), (300, 145), (0, 255, 0), 2)
+                self.image = cv2.rectangle(self.image, (310, 60), (420, 145), (0, 255, 0), 2)
 
             # cv2.show() in rectangle() show qr area
             else:
-                image = cv2.rectangle(image, (190 , 110 ), (290, 210), (0, 255, 0), 2)
-            cv2.imshow("main",image)
+                self.image = cv2.rectangle(self.image, (190 , 110 ), (290, 210), (0, 255, 0), 2)
+            cv2.imshow("main",self.image)
 
         # close window
         cv2.destroyAllWindows()
