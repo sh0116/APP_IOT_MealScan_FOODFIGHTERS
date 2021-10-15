@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
             iconTheme: IconThemeData(color: Colors.black),
           ),
         ),
-        home: MyHomePage2(),
+        home: MainScreen(), //MainScreen() is the original
       ),
     );
   }

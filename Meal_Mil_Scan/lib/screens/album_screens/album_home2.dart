@@ -1,6 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:osam2021/screens/album_screens/album_details2.dart';
 import 'album_details.dart';
 import 'package:intl/intl.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -20,17 +21,17 @@ import 'package:firebase_core/firebase_core.dart';
 //    return url.toString();
 //  }
 
-//final m = getFileData();
+final m = "https://storage.googleapis.com/military-cafeteria.appspot.com/20-71209928/21-10-14-3.png";
 List<ImageDetails> _images = [
   ImageDetails(
-    imagePath: 'assets/images/meal1.jpg',
+    imagePath: m,
     percentage: '80%',
     mealType: '조식',
     date: '2021-11-29',
     details: '',
   ),
   ImageDetails(
-    imagePath: 'assets/images/meal2.jpg',
+    imagePath: m,
     percentage: '65%',
     mealType: '중식',
     date: '2021-11-30',
@@ -38,7 +39,7 @@ List<ImageDetails> _images = [
   ),
 ];
 
-class AlbumHome extends StatelessWidget {
+class AlbumHome2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     _images.sort((a, b) => a.date.compareTo(b.date));
@@ -67,7 +68,7 @@ class AlbumHome extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => AlbumDetails(
+                          builder: (context) => AlbumDetails2(
                             imagePath: _images[index].imagePath,
                             date: _images[index].date,
                             mealType: _images[index].mealType,
@@ -84,7 +85,7 @@ class AlbumHome extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           image: DecorationImage(
-                            image: AssetImage(_images[index].imagePath),
+                            image: Image.network(_images[index].imagePath).image,
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -137,7 +138,7 @@ class AlbumHome extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AlbumDetails(
+                    builder: (context) => AlbumDetails2(
                       imagePath: images[index].imagePath,
                       date: images[index].date,
                       mealType: images[index].mealType,
@@ -154,7 +155,7 @@ class AlbumHome extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
                     image: DecorationImage(
-                      image: AssetImage(images[index].imagePath),
+                      image: Image.network(_images[index].imagePath).image,
                       fit: BoxFit.cover,
                     ),
                   ),

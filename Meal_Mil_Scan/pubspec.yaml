@@ -41,7 +41,6 @@ dependencies:
   photo_view: ^0.13.0
   dropbox_client: ^0.8.0
   connectivity: ^3.0.6
-  firebase_storage: 
 
 
 dev_dependencies:

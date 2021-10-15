@@ -1,4 +1,4 @@
-import 'package:osam2021/firebase/database_manager.dart';
+import 'package:osam2021/firebase/database_images.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -18,7 +18,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: const Text("Firebase Demo"),
       ),
       body: FutureBuilder(
-        future: FireStoreDataBase().getData(),
+        future: FireStoreDataBase().getImageData(),
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return const Text(
