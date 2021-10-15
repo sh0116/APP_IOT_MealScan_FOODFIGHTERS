@@ -91,7 +91,7 @@ class main_process():
                 else:
                     draw = cv2.rectangle(draw, (190 , 110 ), (290, 210), (0, 255, 0), 2)
                 '''
-                cv2.imshow(draw)
+                cv2.imshow("main",draw)
 
                 a = b
                 b = c
