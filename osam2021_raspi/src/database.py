@@ -14,7 +14,7 @@ import sys
 Firebase credential path: 'military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json'  
 '''
 # initialize  the connection to our Firebase database 
-cred = credentials.Certificate('military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
+cred = credentials.Certificate('~/osam/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/src/military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.jsonmilitary-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
 firebase_admin.initialize_app(cred, {
     'storageBucket': 'military-cafeteria.appspot.com'
 })
