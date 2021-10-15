@@ -13,8 +13,8 @@ class main_process():
        
         self.cap = cv2.VideoCapture(0)
         # cv2.show size
-        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 480)
-        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 320)
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 600)
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 600)
         # button point x1,y1,x2,y2
         self.button = [20,60,50,250]
         # fist state
@@ -65,8 +65,8 @@ class main_process():
         '''
 
         # open camera
-        while(self.cap.isOpened()):
-            ret, a = self.cap.read()
+        while(cap.isOpened()):
+            ret, a = cap.read()
             draw = a.copy()
             # cv2.show() in rectangle() show plate area
 
