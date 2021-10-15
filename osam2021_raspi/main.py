@@ -65,8 +65,8 @@ class main_process():
         '''
 
         # open camera
-        while(cap.isOpened()):
-            ret, a = cap.read()
+        while(self.cap.isOpened()):
+            ret, a = self.cap.read()
             draw = a.copy()
             # cv2.show() in rectangle() show plate area
 
