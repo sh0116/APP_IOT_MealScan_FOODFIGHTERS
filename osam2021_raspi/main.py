@@ -70,7 +70,7 @@ class main_process():
         cv2.imshow('Control', control_image)
 
         self.cap.framerate = 32
-        raw_capture = PiRGBArray(self.cap, size=(640, 480))
+        raw_capture = PiRGBArray(self.cap, size=(480, 360))
         time.sleep(0.1)
         # open camera
         for frame in self.cap.capture_continuous(raw_capture, format="bgr", use_video_port=True):
