@@ -58,7 +58,7 @@ class main_process():
                     self.state = "qr"
             
     def webcam(self):
-        '''
+
         # create a window and attach a mousecallback and a trackbar
         cv2.namedWindow('Control')
         cv2.setMouseCallback('Control',self.process_click)
@@ -68,7 +68,7 @@ class main_process():
         cv2.putText(control_image, 'Click',(100,50),cv2.FONT_HERSHEY_PLAIN, 2,(0),3)
         # show 'control panel'
         cv2.imshow('Control', control_image)
-        '''
+
         self.cap.framerate = 32
         raw_capture = PiRGBArray(self.cap, size=(640, 480))
         time.sleep(0.1)
