@@ -73,7 +73,7 @@ class main_process():
         raw_capture = PiRGBArray(self.cap, size=(640, 480))
         time.sleep(0.1)
         # open camera
-        for frame in camera.capture_continuous(raw_capture, format="bgr", use_video_port=True):
+        for frame in self.cap.capture_continuous(raw_capture, format="bgr", use_video_port=True):
             
             # Grab the raw NumPy array representing the image
             image = frame.array
