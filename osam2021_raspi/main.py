@@ -62,39 +62,29 @@ class main_process():
         # show 'control panel'
         cv2.imshow('Control', control_image)
 
+
         # open camera
-        if self.cap.isOpened():
+        while(self.cap.isOpened()):
             ret, a = self.cap.read()
-            ret, b = self.cap.read()
-            # camera still open
-            while ret:
-                ret, c = self.cap.read()
-                draw = c.copy()
-                # close camera
-                if not ret:
-                    break
-                # cv2.show() in rectangle() show plate area
+            draw = a.copy()
+            # cv2.show() in rectangle() show plate area
 
-                #if self.state!="qr":
-                draw = cv2.rectangle(draw, (50, 50), (430, 270), (0, 255, 0), 2)
-                draw = cv2.rectangle(draw, (245, 155), (420, 260), (0, 255, 0), 2)
-                draw = cv2.rectangle(draw, (60, 155), (235, 260), (0, 255, 0), 2)
+            #if self.state!="qr":
+            draw = cv2.rectangle(draw, (50, 50), (430, 270), (0, 255, 0), 2)
+            draw = cv2.rectangle(draw, (245, 155), (420, 260), (0, 255, 0), 2)
+            draw = cv2.rectangle(draw, (60, 155), (235, 260), (0, 255, 0), 2)
 
-                draw = cv2.rectangle(draw, (60, 60), (175, 145), (0, 255, 0), 2)
-                draw = cv2.rectangle(draw, (185, 60), (300, 145), (0, 255, 0), 2)
-                draw = cv2.rectangle(draw, (310, 60), (420, 145), (0, 255, 0), 2)
+            draw = cv2.rectangle(draw, (60, 60), (175, 145), (0, 255, 0), 2)
+            draw = cv2.rectangle(draw, (185, 60), (300, 145), (0, 255, 0), 2)
+            draw = cv2.rectangle(draw, (310, 60), (420, 145), (0, 255, 0), 2)
 
+            # cv2.show() in rectangle() show qr area
+            '''
+            else:
+                draw = cv2.rectangle(draw, (190 , 110 ), (290, 210), (0, 255, 0), 2)
+            '''
+            cv2.imshow("main",draw)
 
-
-                # cv2.show() in rectangle() show qr area
-                '''
-                else:
-                    draw = cv2.rectangle(draw, (190 , 110 ), (290, 210), (0, 255, 0), 2)
-                '''
-                cv2.imshow("main",draw)
-
-                a = b
-                b = c
         # close window
         cv2.destroyAllWindows()
 
