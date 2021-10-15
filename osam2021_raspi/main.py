@@ -29,13 +29,12 @@ class main_process():
 
     # state check function
     def process_click(self, event, x, y, flags, params):
-        capt = cv2.VideoCapture(0)
         if event == cv2.EVENT_LBUTTONDOWN:
             # if click botton
             if y > self.button[0] and y < self.button[1] and x > self.button[2] and x < self.button[3]: 
                 print('Clicked on Button!')
                 # check image capture
-                ret, a = capt.read()
+                a = self.image
 
                 # state init 
                 if self.state=="init":
@@ -74,16 +73,12 @@ class main_process():
         time.sleep(0.1)
         # open camera
         for frame in self.cap.capture_continuous(raw_capture, format="bgr", use_video_port=True):
-            
             # Grab the raw NumPy array representing the image
-            image = frame.array
-            
-            # Wait for keyPress for 1 millisecond
-            key = cv2.waitKey(1) & 0xFF
+            self.image = frame.array
             
             # Clear the stream in preparation for the next frame
             raw_capture.truncate(0)
-
+            # cv2.show() in rectangle() show plate area
             if self.state!="qr":
                 image = cv2.rectangle(image, (50, 50), (430, 270), (0, 255, 0), 2)
                 image = cv2.rectangle(image, (245, 155), (420, 260), (0, 255, 0), 2)
@@ -94,7 +89,6 @@ class main_process():
                 image = cv2.rectangle(image, (310, 60), (420, 145), (0, 255, 0), 2)
 
             # cv2.show() in rectangle() show qr area
-
             else:
                 image = cv2.rectangle(image, (190 , 110 ), (290, 210), (0, 255, 0), 2)
             cv2.imshow("main",image)
