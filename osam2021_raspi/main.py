@@ -29,12 +29,13 @@ class main_process():
 
     # state check function
     def process_click(self, event, x, y, flags, params):
+        capt = cv2.VideoCapture(0)
         if event == cv2.EVENT_LBUTTONDOWN:
             # if click botton
             if y > self.button[0] and y < self.button[1] and x > self.button[2] and x < self.button[3]: 
                 print('Clicked on Button!')
                 # check image capture
-                a = self.image
+                ret, a = capt.read()
 
                 # state init 
                 if self.state=="init":
@@ -74,24 +75,24 @@ class main_process():
         # open camera
         for frame in self.cap.capture_continuous(raw_capture, format="bgr", use_video_port=True):
             # Grab the raw NumPy array representing the image
-            self.image = frame.array
+            image = frame.array
             
             # Clear the stream in preparation for the next frame
             raw_capture.truncate(0)
             # cv2.show() in rectangle() show plate area
             if self.state!="qr":
-                self.image = cv2.rectangle(self.image, (50, 50), (430, 270), (0, 255, 0), 2)
-                self.image = cv2.rectangle(self.image, (245, 155), (420, 260), (0, 255, 0), 2)
-                self.image = cv2.rectangle(self.image, (60, 155), (235, 260), (0, 255, 0), 2)
+                image = cv2.rectangle(image, (50, 50), (430, 270), (0, 255, 0), 2)
+                image = cv2.rectangle(image, (245, 155), (420, 260), (0, 255, 0), 2)
+                image = cv2.rectangle(image, (60, 155), (235, 260), (0, 255, 0), 2)
 
-                self.image = cv2.rectangle(self.image, (60, 60), (175, 145), (0, 255, 0), 2)
-                self.image = cv2.rectangle(self.image, (185, 60), (300, 145), (0, 255, 0), 2)
-                self.image = cv2.rectangle(self.image, (310, 60), (420, 145), (0, 255, 0), 2)
+                image = cv2.rectangle(image, (60, 60), (175, 145), (0, 255, 0), 2)
+                image = cv2.rectangle(image, (185, 60), (300, 145), (0, 255, 0), 2)
+                image = cv2.rectangle(image, (310, 60), (420, 145), (0, 255, 0), 2)
 
             # cv2.show() in rectangle() show qr area
             else:
-                self.image = cv2.rectangle(self.image, (190 , 110 ), (290, 210), (0, 255, 0), 2)
-            cv2.imshow("main",self.image)
+                image = cv2.rectangle(image, (190 , 110 ), (290, 210), (0, 255, 0), 2)
+            cv2.imshow("main",image)
 
         # close window
         cv2.destroyAllWindows()
