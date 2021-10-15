@@ -16,7 +16,7 @@ class main_process():
        
         #self.cap = cv2.VideoCapture(0)
         self.cap = PiCamera()
-        self.cap.resolution = (640, 480)
+        self.cap.resolution = (480, 360)
         # cv2.show size
         #self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 600)
         #self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 600)
