@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:osam2021/firebase/database_challenge.dart';
+import 'package:osam2021/notifiers.dart';
 
 class Challenge {
   final String name;
@@ -12,29 +12,37 @@ class Challenge {
   final bool added;
   final String prize;
 
-
-  Challenge({required this.name, required this.bgColor, required this.bgColor2, required this.prize, required this.announcement, required this.date, required this.attendants, required this.code, required this.added});
+  Challenge(
+    {
+      required this.name,
+      required this.bgColor,
+      required this.bgColor2,
+      required this.prize,
+      required this.announcement,
+      required this.date,
+      required this.attendants,
+      required this.code,
+      required this.added
+    }
+  );
 }
 
-List<Challenge> open = [
-  Challenge(
-      code: 0,
-      bgColor: Color(0xffFFAAA6),
-      bgColor2: Color(0xFFF9D6D4),
-      name: '259대대 잔반경연대회',
-      announcement: '이기자! 수호대대 병사 여러분, 좋은 취지에 함께하기 위해 챌린지에 참여해주셔서 감사합니다 . ', //
-      date: '2021-11-30 23:59:59',
-      attendants: '150',
-      added: false,
-      prize: '상점 20점 + 전투휴무 1일'),
-  Challenge(
-      code: 1,
-      bgColor: Color(0xffE0B58C),
-      bgColor2: Color(0xFFE0CAB6),
-      name: '259대대 HQ 개인전',
-      announcement: 'hello2', //
-      date: '2021-11-01 23:59:59',
-      attendants: '50',
-      added: false,
-      prize: '상점 25점')
-];
+// Firebase에 저장된 challenge 데이터를 Notifier의 opened에 씀
+void initializeNotifier(List dataList, Notifiers notifiers){
+  notifiers.initialized = true;
+  for(int i=0; i < dataList.length; i++){
+    notifiers.openChallenge(
+      Challenge(
+        name: dataList[i]["name"],
+        bgColor: Color(dataList[i]["bgColor"]),
+        bgColor2: Color(dataList[i]["bgColor2"]),
+        announcement: dataList[i]["announcement"],
+        date: dataList[i]["date"],
+        attendants: dataList[i]["attendants"],
+        code: dataList[i]["code"],
+        added: dataList[i]["added"],
+        prize: dataList[i]["prize"]
+      )
+    );
+  }
+}
