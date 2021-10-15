@@ -74,6 +74,7 @@ class main_process():
                 if not ret:
                     break
                 # cv2.show() in rectangle() show plate area
+                '''
                 if self.state!="qr":
                     draw = cv2.rectangle(draw, (50, 50), (430, 270), (0, 255, 0), 2)
                     draw = cv2.rectangle(draw, (245, 155), (420, 260), (0, 255, 0), 2)
@@ -91,7 +92,8 @@ class main_process():
                 # cv2.show() in rectangle() show qr area
                 else:
                     draw = cv2.rectangle(draw, (190 , 110 ), (290, 210), (0, 255, 0), 2)
-                    cv2.imshow('qr', draw)
+                '''
+                cv2.imshow(draw)
 
                 a = b
                 b = c
