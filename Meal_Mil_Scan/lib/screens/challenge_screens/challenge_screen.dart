@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:osam2021/components/challenge_components/challenge_menu.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:osam2021/components/challenge_components/challenge_menu2.dart';
 
 class ChallengeScreen extends StatelessWidget {
   final int selectedIndex = 0;
@@ -22,7 +23,7 @@ class ChallengeScreen extends StatelessWidget {
       body: Container(
         padding: const EdgeInsets.only(left: 30, right: 30),
         child: 
-          ChallengeMenu(),
+          ChallengeMenu2(),
       ),
     ); //scaffold
   }

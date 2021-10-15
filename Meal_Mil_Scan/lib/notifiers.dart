@@ -6,7 +6,7 @@ import 'firebase/database_challenge.dart';
 class Notifiers extends ChangeNotifier {
   final List<Challenge> _added = [];
   // 원래 여기 _opened에다가 ChallengeProvider.loadChallenge() 를 받고 싶었습니다.
-  final List<Challenge> _opened = [];
+  final List<Challenge> _opened = open;
 
   void addChallenge(Challenge challenge) {
     added.add(challenge);
