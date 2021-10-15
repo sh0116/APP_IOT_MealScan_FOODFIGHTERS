@@ -84,6 +84,7 @@ class main_process():
             else:
                 draw = cv2.rectangle(draw, (190 , 110 ), (290, 210), (0, 255, 0), 2)
             '''
+            draw = cv2.flip(draw, 0)
             cv2.imshow("main",draw)
 
         # close window
