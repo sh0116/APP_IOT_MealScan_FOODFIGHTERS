@@ -70,20 +70,20 @@ class main_process():
             # cv2.show() in rectangle() show plate area
 
             #if self.state!="qr":
-            draw = cv2.rectangle(draw, (50, 50), (430, 270), (0, 255, 0), 2)
-            draw = cv2.rectangle(draw, (245, 155), (420, 260), (0, 255, 0), 2)
-            draw = cv2.rectangle(draw, (60, 155), (235, 260), (0, 255, 0), 2)
+            #draw = cv2.rectangle(draw, (50, 50), (430, 270), (0, 255, 0), 2)
+            #draw = cv2.rectangle(draw, (245, 155), (420, 260), (0, 255, 0), 2)
+            #draw = cv2.rectangle(draw, (60, 155), (235, 260), (0, 255, 0), 2)
 
-            draw = cv2.rectangle(draw, (60, 60), (175, 145), (0, 255, 0), 2)
-            draw = cv2.rectangle(draw, (185, 60), (300, 145), (0, 255, 0), 2)
-            draw = cv2.rectangle(draw, (310, 60), (420, 145), (0, 255, 0), 2)
+            #draw = cv2.rectangle(draw, (60, 60), (175, 145), (0, 255, 0), 2)
+            #draw = cv2.rectangle(draw, (185, 60), (300, 145), (0, 255, 0), 2)
+            #draw = cv2.rectangle(draw, (310, 60), (420, 145), (0, 255, 0), 2)
 
             # cv2.show() in rectangle() show qr area
             '''
             else:
                 draw = cv2.rectangle(draw, (190 , 110 ), (290, 210), (0, 255, 0), 2)
             '''
-            cv2.imshow("main",draw)
+            cv2.imshow("main",a)
 
         # close window
         cv2.destroyAllWindows()
