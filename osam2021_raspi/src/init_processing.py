@@ -31,7 +31,7 @@ class Image_Processing:
 		for self.box in np.array(self.main_dish):
 			cv2.imwrite("../asset/{}.png".format(dish_tag[self.cnt]), self.image[self.box[1][1]+10:self.box[0][1]-10,self.box[1][0]+10:self.box[2][0]-10].copy() )
 			self.cnt+=1
-		
+		#list형식 뒤에 두개가 밥,국
 		self.menu = today_menu.get_menu(1)
 
 if __name__=="__main__":

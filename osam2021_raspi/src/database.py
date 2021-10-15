@@ -4,7 +4,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 from firebase_admin import storage
 from uuid import uuid4
-import today_menu
+from src import today_menu
 import datetime
 import time
 import sys
