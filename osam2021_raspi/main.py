@@ -84,20 +84,19 @@ class main_process():
             # Clear the stream in preparation for the next frame
             raw_capture.truncate(0)
 
-            #if self.state!="qr":
-            #draw = cv2.rectangle(draw, (50, 50), (430, 270), (0, 255, 0), 2)
-            #draw = cv2.rectangle(draw, (245, 155), (420, 260), (0, 255, 0), 2)
-            #draw = cv2.rectangle(draw, (60, 155), (235, 260), (0, 255, 0), 2)
+            if self.state!="qr":
+                image = cv2.rectangle(image, (50, 50), (430, 270), (0, 255, 0), 2)
+                image = cv2.rectangle(image, (245, 155), (420, 260), (0, 255, 0), 2)
+                image = cv2.rectangle(image, (60, 155), (235, 260), (0, 255, 0), 2)
 
-            #draw = cv2.rectangle(draw, (60, 60), (175, 145), (0, 255, 0), 2)
-            #draw = cv2.rectangle(draw, (185, 60), (300, 145), (0, 255, 0), 2)
-            #draw = cv2.rectangle(draw, (310, 60), (420, 145), (0, 255, 0), 2)
+                image = cv2.rectangle(image, (60, 60), (175, 145), (0, 255, 0), 2)
+                image = cv2.rectangle(image, (185, 60), (300, 145), (0, 255, 0), 2)
+                image = cv2.rectangle(image, (310, 60), (420, 145), (0, 255, 0), 2)
 
             # cv2.show() in rectangle() show qr area
-            '''
+
             else:
-                draw = cv2.rectangle(draw, (190 , 110 ), (290, 210), (0, 255, 0), 2)
-            '''
+                image = cv2.rectangle(image, (190 , 110 ), (290, 210), (0, 255, 0), 2)
             cv2.imshow("main",image)
 
         # close window
