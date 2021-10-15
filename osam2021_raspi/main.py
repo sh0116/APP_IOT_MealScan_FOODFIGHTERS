@@ -93,7 +93,7 @@ class main_process():
 
 if __name__=="__main__":
     #main_process()
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture(0)
     while(cap.isOpened()) :
         ret, frame = cap.read()
         if(ret):
