@@ -2,15 +2,15 @@ import numpy as np
 import pandas as pd
 import pytz
 from datetime import date, datetime
-
+import math
 #dictionary for mapping base code to menu code 
 dic = {1 : 3389, 2: 6176, 3:1691}
 
 #Function returing user's meal as a list
-def get_menu(base_code): 
+def get_menu(base_code=1): 
     #get path of csv file 
     #path for raspi
-    path = '/home/pi/osam/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/monthly_menu_base/base_'+ str(dic[base_code]) +'.csv'
+    path = '/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/monthly_menu_base/base_'+ str(dic[base_code]) +'.csv'
     #path for codespace
     #path = '/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/monthly_menu_base/base_'+ str(dic[base_code]) +'.csv'
     #make a dataframe of user's menu
@@ -25,8 +25,13 @@ def get_menu(base_code):
     else:
         df = df.iloc[0:5,5]
     #remove unneeded parts
-    final = [i.split("(")[0] for i in df.tolist()]
+    #final = [ i.split("(")[0] for i in df.tolist()]
+    final = []
+    for i in df.tolist():
+        if isinstance(i, str):
+            final.append(i.split("(")[0])
     #sorted for processing purposes
+
     final = sorted(final[2:]) + final[0:2]
     return final
 
