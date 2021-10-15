@@ -92,13 +92,11 @@ class main_process():
 
 if __name__=="__main__":
     #main_process()
-    cap = cv2.VideoCapture(-1)
+    cap = cv2.VideoCapture(0)
     while(cap.isOpened()) :
         ret, frame = cap.read()
         if(ret):
-            frame = cv2.flip(frame, 0)
-            gray_img = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-            cv2.imshow('result', gray_img)
+            cv2.imshow('result', frame)
 
     cap.release()
     cv2.destroyAllWindows()
