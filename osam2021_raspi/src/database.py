@@ -17,7 +17,7 @@ Firebase credential path: 'military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa
 #cred for codespace
 #cred = credentials.Certificate('military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
 #cred for raspi
-cred = credentials.Certificate('/home/pi/osam/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/src/military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
+cred = credentials.Certificate('/home/pi/osam/APP_IOT_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/src/military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
 firebase_admin.initialize_app(cred, {
     'storageBucket': 'military-cafeteria.appspot.com'
 })
