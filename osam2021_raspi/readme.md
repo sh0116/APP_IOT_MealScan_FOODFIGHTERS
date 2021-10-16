@@ -13,10 +13,13 @@
 
  
 <h2> 🛠Process 구조 </h2>
- 
-### flow chart
-<img src="/asset/flow_chart.drawio.png">
 
+ <div align="Center">
+  
+ ### Flow Chart
+ <img src="/asset/flow_chart.drawio.png">
+ </div>
+ 
 ## 📋Jupyter Notebook(colab) 
 ### 음식 분류 알고리즘
 >> cv2.rectangle() 함수와 imshow() 함수를 통해서 사용자에게 식판을 놓을 위치를 알려준다.<br>
