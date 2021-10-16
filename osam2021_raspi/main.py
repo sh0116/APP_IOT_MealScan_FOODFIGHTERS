@@ -40,7 +40,7 @@ class main_process():
                     #database.firebase_send_meal(today_menu.get_menu(1))
                     #database.firestore_send_image()
                     self.state = "qr"
-
+                """
                 # state qr
                 elif self.state=="qr":
                     self.qr = qr_processing.Image_Processing(a)
@@ -48,7 +48,7 @@ class main_process():
                     print("user id : {}".format(self.qr_data))
                     if self.qr_data != "empty data":
                         self.state = "plate"
-
+                """
                 # state plate 
                 elif self.state=="plate":
                     process_class = image_processing.Image_Processing(a)
@@ -92,6 +92,8 @@ class main_process():
                             0.5, (0, 255, 0), 2)
                 if data:
                     print("data found: ", data)
+                    self.state = "plate"
+                    self.qr_data = data
 
 
             if cv2.waitKey(1) & 0xFF == 27: # esc 키를 누르면 닫음
