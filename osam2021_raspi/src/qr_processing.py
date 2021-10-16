@@ -8,7 +8,7 @@ class Image_Processing:
         self.detector = cv2.QRCodeDetector()
         # data is User info
         self.data, _, _ = self.detector.detectAndDecode(image)
-        cv2.imshow("main",self.data)
+        cv2.imshow("main",image)
     # get data info function
     def Data(self):
         if not self.data:
