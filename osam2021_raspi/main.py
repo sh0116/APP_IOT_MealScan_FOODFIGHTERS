@@ -4,7 +4,7 @@ import time
 
 from src import image_processing
 from src import init_processing
-from src import qr_processing
+#from src import qr_processing
 from src import database
 
 from picamera.array import PiRGBArray # Generates a 3D RGB array
@@ -14,10 +14,6 @@ from picamera import PiCamera # Provides a Python interface for the RPi Camera M
 class main_process():
     def __init__(self):
        
-        #self.cap = cv2.VideoCapture(0)
-        # cv2.show size
-        #self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 600)
-        #self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 600)
         # button point x1,y1,x2,y2
         self.button = [20,60,50,250]
         # fist state
@@ -47,15 +43,6 @@ class main_process():
                     result = database.firebase_post(self.qr_data, process_class.DataList )
 
                     self.state = "qr"
-                """
-                # state qr
-                elif self.state=="qr":
-                    self.qr = qr_processing.Image_Processing(a)
-                    self.qr_data = self.qr.Data()
-                    print("user id : {}".format(self.qr_data))
-                    if self.qr_data != "empty data":
-                        self.state = "plate"
-                """
             
     def webcam(self):
 
@@ -85,13 +72,12 @@ class main_process():
             data, bbox, _ = self.detector.detectAndDecode(f)
 
             # if there is a bounding box, draw one, along with the data
-            if(bbox is not None):
+            if (bbox is not None):
                 for i in range(len(bbox)):
-                    cv2.line(frame, tuple(bbox[i][0]), tuple(bbox[(i+1) % len(bbox)][0]), color=(255,
-                            0, 255), thickness=2)
+                    cv2.line(frame, tuple(bbox[i][0]), tuple(bbox[(i+1) % len(bbox)][0]), color=(0, 255, 0), thickness=2)
                 cv2.putText(frame, data, (int(bbox[0][0][0]), int(bbox[0][0][1]) - 10), cv2.FONT_HERSHEY_SIMPLEX,
                             0.5, (0, 255, 0), 2)
-                if data:
+                if self.state == "qr" and data:
                     print("data found: ", data)
                     self.state = "plate"
                     self.qr_data = data
