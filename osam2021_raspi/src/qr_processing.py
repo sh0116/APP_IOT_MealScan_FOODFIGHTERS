@@ -20,7 +20,7 @@ class Image_Processing:
 
 
 if __name__=="__main__":
-    img = cv2.imread("../asset/test_image/qr_test/qr_data.png")
+    img = cv2.imread("../asset/test_image/qr_test/qrcode.png")
     classd = Image_Processing(img)
     print(classd.data)
 
