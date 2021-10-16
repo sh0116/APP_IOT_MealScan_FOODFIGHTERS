@@ -194,29 +194,3 @@ if __name__=="__main__":
     firebase_send_user_waste(id,w_list)
     #firestore_send_image(id, i_address, w_list)
     print("Successfully sent data to Firebase")
-
-'''
-App key
-h18mokh27adozq8
-App secret
-iieazt3mrgs02uv
-
-class DropBoxManager:
-    def __init__(self):
-        #public repo 하면 안됨 토큰값 -> 보안상의 목적으로는 환경변수로 등록하고 환경변수의 값을 불러오는 형태로 해야함.
-        #편의상 올려놓음 주의바람
-        self.token = "sl.A6IL75RRqHngbTKqYBErVIYQFtla37lnn95H4FhILVxoyfTYBDhZAQcoUeIbNAflVVOXJNcQ2sauvNle8guzsGVKW7fnwZX2jsGyyJTj6Mn4dkDY30Sx3Dg8RDo0Boj87JmJqzTJ7qJC"
-        self.fileName = "/workspaces/AP"
-        self.pathName = "/{}/100per.png".format(time.strftime('%y_%m_%d'))
- 
-    def UpLoadFile(self):
-        dbx = dropbox.Dropbox(self.token,timeout=900)
-        with open(self.fileName, "rb") as f:
-            dbx.files_upload(f.read(), self.pathName, mode=dropbox.files.WriteMode.overwrite)
- 
-    def GetFileLink(self):
-        dbx = dropbox.Dropbox(self.token,timeout=900)
-        shared_URL = dbx.sharing_create_shared_link_with_settings("/monthly_menu_base/제1691부대 식단 정보_월별.csv").url
-        modified_URL = shared_URL[:-1] + '1'
-        return modified_URL
-'''

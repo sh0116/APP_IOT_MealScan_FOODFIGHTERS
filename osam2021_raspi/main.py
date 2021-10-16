@@ -41,6 +41,17 @@ class main_process():
                 elif self.state=="plate":
                     process_class = image_processing.Image_Processing(a)
                     result = database.firebase_post(self.qr_data, process_class.DataList )
+                     = self.qr_data[:4],self.qr_data[4:]
+                    b_code = 1
+                    w_list = [99,99, 99, 99, 99]
+                    #path for raspi
+                    i_address = '/home/pi/osam/APP_IOT_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/test_image/100_per/100per.png'
+                    #path for codespace
+                    #i_address = "/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/Meal_Mil_Scan/assets/images/meal2.jpg"
+                    #firebase_send_meal(b_code)
+                    firebase_send_user_waste(id,w_list)
+                    #firestore_send_image(id, i_address, w_list)
+                    print("Successfully sent data to Firebase")
 
                     self.state = "qr"
             
