@@ -32,7 +32,8 @@ class Image_Processing:
 			cv2.imwrite("../asset/{}.png".format(dish_tag[self.cnt]), self.image[self.box[1][1]+10:self.box[0][1]-10,self.box[1][0]+10:self.box[2][0]-10].copy() )
 			self.cnt+=1
 		#list형식 뒤에 두개가 밥,국
-		database.firebase_send_meal(today_menu.get_menu(1))
+		print(today_menu.get_menu(2))
+		#database.firebase_send_meal(today_menu.get_menu(1))
 
 if __name__=="__main__":
 	img_pro = Image_Processing("../asset/result2.png")

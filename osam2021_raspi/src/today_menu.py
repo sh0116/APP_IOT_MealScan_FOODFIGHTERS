@@ -12,7 +12,7 @@ def get_menu(base_code=2):
     #path for raspi
     path = '/home/pi/osam/APP_IOT_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/monthly_menu_base/base_'+ str(dic[base_code]) +'.csv'
     #path for codespace
-    #path = '/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/monthly_menu_base/base_'+ str(dic[base_code]) +'.csv'
+    #path = '/workspaces/APP_IOT_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/monthly_menu_base/base_'+ str(dic[base_code]) +'.csv'
     #make a dataframe of user's menu
     df = pd.read_csv(path, encoding='euc-kr')
     today_date, meal_type = get_date_meal_type()
@@ -52,4 +52,4 @@ def get_date_meal_type():
 
 if __name__=="__main__":
     print(get_date_meal_type())
-    print(get_menu(1))
+    print(get_menu(2))
