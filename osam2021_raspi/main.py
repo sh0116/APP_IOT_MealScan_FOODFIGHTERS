@@ -34,7 +34,6 @@ class main_process():
                 if self.state=="init":
                     init_processing.Image_Processing(a)
                     #database.firebase_send_meal(today_menu.get_menu(1))
-                    #database.firestore_send_image()
                     self.state = "qr"
                 
                 # state plate 

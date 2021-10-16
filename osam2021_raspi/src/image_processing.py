@@ -57,7 +57,7 @@ class Image_Processing:
 	# backProjection Function (역투영)
 	def backProjection(self):
 		# read image (Region of Interest & Target image)
-		img = cv2.imread('{}.png'.format(self.dish_tag[self.cnt]), cv2.IMREAD_COLOR)
+		img = cv2.imread('/home/pi/osam/APP_IOT_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/{}.png'.format(self.dish_tag[self.cnt]), cv2.IMREAD_COLOR)
 		hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV) 
 		hsvt = cv2.cvtColor(self.image, cv2.COLOR_BGR2HSV) 
 		
