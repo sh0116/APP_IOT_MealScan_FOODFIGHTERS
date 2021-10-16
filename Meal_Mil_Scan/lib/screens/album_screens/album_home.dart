@@ -28,21 +28,19 @@ List<ImageDetails> _images = [
     percentage: '80%',
     mealType: '조식',
     date: '2021-11-29',
-    details: '',
   ),
   ImageDetails(
     imagePath: 'assets/images/meal2.jpg',
     percentage: '65%',
     mealType: '중식',
     date: '2021-11-30',
-    details: '',
   ),
 ];
 
 class AlbumHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    _images.sort((a, b) => a.date.compareTo(b.date));
+    //_images.sort((a, b) => a.date.compareTo(b.date));
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -67,7 +65,7 @@ class AlbumHome extends StatelessWidget {
 Widget buildPhotos() {
   List photoList = [];
   return FutureBuilder(
-    future: FireStoreDataBase().getImageData(),
+    future: ImageDataBase().getImageData(),
     builder: (context, snapshot) {
           if (snapshot.hasError) {
             return const Text(
@@ -84,18 +82,18 @@ Widget buildPhotos() {
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 10,
                 ),
-                itemBuilder: (context, index) {
+                itemCount: photoList.length,
+                itemBuilder: (BuildContext context, int index) {
                   return RawMaterialButton(
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) => AlbumDetails(
-                            imagePath: photoList[index].imagePath,
-                            date: photoList[index].date,
-                            mealType: photoList[index].mealType,
-                            percentage: photoList[index].percentage,
-                            details: photoList[index].details,
+                            imagePath: photoList[index]["IMAGE_ADDRESS"],
+                            date: photoList[index]["DATE"],
+                            mealType: photoList[index]["MEALTYPE"],
+                            percentage: photoList[index]["PERCENTAGE"],
                             index: index,
                           ),
                         ),
@@ -107,7 +105,8 @@ Widget buildPhotos() {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           image: DecorationImage(
-                            image: AssetImage(photoList[index].imagePath),
+                            //image: Image.network(photoList[index]["IMAGE_ADDRESS"]).image,
+                            image:Image.network("https://storage.googleapis.com/military-cafeteria.appspot.com/20-71209928/21-10-14-1.png").image,
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -115,7 +114,6 @@ Widget buildPhotos() {
                     ),
                   );
                 },
-                itemCount: photoList.length,
               )
               ],
             );
@@ -132,12 +130,10 @@ class ImageDetails {
   final String percentage;
   final String mealType;
   final String date;
-  final String details;
   ImageDetails({
     required this.imagePath,
     required this.percentage,
     required this.mealType,
     required this.date,
-    required this.details,
   });
 }

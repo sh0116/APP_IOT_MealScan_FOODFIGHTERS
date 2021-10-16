@@ -3,9 +3,8 @@ import 'package:flutter/cupertino.dart';
 
 final service_number = '20-71209928';
 
-class FireStoreDataBase {
+class ImageDataBase {
   List imageList = [];
-  List docImageList = [];
   final CollectionReference collectionRef =
       FirebaseFirestore.instance.collection("IMAGES").doc(service_number).collection("WASTE_IMAGES");
 
@@ -17,8 +16,7 @@ class FireStoreDataBase {
       // to get data from all documents sequentially
       await collectionRef.get().then((querySnapshot) {
         for (var result in querySnapshot.docs) {
-          imageList.add(result['IMAGE_ADDRESS']);
-          docImageList.add(result.id);
+          imageList.add(result.data());
         }
       });
 

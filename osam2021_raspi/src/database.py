@@ -4,7 +4,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 from firebase_admin import storage
 from uuid import uuid4
-from src import today_menu
+import today_menu
 from datetime import date, datetime, timedelta
 import time
 import sys
@@ -15,9 +15,9 @@ Firebase credential path: 'military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa
 '''
 # initialize  the connection to our Firebase database 
 #cred for codespace
-#cred = credentials.Certificate('military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
+cred = credentials.Certificate('military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
 #cred for raspi
-cred = credentials.Certificate('/home/pi/osam/APP_IOT_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/src/military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
+#cred = credentials.Certificate('/home/pi/osam/APP_IOT_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/src/military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
 firebase_admin.initialize_app(cred, {
     'storageBucket': 'military-cafeteria.appspot.com'
 })
@@ -185,7 +185,7 @@ def firestore_send_image(id, image_address, waste_list):
 if __name__=="__main__":
     id = '20-71209928'
     b_code = 1
-    w_list = [99,99, 99, 99, 99]
+    w_list = [0,0, 0, 0, 0]
     #path for raspi
     i_address = '/home/pi/osam/APP_IOT_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/test_image/100_per/100per.png'
     #path for codespace

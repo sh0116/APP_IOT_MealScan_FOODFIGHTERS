@@ -102,76 +102,8 @@ class AlbumHome2 extends StatelessWidget {
       ),
     );
   }
-
-  List<Widget> _buildImageGridView() {
-    var dateToImages = new Map();
-    _images.sort((a, b) => a.date.compareTo(b.date));
-    //group images by date
-    for (int i = 0; i < _images.length; i++) {
-      var d = _images[i].date; //convert string to Datetime
-      if (dateToImages.containsKey(d)) {
-        dateToImages[d].add(_images[i]);
-      } else {
-        dateToImages[d] = [_images[i]];
-        print(dateToImages);
-      }
-    }
-    var sortedKeys = dateToImages.keys.toList()..sort((a, b) => a.compareTo(b));
-    List<Widget> children = [];
-    for (int i = 0; i < sortedKeys.length; i++) {
-      var date = sortedKeys[i];
-      children.add(Text(date,
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)));
-      var images = dateToImages[date];
-      Container gridviewContainer = Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-        ),
-        child: GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
-          ),
-          itemBuilder: (context, index) {
-            return RawMaterialButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => AlbumDetails2(
-                      imagePath: images[index].imagePath,
-                      date: images[index].date,
-                      mealType: images[index].mealType,
-                      percentage: images[index].percentage,
-                      details: images[index].details,
-                      index: index,
-                    ),
-                  ),
-                );
-              },
-              child: Hero(
-                tag: 'logo$index',
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    image: DecorationImage(
-                      image: Image.network(_images[index].imagePath).image,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-              ),
-            );
-          },
-          itemCount: images.length,
-        ),
-      );
-      children.add(gridviewContainer);
-    }
-    return children;
-  }
 }
+ 
 
 class ImageDetails {
   final String imagePath;

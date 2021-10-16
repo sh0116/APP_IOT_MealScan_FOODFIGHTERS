@@ -18,7 +18,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: const Text("Firebase Demo"),
       ),
       body: FutureBuilder(
-        future: FireStoreDataBase().getImageData(),
+        future: ImageDataBase().getImageData(),
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return const Text(
@@ -42,11 +42,11 @@ class _MyHomePageState extends State<MyHomePage> {
       itemBuilder: (BuildContext context, int index) {
         return ListTile(
           title: Text(
-            dataList[index]["NAME"]
+            dataList[index]["DATE"]
           ),
-          subtitle:  Text(dataList[index]["BASE_CODE"]),
+          subtitle:  Text(dataList[index]["IMAGE_ADDRESS"]),
           trailing: Text(
-            dataList[index]["COMPANY"],
+            dataList[index]["MEALTYPE"],
           ),
         );
       });

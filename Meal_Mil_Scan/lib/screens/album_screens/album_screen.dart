@@ -27,7 +27,7 @@ class _AlbumScreenState extends State<AlbumScreen> {
       body: Container(
         padding: const EdgeInsets.only(left: 30, right: 30),
         child: 
-          AlbumHome2(),
+          AlbumHome(),
       ),
     );
   }
