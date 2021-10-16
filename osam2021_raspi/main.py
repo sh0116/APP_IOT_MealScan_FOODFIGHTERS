@@ -40,6 +40,13 @@ class main_process():
                     #database.firebase_send_meal(today_menu.get_menu(1))
                     #database.firestore_send_image()
                     self.state = "qr"
+                
+                # state plate 
+                elif self.state=="plate":
+                    process_class = image_processing.Image_Processing(a)
+                    result = database.firebase_post(self.qr_data, process_class.DataList )
+
+                    self.state = "qr"
                 """
                 # state qr
                 elif self.state=="qr":
@@ -49,12 +56,6 @@ class main_process():
                     if self.qr_data != "empty data":
                         self.state = "plate"
                 """
-                # state plate 
-                elif self.state=="plate":
-                    process_class = image_processing.Image_Processing(a)
-                    result = database.firebase_post(self.qr_data, process_class.DataList )
-
-                    self.state = "qr"
             
     def webcam(self):
 
