@@ -93,7 +93,7 @@ class main_process():
             # cv2.show() in rectangle() show qr area
             else:
                 frame = cv2.rectangle(frame, (190 , 110 ), (290, 210), (0, 255, 0), 2)
-            cv2.imshow("main",frame)
+            cv2.imshow("main",f)
 
         # close window
         self.cap.release()
