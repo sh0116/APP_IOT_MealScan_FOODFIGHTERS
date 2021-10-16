@@ -46,7 +46,7 @@ class main_process():
                 elif self.state=="qr":
                     self.qr = qr_processing.Image_Processing(a)
                     self.qr_data = self.qr.Data()
-                    print("user id : {}".(self.qr_data))
+                    print("user id : {}".format(self.qr_data))
                     if self.qr_data != "empty data":
                         self.state = "plate"
 
