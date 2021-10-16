@@ -5,7 +5,7 @@ from firebase_admin import firestore
 from firebase_admin import storage
 from uuid import uuid4
 from src import today_menu
-import datetime
+from datetime import date, datetime, timedelta
 import time
 import sys
 #import wget
@@ -25,15 +25,15 @@ db = firestore.client()
 bucket = storage.bucket()
 
 #get date and meal_type
-date, meal_type = today_menu.get_date_meal_type()
-date_meal = date[2:] + '-'+str(meal_type)
+date_tod, meal_type = today_menu.get_date_meal_type()
+date_meal = date_tod[2:] + '-'+str(meal_type)
 
 #Function to send today's menu data according to base code from init to Firebase Firestore Database
 def firebase_send_meal(base_code):
     #get today's menu from today_menu.py
     menu = today_menu.get_menu(base_code)
     #set data
-    data = {
+    data1 = {
     u'1ITEMNAME': menu[0],
     u'2ITEMNAME': menu[1],
     u'3ITEMNAME': menu[2],
@@ -41,7 +41,24 @@ def firebase_send_meal(base_code):
     u'5ITEMNAME': menu[4]
     }
     #send to Firebase Firestore Database
-    db.collection(u'MEALPLANS').document(str(base_code)).collection(u'MEALS').document(date_meal).set(data)
+    db.collection(u'MEALPLANS').document(str(base_code)).collection(u'MEALS').document(date_meal).set(data1)
+    #send tommorow's menu in breakfast
+    if meal_type == 1:
+        #get tomorrow's menus
+        tom_arr = today_menu.get_menu_tomorrow(base_code)
+        for i in range(len(tom_arr)):
+            #set data
+            data2 = {
+                u'1ITEMNAME': tom_arr[i][0],
+                u'2ITEMNAME': tom_arr[i][1],
+                u'3ITEMNAME': tom_arr[i][2],
+                u'4ITEMNAME': tom_arr[i][3],
+                u'5ITEMNAME': tom_arr[i][4]
+                }
+            #format document id
+            tom_date_mealtype = str(date.today() + timedelta(days=1))[2:]  +'-'+ str(i+1)
+            #send to Firebase Firestore Database
+            db.collection(u'MEALPLANS').document(str(base_code)).collection(u'MEALS').document(tom_date_mealtype).set(data2)
 
 
 
@@ -69,13 +86,25 @@ def firebase_send_user_waste(id, waste_list):
         new_arr =curr_arr+ [list_mean]
         #get new_average and format
         new_avg = str(round(sum(new_arr)/len(new_arr),2)) + '%'
-        #set data
+        #update data
         data2 = {
             u'WASTE_ARR': new_arr,
             u'WASTE_AVG': new_avg
             }
         #send to Firebase Firestore Database
-        avg_update_doc.set(data2)
+        avg_update_doc.update(data2)
+        #get today's average
+        if meal_type == 3:
+            #get today's date and format
+            dow = datetime.today().strftime('%A')[0:3].upper()
+            #get today's avg
+            today_avg = round(sum(new_arr[-3:])/3, 2)
+            #update date
+            data2_1 = {
+                dow: today_avg
+            }
+            #send to Firebase Firestore Database
+            avg_update_doc.update(data2_1)
     else:
         new_arr = [list_mean]
         #get new_average and format
@@ -109,15 +138,15 @@ def firebase_send_user_waste(id, waste_list):
         lb = []
         #make leaderboard based on food_waste
         for i in parti:
-            lb += [[(chalrank_update_doc.get().to_dict()[i+'_AVG']).split('%')[0], i]]
-        lb_for_send = [j for i,j in sorted(lb, reverse= True)]
+            #send name when updating leaderboard
+            name = db.collection(u'USER').document(i).get().to_dict()['NAME']
+            lb += [[(chalrank_update_doc.get().to_dict()[i+'_AVG']).split('%')[0], i, name]]
+        lb_for_send = [j + ' : ' + k for i,j,k in sorted(lb, reverse= True)]
         data4 = {
             u'LEADERBOARD' : lb_for_send
         }
         #send to Firebase Firestore Database
         chalrank_update_doc.update(data4)
-
-
 
 #Function to send image data to Firebase Storage and send image path to Firebase Firestore
 def firestore_send_image(id, image_address, waste_list):
@@ -161,9 +190,9 @@ if __name__=="__main__":
     i_address = '/home/pi/osam/APP_IOT_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/test_image/100_per/100per.png'
     #path for codespace
     #i_address = "/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/Meal_Mil_Scan/assets/images/meal2.jpg"
-    firebase_send_meal(b_code)
+    #firebase_send_meal(b_code)
     firebase_send_user_waste(id,w_list)
-    firestore_send_image(id, i_address, w_list)
+    #firestore_send_image(id, i_address, w_list)
     print("Successfully sent data to Firebase")
 
 '''
