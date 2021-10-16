@@ -32,7 +32,7 @@ class main_process():
             if y > self.button[0] and y < self.button[1] and x > self.button[2] and x < self.button[3]: 
                 print('Clicked on Button!')
                 # check image capture
-                ret, a = 1,2 #self.cap.read()   
+                ret, a = self.cap.read()   
 
                 # state init 
                 if self.state=="init":
