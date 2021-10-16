@@ -32,7 +32,7 @@ class main_process():
             if y > self.button[0] and y < self.button[1] and x > self.button[2] and x < self.button[3]: 
                 print('Clicked on Button!')
                 # check image capture
-                ret, a = cap.read()   
+                ret, a = self.cap.read()   
 
                 # state init 
                 if self.state=="init":
@@ -75,7 +75,7 @@ class main_process():
         #time.sleep(0.1)
         # open camera
         while(True):
-            ret, f = cap.read()               
+            ret, f = self.cap.read()               
             frame = f.copy()
             if cv2.waitKey(1) & 0xFF == 27: # esc 키를 누르면 닫음
                 break
