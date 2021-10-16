@@ -24,6 +24,7 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: FutureBuilder(
         future: ChallengeDataBase().getData(),
         builder: (context, snapshot) {

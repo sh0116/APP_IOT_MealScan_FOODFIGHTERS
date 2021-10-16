@@ -1,7 +1,6 @@
 import 'package:osam2021/firebase/database_challenge.dart';
 import 'package:osam2021/firebase/database_images.dart';
 import 'package:flutter/material.dart';
-import 'package:osam2021/models/challenge/challenge_provider.dart';
 
 class MyHomePage2 extends StatefulWidget {
   const MyHomePage2({Key? key}) : super(key: key);
@@ -20,7 +19,6 @@ class _MyHomePage2State extends State<MyHomePage2> {
         title: const Text("Firebase Demo"),
       ),
       body: FutureBuilder(
-        future: ChallengeProvider().loadChallenge(),
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return const Text(
