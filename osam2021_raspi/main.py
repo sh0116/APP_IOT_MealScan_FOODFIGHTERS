@@ -82,9 +82,9 @@ class main_process():
             #frame = cv2.flip(frame, 0)
             # cv2.show() in rectangle() show plate area
             if self.state!="qr":
-                frame = cv2.rectangle(frame, (20, 20), (460, 340), (0, 255, 0), 2)
-                frame = cv2.rectangle(frame, (245, 155), (420, 340), (0, 255, 0), 2)
-                frame = cv2.rectangle(frame, (60, 155), (235, 340), (0, 255, 0), 2)
+                frame = cv2.rectangle(frame, (20, 20), (460, 320), (0, 255, 0), 2)
+                frame = cv2.rectangle(frame, (245, 155), (420, 310), (0, 255, 0), 2)
+                frame = cv2.rectangle(frame, (60, 155), (235, 310), (0, 255, 0), 2)
 
                 frame = cv2.rectangle(frame, (60, 60), (175, 145), (0, 255, 0), 2)
                 frame = cv2.rectangle(frame, (185, 60), (300, 145), (0, 255, 0), 2)
