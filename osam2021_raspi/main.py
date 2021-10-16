@@ -86,9 +86,9 @@ class main_process():
                 frame = cv2.rectangle(frame, (230, 155), (405, 315), (0, 255, 0), 2)
                 frame = cv2.rectangle(frame, (35, 155), (220, 315), (0, 255, 0), 2)
 
-                frame = cv2.rectangle(frame, (35, 30), (160, 145), (0, 255, 0), 2)
-                frame = cv2.rectangle(frame, (175, 30), (280, 145), (0, 255, 0), 2)
-                frame = cv2.rectangle(frame, (285, 30), (405, 145), (0, 255, 0), 2)
+                frame = cv2.rectangle(frame, (35, 35), (160, 145), (0, 255, 0), 2)
+                frame = cv2.rectangle(frame, (175, 35), (270, 145), (0, 255, 0), 2)
+                frame = cv2.rectangle(frame, (285, 35), (405, 145), (0, 255, 0), 2)
 
             # cv2.show() in rectangle() show qr area
             else:
