@@ -67,8 +67,8 @@ class main_process():
         cv2.imshow('Control', control_image)
         '''
         self.cap = cv2.VideoCapture(0)
-        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 600)
-        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 600)
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 480)
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 360)
         #self.cap.resolution = (480, 360)
         #self.cap.framerate = 32
         #raw_capture = PiRGBArray(self.cap, size=(480, 360))
