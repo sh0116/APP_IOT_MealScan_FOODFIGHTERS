@@ -37,7 +37,6 @@ class main_process():
                 # state init 
                 if self.state=="init":
                     init_processing.Image_Processing(a)
-
                     #database.firebase_send_meal(today_menu.get_menu(1))
                     #database.firestore_send_image()
                     self.state = "qr"
@@ -70,6 +69,8 @@ class main_process():
         cv2.imshow('Control', control_image)
 
         self.cap = cv2.VideoCapture(0)
+        self.detector = cv2.QRCodeDetector()
+
         self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 480)
         self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 360)
         #self.cap.resolution = (480, 360)
@@ -80,6 +81,19 @@ class main_process():
         while(True):
             ret, f = self.cap.read()               
             frame = f.copy()
+            data, bbox, _ = detector.detectAndDecode(f))
+
+            # if there is a bounding box, draw one, along with the data
+            if(bbox is not None):
+                for i in range(len(bbox)):
+                    cv2.line(frame, tuple(bbox[i][0]), tuple(bbox[(i+1) % len(bbox)][0]), color=(255,
+                            0, 255), thickness=2)
+                cv2.putText(frame, data, (int(bbox[0][0][0]), int(bbox[0][0][1]) - 10), cv2.FONT_HERSHEY_SIMPLEX,
+                            0.5, (0, 255, 0), 2)
+                if data:
+                    print("data found: ", data)
+
+
             if cv2.waitKey(1) & 0xFF == 27: # esc 키를 누르면 닫음
                 break
             #frame = cv2.flip(frame, 0)
@@ -93,15 +107,11 @@ class main_process():
                 frame = cv2.rectangle(frame, (175, 35), (270, 145), (0, 255, 0), 2)
                 frame = cv2.rectangle(frame, (285, 35), (405, 145), (0, 255, 0), 2)
 
-            # cv2.show() in rectangle() show qr area
-            else:
-                frame = cv2.rectangle(frame, (190 , 110 ), (290, 210), (0, 255, 0), 2)
             cv2.imshow("main",frame)
 
         # close window
         self.cap.release()
         cv2.destroyAllWindows()
-
 
 if __name__=="__main__":
     main_process()
