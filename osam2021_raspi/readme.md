@@ -5,7 +5,7 @@
 </div>
 
 ## 🗃목차
-### [1.🛠Process 구조](#main)
+### [1.🛠Process 구조](#flow-chart)
 ### [2.📋Jupyter Notebook(colab)](#음식-분류-알고리즘)
 ### [3.📊Sequence Diagram](#sequence-diagram)
 
@@ -13,11 +13,9 @@
 
  
 <h2> 🛠Process 구조 </h2>
-<h3>Main</h3>
-<h3>init_processing</h3>
-<h3>image_processing</h3>
-<h3>qr_processing</h3>
-<h3>utill & database</h3>
+ 
+### flow chart
+<img src="/asset/flow_chart.drawio.png">
 
 ## 📋Jupyter Notebook(colab) 
 ### 음식 분류 알고리즘
@@ -109,7 +107,7 @@ Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_M
  
 ### Sequence Diagram 
  
-<img src="../asset/Sequence.png">
+<img src="/asset/seq_chart.png">
 </div>
 
 </div>
