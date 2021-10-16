@@ -82,7 +82,7 @@ class main_process():
         while(True):
             ret, f = self.cap.read()               
             frame = f.copy()
-            data, bbox, _ = detector.detectAndDecode(f)
+            data, bbox, _ = self.detector.detectAndDecode(f)
 
             # if there is a bounding box, draw one, along with the data
             if(bbox is not None):
