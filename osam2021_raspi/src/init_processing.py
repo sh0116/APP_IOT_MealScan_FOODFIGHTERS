@@ -1,6 +1,8 @@
 import cv2
 import numpy as np
 import os
+from src import database
+from src import today_menu
 
 # init process class
 class Image_Processing:
@@ -12,7 +14,7 @@ class Image_Processing:
 
 		# split image (x,y)point
 		dish = list()
-		rect_range = [[245,420,155,260],[60,235,155,260],[60,175,60,145],[185,300,60,145],[310,420,60,145]]
+		rect_range = [[230,405,155,315],[35,220,155,315],[35,160,35,145],[175,270,35,145],[285,405,35,145]]
 		for x1,x2,y1,y2 in rect_range:
 			dish.append([[x1,y2],[x1,y1],[x2,y1],[x2,y2]])
 			
@@ -29,6 +31,7 @@ class Image_Processing:
 		for self.box in np.array(self.main_dish):
 			cv2.imwrite("../asset/{}.png".format(dish_tag[self.cnt]), self.image[self.box[1][1]+10:self.box[0][1]-10,self.box[1][0]+10:self.box[2][0]-10].copy() )
 			self.cnt+=1
+
 
 if __name__=="__main__":
 	img_pro = Image_Processing("../asset/result2.png")

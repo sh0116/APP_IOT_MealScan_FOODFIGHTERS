@@ -23,7 +23,6 @@ class DataMenu extends StatelessWidget {
         curve: Curves.ease,
         itemCount: cards.length,
         pagination: SwiperPagination(),
-        control: SwiperControl(),
       ),
     );
   }

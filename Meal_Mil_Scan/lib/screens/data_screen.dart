@@ -35,10 +35,7 @@ class _DataScreenState extends State<DataScreen> {
           padding: const EdgeInsets.only(left: 30, right: 30),
           child: ListView(
             children: [
-              Row(children: [
-                
-              ]),
-              Gauge(),
+              SizedBox(height: 30),
               Row(children: [
                 Text(
                   "식단 추천",
@@ -54,7 +51,16 @@ class _DataScreenState extends State<DataScreen> {
               SizedBox(height: 50),
               Row(children: [
                 Text(
-                  "일별 평균 잔반량",
+                  "누적 잔반 클리어률",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700), //TextStyle
+                ),
+              ]), 
+              Gauge(),              
+              Row(children: [
+                Text(
+                  "일별 잔반 클리어률",
                   style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w700), //TextStyle
