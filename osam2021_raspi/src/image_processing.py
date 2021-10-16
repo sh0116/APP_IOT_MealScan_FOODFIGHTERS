@@ -16,7 +16,8 @@ class Image_Processing:
 		self.image = image
 		self.images = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
 		self.image_lenght_x,self.image_lenght_y,_ =  self.image.shape
-		cv2.imwrite('/home/pi/osam/APP_IOT_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/temp_result/temp.png')
+		cv2.imwrite('/home/pi/osam/APP_IOT_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/temp_result/temp.png',
+			image[20:420,20:325].copy())
 		dish = list()
 		# split image (x,y)point
 		rect_range = [[230,405,155,315],[35,220,155,315],[35,160,35,145],[175,270,35,145],[285,405,35,145]]
