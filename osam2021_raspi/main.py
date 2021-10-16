@@ -79,7 +79,7 @@ class main_process():
             frame = f.copy()
             if cv2.waitKey(1) & 0xFF == 27: # esc 키를 누르면 닫음
                 break
-            #  frame = cv2.flip(frame, 0)
+            #frame = cv2.flip(frame, 0)
             # cv2.show() in rectangle() show plate area
             if self.state!="qr":
                 frame = cv2.rectangle(frame, (50, 50), (430, 270), (0, 255, 0), 2)
@@ -93,7 +93,7 @@ class main_process():
             # cv2.show() in rectangle() show qr area
             else:
                 frame = cv2.rectangle(frame, (190 , 110 ), (290, 210), (0, 255, 0), 2)
-            cv2.imshow("main",f)
+            cv2.imshow("main",frame)
 
         # close window
         self.cap.release()
