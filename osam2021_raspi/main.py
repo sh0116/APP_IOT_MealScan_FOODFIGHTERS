@@ -83,12 +83,12 @@ class main_process():
             # cv2.show() in rectangle() show plate area
             if self.state!="qr":
                 frame = cv2.rectangle(frame, (20, 20), (420, 325), (0, 255, 0), 2)
-                frame = cv2.rectangle(frame, (230, 155), (410, 315), (0, 255, 0), 2)
-                frame = cv2.rectangle(frame, (30, 155), (235, 315), (0, 255, 0), 2)
+                frame = cv2.rectangle(frame, (230, 155), (405, 315), (0, 255, 0), 2)
+                frame = cv2.rectangle(frame, (35, 155), (220, 315), (0, 255, 0), 2)
 
-                frame = cv2.rectangle(frame, (60, 30), (175, 145), (0, 255, 0), 2)
-                frame = cv2.rectangle(frame, (185, 30), (300, 145), (0, 255, 0), 2)
-                frame = cv2.rectangle(frame, (310, 30), (420, 145), (0, 255, 0), 2)
+                frame = cv2.rectangle(frame, (35, 30), (160, 145), (0, 255, 0), 2)
+                frame = cv2.rectangle(frame, (175, 30), (280, 145), (0, 255, 0), 2)
+                frame = cv2.rectangle(frame, (285, 30), (405, 145), (0, 255, 0), 2)
 
             # cv2.show() in rectangle() show qr area
             else:
