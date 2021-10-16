@@ -19,7 +19,7 @@ class Image_Processing:
 
 		dish = list()
 		# split image (x,y)point
-		rect_range = [[245,420,155,260],[60,235,155,260],[60,175,60,145],[185,300,60,145],[310,420,60,145]]
+		rect_range = [[230,405,155,315],[35,220,155,315],[35,160,35,145],[175,270,35,145],[285,405,35,145]]
 		for x1,x2,y1,y2 in rect_range:
 			dish.append([[x1,y2],[x1,y1],[x2,y1],[x2,y2]])
 		self.side_rect = dish[:3]
