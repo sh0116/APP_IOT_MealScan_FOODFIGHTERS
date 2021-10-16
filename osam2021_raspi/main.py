@@ -7,9 +7,6 @@ from src import init_processing
 #from src import qr_processing
 from src import database
 
-from picamera.array import PiRGBArray # Generates a 3D RGB array
-from picamera import PiCamera # Provides a Python interface for the RPi Camera Module
-
 # main process
 class main_process():
     def __init__(self):
@@ -44,11 +41,10 @@ class main_process():
                     #path for raspi
                     i_address = '/home/pi/osam/APP_IOT_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/temp_result/temp.png'
                     #path for codespace
-                    #i_address = "/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/Meal_Mil_Scan/assets/images/meal2.jpg"
-                    #firebase_send_meal(b_code)
                     w_list = process_class.DataList
-                    result = database.firebase_send_user_waste(user_data, w_list)
-                    firestore_send_image(id, i_address, w_list)
+                    database.firebase_send_user_waste(user_data, w_list)
+                    database.firestore_send_image(user_data, i_address, w_list)
+                    
                     print("Successfully sent data to Firebase")
 
                     self.state = "qr"
@@ -65,15 +61,13 @@ class main_process():
         # show 'control panel'
         cv2.imshow('Control', control_image)
 
+        # camera setting
         self.cap = cv2.VideoCapture(0)
         self.detector = cv2.QRCodeDetector()
 
         self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 480)
         self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 360)
-        #self.cap.resolution = (480, 360)
-        #self.cap.framerate = 32
-        #raw_capture = PiRGBArray(self.cap, size=(480, 360))
-        #time.sleep(0.1)
+
         # open camera
         while(True):
             ret, f = self.cap.read()               
