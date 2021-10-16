@@ -36,7 +36,7 @@ class main_process():
                 # state plate 
                 elif self.state=="plate":
                     process_class = image_processing.Image_Processing(a)
-                    b_code,user_data = int(self.qr_data[:4]), self.qr_data[4:]
+                    b_code, user_data = int(self.qr_data[:4]), self.qr_data[4:]
                     b_code = 1
                     #path for raspi
                     i_address = '/home/pi/osam/APP_IOT_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/temp_result/temp.png'
