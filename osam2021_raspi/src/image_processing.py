@@ -11,7 +11,7 @@ from src import utill
 
 # image process class
 class Image_Processing:
-	def __init__(self, image, qr_data):
+	def __init__(self, image):
 		# get image from main_process
 		self.image = image
 		self.images = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
