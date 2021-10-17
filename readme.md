@@ -56,7 +56,7 @@ Scan 단계에서의 데이터는 챌린지 뿐만 아니라 간편하고 보기
 		<tr>
             <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
             /Meal_Mil_Scan/assets/images/explore_screenshot.png"><img src="./Meal_Mil_Scan/assets/images/explore_screenshot.png" width="90%" height="90%"></a></div></td>
-            <td width="33%">끼니 별 배식 추천</td>
+            <td width="33%">끼니 별 배식량 추천</td>
         </tr>
         <tr>
             <td>다양한 차트 + 애니메이션을 이용한 데이터 시각화 </td>

@@ -140,7 +140,7 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
         padding: const EdgeInsets.only(top: 4, bottom: 6),
         child: Icon(FontAwesomeIcons.medal, color: Color(0xffd4af37), size: 15),
       );
-      trailingWidget = Tooltip(message: '누적 잔반 비움 비율을 나타냅니다.', child: tooltipText,);
+      trailingWidget = Tooltip(message: '누적 잔반 클리어율을 나타냅니다.', child: tooltipText,);
     } else {
       arrow = Icon(FontAwesomeIcons.sortDown, color: Colors.red, size: 10.0);
       rankWidget = Text("$rank", style: TextStyle(color: widget.challenge.bgColor, fontSize: 20));

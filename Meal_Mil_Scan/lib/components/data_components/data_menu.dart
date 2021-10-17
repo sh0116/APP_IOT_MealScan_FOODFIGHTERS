@@ -21,6 +21,7 @@ class DataMenu extends StatelessWidget {
         scale: 0.9,
         fade: 1.0,
         curve: Curves.ease,
+        autoplay: true,
         itemCount: cards.length,
         pagination: SwiperPagination(),
       ),
