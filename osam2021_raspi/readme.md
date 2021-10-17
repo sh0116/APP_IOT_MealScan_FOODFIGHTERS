@@ -5,7 +5,7 @@
 </div>
 
 ## 🗃목차
-### [1.🛠Process 구조](#main)
+### [1.🛠Process 구조](#flow-chart)
 ### [2.📋Jupyter Notebook(colab)](#음식-분류-알고리즘)
 ### [3.📊Sequence Diagram](#sequence-diagram)
 
@@ -13,12 +13,13 @@
 
  
 <h2> 🛠Process 구조 </h2>
-<h3>Main</h3>
-<h3>init_processing</h3>
-<h3>image_processing</h3>
-<h3>qr_processing</h3>
-<h3>utill & database</h3>
 
+ <div align="Center">
+  
+ ### Flow Chart
+ <img src="/asset/flow_chart.drawio.png">
+ </div>
+ 
 ## 📋Jupyter Notebook(colab) 
 ### 음식 분류 알고리즘
 >> cv2.rectangle() 함수와 imshow() 함수를 통해서 사용자에게 식판을 놓을 위치를 알려준다.<br>
@@ -109,7 +110,7 @@ Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_M
  
 ### Sequence Diagram 
  
-<img src="../asset/Sequence.png">
+<img src="/asset/seq_chart.png">
 </div>
 
 </div>

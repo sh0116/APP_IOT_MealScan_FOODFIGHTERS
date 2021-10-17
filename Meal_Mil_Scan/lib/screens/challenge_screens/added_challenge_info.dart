@@ -4,6 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:osam2021/components/challenge_components/challenge_header.dart';
 import 'package:provider/provider.dart';
 import 'package:osam2021/notifiers.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class AddedChallengeInfo extends StatefulWidget {
   final Challenge challenge;
@@ -87,6 +89,7 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
   }
 
   Widget _buildLeaderboard() {
+    CollectionReference rank = FirebaseFirestore.instance.collection('CHALLENGE_RANK').doc('1').collection('1');
     return Column(
       children: [
         Row(mainAxisAlignment: MainAxisAlignment.center, 
@@ -137,7 +140,7 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
         padding: const EdgeInsets.only(top: 4, bottom: 6),
         child: Icon(FontAwesomeIcons.medal, color: Color(0xffd4af37), size: 15),
       );
-      trailingWidget = Tooltip(message: '누적 잔반 비움 비율을 나타냅니다.', child: tooltipText,);
+      trailingWidget = Tooltip(message: '누적 잔반 클리어율을 나타냅니다.', child: tooltipText,);
     } else {
       arrow = Icon(FontAwesomeIcons.sortDown, color: Colors.red, size: 10.0);
       rankWidget = Text("$rank", style: TextStyle(color: widget.challenge.bgColor, fontSize: 20));

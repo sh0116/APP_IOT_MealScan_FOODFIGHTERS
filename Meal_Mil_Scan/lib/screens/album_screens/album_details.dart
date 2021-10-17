@@ -8,7 +8,6 @@ class AlbumDetails extends StatelessWidget {
   final String date;
   final String mealType;
   final String percentage;
-  final String details;
   final int index;
 
   AlbumDetails(
@@ -16,7 +15,6 @@ class AlbumDetails extends StatelessWidget {
       required this.date,
       required this.mealType,
       required this.percentage,
-      required this.details,
       required this.index});
       
   @override
@@ -68,7 +66,7 @@ class AlbumDetails extends StatelessWidget {
                         bottomRight: Radius.circular(30)),
                   ),
                   child: PhotoView(
-                    imageProvider: AssetImage(imagePath),
+                    imageProvider: Image.network(imagePath).image,
                     backgroundDecoration: BoxDecoration(
                       color: Colors.white
                     ),
