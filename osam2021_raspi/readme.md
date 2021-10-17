@@ -17,7 +17,7 @@
  <div align="Center">
   
  ### Flow Chart
- <img src="/asset/flow_chart.drawio.png">
+ <img src="/asset/flow_chart.png">
  </div>
  
 ## 📋Jupyter Notebook(colab) 
