@@ -1,6 +1,7 @@
 <h1> 🧱3D Modeling & Printing </h1>
-<div align="left">
-<img src="/3D_printing/asset/new_all2.png" width="500" height="500">
+<div align="center">
+<img src="/3D_printing/asset/new_all2.png" width="450 height="450">
+ <img src="/3D_printing/asset/3d_gif.gif" width="450" height="450">
 </div>
 
 <h2>🔧3D Printing 설계 및 출력</h2>
