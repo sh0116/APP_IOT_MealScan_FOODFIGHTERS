@@ -92,16 +92,25 @@ Scan 단계에서의 데이터는 챌린지 뿐만 아니라 간편하고 보기
 
 <br>
 
-## 기술 스택 (Technique Used) 
-### Server(back-end)
- -  nodejs, php, java 등 서버 언어 버전 
- - express, laravel, sptring boot 등 사용한 프레임워크 
- - DB 등 사용한 다른 프로그램 
- 
-### Front-end
- -  react.js, vue.js 등 사용한 front-end 프레임워크 
- -  UI framework
- - 기타 사용한 라이브러리
+## 기술 스택 (Technique Used) 💻 
+
+* **Backend**
+
+|Firebase|
+|:---:|
+|<a href="https://firebase.google.com/"><img src="https://en.wikipedia.org/wiki/Firebase#/media/File:Firebase_Logo.svg" height="30px"></a>|
+
+* **FrontEnd**  
+
+|Dart|Flutter UI Framework|
+|:---:|:---:|
+|<a href="https://dart.dev/"><img src="https://en.wikipedia.org/wiki/Dart_(programming_language)#/media/File:Dart_programming_language_logo.svg" height="50px"></a>|<a href="https://flutter.dev/"><img src="https://en.wikipedia.org/wiki/Flutter_(software)#/media/File:Google-flutter-logo.svg" height="60px"></a>|
+
+* **IOT**  
+
+|Raspberry Pi|Python|
+|:---:|:---:|
+|<a href="https://www.raspberrypi.org/"><img src="https://en.wikipedia.org/wiki/Raspberry_Pi#/media/File:Raspberry_Pi_Logo.svg" height="50px"></a>|<a href="https://www.python.org/"><img src="https://en.wikipedia.org/wiki/Python_(programming_language)#/media/File:Python-logo-notext.svg" height="60px"></a>|
 
 ## 설치 안내 (Installation Process)
 ```bash
