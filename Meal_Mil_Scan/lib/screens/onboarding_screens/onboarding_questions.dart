@@ -2,11 +2,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:cool_stepper/cool_stepper.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:osam2021/models/user/user_provider.dart';
-import 'package:provider/provider.dart';
-import 'package:osam2021/models/user/user_model.dart';
+import 'package:osam2021/screens/main_screen.dart';
+
 
 class OnboardingQuestions extends StatefulWidget {
+  final Function() notifyParent2; 
+  const OnboardingQuestions({required this.notifyParent2});
   @override
   State<OnboardingQuestions> createState() => _OnboardingQuestionsState();
 }
@@ -59,7 +60,6 @@ class _OnboardingQuestionsState extends State<OnboardingQuestions> {
                 child: TextFormField(
                   style: TextStyle(fontSize: 20),
                   onSaved: (value) {
-                    print("군번");
                   },
                   decoration: InputDecoration(
                       labelText: '군번 (- 포함)',
@@ -101,7 +101,6 @@ class _OnboardingQuestionsState extends State<OnboardingQuestions> {
                 child: TextFormField(
                   style: TextStyle(fontSize: 20),
                   onSaved: (value) {
-                    print("고유코드");
                   },
                   decoration: InputDecoration(
                       labelText: '부대 고유코드',
@@ -121,10 +120,11 @@ class _OnboardingQuestionsState extends State<OnboardingQuestions> {
               ),
             ],
           ),
+          
         ),
         validation: () {
           if (!_formKey.currentState!.validate()) {
-            return name;
+            return "부대고유코드를 입력해주세요";
           } else {
             codeNum = _codeCtrl.text;
           }
@@ -137,7 +137,15 @@ class _OnboardingQuestionsState extends State<OnboardingQuestions> {
       child: CoolStepper(
         showErrorSnackbar: true,
         onCompleted: () {
-          print('Steps completed!');
+          print("--------^^");
+          print(_nameCtrl.text);
+          print(_codeCtrl.text);
+          print(_serialNumCtrl.text);
+          Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(builder: (context) => MainScreen()),
+            (Route<dynamic> route) => false,
+          );
         },
         steps: steps,
         config: CoolStepperConfig(

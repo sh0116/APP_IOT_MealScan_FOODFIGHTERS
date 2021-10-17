@@ -2,11 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:osam2021/components/onboarding_components/onboarding_carousel.dart';
 import 'package:osam2021/screens/onboarding_screens/onboarding_questions.dart';
 
-class OnboardingScreen extends StatelessWidget {
+class OnboardingScreen extends StatefulWidget {
+  final Function() notifyParent; 
+  const OnboardingScreen({required this.notifyParent});
+  @override
+  State<OnboardingScreen> createState() => _OnboardingScreenState();
+}
+
+class _OnboardingScreenState extends State<OnboardingScreen> {
   final int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.all(15.0),
@@ -24,14 +33,14 @@ class OnboardingScreen extends StatelessWidget {
             children: [
               //Text("잔반 줄이기, \이제 즐기세요.", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
               OnboardingCarousel(),
-              Container(height: 100),
+              Container(height: 60),
               MaterialButton(
                 color: Colors.black,
                 child: 
                   Text("시작하기", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18, color: Colors.white)),
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute<void>(builder: (BuildContext context) {
-                    return OnboardingQuestions();
+                    return OnboardingQuestions(notifyParent2: triggerSignIn);
                   }));
                 },
                 height: 60,
@@ -47,5 +56,8 @@ class OnboardingScreen extends StatelessWidget {
       ),
     );
   }
-  
+
+  triggerSignIn() {
+    widget.notifyParent();
+  }
 }
