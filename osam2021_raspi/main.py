@@ -42,6 +42,7 @@ class main_process():
                     i_address = '/home/pi/osam/APP_IOT_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/temp_result/temp.png'
                     #path for codespace
                     w_list = process_class.DataList
+                    print(w_list)
                     database.firebase_send_user_waste(user_data, w_list)
                     database.firestore_send_image(user_data, i_address, w_list)
 
