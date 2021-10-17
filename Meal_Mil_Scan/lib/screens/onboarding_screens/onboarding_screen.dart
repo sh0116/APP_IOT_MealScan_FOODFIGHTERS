@@ -20,7 +20,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         leading: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Image.asset(
-            "assets/images/logo.png",
+            "assets/images/logo.jpg",
           ),
         )
       ),      

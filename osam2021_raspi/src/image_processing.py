@@ -16,8 +16,9 @@ class Image_Processing:
 		self.image = image
 		self.images = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
 		self.image_lenght_x,self.image_lenght_y,_ =  self.image.shape
-		cv2.imwrite('/home/pi/osam/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/asset/temp_result/temp.png',
-			image[20:420,20:325].copy())
+		re = cv2.imwrite('/home/pi/osam/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/asset/temp_result/temp.png',
+			image[20:325,20:420].copy())
+		print("image upload",re)
 		dish = list()
 		
 		# split image (x,y)point
@@ -40,12 +41,12 @@ class Image_Processing:
 		# find side dish tag
 		self.find_side_dish()
 
-		print("1 : ",self.DataList)
+		#print("1 : ",self.DataList)
 		# backProjection (main)
 		for self.box in self.main_rect:
 			self.DataList.append(self.backProjection())
 			self.cnt+=1			
-		print("2 : ",self.DataList)
+		#print("2 : ",self.DataList)
 
 	# find side dish tag
 	def find_side_dish(self):
@@ -54,8 +55,8 @@ class Image_Processing:
 		for i1,i2,i3 in [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]:
 			if temp_sum>sum( [ self.DataList[0][i1-1],self.DataList[1][i2-1],self.DataList[2][i3-1] ] ):
 				temp_idx, temp_sum = [ self.DataList[0][i1-1],self.DataList[1][i2-1],self.DataList[2][i3-1] ], sum( [ self.DataList[0][i1-1],self.DataList[1][i2-1],self.DataList[2][i3-1] ] )
-		print("3 : ",temp_idx)
-		print("4 : ",self.DataList)
+		#print("3 : ",temp_idx)
+		#print("4 : ",self.DataList)
 		self.DataList = temp_idx.copy()
 
 	# backProjection Function (역투영)
