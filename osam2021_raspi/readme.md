@@ -116,6 +116,6 @@ Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_M
 </div>
 
 ### Reference
-BackProjection     : (https://docs.opencv.org/3.4.15/da/d7f/tutorial_back_projection.html)
-opencv Webcam      : (https://docs.opencv.org/4.5.3/d8/dfe/classcv_1_1VideoCapture.html)
-opencv Class index : (https://docs.opencv.org/master/annotated.html)
+BackProjection     : (https://docs.opencv.org/3.4.15/da/d7f/tutorial_back_projection.html) <br>
+opencv Webcam      : (https://docs.opencv.org/4.5.3/d8/dfe/classcv_1_1VideoCapture.html) <br>
+opencv Class index : (https://docs.opencv.org/master/annotated.html) <br>
