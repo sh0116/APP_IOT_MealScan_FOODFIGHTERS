@@ -5,9 +5,9 @@ from firebase_admin import firestore
 from firebase_admin import storage
 from uuid import uuid4
 # in codespace
-import today_menu
+#import today_menu
 # in IoT
-#from src import today_menu
+from src import today_menu
 from datetime import date, datetime, timedelta
 import time
 import sys
