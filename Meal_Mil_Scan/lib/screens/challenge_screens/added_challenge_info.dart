@@ -171,7 +171,7 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
         Icon(FontAwesomeIcons.solidQuestionCircle, size: 8)
       ],
     );
-    if (name == "본부포대") {
+    if (rank == '1') {
       arrow = Icon(FontAwesomeIcons.sortUp, color: Colors.green, size: 10.0);
       rankWidget = Padding(
         padding: const EdgeInsets.only(top: 4, bottom: 6),
