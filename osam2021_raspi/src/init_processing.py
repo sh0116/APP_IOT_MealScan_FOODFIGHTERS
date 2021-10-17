@@ -29,7 +29,7 @@ class Image_Processing:
 			self.cnt+=1
 
 		for self.box in np.array(self.main_dish):
-			cv2.imwrite("/home/pi/osam/APP_IOT_MealScan_FOODFIGHTERSS/osam2021_raspi/asset/{}.png".format(dish_tag[self.cnt]), self.image[self.box[1][1]+10:self.box[0][1]-10,self.box[1][0]+10:self.box[2][0]-10].copy() )
+			cv2.imwrite("/home/pi/osam/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/asset/{}.png".format(dish_tag[self.cnt]), self.image[self.box[1][1]+10:self.box[0][1]-10,self.box[1][0]+10:self.box[2][0]-10].copy() )
 			self.cnt+=1
 
 
