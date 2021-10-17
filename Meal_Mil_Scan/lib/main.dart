@@ -1,9 +1,6 @@
 import 'package:osam2021/screens/main_screen.dart';
-import 'package:osam2021/screens/main_screen2.dart';
 import 'package:flutter/material.dart';
-import 'package:osam2021/screens/onboarding_screens/onboarding_questions.dart';
 import 'package:osam2021/screens/onboarding_screens/onboarding_screen.dart';
-import 'package:osam2021/screens/onboarding_screens/onboarding_two.dart';
 import 'package:provider/provider.dart';
 import 'package:osam2021/notifiers.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -13,7 +10,13 @@ void main() async {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool signed_in = false;
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<Notifiers>(
@@ -33,8 +36,14 @@ class MyApp extends StatelessWidget {
             iconTheme: IconThemeData(color: Colors.black),
           ),
         ),
-        home: MainScreen(), //MainScreen() is the original
+        home: signed_in ? MainScreen() : OnboardingScreen(notifyParent: update), //MainScreen() is the original
       ),
     );
+  }
+
+  update() {
+    setState(() {
+      signed_in = true;
+    });
   }
 }

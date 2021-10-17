@@ -14,7 +14,6 @@ class OnboardingCarousel extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 30),
             Text("잔반 줄이기, \n이제 즐기세요.", style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold))
           ]
         )
@@ -31,7 +30,6 @@ class OnboardingCarousel extends StatelessWidget {
           color: Colors.white,
         ), 
         child: Swiper(
-          //autoplay: true,
           itemBuilder: (context, index) {
             return Container(child: onboardingPagesList[index]);
           },
@@ -42,7 +40,6 @@ class OnboardingCarousel extends StatelessWidget {
             builder: new DotSwiperPaginationBuilder(
             color: Colors.grey, activeColor: Colors.blueGrey),
           ),
-          control: new SwiperControl()
         ),
       ),
     );
