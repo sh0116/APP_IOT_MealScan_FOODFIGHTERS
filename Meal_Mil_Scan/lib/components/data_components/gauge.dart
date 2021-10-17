@@ -1,10 +1,9 @@
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-//import 'package:osam2021/firebase/database_datas.dart';
 import 'package:flutter/material.dart';
 
-final serviceNumber = '20-71209928';
+final serviceNumber = '20-14339655';
 
 class Gauge extends StatelessWidget {
   CollectionReference waste = FirebaseFirestore.instance.collection('USER_FOOD_WASTE_AVG');
@@ -24,7 +23,6 @@ class Gauge extends StatelessWidget {
 
         if (snapshot.connectionState == ConnectionState.done) {
           Map<String, dynamic> data = snapshot.data!.data() as Map<String, dynamic>;
-          //return Text("Full Name: ${data['full_name']} ${data['last_name']}");
           return SfRadialGauge(
             axes: <RadialAxis>[
               RadialAxis(
@@ -58,7 +56,7 @@ class Gauge extends StatelessWidget {
                         value: double.parse(data['WASTE_AVG'].split('%')[0]),
                         cornerStyle: CornerStyle.bothCurve,
                         enableAnimation: true,
-                        animationDuration: 7000,
+                        animationDuration: 4500,
                         animationType: AnimationType.ease,
                         sizeUnit: GaugeSizeUnit.factor,
                         gradient: SweepGradient(

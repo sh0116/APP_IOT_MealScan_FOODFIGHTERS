@@ -90,21 +90,40 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
 
   Widget _buildLeaderboard() {
     CollectionReference rank = FirebaseFirestore.instance.collection('CHALLENGE_RANK').doc('1').collection('1');
-    return Column(
-      children: [
-        Row(mainAxisAlignment: MainAxisAlignment.center, 
-          children: [Icon(FontAwesomeIcons.flagCheckered, size: 14),
-            Text("  매일 저녁 8시에 업데이트 됩니다."),
-          ]),
-        Container(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(children: [_createRanksSpecial('1', '본부포대', '87%'), _createRanksSpecial('2', '3포대', '84%'), _createRanks('3', '2포대', '79%'), 
-            _createRanks('4', '1포대', '73%')].expand((x) => x).toList()),
-          ), 
-        ),
-      ],
-    ); 
+    return FutureBuilder<DocumentSnapshot>(
+      future: rank.doc("RANK").get(),
+      builder: 
+        (BuildContext context, AsyncSnapshot<DocumentSnapshot> snapshot) {
+        if (snapshot.hasError) {
+          return Text("Something went wrong");
+        }
+
+        if (snapshot.hasData && !snapshot.data!.exists) {
+          return Text("Document does not exist");
+        }
+
+        if (snapshot.connectionState == ConnectionState.done) {
+          Map<String, dynamic> data = snapshot.data!.data() as Map<String, dynamic>;
+          //return Text("Full Name: ${data['full_name']} ${data['last_name']}");
+          return Column(
+            children: [
+              Row(mainAxisAlignment: MainAxisAlignment.center, 
+                children: [Icon(FontAwesomeIcons.flagCheckered, size: 14),
+                  Text("  매일 저녁 8시에 업데이트 됩니다."),
+                ]),
+              Container(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(children: [_createRanksSpecial('1', data['LEADERBOARD'][0].substring(14), data[(data['LEADERBOARD'][0].substring(0,11))+'_AVG']), _createRanksSpecial('2', data['LEADERBOARD'][1].substring(14), data[(data['LEADERBOARD'][1].substring(0,11))+'_AVG']), _createRanks('3', '2포대', '79%'), 
+                  _createRanks('4', '1포대', '73%')].expand((x) => x).toList()),
+                ), 
+              ),
+            ],
+          );
+        }
+        return Text("loading");
+        },
+      );
   }
 
   List<Widget> _createRanks(String rank, String name, String percentage) {

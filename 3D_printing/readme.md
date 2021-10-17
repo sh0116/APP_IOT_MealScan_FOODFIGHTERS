@@ -81,5 +81,5 @@ STL파일 제작 및 3D 도면 제작은 오픈소스 Tinkercad를 사용해서 
 <img src="/3D_printing/asset/new_bottom2.png" width="30%" height="30%">
 
 <h3> 결합 완료 </h3>
-<img src="/3D_printing/asset/new_all.png">
+<img src="/3D_printing/asset/3d_gif.gif">
 </div>

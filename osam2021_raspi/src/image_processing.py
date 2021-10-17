@@ -36,23 +36,26 @@ class Image_Processing:
 				temp.append(self.backProjection())
 			self.DataList.append(temp)
 			self.cnt+=1		
-
 		# find side dish tag
 		self.find_side_dish()
 
+		print("1 : ",self.DataList)
 		# backProjection (main)
 		for self.box in self.main_rect:
 			self.DataList.append(self.backProjection())
-			self.cnt+=1						
+			self.cnt+=1			
+		print("2 : ",self.DataList)
+
 	# find side dish tag
 	def find_side_dish(self):
-		temp_sum, temp_idx = 301.0, 0
+		temp_sum, temp_idx = 301.0, []
 		# search all cases and choose the best case
-		for idx,i1,i2,i3 in [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]:
-			if temp_sum<sum( [ self.DataList[0][i1],self.DataList[1][i2],self.DataList[2][i3] ] ):
-				temp_idx,temp_sum = [i1,i2,i3],sum( [ self.DataList[0][i1],self.DataList[1][i2],self.DataList[2][i3] ] )
-
-		self.DataList = temp_idx
+		for i1,i2,i3 in [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]:
+			if temp_sum>sum( [ self.DataList[0][i1-1],self.DataList[1][i2-1],self.DataList[2][i3-1] ] ):
+				temp_idx, temp_sum = [ self.DataList[0][i1-1],self.DataList[1][i2-1],self.DataList[2][i3-1] ], sum( [ self.DataList[0][i1-1],self.DataList[1][i2-1],self.DataList[2][i3-1] ] )
+		print("3 : ",temp_idx)
+		print("4 : ",self.DataList)
+		self.DataList = temp_idx.copy()
 
 	# backProjection Function (역투영)
 	def backProjection(self):
