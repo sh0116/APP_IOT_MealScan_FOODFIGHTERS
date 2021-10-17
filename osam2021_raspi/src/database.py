@@ -5,9 +5,9 @@ from firebase_admin import firestore
 from firebase_admin import storage
 from uuid import uuid4
 # in codespace
-import today_menu
+#import today_menu
 # in IoT
-#from src import today_menu
+from src import today_menu
 from datetime import date, datetime, timedelta
 import time
 import sys
@@ -19,9 +19,9 @@ Firebase credential path: 'military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa
 
 # initialize  the connection to our Firebase database 
 #cred for codespace
-cred = credentials.Certificate('/workspaces/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/src/military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
+#cred = credentials.Certificate('/workspaces/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/src/military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
 #cred for raspi
-#cred = credentials.Certificate('/home/pi/osam/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/src/military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
+cred = credentials.Certificate('/home/pi/osam/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/src/military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
 firebase_admin.initialize_app(cred, {
     'storageBucket': 'military-cafeteria.appspot.com'
 })
