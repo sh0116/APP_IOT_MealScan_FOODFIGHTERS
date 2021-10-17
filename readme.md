@@ -98,8 +98,8 @@ Scan 단계에서의 데이터는 챌린지 뿐만 아니라 간편하고 보기
 
 |Firebase|
 |:---:|
-|<a href="https://firebase.google.com/"><img src="https://en.wikipedia.org/wiki/Firebase#/media/File:Firebase_Logo.svg" height="30px"></a>|
-
+|![<a href="https://firebase.google.com/">](https://en.wikipedia.org/wiki/Firebase#/media/File:Firebase_Logo.svg)<a href="https://firebase.google.com/"><img src="https://en.wikipedia.org/wiki/Firebase#/media/File:Firebase_Logo.svg" height="30px"></a>|
+![alt text](http://url/to/img.png)
 * **FrontEnd**  
 
 |Dart|Flutter UI Framework|
