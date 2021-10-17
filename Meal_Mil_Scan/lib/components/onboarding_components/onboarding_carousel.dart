@@ -30,11 +30,12 @@ class OnboardingCarousel extends StatelessWidget {
           color: Colors.white,
         ), 
         child: Swiper(
+          autoplay: true,
           itemBuilder: (context, index) {
             return Container(child: onboardingPagesList[index]);
           },
           itemCount: 4,
-          duration: 700,
+          duration: 1000,
           pagination: new SwiperPagination(
             alignment: Alignment.bottomCenter,
             builder: new DotSwiperPaginationBuilder(

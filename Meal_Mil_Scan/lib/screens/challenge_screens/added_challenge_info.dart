@@ -68,11 +68,53 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
                           controller: myScrollController,
                           child: Column(children: [
                             _buildScreenSelector(),
-                            selectedId == 0 ? SizedBox() : _buildLeaderboard('1'),
+                            selectedId == 0 ? _buildIntro() : _buildLeaderboard('1'),
                           ])),
                     ));
               })
         ]));
+  }
+
+  Widget _buildIntro() {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Wrap(
+            children: [
+              Icon(FontAwesomeIcons.bullhorn, color: Color(0xff5B5555), size: 15),
+              Text('  지휘관 전파사항', style: TextStyle(color: Color(0xff5B5555),)),
+            ],
+          ),
+          SizedBox(height: 5),
+          Text('  이기자! 수호대대 병사 여러분, 좋은 취지에 함께하기 위해 챌린지에 참여해주셔서 감사합니다.', style: TextStyle(color: Color(0xff000000))),
+          SizedBox(height: 40),
+
+          
+        ],
+      ),
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Wrap(
+            children: [
+              Icon(FontAwesomeIcons.award, color: Color(0xff5B5555), size: 15),
+              Text(' 포상', style: TextStyle(color: Color(0xff5B5555))),
+            ],
+          ),
+          SizedBox(height: 5),
+          Text('  포상외출', style: TextStyle(color: Color(0xff000000)))
+        ],
+      )
+        ]
+
+      ),
+    );
   }
 
   Widget _buildScreenSelector() {
