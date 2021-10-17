@@ -177,7 +177,7 @@ def firestore_send_image(id, image_address, waste_list):
     list_mean = str(round(sum(waste_list)/len(waste_list),2)) + '%'
     data = {
         u'IMAGE_ADDRESS': blob_url,
-        u'DATE': date,
+        u'DATE': date_tod,
         u'MEALTYPE': meal_type_kor,
         u'PERCENTAGE': list_mean
     }
