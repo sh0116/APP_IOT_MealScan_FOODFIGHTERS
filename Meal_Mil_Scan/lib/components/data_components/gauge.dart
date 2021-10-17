@@ -57,7 +57,7 @@ class Gauge extends StatelessWidget {
                         value: double.parse(data['WASTE_AVG'].split('%')[0]),
                         cornerStyle: CornerStyle.bothCurve,
                         enableAnimation: true,
-                        animationDuration: 4500,
+                        animationDuration: 7000,
                         animationType: AnimationType.ease,
                         sizeUnit: GaugeSizeUnit.factor,
                         gradient: SweepGradient(
