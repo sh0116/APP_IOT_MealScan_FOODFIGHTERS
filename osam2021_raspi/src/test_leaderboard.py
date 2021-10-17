@@ -1,3 +1,9 @@
+"""
+PYTHON FOR TESTING LEADERBOARD IMPLEMENTATION
+MUST DELETE AFTER VIDEO
+"""
+
+
 from firebase import firebase
 import firebase_admin
 from firebase_admin import credentials
@@ -5,9 +11,9 @@ from firebase_admin import firestore
 from firebase_admin import storage
 from uuid import uuid4
 # in codespace
-#import today_menu
+import today_menu
 # in IoT
-from src import today_menu
+#from src import today_menu
 from datetime import date, datetime, timedelta
 import time
 import sys
@@ -19,9 +25,9 @@ Firebase credential path: 'military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa
 
 # initialize  the connection to our Firebase database 
 #cred for codespace
-#cred = credentials.Certificate('/workspaces/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/src/military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
+cred = credentials.Certificate('military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
 #cred for raspi
-cred = credentials.Certificate('/home/pi/osam/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/src/military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
+#cred = credentials.Certificate('/home/pi/osam/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/src/military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
 firebase_admin.initialize_app(cred, {
     'storageBucket': 'military-cafeteria.appspot.com'
 })
@@ -144,8 +150,8 @@ def firebase_send_user_waste(id, waste_list):
         for i in parti:
             #send name when updating leaderboard
             name = db.collection(u'USER').document(i).get().to_dict()['NAME']
-            lb += [[int((chalrank_update_doc.get().to_dict()[i+'_AVG']).split('%')[0]), i, name]]
-        lb_for_send = [j + ' : ' + k for _,j,k in sorted(lb, reverse= True)]
+            lb += [[(chalrank_update_doc.get().to_dict()[i+'_AVG']).split('%')[0], i, name]]
+        lb_for_send = [j + ' : ' + k for i,j,k in sorted(lb, reverse= True)]
         data4 = {
             u'LEADERBOARD' : lb_for_send
         }
@@ -189,13 +195,28 @@ def firestore_send_image(id, image_address, waste_list):
 if __name__=="__main__":
     id = '20-71209928'
     b_code = 1
-    w_list = [0,0, 0, 0, 0]
+    w_list = [0,0,0,0,0]
     #path for raspi
     #i_address = '/home/pi/osam/APP_IOT_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/test_image/100_per/100per.png'
     #i_address = '/workspaces/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/asset/test_image/70_per/70per.png'
     #path for codespace
-    i_address = "/workspaces/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/asset/test_image/100_per/100per.png"
+    #i_address = "/workspaces/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/asset/test_image/100_per/100per.png"
     #firebase_send_meal(b_code)
     #firebase_send_user_waste(id,w_list)
-    firestore_send_image(id, i_address, w_list)
+    chalrank_update_doc = db.collection(u'CHALLENGE_RANK').document('1').collection('1').document("RANK")
+    #send to Firebase Firestore Database
+    parti = chalrank_update_doc.get().to_dict()['PARTICIPANTS']
+    lb = []
+    #make leaderboard based on food_waste
+    for i in parti:
+    #send name when updating leaderboard
+        name = db.collection(u'USER').document(i).get().to_dict()['NAME']
+        lb += [[int((chalrank_update_doc.get().to_dict()[i+'_AVG']).split('%')[0]), i, name]]
+    lb_for_send = [j + ' : ' + k for _,j,k in sorted(lb, reverse= True)]
+    data4 = {
+        u'LEADERBOARD' : lb_for_send
+    }
+    #send to Firebase Firestore Database
+    chalrank_update_doc.update(data4)
+    #firestore_send_image(id, i_address, w_list)
     print("Successfully sent data to Firebase")
