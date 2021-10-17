@@ -17,7 +17,7 @@ class Image_Processing:
 		self.images = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
 		self.image_lenght_x,self.image_lenght_y,_ =  self.image.shape
 		re = cv2.imwrite('/home/pi/osam/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/asset/temp_result/temp.png',
-			image[20:420,20:325].copy())
+			image[20:325,20:420].copy())
 		print("image upload",re)
 		dish = list()
 		
