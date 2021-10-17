@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:osam2021/screens/album_screens/album_home2.dart';
 import 'album_home.dart';
 
 class AlbumScreen extends StatefulWidget {
