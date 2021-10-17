@@ -98,7 +98,7 @@ Scan 단계에서의 데이터는 챌린지 뿐만 아니라 간편하고 보기
 
 |Firebase|
 |:---:|
-|<a href="https://firebase.google.com/"><img src="../asset/rasp.png" height="30px"></a>|
+|<a href="https://firebase.google.com/"><img src="/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/asset/raspberrypi_logo_icon_168030.png" height="30px"></a>|
 
 * **FrontEnd**  
 
