@@ -44,6 +44,7 @@ class Image_Processing:
 		for self.box in self.main_rect:
 			self.DataList.append(self.backProjection())
 			self.cnt+=1			
+		print(self.Database)
 
 	# find side dish tag
 	def find_side_dish(self):
@@ -52,7 +53,7 @@ class Image_Processing:
 		for i1,i2,i3 in [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]:
 			if temp_sum<sum( [ self.DataList[0][i1-1],self.DataList[1][i2-1],self.DataList[2][i3-1] ] ):
 				temp_idx, temp_sum = [ self.DataList[0][i1-1],self.DataList[1][i2-1],self.DataList[2][i3-1] ], sum( [ self.DataList[0][i1-1],self.DataList[1][i2-1],self.DataList[2][i3-1] ] )
-
+		print(self.Database)
 		self.DataList = temp_idx
 
 	# backProjection Function (역투영)
