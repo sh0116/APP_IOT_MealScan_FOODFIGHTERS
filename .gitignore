@@ -5,3 +5,4 @@ pubspec.lock # Except for application packages
 Meal_Mil_Scan/.flutter-plugins-dependencies
 Meal_Mil_Scan/ios/Flutter/flutter_export_environment.sh
 Meal_Mil_Scan/ios/Flutter/Generated.xcconfig
+Meal_Mil_Scan/.flutter-plugins
