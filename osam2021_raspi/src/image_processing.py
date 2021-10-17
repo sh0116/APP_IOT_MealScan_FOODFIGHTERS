@@ -48,9 +48,9 @@ class Image_Processing:
 	def find_side_dish(self):
 		temp_sum, temp_idx = 301.0, 0
 		# search all cases and choose the best case
-		for idx,i1,i2,i3 in [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]:
+		for i1,i2,i3 in [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]:
 			if temp_sum<sum( [ self.DataList[0][i1],self.DataList[1][i2],self.DataList[2][i3] ] ):
-				temp_idx,temp_sum = [i1,i2,i3],sum( [ self.DataList[0][i1],self.DataList[1][i2],self.DataList[2][i3] ] )
+				temp_idx, temp_sum = [i1,i2,i3], sum( [ self.DataList[0][i1],self.DataList[1][i2],self.DataList[2][i3] ] )
 
 		self.DataList = temp_idx
 
