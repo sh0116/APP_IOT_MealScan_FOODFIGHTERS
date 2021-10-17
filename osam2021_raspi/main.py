@@ -39,7 +39,7 @@ class main_process():
                     b_code, user_data = int(self.qr_data[:4]), self.qr_data[4:]
                     b_code = 1
                     #path for raspi
-                    i_address = '/home/pi/osam/APP_IOT_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/temp_result/temp.png'
+                    i_address = '/home/pi/osam/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/asset/temp_result/temp.png'
                     #path for codespace
                     w_list = process_class.DataList
                     print(w_list,b_code,user_data)
