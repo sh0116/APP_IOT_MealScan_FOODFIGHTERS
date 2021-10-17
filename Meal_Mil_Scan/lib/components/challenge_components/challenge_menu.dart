@@ -26,7 +26,7 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: FutureBuilder(
-        future: ChallengeDataBase().getData(),
+        future: ChallengeDataBase().getChallengeData(),
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return const Text(

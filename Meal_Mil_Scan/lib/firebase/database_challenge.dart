@@ -6,7 +6,7 @@ class ChallengeDataBase {
   final CollectionReference collectionRef =
       FirebaseFirestore.instance.collection("CHALLENGES");
 
-   Future getData() async {
+   Future getChallengeData() async {
     try {
       //to get data from a single/particular document alone.
       // var temp = await collectionRef.doc("<your document ID here>").get();
