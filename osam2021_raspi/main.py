@@ -44,7 +44,7 @@ class main_process():
                     w_list = process_class.DataList
                     database.firebase_send_user_waste(user_data, w_list)
                     database.firestore_send_image(user_data, i_address, w_list)
-                    
+
                     print("Successfully sent data to Firebase")
 
                     self.state = "qr"
