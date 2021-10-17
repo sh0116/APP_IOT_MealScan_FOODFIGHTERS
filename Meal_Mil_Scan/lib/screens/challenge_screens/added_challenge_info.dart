@@ -68,7 +68,7 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
                           controller: myScrollController,
                           child: Column(children: [
                             _buildScreenSelector(),
-                            selectedId == 0 ? SizedBox() : _buildLeaderboard(),
+                            selectedId == 0 ? SizedBox() : _buildLeaderboard(1),
                           ])),
                     ));
               })
@@ -88,8 +88,8 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
     );
   }
 
-  Widget _buildLeaderboard() {
-    CollectionReference rank = FirebaseFirestore.instance.collection('CHALLENGE_RANK').doc('1').collection('1');
+  Widget _buildLeaderboard(chalCode) {
+    CollectionReference rank = FirebaseFirestore.instance.collection('CHALLENGE_RANK').doc('1').collection(chalCode);
     return FutureBuilder<DocumentSnapshot>(
       future: rank.doc("RANK").get(),
       builder: 
@@ -114,8 +114,9 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
               Container(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Column(children: [_createRanksSpecial('1', data['LEADERBOARD'][0].substring(14), data[(data['LEADERBOARD'][0].substring(0,11))+'_AVG']), _createRanksSpecial('2', data['LEADERBOARD'][1].substring(14), data[(data['LEADERBOARD'][1].substring(0,11))+'_AVG']), _createRanks('3', '2포대', '79%'), 
-                  _createRanks('4', '1포대', '73%')].expand((x) => x).toList()),
+                  //child: Column(children: [_createRanksSpecial('1', data['LEADERBOARD'][0].substring(14), data[(data['LEADERBOARD'][0].substring(0,11))+'_AVG']), _createRanksSpecial('2', data['LEADERBOARD'][1].substring(14), data[(data['LEADERBOARD'][1].substring(0,11))+'_AVG']), _createRanks('3', '2포대', '79%'), 
+                  //_createRanks('4', '1포대', '73%')].expand((x) => x).toList()),
+                  child: Column(children: _createList(data).expand((x) => x).toList()),
                 ), 
               ),
             ],
@@ -125,7 +126,24 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
         },
       );
   }
+  List<List<Widget>> _createList(Map<String, dynamic> rankData){
+    List<List<Widget>> rank = [];
+    try {
+      for (var i = 0; i < rankData['LEADERBOARD'].length; i++){
+        if (i ==0 || i ==1){
+          rank.add(_createRanksSpecial((i+1).toString(), rankData['LEADERBOARD'][i].substring(14), rankData[(rankData['LEADERBOARD'][i].substring(0,11))+'_AVG']));
+        } 
+        else{
+          rank.add(_createRanks((i+1).toString(), rankData['LEADERBOARD'][i].substring(14), rankData[(rankData['LEADERBOARD'][i].substring(0,11))+'_AVG']));
+        }
 
+    };
+    return rank;
+  } catch (e) {
+      debugPrint("Error - $e");
+      return rank;
+    }
+  }
   List<Widget> _createRanks(String rank, String name, String percentage) {
     List<Widget> ranks = [];
     ranks.add(Container(
