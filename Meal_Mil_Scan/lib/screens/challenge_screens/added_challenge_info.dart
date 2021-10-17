@@ -68,7 +68,7 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
                           controller: myScrollController,
                           child: Column(children: [
                             _buildScreenSelector(),
-                            selectedId == 0 ? SizedBox() : _buildLeaderboard(1),
+                            selectedId == 0 ? SizedBox() : _buildLeaderboard('1'),
                           ])),
                     ));
               })
