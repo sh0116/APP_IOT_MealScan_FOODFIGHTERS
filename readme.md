@@ -98,8 +98,8 @@ Scan 단계에서의 데이터는 챌린지 뿐만 아니라 간편하고 보기
 
 |Firebase|
 |:---:|
-|![<a href="https://firebase.google.com/">](https://en.wikipedia.org/wiki/Firebase#/media/File:Firebase_Logo.svg)<a href="https://firebase.google.com/"><img src="https://en.wikipedia.org/wiki/Firebase#/media/File:Firebase_Logo.svg" height="30px"></a>|
-![alt text](http://url/to/img.png)
+|<a href="https://firebase.google.com/"><img src="../asset/rasp.png" height="30px"></a>|
+
 * **FrontEnd**  
 
 |Dart|Flutter UI Framework|
@@ -110,7 +110,7 @@ Scan 단계에서의 데이터는 챌린지 뿐만 아니라 간편하고 보기
 
 |Raspberry Pi|Python|
 |:---:|:---:|
-|<a href="https://www.raspberrypi.org/"><img src="https://en.wikipedia.org/wiki/Raspberry_Pi#/media/File:Raspberry_Pi_Logo.svg" height="50px"></a>|<a href="https://www.python.org/"><img src="https://en.wikipedia.org/wiki/Python_(programming_language)#/media/File:Python-logo-notext.svg" height="60px"></a>|
+|<a href="https://www.raspberrypi.org/"><img src="../asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="https://en.wikipedia.org/wiki/Python_(programming_language)#/media/File:Python-logo-notext.svg" height="60px"></a>|
 
 ## 설치 안내 (Installation Process)
 ```bash
