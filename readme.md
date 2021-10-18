@@ -4,7 +4,7 @@
 
 
 ## 프로젝트 소개
-밀스캔 (MealScan)은 식판 이미지를 이용한 장병들의 잔반 데이터 분석 및 이를 기반으로 한 잔반 챌린지 이벤트를 통해 군 내 잔반 문제를 해결하기 위하여 만들어진 모바일 애플리케이션입니다. 처리비용만 [연 142억원](http://www.urinews.org/120112), 군 음식물 쓰레기가 [역대 최대치](https://www.edaily.co.kr/news/read?newsId=02223846625936528&mediaCodeNo=257)를 경신한 지금, 기존 방식보다 더 편리하고 재치있는 방식으로 잔반 문제 해결에 한 발짝 더 다가가고자 합니다. 
+밀스캔 (MealScan)은 식판 이미지를 이용한 장병들의 잔반 데이터 분석 및 이를 기반으로 한 잔반 챌린지 이벤트를 통해 군 내 잔반 문제를 해결하기 위하여 만들어진 모바일 애플리케이션입니다. 처리비용만 연 142억원, 군 음식물 쓰레기가 [역대 최대치](https://www.edaily.co.kr/news/read?newsId=02223846625936528&mediaCodeNo=257)를 경신한 지금, 기존 방식보다 더 편리하고 재치있는 방식으로 잔반 문제 해결에 한 발짝 더 다가가고자 합니다. 
 
 밀스캔은 세가지 Task로 이루어져 있습니다.
 1. 📷 **Scan**\
@@ -122,14 +122,14 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 ## 기대효과
 
 ✨ **장병들의 자발적, 적극적 참여**
-* 식단별 배식량을 추천해줌으로써 자연스럽게 병사들의 올바른 배식문화 유도 (넛지효과)
+* 식단별 배식량을 추천해줌으로서 자연스럽게 병사들의 올바른 배식문화 유도 (넛지효과)
 * 챌린지 포상을 통해 동기부여 제공
-* 동기부여로 앱의 지속가능성 확립 (잔반 데이터만 제공하면 사용자 유지율(리텐션)이 낮아질 수 밖에 없는 문제점 보완)
+* 이런 명확한 동기부여로 앱의 지속가능성 확립 (잔반 데이터만 제공하면 사용자 유지율(리텐션)이 낮아질 수 밖에 없음)
 
 💖 **식판 데이터 기반 장병 선호도 파악**
-* 매 끼니 데이터를 기반으로 함으로 기존 월 1회 설문조사 방식보다 정확함
+* 매 끼니 데이터를 기반으로하여 기존 월 1회 설문조사 방식보다 정확함
 * 해당 데이터를 국방부와 공유하여 호응도에 부응하는 효과적인 식단 편성
-* 스캔만 하면 완료되는 선호도 조사로 기존 종이 설문조사 과정을 무인화, 자동화하여 간부 및 병사의 수고로움를 덜고, 설문조사에 사용되는 종이 낭비를 막아 환경보호까지 일석이조의 효과
+* 스캔만 하면 완료되는 선호도 조사로 기존 종이 설문조사 필요없이 과정을 무인화, 자동화하여 간부 및 병사의 수고로움를 덜고, 설문조사에 사용되는 종이 낭비를 막아 환경보호까지 일석이조의 효과
 
 
 ## 발전방향
@@ -142,7 +142,7 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 위와 같이 음식물 쓰레기 배출량 문제는 비단 군대에서만 아니라 사회 전반에서 주목하는 이슈입니다. 사회 다양한 곳에서 이루어지고 있는 잔반 줄이기 캠페인에도 불구하고, 매일 1만4400톤 가량의 음식물쓰레기가 배출되고 있고, 매년 상승하는 처리비용으로 연간 8000억의 혈세낭비가 있고 더 증가할 것으로 예상됩니다. 이런 현실 속에 밀스캔은 군대, 학교 등 국내 다양한 공공기관에서 잔반 챌린지와 데이터 분석을 개시하는 초석이 될 수 있습니다. 기존 포스터 배포나 교육 위주의 방식에서 탈피하면서 2021년에 알맞고 MZ세대의 눈높이에 맞춘, 데이터 기반의 챌린지 기능과 모바일 앱으로서의 접근성을 가진 밀스캔이 대한민국 음식물 쓰레기 감축의 미래라고 믿어 의심치 않습니다.
 
 
-## 📋Jupyter Notebook(colab)  
+## 📋IOT 잔반량 측정 알고리즘
 <h3> Image Processing Open Source 결과값 출력 </h3>
  
  >>[Test Data](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/osam2021_raspi/asset/test_image)  를 대상으로 알고리즘 실행 결과  <br>
@@ -170,18 +170,18 @@ Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_M
 
 |Firebase|
 |:---:|
-|<a href="https://firebase.google.com/"><img src="/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/asset/raspberrypi_logo_icon_168030.png" height="30px"></a>|
+|<a href="https://firebase.google.com/"><img src="aaset/firebase.jpg" height="30px"></a>|
 
 |사용한 오픈소스 패키지 이름|용도 
 |:---:|:---:|
 |provider (^5.0.0)| 용도
-|dropbox_client (^0.8.0) | 용도
 <br>
+
 * **FrontEnd**  
 
 |Dart|Flutter UI Framework|Figma
 |:---:|:---:|:---:|
-|<a href="https://dart.dev/"><img src="https://en.wikipedia.org/wiki/Dart_(programming_language)#/media/File:Dart_programming_language_logo.svg" height="50px"></a>|<a href="https://flutter.dev/"><img src="https://en.wikipedia.org/wiki/Flutter_(software)#/media/File:Google-flutter-logo.svg" height="60px"></a>|
+|<a href="https://dart.dev/"><img src="asset/dart.png" height="50px"></a>|<a href="https://flutter.dev/"><img src="asset/flutter-logo.png" height="60px"></a>|<a href="https://www.figma.com/"><img src="asset/figma.png" height="60px"></a>|
 
 <table>
     <tr>
@@ -218,7 +218,7 @@ Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_M
 
 |Raspberry Pi|Python|
 |:---:|:---:|
-|<a href="https://www.raspberrypi.org/"><img src="asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src=asset/python.png" height="60px"></a>|
+|<a href="https://www.raspberrypi.org/"><img src="asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="asset/python.png" height="60px"></a>|
 
 * **Image Processing**  
 
