@@ -94,16 +94,16 @@
  
 <h3> 음식 분류 알고리즘 및 양 측정 알고리즘 테스트 결과 </h3>
  
- >>[Test Data](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/tree/master/osam2021_raspi/asset/test_image)  를 대상으로 알고리즘 실행 결과  <br>
+ >>[Test Data](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/tree/master/IoT(3D PRINT)/asset/test_image)  를 대상으로 알고리즘 실행 결과  <br>
  <img src="../asset/jupyter_img1.png">
  
- >>알고리즘을 적용한 [Result](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/tree/master/osam2021_raspi/asset/result_test_image) 값 (잔반 이외의 부분은 검정색(#000000)으로 Masking)<br>
+ >>알고리즘을 적용한 [Result](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/tree/master/IoT(3D PRINT)/asset/result_test_image) 값 (잔반 이외의 부분은 검정색(#000000)으로 Masking)<br>
  <img src="../asset/jupyter_img2.png">
  <img src="../asset/jupyter_img3.png">
  
 <br> <br>
 
-Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/blob/master/osam2021_raspi/test_ImageProcess%20.ipynb) 또는 [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing)에서 실행해보세요!
+Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/blob/master/IoT(3D PRINT)/test_ImageProcess%20.ipynb) 또는 [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing)에서 실행해보세요!
  
 <h2> 📊Sequence Diagram </h2>
 <div align="center">

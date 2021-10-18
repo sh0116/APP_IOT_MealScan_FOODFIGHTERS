@@ -19,9 +19,9 @@ Firebase credential path: 'military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa
 
 # initialize  the connection to our Firebase database 
 #cred for codespace
-#cred = credentials.Certificate('/workspaces/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/src/military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
+#cred = credentials.Certificate('/workspaces/APP_IOT_MealScan_FOODFIGHTERS/IoT(Raspberry Pi)/src/military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
 #cred for raspi
-cred = credentials.Certificate('/home/pi/osam/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/src/military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
+cred = credentials.Certificate('/home/pi/osam/APP_IOT_MealScan_FOODFIGHTERS/IoT(Raspberry Pi)/src/military-cafeteria-firebase-adminsdk-dt176-6bbbcb40fa.json')
 firebase_admin.initialize_app(cred, {
     'storageBucket': 'military-cafeteria.appspot.com'
 })
@@ -191,10 +191,10 @@ if __name__=="__main__":
     b_code = 1
     w_list = [0,0, 0, 0, 0]
     #path for raspi
-    #i_address = '/home/pi/osam/APP_IOT_Meal-Mil-Scan_FOODFIGHTERS/osam2021_raspi/asset/test_image/100_per/100per.png'
-    #i_address = '/workspaces/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/asset/test_image/70_per/70per.png'
+    #i_address = '/home/pi/osam/APP_IOT_Meal-Mil-Scan_FOODFIGHTERS/IoT(Raspberry Pi)/asset/test_image/100_per/100per.png'
+    #i_address = '/workspaces/APP_IOT_MealScan_FOODFIGHTERS/IoT(Raspberry Pi)/asset/test_image/70_per/70per.png'
     #path for codespace
-    i_address = "/workspaces/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/asset/test_image/100_per/100per.png"
+    i_address = "/workspaces/APP_IOT_MealScan_FOODFIGHTERS/IoT(Raspberry Pi)/asset/test_image/100_per/100per.png"
     #firebase_send_meal(b_code)
     #firebase_send_user_waste(id,w_list)
     firestore_send_image(id, i_address, w_list)

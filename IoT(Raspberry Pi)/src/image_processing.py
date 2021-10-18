@@ -16,7 +16,7 @@ class Image_Processing:
 		self.image = image
 		self.images = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
 		self.image_lenght_x,self.image_lenght_y,_ =  self.image.shape
-		re = cv2.imwrite('/home/pi/osam/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/asset/temp_result/temp.png',
+		re = cv2.imwrite('/home/pi/osam/APP_IOT_MealScan_FOODFIGHTERS/IoT(Raspberry Pi)/asset/temp_result/temp.png',
 			image[20:325,20:420].copy())
 		print("image upload",re)
 		dish = list()
@@ -62,7 +62,7 @@ class Image_Processing:
 	# backProjection Function (역투영)
 	def backProjection(self):
 		# read image (Region of Interest & Target image)
-		img = cv2.imread('/home/pi/osam/APP_IOT_MealScan_FOODFIGHTERS/osam2021_raspi/asset/{}.png'.format(self.dish_tag[self.cnt]), cv2.IMREAD_COLOR)
+		img = cv2.imread('/home/pi/osam/APP_IOT_MealScan_FOODFIGHTERS/IoT(Raspberry Pi)/asset/{}.png'.format(self.dish_tag[self.cnt]), cv2.IMREAD_COLOR)
 		hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV) 
 		hsvt = cv2.cvtColor(self.image, cv2.COLOR_BGR2HSV) 
 		
