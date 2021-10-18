@@ -15,15 +15,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        leading: Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Image.asset(
-            "assets/images/logo.jpg",
-          ),
-        )
-      ),      
+      backgroundColor: Colors.white,    
       body: Container(
         padding: const EdgeInsets.only(left: 30, right: 30, top: 50),
         child: Expanded(
