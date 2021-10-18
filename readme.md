@@ -31,7 +31,7 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 			</td>
 		</tr>
 		<tr>
-            <td rowspan="1"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/Meal_Mil_Scan/assets/images/finished_meal.gif?raw=true"><img src="./Meal_Mil_Scan/assets/images/init.gif" width="60%" height="60%"></a></div></td>
+            <td rowspan="1"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/Meal_Mil_Scan/assets/images/finished_meal.gif"><img src="./Meal_Mil_Scan/assets/images/init.gif" width="60%" height="60%"></a></div></td>
             <td width="33%"> 1. (간부) 식사시간 전 initData 생성용 정량 배식된 식판 스캔 </td>
         </tr>
         <tr>
