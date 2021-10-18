@@ -38,10 +38,10 @@ class _DataScreenState extends State<DataScreen> {
               SizedBox(height: 30),
               Row(children: [
                 Text(
-                  "식단 추천",
+                  "식단 별 배식 추천",
                   style: TextStyle(
                       fontSize: 20,
-                      fontWeight: FontWeight.w700), //TextStyle
+                      fontWeight: FontWeight.bold), //TextStyle
                 ),
               ]),
               SizedBox(
@@ -54,7 +54,7 @@ class _DataScreenState extends State<DataScreen> {
                   "누적 잔반 클리어률",
                   style: TextStyle(
                       fontSize: 20,
-                      fontWeight: FontWeight.w700), //TextStyle
+                      fontWeight: FontWeight.bold), //TextStyle
                 ),
               ]), 
               Gauge(),              
@@ -63,7 +63,7 @@ class _DataScreenState extends State<DataScreen> {
                   "일별 잔반 클리어률",
                   style: TextStyle(
                       fontSize: 20,
-                      fontWeight: FontWeight.w700), //TextStyle
+                      fontWeight: FontWeight.bold), //TextStyle
                 ),
               ]),
               SizedBox(
@@ -76,7 +76,7 @@ class _DataScreenState extends State<DataScreen> {
                   "저번 달 비선호 메뉴",
                   style: TextStyle(
                       fontSize: 20,
-                      fontWeight: FontWeight.w700), //TextStyle
+                      fontWeight: FontWeight.bold), //TextStyle
                 ),
               ]),
               SizedBox(height: 30),

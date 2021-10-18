@@ -144,7 +144,7 @@ def firebase_send_user_waste(id, waste_list):
         for i in parti:
             #send name when updating leaderboard
             name = db.collection(u'USER').document(i).get().to_dict()['NAME']
-            lb += [[int((chalrank_update_doc.get().to_dict()[i+'_AVG']).split('%')[0]), i, name]]
+            lb += [[float((chalrank_update_doc.get().to_dict()[i+'_AVG']).split('%')[0]), i, name]]
         lb_for_send = [j + ' : ' + k for _,j,k in sorted(lb, reverse= True)]
         data4 = {
             u'LEADERBOARD' : lb_for_send
