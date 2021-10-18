@@ -292,8 +292,15 @@ http://0.0.0.0:XXXXX
  샘플 에디터 [https://stackedit.io/app#](https://stackedit.io/app#)
  
 ## 팀 정보 (Team Information)
-- hong gil dong (hong999@gmail.com), Github Id: gildong999
-- kim su ji (suji999@gmail.com), Github Id: suji999
+
+- [김석현 상병](https://github.com/sh0116) E-mail : [seokhyeon116@naver.com](mailto:seokhyeon116@naver.com), **팀장 및 IOT**
+
+- [이승준 상병](https://github.com/seansungjoonlee) E-mail : [youkind98@gmail.com](mailto:youkind98@gmail.com), **Frontend**
+
+- [이형민 상병](https://github.com/alee2022) E-mail : [jackli0373@gmail.com](mailto:jackli0373@gmail.com), **Backend**
+
+- [박세연 상병](https://github.com/seanpark98) E-mail : [seyeonpark@berkeley.edu](mailto:seyeonpark@berkeley.edu), **Backend-IOT**
+
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
