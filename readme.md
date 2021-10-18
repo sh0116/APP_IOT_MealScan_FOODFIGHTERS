@@ -299,7 +299,7 @@ http://0.0.0.0:XXXXX
 
 - [이형민 상병](https://github.com/alee2022) E-mail : [jackli0373@gmail.com](mailto:jackli0373@gmail.com), **Backend**
 
-- [박세연 상병](https://github.com/seanpark98) E-mail : [seyeonpark@berkeley.edu](mailto:seyeonpark@berkeley.edu), **Backend-IOT**
+- [박세연 상병](https://github.com/seanpark98) E-mail : [seanpark98@gmail.com](mailto:seyeonpark@berkeley.edu), **Backend-IOT**
 
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
