@@ -293,9 +293,9 @@ http://0.0.0.0:XXXXX
  
 ## 팀 정보 (Team Information)
 
-- [김석현 상병](https://github.com/sh0116) E-mail : [seokhyeon116@naver.com](mailto:seokhyeon116@naver.com), **팀장 및 IOT**
+- [김석현 병](https://github.com/sh0116) E-mail : [seokhyeon116@naver.com](mailto:seokhyeon116@naver.com), **팀장 및 IOT**
 
-- [이승준 상병](https://github.com/seansungjoonlee) E-mail : [youkind98@gmail.com](mailto:youkind98@gmail.com), **Frontend**
+- [이승준 상병](https://github.com/seansungjoonlee) E-mail : [slee1040@gmail.com](mailto:slee1040@gmail.com), **Frontend**
 
 - [이형민 상병](https://github.com/alee2022) E-mail : [jackli0373@gmail.com](mailto:jackli0373@gmail.com), **Backend**
 
