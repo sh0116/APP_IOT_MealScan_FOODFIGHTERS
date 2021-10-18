@@ -145,17 +145,17 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 ## 📋IOT 잔반량 측정 알고리즘
 <h3> Image Processing Open Source 결과값 출력 </h3>
  
- >>[Test Data](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(Raspberry Pi)/asset/test_image)  를 대상으로 알고리즘 실행 결과  <br>
+ >>[Test Data](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/osam2021_raspi/asset/test_image)  를 대상으로 알고리즘 실행 결과  <br>
  <img src="asset/jupyter_img1.png">
  
- >>알고리즘을 적용한 [Result](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(Raspberry Pi)/asset/result_test_image) 값 (잔반 이외의 부분은 검정색(#000000)으로 Masking)<br>
+ >>알고리즘을 적용한 [Result](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/osam2021_raspi/asset/result_test_image) 값 (잔반 이외의 부분은 검정색(#000000)으로 Masking)<br>
  <img src="asset/jupyter_img2.png">
  <img src="asset/jupyter_img3.png">
  
 <br> <br>
 
-Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/blob/master/IoT(Raspberry Pi)/test_ImageProcess%20.ipynb) 또는 [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing)에서 실행해보세요! <br>
-더 자세한 내용과 알고리즘의 상세한 내용은 [여기서!](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(Raspberry Pi))
+Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/blob/master/osam2021_raspi/test_ImageProcess%20.ipynb) 또는 [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing)에서 실행해보세요! <br>
+더 자세한 내용과 알고리즘의 상세한 내용은 [여기서!](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/osam2021_raspi)
 
 
 ## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
@@ -170,7 +170,20 @@ Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_M
 
 |Firebase|
 |:---:|
-|<a href="https://firebase.google.com/"><img src="aaset/firebase.jpg" height="30px"></a>|
+|<a href="https://firebase.google.com/"><img src="asset/firebase.jpg" height="70px"></a>|
+
+<table>
+    <tr>
+        <td width="100%">
+            <img src="asset/fbstructure.png">
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <a>Firebase Structure</a>
+        </td>
+    </tr>
+</table>
 
 |사용한 오픈소스 패키지 이름|용도 
 |:---:|:---:|
@@ -181,7 +194,7 @@ Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_M
 
 |Dart|Flutter UI Framework|Figma
 |:---:|:---:|:---:|
-|<a href="https://dart.dev/"><img src="asset/dart.png" height="50px"></a>|<a href="https://flutter.dev/"><img src="asset/flutter-logo.png" height="60px"></a>|<a href="https://www.figma.com/"><img src="asset/figma.png" height="60px"></a>|
+|<a href="https://dart.dev/"><img src="asset/dart.png" height="30px"></a>|<a href="https://flutter.dev/"><img src="asset/flutter-logo.png" height="30px"></a>|<a href="https://www.figma.com/"><img src="asset/figma.png" height="50px"></a>|
 
 <table>
     <tr>
@@ -218,7 +231,7 @@ Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_M
 
 |Raspberry Pi|Python|
 |:---:|:---:|
-|<a href="https://www.raspberrypi.org/"><img src="asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="asset/python.png" height="60px"></a>|
+|<a href="https://www.raspberrypi.org/"><img src="asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="asset/python.png" height="30px"></a>|
 
 * **Image Processing**  
 
@@ -231,6 +244,25 @@ opencv Class index : (https://docs.opencv.org/master/annotated.html) <br>
 |Github Projects|Slack|
 |:---:|:---:|
 |<a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/projects/1"><img src="asset/GitHub-logo.png" height="50px"></a>|<a href="https://www.slack.com/"><img src="asset/slack.jpg" height="60px"></a>|
+
+<table>
+    <tr>
+        <td width="50%">
+            <img src="asset/kanban.png">
+        </td>
+        <td width="50%">
+            <img src="asset/chat.png">
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <a>Github Projects Kanban Board</a>
+        </td>
+        <td align="center">
+            <a>Slack Workspace</a>
+        </td>
+    </tr>
+</table>
 
 ## 설치 안내 (Installation Process)
 ```bash
