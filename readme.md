@@ -218,7 +218,7 @@ Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_M
 
 |Raspberry Pi|Python|
 |:---:|:---:|
-|<a href="https://www.raspberrypi.org/"><img src="../asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="https://en.wikipedia.org/wiki/Python_(programming_language)#/media/File:Python-logo-notext.svg" height="60px"></a>|
+|<a href="https://www.raspberrypi.org/"><img src="asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src=asset/python.png" height="60px"></a>|
 
 * **Image Processing**  
 
@@ -226,6 +226,11 @@ BackProjection     : (https://docs.opencv.org/3.4.15/da/d7f/tutorial_back_projec
 opencv Webcam      : (https://docs.opencv.org/4.5.3/d8/dfe/classcv_1_1VideoCapture.html) <br>
 opencv Class index : (https://docs.opencv.org/master/annotated.html) <br>
 
+* **Communitcations/Project Management**  
+
+|Github Projects|Slack|
+|:---:|:---:|
+|<a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/projects/1"><img src="asset/GitHub-logo.png" height="50px"></a>|<a href="https://www.slack.com/"><img src="asset/slack.jpg" height="60px"></a>|
 
 ## 설치 안내 (Installation Process)
 ```bash
