@@ -49,7 +49,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   borderRadius: BorderRadius.circular(50),
                 ),
                 minWidth: double.infinity,                
-              )
+              ),
             ]
           ),
         )  

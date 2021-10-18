@@ -17,6 +17,9 @@
 Scan 단계에서의 데이터가 간편하고 보기 쉽게 시각화되어 밀스캔을 통해 확인하실 수 있습니다. 또한 잔반 클리어률을 바탕으로 매 끼니별 배식 추천을 제공하여 배식받을 때나 자율배식 할 때 필요 이상을 받지 않도록 적게 배식받을 메뉴를 추천합니다. 밀스캔 데이터는 국방부와 공유되어 각 군단별 영양사분들이 더 효과적인 식단을 짤 수 있도록 합니다.
 
 ## 기능 세부 설명
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp1Ln3TPyICmkYXUJTXS2bI%2FMealScan%3Fnode-id%3D9%253A39%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D9%253A39%26show-proto-sidebar%3D1" allowfullscreen></iframe>
+
+
  <table>
         <tbody>
 		<tr>
@@ -123,8 +126,8 @@ Scan 단계에서의 데이터가 간편하고 보기 쉽게 시각화되어 밀
 
 * **FrontEnd**  
 
-|Dart|Flutter UI Framework|
-|:---:|:---:|
+|Dart|Flutter UI Framework|Figma
+|:---:|:---:|:---:|
 |<a href="https://dart.dev/"><img src="https://en.wikipedia.org/wiki/Dart_(programming_language)#/media/File:Dart_programming_language_logo.svg" height="50px"></a>|<a href="https://flutter.dev/"><img src="https://en.wikipedia.org/wiki/Flutter_(software)#/media/File:Google-flutter-logo.svg" height="60px"></a>|
 
 * **IOT**  
