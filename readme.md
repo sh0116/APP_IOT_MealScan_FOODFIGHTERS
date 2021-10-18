@@ -31,17 +31,15 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 			</td>
 		</tr>
 		<tr>
-            <td rowspan="1"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/Meal_Mil_Scan/assets/images/finished_meal.gif"><img src="./Meal_Mil_Scan/assets/images/init.gif" width="60%" height="60%"></a></div></td>
+            <td rowspan="1"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/Meal_Mil_Scan/assets/images/init.gif"><img src="./Meal_Mil_Scan/assets/images/init.gif" width="60%" height="60%"></a></div></td>
             <td width="33%"> 1. (간부) 식사시간 전 initData 생성용 정량 배식된 식판 스캔 </td>
         </tr>
         <tr>
-            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
-            /Meal_Mil_Scan/assets/images/qr.gif"><img src="./Meal_Mil_Scan/assets/images/qr.gif" width="60%" height="60%"></a></div></td>
+            <td rowspan="1"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/Meal_Mil_Scan/assets/images/qr.gif"><img src="./Meal_Mil_Scan/assets/images/qr.gif" width="60%" height="60%"></a></div></td>
            <td>2. (병사) 식사 후 본인식별용 QR코드 스캔</td>
         </tr>
         <tr>
-            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
-            /Meal_Mil_Scan/assets/images/finished_meal.gif"><img src="./Meal_Mil_Scan/assets/images/finished_meal.gif" width="60%" height="60%"></a></div></td>
+            <td rowspan="1"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/Meal_Mil_Scan/assets/images/finished_meal.gif"><img src="./Meal_Mil_Scan/assets/images/finished_meal.gif" width="60%" height="60%"></a></div></td>
            <td>3. (병사) 잔반 버리기 전 화면 속 규격에 식판 맞추고 스캔 </td>
         </tr>
    </tbody>
@@ -59,18 +57,15 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 			</td>
 		</tr>
 		<tr>
-            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
-            /Meal_Mil_Scan/assets/images/challenge.gif"><img src="./Meal_Mil_Scan/assets/images/challenge.gif" width="60%" height="60%"></a></div></td>
+            <td rowspan="1"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/Meal_Mil_Scan/assets/images/challenge.gif"><img src="./Meal_Mil_Scan/assets/images/challenge.gif" width="60%" height="60%"></a></div></td>
             <td width="33%"> 챌린지 등록 및 삭제 </td>
         </tr>
         <tr>
-            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
-            /Meal_Mil_Scan/assets/images/info.gif"><img src="./Meal_Mil_Scan/assets/images/info.gif" width="60%" height="60%"></a></div></td>
+            <td rowspan="1"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/Meal_Mil_Scan/assets/images/info.gif"><img src="./Meal_Mil_Scan/assets/images/info.gif" width="60%" height="60%"></a></div></td>
            <td>챌린지 정보 확인 (포상, 진행기간 등) </td>
         </tr>
         <tr>
-            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
-            /Meal_Mil_Scan/assets/images/leaderboard.gif"><img src="./Meal_Mil_Scan/assets/images/leaderboard.gif" width="60%" height="60%"></a></div></td>
+            <td rowspan="1"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/Meal_Mil_Scan/assets/images/leaderboard.gif"><img src="./Meal_Mil_Scan/assets/images/leaderboard.gif" width="60%" height="60%"></a></div></td>
            <td>리더보드에서 챌린지 최신 순위 확인</td>
         </tr>
    </tbody>
@@ -86,8 +81,7 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 			</td>
 		</tr>
 		<tr>
-            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
-            /Meal_Mil_Scan/assets/images/explore.gif"><img src="./Meal_Mil_Scan/assets/images/explore.gif" width="90%" height="90%"></a></div></td>
+            <td rowspan="2"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/Meal_Mil_Scan/assets/images/explore.gif"><img src="./Meal_Mil_Scan/assets/images/explore.gif" width="90%" height="90%"></a></div></td>
             <td width="33%">끼니별 배식량 추천</td>
         </tr>
         <tr>
@@ -106,8 +100,7 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 			</td>
 		</tr>
 		<tr>
-            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
-            /Meal_Mil_Scan/assets/images/album.gif"><img src="./Meal_Mil_Scan/assets/images/album.gif" width="90%" height="90%"></a></div></td>
+            <td rowspan="2"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/Meal_Mil_Scan/assets/images/album.gif"><img src="./Meal_Mil_Scan/assets/images/album.gif" width="90%" height="90%"></a></div></td>
             <td width="33%">스캔한 식판 사진 모두 조회 가능</td>
         </tr>
         <tr>
