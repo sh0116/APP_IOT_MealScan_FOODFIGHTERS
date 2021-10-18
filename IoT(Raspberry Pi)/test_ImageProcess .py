@@ -1,4 +1,4 @@
-# Run in Jupyter Notebook
+# Run in Jupyter Notebook!
 
 import cv2
 import sys
@@ -69,6 +69,7 @@ class Image_Processing:
 		return utill.processLog(res[self.box[1][1]:self.box[0][1],self.box[1][0]:self.box[2][0]])
 
 if __name__=="__main__":
+	# test image is 70per.png
 	img_pro = Image_Processing("asset/test_image/70_per/70per.png")
 
 
