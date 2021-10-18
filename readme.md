@@ -142,21 +142,6 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 위와 같이 음식물 쓰레기 배출량 문제는 비단 군대에서만 아니라 사회 전반에서 주목하는 이슈입니다. 사회 다양한 곳에서 이루어지고 있는 잔반 줄이기 캠페인에도 불구하고, 매일 1만4400톤 가량의 음식물쓰레기가 배출되고 있고, 매년 상승하는 처리비용으로 연간 8000억의 혈세낭비가 있고 더 증가할 것으로 예상됩니다. 이런 현실 속에 밀스캔은 군대, 학교 등 국내 다양한 공공기관에서 잔반 챌린지와 데이터 분석을 개시하는 초석이 될 수 있습니다. 기존 포스터 배포나 교육 위주의 방식에서 탈피하면서 2021년에 알맞고 MZ세대의 눈높이에 맞춘, 데이터 기반의 챌린지 기능과 모바일 앱으로서의 접근성을 가진 밀스캔이 대한민국 음식물 쓰레기 감축의 미래라고 믿어 의심치 않습니다.
 
 
-## 📋IOT 잔반량 측정 알고리즘
-<h3> Image Processing Open Source 결과값 출력 </h3>
- 
- >>[Test Data](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/osam2021_raspi/asset/test_image)  를 대상으로 알고리즘 실행 결과  <br>
- <img src="asset/jupyter_img1.png">
- 
- >>알고리즘을 적용한 [Result](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/osam2021_raspi/asset/result_test_image) 값 (잔반 이외의 부분은 검정색(#000000)으로 Masking)<br>
- <img src="asset/jupyter_img2.png">
- <img src="asset/jupyter_img3.png">
- 
-<br> <br>
-
-Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/blob/master/osam2021_raspi/test_ImageProcess%20.ipynb) 또는 [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing)에서 실행해보세요! <br>
-더 자세한 내용과 알고리즘의 상세한 내용은 [여기서!](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/osam2021_raspi)
-
 
 ## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
 * ECMAScript 6 지원 브라우저 사용
@@ -238,6 +223,11 @@ Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_M
 BackProjection     : (https://docs.opencv.org/3.4.15/da/d7f/tutorial_back_projection.html) <br>
 opencv Webcam      : (https://docs.opencv.org/4.5.3/d8/dfe/classcv_1_1VideoCapture.html) <br>
 opencv Class index : (https://docs.opencv.org/master/annotated.html) <br>
+
+**오픈소스 및 테스트**
+[Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/IoT(Raspberry%20Pi)/test_ImageProcess_.ipynb) 또는 [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing)에서 실행해보세요! <br>
+더 자세한 내용과 알고리즘의 상세한 내용은 [여기서!](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(Raspberry%20Pi))
+
 <br>
 
 ### **COMMUNICATIONS/PROJECT MANAGEMENT**
