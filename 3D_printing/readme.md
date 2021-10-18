@@ -10,7 +10,7 @@ STL파일 제작 및 3D 도면 제작은 오픈소스 Tinkercad를 사용해서 
 > **설계를 할때 주요 고려해던 사항** <br>
 >>  ● 출력의 속도를 고려한 설계 <br>
 >>  ● 빛이 잘 통하는 구조 <br>
->>  ● 전용 카메라와 바닥의 수직상 거리 <br><br>
+>>  ● 전용 카메라와 바닥의 수직상 거리 <br>
 >>  ● 장기간(24시간 이상) 사용 시 노즐의 손상으로 정상적인 출력이 불가한 경우 고려 <br>
 >>  ● 부품 결합을 고려 <br>
 >>  
@@ -18,24 +18,34 @@ STL파일 제작 및 3D 도면 제작은 오픈소스 Tinkercad를 사용해서 
 >>  ● 채움의 정도 0% <br>
 >>  ● 외벽의 두깨 1~0.5 mm <br>
 >>  ● 출력 속도는 해당 기계의 최고 속도 <br>
+>>                                                                    
+> **출력 환경** <br>                                                              
+>>  ● STL 제작 : Tinkercad 사용 <br>
+>>  ● G-code생성 : CURA 사용  <br>
+>>  ● 3D Printer : Ultimaker社  <br>
+>>  ● Total Time : 36h <br>
 
 
 <h2>🔨부속품 소개</h2>
-
->TOP
+                                                                  
+### 부속품 총 갯수 15/ea
+                                                                  
+>TOP 4/ea
 >>TOP_center<br>
 >>TOP_center_front<br>
 >>TOP_left<br>
 >>TOP_right<br>
 >>
->BOTTOM
+>BOTTOM 3/ea
 >>BOTTOM_center<br>
 >>BOTTOM_left<br>
 >>BOTTOM_right<br>
 >>
->PILLAR
+>PILLAR 8/ea
+                                                                  
+  ___
 
-<br><br>
+                                                                  
 <h3>top_center.stl</h3>
 
 >라즈베리파이와 카메라가 올라가는 부속품, <br>
