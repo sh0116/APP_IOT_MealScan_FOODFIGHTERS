@@ -2,42 +2,63 @@
 
 <H3 align="center"> <i> 잔반 줄이기, 이제 즐기세요 </i></H3>
 
-## 팀 소개
-- 설명 기입
 
 ## 프로젝트 소개
 밀스캔 (MealScan)은 장병들의 식판 이미지를 이용한 잔반 데이터 분석과 이를 바탕으로한 잔반 챌린지 이벤트를 통해 군 내 잔반 문제를 해결하기 위하여 만들어진 모바일 애플리케이션입니다. 군 음식물 쓰레기가 [역대 최대치](https://www.edaily.co.kr/news/read?newsId=02223846625936528&mediaCodeNo=257)를 경신한 지금, 기존 방식보다 더 편리하고 재치있는 해결법으로 잔반 문제 해결에 한 발짝 더 다가가고자 합니다. 
 
 밀스캔은 세가지 Task로 이루어져 있습니다.
 1. 📷 **Scan**\
-식사를 마친 후 밀스캔 하드웨어 (Raspberry Pi)에 식판 및 본인식별 QR을 스캔해주세요. 밀스캔이 전우님의 식판 이미지를 분석하여 해당 식사의 전체적인 잔반 클리어률, 그리고 반찬 별 클리어률을 계산합니다.
+식사를 마친 후 밀스캔 하드웨어에 식판 및 본인식별 QR을 스캔해주세요. 밀스캔이 전우님의 식판 이미지를 분석하여 해당 식판의 전체적인 잔반 클리어률, 그리고 반찬별 클리어률을 계산합니다.
 
 2. 🥊 **Challenge**\
-서비스에 가입하실 때 기입하신 부대고유코드를 바탕으로 전우님이 참가할 수 있는 잔반 챌린지를 제시합니다. 챌린지에 참가하게 되면 챌린지 기간동안 누적된 전우님의 잔반 클리어률이 순위에 반영되고, 최종 우승 시 지휘관이 설정한 포상을 획득하게 됩니다. 챌린지 경쟁자는 개인별, 중대별, 대대별 등 부대 상황과 지휘관 등록에 따라 달라집니다.
+서비스에 가입하실 때 기입하신 부대고유코드를 바탕으로 전우님이 참가할 수 있는 잔반 챌린지를 제시합니다. 챌린지에 참가하게 되면 챌린지 기간동안 누적된 전우님의 잔반 클리어률이 순위에 반영되고, 최종 우승 시 지휘관이 설정한 포상을 획득하게 됩니다. 챌린지 경쟁자는 개인별, 중대별, 대대별 등 부대 상황과 지휘관 설정에 따라 달라집니다.
 
 2. 📊 **Explore**\
-Scan 단계에서의 데이터는 챌린지 뿐만 아니라 간편하고 보기 쉽게 시각화되어 밀스캔을 통해 확인하실 수 있습니다. 또한 잔반 별 클리어률을 바탕으로 매 끼니 별 배식 추천을 제공하여 배식받을 때나 자율배식 할 때 필요 이상을 받지 않도록 적게 배식받을 메뉴를 추천합니다. 또한 이런 데이터들은 밀스캔이 국방부와 공유하여 각 군단별 영양사분들이 더 효과적인 식단을 짤 수 있도록 돕겠습니다. 
+Scan 단계에서의 데이터가 간편하고 보기 쉽게 시각화되어 밀스캔을 통해 확인하실 수 있습니다. 또한 잔반 클리어률을 바탕으로 매 끼니별 배식 추천을 제공하여 배식받을 때나 자율배식 할 때 필요 이상을 받지 않도록 적게 배식받을 메뉴를 추천합니다. 밀스캔 데이터는 국방부와 공유되어 각 군단별 영양사분들이 더 효과적인 식단을 짤 수 있도록 합니다.
 
 ## 기능 세부 설명
- - Scan: 식판을 밀스캔 거치대에 놓고, 라즈베리파이 화면에 나온 규격에 식판을 맞춤, Click을 눌러 식판을 찍고, 본인식별 QR코드 또한 스캔
- 
-- Challenge: 진행 중 탭에서 참가 가능한 현재 진행 중인 챌린지 확인, 챌린지 정보에서 포상내용 등을 확인 후 참가등록, 참가 중 탭에서 참가 중 챌린지 확인, 참가 중 챌린지를 탭하면 챌린지 정보 및 최신 순위를 보여주는 리더보드 확인 가능
-<table>
+ <table>
         <tbody>
 		<tr>
-			<td colspan=2>
+			<td colspan=3>
 				<br>
-				<b> 🥊 Challenge </b><br>
+				<b> 스캔하세요. </b><br>
 				<br>
 			</td>
 		</tr>
 		<tr>
-            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
+            <td rowspan="3"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
             /Meal_Mil_Scan/assets/images/explore_screenshots.png"><img src="./Meal_Mil_Scan/assets/images/explore_screenshots.png" width="90%" height="90%"></a></div></td>
-            <td width="33%">끼니 별 배식 추천</td>
+            <td width="33%">initData 생성용 꽉 찬 식판 스캔</td>
         </tr>
         <tr>
-            <td>다양한 차트 + 애니메이션을 이용한 데이터 시각화 </td>
+            <td>본인식별 QR코드로 인증 후 화면 속 규격에 식판 맞춰 스캔</td>
+        </tr>
+        <tr>
+            <td>식판 이미지를 통한 잔반 클리어률, 반찬별 클리어률 계산</td>
+        </tr>
+   </tbody>
+</table>
+ 
+<table>
+        <tbody>
+		<tr>
+			<td colspan=2>
+				<br>
+				<b> 잔반 줄이고 포상도 얻으세요. </b><br>
+				<br>
+			</td>
+		</tr>
+		<tr>
+            <td rowspan="3"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
+            /Meal_Mil_Scan/assets/images/explore_screenshots.png"><img src="./Meal_Mil_Scan/assets/images/explore_screenshots.png" width="90%" height="90%"></a></div></td>
+            <td width="33%">챌린지 등록 및 삭제</td>
+        </tr>
+        <tr>
+            <td>리더보드에서 챌린지 최신 순위 확인 </td>
+        </tr>
+        <tr>
+            <td>챌린지 정보 확인 (포상, 진행기간 등) </td>
         </tr>
    </tbody>
 </table>
@@ -49,14 +70,14 @@ Scan 단계에서의 데이터는 챌린지 뿐만 아니라 간편하고 보기
 		<tr>
 			<td colspan=2>
 				<br>
-				<b> 📊 Explore (Data) </b><br>
+				<b> 잔반 현황 확인하고 다음 식사에 적용하세요. </b><br>
 				<br>
 			</td>
 		</tr>
 		<tr>
             <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
-            /Meal_Mil_Scan/assets/images/explore_screenshot.png"><img src="./Meal_Mil_Scan/assets/images/explore_screenshot.png" width="90%" height="90%"></a></div></td>
-            <td width="33%">끼니 별 배식량 추천</td>
+            /Meal_Mil_Scan/assets/images/explore.gif"><img src="./Meal_Mil_Scan/assets/images/explore.gif" width="90%" height="90%"></a></div></td>
+            <td width="33%">끼니별 배식량 추천</td>
         </tr>
         <tr>
             <td>다양한 차트 + 애니메이션을 이용한 데이터 시각화 </td>
@@ -69,7 +90,7 @@ Scan 단계에서의 데이터는 챌린지 뿐만 아니라 간편하고 보기
 		<tr>
 			<td colspan=2>
 				<br>
-				<b> ➕ Album </b><br>
+				<b> ➕ 내 식판 손쉽게 조회하세요 </b><br>
 				<br>
 			</td>
 		</tr>
@@ -79,7 +100,7 @@ Scan 단계에서의 데이터는 챌린지 뿐만 아니라 간편하고 보기
             <td width="33%">스캔한 식판 사진 모두 조회</td>
         </tr>
         <tr>
-            <td>각 식판 별 잔반 클리어률 확인 </td>
+            <td>각 식판 사진별 잔반 클리어률 확인하여 밀스캔 계산의 합리성 확인 </td>
         </tr>
    </tbody>
 </table>

@@ -54,7 +54,7 @@ class LeftoverPieChartState extends State {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const <Widget>[
                 Indicator(
-                  color: Color(0xff0293ee),
+                  color: Color(0xff808080),
                   text: '꽈리고추멸치볶음',
                   isSquare: true,
                 ),

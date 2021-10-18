@@ -30,7 +30,7 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
     final notifier = context.watch<Notifiers>();
 
     return Scaffold(
-        backgroundColor: Color(0xffFFAAA6),
+        backgroundColor: widget.challenge.bgColor,
         appBar: AppBar(
             iconTheme: IconThemeData(
               color: Color(0xff999999),
@@ -48,7 +48,7 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
                   notifier.openChallenge(widget.challenge);
                   Navigator.pop(context, true);
                   ScaffoldMessenger.of(context)
-                    .showSnackBar(SnackBar(content: Text('등록 완료! 참가 중 탭에서 확인하세요.')));
+                    .showSnackBar(SnackBar(content: Text('삭제 완료! 진행 중 탭에서 확인하세요.')));
                 },
               ),
               SizedBox(width: 20)

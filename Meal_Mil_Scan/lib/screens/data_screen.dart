@@ -38,7 +38,7 @@ class _DataScreenState extends State<DataScreen> {
               SizedBox(height: 30),
               Row(children: [
                 Text(
-                  "식단 추천",
+                  "식단 별 배식 추천",
                   style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold), //TextStyle
