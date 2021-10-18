@@ -166,7 +166,7 @@ Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_M
 
 ## 기술 스택 (Technique Used) 💻 
 
-* **Backend**
+### **BACKEND**
 
 |Firebase|
 |:---:|
@@ -190,7 +190,7 @@ Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_M
 |provider (^5.0.0)| 용도
 <br>
 
-* **FrontEnd**  
+### **FRONTEND**
 
 |Dart|Flutter UI Framework|Figma
 |:---:|:---:|:---:|
@@ -224,22 +224,23 @@ Jupyter Notebook [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_AI_M
 |flutter_swiper_plus () | 데이터 화면 갤러리 형태의 배식추천
 |carousel_slider (^4.0.0) | 온보딩 첫 화면 튜토리얼
 |photo_view (^0.13.0) | 앨범 탭에서 식판 사진 줌인 줌아웃 가능
-
 <br>
 
-* **IOT**  
+### **IOT**
 
 |Raspberry Pi|Python|
 |:---:|:---:|
 |<a href="https://www.raspberrypi.org/"><img src="asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="asset/python.png" height="30px"></a>|
+<br>
 
-* **Image Processing**  
+### **IMAGE PROCESSING**  
 
 BackProjection     : (https://docs.opencv.org/3.4.15/da/d7f/tutorial_back_projection.html) <br>
 opencv Webcam      : (https://docs.opencv.org/4.5.3/d8/dfe/classcv_1_1VideoCapture.html) <br>
 opencv Class index : (https://docs.opencv.org/master/annotated.html) <br>
+<br>
 
-* **Communitcations/Project Management**  
+### **COMMUNICATIONS/PROJECT MANAGEMENT**
 
 |Github Projects|Slack|
 |:---:|:---:|
@@ -263,6 +264,7 @@ opencv Class index : (https://docs.opencv.org/master/annotated.html) <br>
         </td>
     </tr>
 </table>
+<br>
 
 ## 설치 안내 (Installation Process)
 ```bash
