@@ -17,56 +17,65 @@
 Scan 단계에서의 데이터가 간편하고 보기 쉽게 시각화되어 밀스캔을 통해 확인하실 수 있습니다. 또한 잔반 클리어률을 바탕으로 매 끼니별 배식 추천을 제공하여 배식받을 때나 자율배식 할 때 필요 이상을 받지 않도록 적게 배식받을 메뉴를 추천합니다. 밀스캔 데이터는 국방부와 공유되어 각 군단별 영양사분들이 더 효과적인 식단을 짤 수 있도록 합니다.
 
 ## 기능 세부 설명
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp1Ln3TPyICmkYXUJTXS2bI%2FMealScan%3Fnode-id%3D9%253A39%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D9%253A39%26show-proto-sidebar%3D1" allowfullscreen></iframe>
 
 
- <table>
-        <tbody>
-		<tr>
-			<td colspan=3>
-				<br>
-				<b> 스캔하세요. </b><br>
-				<br>
-			</td>
-		</tr>
-		<tr>
-            <td rowspan="3"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
-            /Meal_Mil_Scan/assets/images/explore_screenshots.png"><img src="./Meal_Mil_Scan/assets/images/explore_screenshots.png" width="90%" height="90%"></a></div></td>
-            <td width="33%">initData 생성용 꽉 찬 식판 스캔</td>
-        </tr>
-        <tr>
-            <td>본인식별 QR코드로 인증 후 화면 속 규격에 식판 맞춰 스캔</td>
-        </tr>
-        <tr>
-            <td>식판 이미지를 통한 잔반 클리어률, 반찬별 클리어률 계산</td>
-        </tr>
-   </tbody>
-</table>
- 
+
+
 <table>
         <tbody>
 		<tr>
 			<td colspan=2>
 				<br>
-				<b> 잔반 줄이고 포상도 얻으세요. </b><br>
+				<b>이제 설문조사 대신 스캔하세요.</b><br>
 				<br>
 			</td>
 		</tr>
 		<tr>
-            <td rowspan="3"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
-            /Meal_Mil_Scan/assets/images/explore_screenshots.png"><img src="./Meal_Mil_Scan/assets/images/explore_screenshots.png" width="90%" height="90%"></a></div></td>
-            <td width="33%">챌린지 등록 및 삭제</td>
+            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
+            /Meal_Mil_Scan/assets/images/init.gif"><img src="./Meal_Mil_Scan/assets/images/init.gif" width="60%" height="60%"></a></div></td>
+            <td width="33%"> 1. (간부) 식사시간 전 initData 생성용 정량 배식된 식판 스캔 </td>
         </tr>
         <tr>
-            <td>리더보드에서 챌린지 최신 순위 확인 </td>
+            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
+            /Meal_Mil_Scan/assets/images/qr.gif"><img src="./Meal_Mil_Scan/assets/images/qr.gif" width="60%" height="60%"></a></div></td>
+           <td>2. (병사) 식사 후 본인식별용 QR코드 스캔</td>
         </tr>
         <tr>
-            <td>챌린지 정보 확인 (포상, 진행기간 등) </td>
+            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
+            /Meal_Mil_Scan/assets/images/finished_meal.gif"><img src="./Meal_Mil_Scan/assets/images/finished_meal.gif" width="60%" height="60%"></a></div></td>
+           <td>3. (병사) 잔반 버리기 전 화면 속 규격에 식판 맞추고 스캔 </td>
         </tr>
    </tbody>
 </table>
 
 
+
+<table>
+        <tbody>
+		<tr>
+			<td colspan=2>
+				<br>
+				<b>잔반 줄이고 포상도 획득하세요.</b><br>
+				<br>
+			</td>
+		</tr>
+		<tr>
+            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
+            /Meal_Mil_Scan/assets/images/challenge.gif"><img src="./Meal_Mil_Scan/assets/images/challenge.gif" width="60%" height="60%"></a></div></td>
+            <td width="33%"> 챌린지 등록 및 삭제 </td>
+        </tr>
+        <tr>
+            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
+            /Meal_Mil_Scan/assets/images/info.gif"><img src="./Meal_Mil_Scan/assets/images/info.gif" width="60%" height="60%"></a></div></td>
+           <td>챌린지 정보 확인 (포상, 진행기간 등) </td>
+        </tr>
+        <tr>
+            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
+            /Meal_Mil_Scan/assets/images/leaderboard.gif"><img src="./Meal_Mil_Scan/assets/images/leaderboard.gif" width="60%" height="60%"></a></div></td>
+           <td>리더보드에서 챌린지 최신 순위 확인</td>
+        </tr>
+   </tbody>
+</table>
 
 <table>
         <tbody>
@@ -99,7 +108,7 @@ Scan 단계에서의 데이터가 간편하고 보기 쉽게 시각화되어 밀
 		</tr>
 		<tr>
             <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS
-            /Meal_Mil_Scan/assets/images/explore_screenshots.png"><img src="./Meal_Mil_Scan/assets/images/explore_screenshots.png" width="90%" height="90%"></a></div></td>
+            /Meal_Mil_Scan/assets/images/album.gif"><img src="./Meal_Mil_Scan/assets/images/album.gif" width="90%" height="90%"></a></div></td>
             <td width="33%">스캔한 식판 사진 모두 조회</td>
         </tr>
         <tr>
@@ -109,6 +118,31 @@ Scan 단계에서의 데이터가 간편하고 보기 쉽게 시각화되어 밀
 </table>
 
 <br>
+
+## 기대효과
+
+✨ **장병들의 자발적, 적극적 참여**
+* 식단별 배식량을 추천해줌으로서 자연스럽게 병사들의 올바른 배식문화 유도 (넛지효과)
+* 챌린지 포상을 통해 동기부여 제공
+* 이런 명확한 동기부여로 앱의 지속가능성 확립 (잔반 데이터만 제공하면 사용자 유지율(리텐션)이 낮아질 수 밖에 없음)
+
+💖 **식판 데이터 기반 장병 선호도 파악**
+* 매 끼니 데이터를 기반으로하여 기존 월 1회 설문조사 방식보다 정확함
+* 해당 데이터를 국방부와 공유하여 호응도에 부응하는 효과적인 식단 편성
+* 조사를 무인화, 자동화하여 간부 및 병사의 수고로움를 덜고, 설문조사에 사용되는 종이 낭비를 막아 환경보호까지 일석이조의 효과
+
+
+<br>
+
+## 발전방향
+
+[온실가스 주범 음식물 쓰레기...연간 885만톤 배출](http://www.greenpostkorea.co.kr/news/articleView.html?idxno=127566)\
+[음식물 쓰레기 처리로 연간 8000억 낭비](http://www.hkbs.co.kr/news/articleView.html?idxno=530572)\
+['음쓰' 물기 빼기가 경제에 미치는 영향](http://www.ohmynews.com/NWS_Web/View/at_pg_w.aspx?CNTN_CD=A0002725580)
+
+
+위와 같이 음식물 쓰레기 배출 문제는 군대 뿐만 아니라 사회에서도 주목하는 이슈입니다. 사회 다양한 곳에서 이루어지고 있는 잔반 줄이기 캠페인에도 불구하고, 매일 1만4400톤 가량의 음식물쓰레기가 배출되고 있고, 매년 상승되는 처리비용으로 연간 8000억의 혈세낭비는 더욱 더 증가할 것으로 예상됩니다. 이런 현실 속 밀스캔은 군대 뿐만 아니라 학교 등 국내 다양한 공공기관에서 잔반 챌린지와 데이터 분석을 개시해보고 싶습니다. 기존 포스터 배포나 교육 위주의 방식에서 탈피하여 2021년에 알맞고, MZ세대의 눈높이에 맞춘 데이터 기반의 챌린지 기능과 모바일 앱으로서의 접근성을 가진 밀스캔이 대한민국 음식물 쓰레기 감축의 미래라고 생각합니다. 
+
 
 ## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
 * ECMAScript 6 지원 브라우저 사용
@@ -124,11 +158,46 @@ Scan 단계에서의 데이터가 간편하고 보기 쉽게 시각화되어 밀
 |:---:|
 |<a href="https://firebase.google.com/"><img src="/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/asset/raspberrypi_logo_icon_168030.png" height="30px"></a>|
 
+|사용한 오픈소스 패키지 이름|용도 
+|:---:|:---:|
+|provider (^5.0.0)| 용도
+|dropbox_client (^0.8.0) | 용도
+
 * **FrontEnd**  
 
 |Dart|Flutter UI Framework|Figma
 |:---:|:---:|:---:|
 |<a href="https://dart.dev/"><img src="https://en.wikipedia.org/wiki/Dart_(programming_language)#/media/File:Dart_programming_language_logo.svg" height="50px"></a>|<a href="https://flutter.dev/"><img src="https://en.wikipedia.org/wiki/Flutter_(software)#/media/File:Google-flutter-logo.svg" height="60px"></a>|
+
+<table>
+    <tr>
+        <td width="50%">
+            <img src="./Meal_Mil_Scan/assets/images/figma_screenshot.png">
+        </td>
+        <td width="50%">
+            <img src="./Meal_Mil_Scan/assets/images/figma_prototype.png">
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <a href="https://www.figma.com/file/p1Ln3TPyICmkYXUJTXS2bI/MealScan?node-id=0%3A1">Figma Viewport</a>
+        </td>
+        <td align="center">
+            <a href="https://www.figma.com/proto/p1Ln3TPyICmkYXUJTXS2bI/MealScan?node-id=9%3A39&scaling=scale-down&page-id=0%3A1&starting-point-node-id=9%3A39&show-proto-sidebar=1">Figma Prototype</a>
+        </td>
+    </tr>
+</table>
+
+|사용한 오픈소스 패키지 이름|용도 
+|:---:|:---:|
+|font_awesome_flutter (^9.0.0)| 아이콘 사용
+|fl_chart (^0.40.0) | Explore를 위한 데이터 시각화
+|animated_widgets (^1.1.0) | 챌린지 및 데이터 화면에서 아이콘 탭 유도
+|cool_stepper (^1.2.1) | 온보딩 화면 제작
+|flutter_swiper_plus () | 데이터 화면 갤러리 형태의 배식추천
+|carousel_slider (^4.0.0) | 온보딩 첫 화면 튜토리얼
+|photo_view (^0.13.0) | 앨범 탭에서 식판 사진 줌인 줌아웃 가능
+
 
 * **IOT**  
 
@@ -138,10 +207,15 @@ Scan 단계에서의 데이터가 간편하고 보기 쉽게 시각화되어 밀
 
 ## 설치 안내 (Installation Process)
 ```bash
-$ git clone git주소
-$ yarn or npm install
-$ yarn start or npm run start
+$ git clone https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS.git
+$ cd Meal_Mil_Scan
+$ flutter run --web-renderer html -v -d web-server --web-hostname=0.0.0.0
+$...lib/main.dart is being served at http://0.0.0.0:*****...
 ```
+```
+http://0.0.0.0:XXXXX
+```
+해당 링크 Ctrl/Command + Click
 
 ## 프로젝트 사용법 (Getting Started)
 **마크다운 문법을 이용하여 자유롭게 기재**
