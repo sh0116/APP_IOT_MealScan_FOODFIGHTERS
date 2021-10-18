@@ -45,7 +45,7 @@ class Image_Processing:
 	# backProjection Function (역투영)
 	def backProjection(self):
 		# read image (Region of Interest & Target image)
-		img = cv2.imread('/content/APP_IOT_MealScan_FOODFIGHTERS/IoT(Raspberry Pi)/asset/test_image/70_per/70_per_{}.png'.format(self.dish_tag[self.cnt]), cv2.IMREAD_COLOR)
+		img = cv2.imread('/content/APP_IOT_MealScan_FOODFIGHTERS/IoT(Raspberry Pi)/asset/test_image/100_per/100_per_{}.png'.format(self.dish_tag[self.cnt]), cv2.IMREAD_COLOR)
 		hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV) 
 		hsvt = cv2.cvtColor(self.image, cv2.COLOR_BGR2HSV) 
 		
