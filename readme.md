@@ -267,8 +267,6 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
 * Android 5.0 (Lollipop: API level 21)
 * 권장: Android 10.0 (Q: API level 29)
 
-<br>
-
 ## 설치 안내 (Installation Process)
 ```bash
 $ git clone https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS.git
@@ -285,7 +283,7 @@ http://0.0.0.0:XXXXX
 해당 링크 Ctrl/Command + Click
 
 ## 프로젝트 사용법 (Getting Started)
-* App은 Web에서 Run하여 실행해보세요!
+* App은 Web에서 Run하여 사용해보세요!
 * Image Processing은 [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/IoT(Raspberry%20Pi)/test_ImageProcess_.ipynb) 또는 [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing)에서 실행해보세요!
 
  
