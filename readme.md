@@ -221,9 +221,9 @@ Front-End Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack
 
 |사용한 오픈소스 기술|용도 
 |:---:|:---:|
-|[BackProjection](https://docs.opencv.org/3.4.15/da/d7f/tutorial_back_projection.html)| 용도1
-|[opencv Webcam](https://docs.opencv.org/4.5.3/d8/dfe/classcv_1_1VideoCapture.html)| 용도2
-|[opencv Class index](https://docs.opencv.org/master/annotated.html)| 용도3
+|[BackProjection](https://docs.opencv.org/3.4.15/da/d7f/tutorial_back_projection.html)| 잔반 측정 및 Classification 알고리즘에 들어가는 역투영 기술
+|[opencv Webcam](https://docs.opencv.org/4.5.3/d8/dfe/classcv_1_1VideoCapture.html)| 라즈베리파이 실시간 잔반 측정을 위한 기술
+|[opencv Class index](https://docs.opencv.org/master/annotated.html)| Transfer Colorspace Class (HSV,GRAY,GRB ...)
 
 **오픈소스 및 테스트**\
 [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/IoT(Raspberry%20Pi)/test_ImageProcess_.ipynb) 또는 [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing)에서 실행해보세요! <br>
