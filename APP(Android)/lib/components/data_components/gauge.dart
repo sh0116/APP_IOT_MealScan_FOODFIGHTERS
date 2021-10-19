@@ -1,12 +1,11 @@
 import 'package:syncfusion_flutter_gauges/gauges.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-final serviceNumber = '20-71209928';
+final serviceNumber = '20-14339655';
 
 class Gauge extends StatelessWidget {
-  CollectionReference waste = FirebaseFirestore.instance.collection('USER_FOOD_WASTE_AVG');
+  final CollectionReference waste = FirebaseFirestore.instance.collection('USER_FOOD_WASTE_AVG');
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<DocumentSnapshot>(
