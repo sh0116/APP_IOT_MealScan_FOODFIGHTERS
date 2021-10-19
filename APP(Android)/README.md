@@ -19,7 +19,7 @@
 </table>
 
 ### 주요 Directory 분류
-* Components\
+* Components:\
 &nbsp; - challenge_components: 챌린지 스크린에 들어가는 컴포넌트 모음\
 &nbsp; - data_components: Explore data 스크린에 들어가는 컴포넌트 모음\
 &nbsp; - login_components: 로그인 스크린에 들어가는 컴포넌트 모음\
@@ -30,7 +30,7 @@
 &nbsp; - challenge_screens: 챌린지 탭에 들어가는 스크린 (참가 중/진행 중 챌린지 탭버튼에 따른 스크린, 참가 중 정보 스크린, 진행 중 정보 스크린)\
 &nbsp; - onboarding_screens (온보딩 메인 스크린, 온보딩 가입정보 스크린)\
 
-* Models\
+* Models:\
 &nbsp; - challenge: 챌린지 클래스 모델링\
 &nbsp; - user: 유저 클래스 모델링
 
