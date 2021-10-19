@@ -212,9 +212,9 @@ Front-End Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack
 
 ### **IOT + Image Processing**
 
-|Raspberry Pi|Python|
-|:---:|:---:|
-|<a href="https://www.raspberrypi.org/"><img src="asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="asset/python.png" height="30px"></a>|
+|Raspberry Pi|Python|OpenCV|
+|:---:|:---:|:---:|
+|<a href="https://www.raspberrypi.org/"><img src="asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="asset/python.png" height="30px"></a>|<a href="https://www.https://opencv.org/"><img src="asset/OpenCV_Logo.png" height="50px"></a>|
 <br>
 
 < 여기다가 iot 서비스 플로우 표 넣으면 좋을듯 >
