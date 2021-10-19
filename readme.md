@@ -164,7 +164,7 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
     </tr>
 </table>
 
-Back-End Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/APP(Android)/README.md) 확인하세요.
+Backend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/APP(Android)/README.md) 확인하세요.
 
 <br>
 
@@ -193,7 +193,7 @@ Back-End Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
     </tr>
 </table>
 
-Front-End Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/APP(Android)/README.md) 확인하세요.
+Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/APP(Android)/README.md) 확인하세요.
 
 <br>
 
@@ -231,7 +231,7 @@ Front-End Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack
     </tr>
     <tr>
         <td align="center">
-            <a>Firebase Structure</a>
+            <a>3D Model Structure</a>
         </td>
     </tr>
 </table>
