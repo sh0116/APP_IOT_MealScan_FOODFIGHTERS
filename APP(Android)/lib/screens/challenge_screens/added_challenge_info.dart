@@ -130,7 +130,9 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
   }
 
   Widget _buildLeaderboard(chalCode) {
-    CollectionReference rank = FirebaseFirestore.instance.collection('CHALLENGE_RANK').doc('1').collection(chalCode);
+    //Firebase Firestore CHALLANGE_RANK Collection을 선언
+    final CollectionReference rank = FirebaseFirestore.instance.collection('CHALLENGE_RANK').doc(chalCode).collection(chalCode);
+    //Future Builder를 통해 순위표 정보를 불러오고 불러와졌을 때 순위표를 빌드함
     return FutureBuilder<DocumentSnapshot>(
       future: rank.doc("RANK").get(),
       builder: 
@@ -167,6 +169,7 @@ class _AddedChallengeInfoState extends State<AddedChallengeInfo> {
         },
       );
   }
+  //순위표 포맷을 위한 함수
   List<List<Widget>> _createList(Map<String, dynamic> rankData){
     List<List<Widget>> rank = [];
     try {
