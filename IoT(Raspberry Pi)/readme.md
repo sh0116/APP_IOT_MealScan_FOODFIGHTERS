@@ -25,6 +25,16 @@
  <img src="/asset/flow_chart.png">
  </div>
  
+## ✔**How to Run**
+
+```bash
+$ git clone https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS.git
+$ cd APP_IOT_MealScan_FOODFIGHTERS.git/IoT(Raspberry Pi)
+$ python main.py
+```
+
+ 
+ 
 ## 📋Jupyter Notebook(colab) 
 ### 음식 분류 알고리즘
 >> cv2.rectangle() 함수와 imshow() 함수를 통해서 사용자에게 식판을 놓을 위치를 알려준다.<br>
