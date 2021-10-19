@@ -1,4 +1,4 @@
-//유저가 지금까지 스캔한 식판들의 사진을 불러옴
+//유저가 지금까지 스캔한 식판들의 사진을 불러와서 앨범피드 형태로 보여줌
 import 'package:flutter/material.dart';
 import 'package:osam2021/firebase/database_images.dart';
 import 'album_details.dart';
