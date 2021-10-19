@@ -221,7 +221,21 @@ Front-End Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack
 ### **3D Modeling & Printing**
 |Tinkercad|Cura|Ultimaker
 |:---:|:---:|:---:|
-|<a href="https://www.tinkercad.com/"><img src="asset/tinkercad_logo.png" height="30px"></a>|<a href="https://ultimaker.com/software/ultimaker-cura"><img src="asset/Cura_logo.png" height="30px"></a>|<a href="https://ultimaker.com//"><img src="asset/Ultimaker%20logo.png" height="50px"></a>|
+|<a href="https://www.tinkercad.com/"><img src="asset/tinkercad_logo.png" height="30px"></a>|<a href="https://ultimaker.com/software/ultimaker-cura"><img src="asset/Cura_logo.jpg" height="30px"></a>|<a href="https://ultimaker.com//"><img src="asset/Ultimaker%20logo.png" height="50px"></a>|
+
+<table>
+    <tr>
+        <td width="100%">
+             <img src="/IoT(3D PRINT)/asset/3d_gif.gif" width="450" height="450">
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <a>Firebase Structure</a>
+        </td>
+    </tr>
+</table>
+
 
 3D Modeling & Printing의 더 자세한 내용 관련 내용은 [이곳](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(3D%20PRINT)) 에서
 
@@ -250,7 +264,6 @@ Front-End Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack
     </tr>
 </table>
 <br>
-3D모델링에 대해 더 자세한 내용을 알고싶다면 [3D Modeling & Printing readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/IoT(3D%20PRINT)) 참고
 
 ## 설치 안내 (Installation Process)
 ```bash
