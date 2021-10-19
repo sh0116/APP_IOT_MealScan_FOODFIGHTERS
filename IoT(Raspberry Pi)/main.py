@@ -1,10 +1,11 @@
+# in IoT System Run 
+# Main_Process
 import cv2
 import numpy as np
 import time
 
 from src import image_processing
 from src import init_processing
-#from src import qr_processing
 from src import database
 
 # main process

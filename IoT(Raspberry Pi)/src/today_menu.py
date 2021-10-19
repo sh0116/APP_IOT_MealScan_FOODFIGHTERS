@@ -3,14 +3,16 @@ import pandas as pd
 import pytz
 from datetime import date, datetime, timedelta
 import math
+
 #dictionary for mapping base code to menu code 
 dic = {1 : 3389, 2: 6176, 3:1691}
 
-#Function returing user's meal as a list
+"""
+Function returing menu according to basecode as a list
+"""
 def get_menu(base_code=2): 
     #get path of csv file 
     #path for raspi
-    
     path = '/home/pi/osam/APP_IOT_MealScan_FOODFIGHTERS/IoT(Raspberry Pi)/asset/monthly_menu_base/base_'+ str(dic[base_code]) +'.csv'
     #path for codespace
     #path = '/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/IoT(Raspberry Pi)/asset/monthly_menu_base/base_'+ str(dic[base_code]) +'.csv'
@@ -38,11 +40,14 @@ def get_menu(base_code=2):
         final =  [''] + final
     return final
 
-
-#Function returing user's meal as a list
+"""
+Function returing user's meal as a list
+"""
 def get_menu_tomorrow(base_code=1): 
     #get path of csv file 
-    #path for raspi
+    #path for iot
+
+
     path = '/home/pi/osam/APP_IOT_MealScan_FOODFIGHTERS/IoT(Raspberry Pi)/asset/monthly_menu_base/base_'+ str(dic[base_code]) +'.csv'
     #path for codespace
     #path = '/workspaces/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/IoT(Raspberry Pi)/asset/monthly_menu_base/base_'+ str(dic[base_code]) +'.csv'
@@ -86,7 +91,9 @@ def get_menu_tomorrow(base_code=1):
     print(final1, final2, final3)
     return [final1, final2, final3]
 
-#Function returning today's date and meal type(1: breakfast, 2: lunch, 3: dinner)
+"""
+Function returning today's date and meal type(1: breakfast, 2: lunch, 3: dinner)
+"""
 def get_date_meal_type():
     #get time in Seoul
     tz = pytz.timezone('Asia/Seoul')
@@ -98,6 +105,7 @@ def get_date_meal_type():
         curr_meal = 2
     else: 
         curr_meal = 3 
+    #return today's date in string and current meal type
     return str(date.today()), curr_meal 
 
 if __name__=="__main__":

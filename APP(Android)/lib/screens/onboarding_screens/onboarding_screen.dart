@@ -1,3 +1,4 @@
+//온보딩 task의 첫 화면. 가입화면으로 이어짐
 import 'package:flutter/material.dart';
 import 'package:osam2021/components/onboarding_components/onboarding_carousel.dart';
 import 'package:osam2021/screens/onboarding_screens/onboarding_questions.dart';
@@ -23,7 +24,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              //Text("잔반 줄이기, \이제 즐기세요.", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
               OnboardingCarousel(),
               Container(height: 60),
               MaterialButton(

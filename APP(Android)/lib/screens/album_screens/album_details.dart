@@ -1,3 +1,5 @@
+// 앨범 피드 속 사진을 탭했을때 뜨는 hero. 식판사진 정보
+// 및 간단한 포토뷰어 기능 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -5,9 +7,9 @@ import 'package:photo_view/photo_view.dart';
 
 class AlbumDetails extends StatelessWidget {
   final String imagePath;
-  final String date;
-  final String mealType;
-  final String percentage;
+  final String date; //식판 스캔일
+  final String mealType; //조식, 중식, 석식 
+  final String percentage; // 해당 식판 잔반 클리어률
   final int index;
 
   AlbumDetails(
@@ -34,7 +36,7 @@ class AlbumDetails extends StatelessWidget {
                 FontAwesomeIcons.arrowLeft,
                 size: 20,
                 color: Color(0xff999999),
-              ), // Icon
+              ), 
               onPressed: () {
                 Navigator.pop(context, true);
               },
@@ -46,7 +48,7 @@ class AlbumDetails extends StatelessWidget {
                 Icons.file_download_outlined,
                 size: 20,
                 color: Color(0xff999999),
-              ), // Icon
+              ), 
               onPressed: () {
               },
             ),

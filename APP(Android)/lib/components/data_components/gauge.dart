@@ -1,3 +1,5 @@
+//데이터 스크린의 누적 잔반클리어률을 보여주는 gauge
+
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -5,9 +7,11 @@ import 'package:flutter/material.dart';
 final serviceNumber = '20-14339655';
 
 class Gauge extends StatelessWidget {
+  //Firebase Firestore USER_FOOD_WASTE_AVG Collection을 선언
   final CollectionReference waste = FirebaseFirestore.instance.collection('USER_FOOD_WASTE_AVG');
   @override
   Widget build(BuildContext context) {
+    //Future Builder를 활용해 평균 잔반량 정보를 불러오고 불러와졌을 때 SfRadialGauge를 빌드함
     return FutureBuilder<DocumentSnapshot>(
       future: waste.doc(serviceNumber).get(),
       builder: 

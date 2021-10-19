@@ -14,15 +14,15 @@ class Challenge {
 
   Challenge(
     {
-      required this.name,
-      required this.bgColor,
-      required this.bgColor2,
-      required this.prize,
-      required this.announcement,
-      required this.date,
-      required this.attendants,
-      required this.code,
-      required this.added
+      required this.name, //챌린지 이름
+      required this.bgColor, //챌린지 카드 배경색
+      required this.bgColor2, //챌린지 카드 배경 gradient 색
+      required this.prize, // 챌린지 우승 포상
+      required this.announcement, //지휘관 전파사항
+      required this.date, // 마가임
+      required this.attendants, //참가인원수
+      required this.code, //부대운영코드
+      required this.added //유저가 참가등록했는지 여부
     }
   );
 }
