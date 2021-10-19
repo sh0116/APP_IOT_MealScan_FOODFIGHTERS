@@ -213,8 +213,15 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
 |Raspberry Pi|Python|OpenCV|
 |:---:|:---:|:---:|
 |<a href="https://www.raspberrypi.org/"><img src="asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="asset/python.png" height="30px"></a>|<a href="https://www.https://opencv.org/"><img src="asset/OpenCV_Logo.png" height="50px"></a>|
-
 <br>
+
+**How to Run**
+
+```bash
+$ git clone https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS.git
+$ cd APP_IOT_MealScan_FOODFIGHTERS.git/IoT(Raspberry Pi)
+$ python main.py
+```
 
 <table>
     <tr>
