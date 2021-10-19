@@ -31,11 +31,13 @@ class _ChallengeCardState extends State<ChallengeCard> {
       ],
     );
   }
-
+  //유저가 해당 챌린지를 참가등록했는지 여부에 따라 보이는 카드가 다름
   Widget _selectCard() {
     return widget.added ? _addedCard() : _openCard();
   }
 
+  //참가등록된 카드의 경우 카드 내에 별도의 챌린지정보가 없고
+  //대신 카드 위에 카운트다운이 있음
   Widget _addedCard() {
     DateFormat format = DateFormat("hh:mm:ss");
     int estimateTs = DateTime.parse(widget.challenge.date).millisecondsSinceEpoch;
@@ -113,7 +115,7 @@ class _ChallengeCardState extends State<ChallengeCard> {
       ),
     );   
   }
-
+  //진행중 챌린지는 카드에 챌린지 정보(참가자수, 마감일까지 남은일수)가 제공됨
   Widget _openCard() {
     String name = widget.challenge.name;
     String attendant = widget.challenge.attendants + "명 참가 중";
@@ -194,7 +196,8 @@ class _ChallengeCardState extends State<ChallengeCard> {
     );
 
   }
-
+  
+  //진행중 챌린지 카드 탭할 시 챌린지 참가버튼이 있는 다이얼로그로 이동
   _navigateToChallengeInfo(BuildContext context) async {
     await showDialog(
         context: context,
@@ -205,6 +208,7 @@ class _ChallengeCardState extends State<ChallengeCard> {
     widget.notifyParent();
   }
 
+  //참가중 챌린지 카드 탭할 시 리더보드와 챌린지 정보가 보이는 별도의 페이지로 이동
   _navigateToAddedInfoScreen(BuildContext context) async {
     await Navigator.of(context).push(MaterialPageRoute<void>(builder: (BuildContext context) {
       return AddedChallengeInfo(challenge: widget.challenge);
