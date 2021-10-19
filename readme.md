@@ -202,6 +202,7 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
 |Raspberry Pi|Python|OpenCV|
 |:---:|:---:|:---:|
 |<a href="https://www.raspberrypi.org/"><img src="asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="asset/python.png" height="30px"></a>|<a href="https://www.https://opencv.org/"><img src="asset/OpenCV_Logo.png" height="50px"></a>|
+
 <br>
 
 < 여기다가 iot 서비스 플로우 표 넣으면 좋을듯 >
@@ -236,8 +237,9 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
     </tr>
 </table>
 
-
 3D Modeling & Printing의 더 자세한 내용 관련 내용은 [이곳](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(3D%20PRINT)) 에서
+
+<br>
 
 ### **COMMUNICATIONS/PROJECT MANAGEMENT**
 
