@@ -20,7 +20,7 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 <table>
     <tr>
         <td width="100%">
-            <img src="asset/ServiceFlowChart.png">
+            <img src="asset/ServiceFlowChart.jpg">
         </td>
     </tr>
     <tr>
