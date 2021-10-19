@@ -4,7 +4,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:osam2021/components/challenge_components/challenge_header.dart';
 import 'package:provider/provider.dart';
 import 'package:osam2021/notifiers.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class AddedChallengeInfo extends StatefulWidget {
