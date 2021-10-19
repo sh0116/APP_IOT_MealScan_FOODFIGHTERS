@@ -1,3 +1,4 @@
+//저번 주 일별 잔반클리어률을 보여주는 바차트
 import 'dart:async';
 import 'dart:math';
 import 'package:fl_chart/fl_chart.dart';
@@ -23,9 +24,9 @@ class LeftoverBarchartState extends State<LeftoverBarchart> {
   final Color barBackgroundColor = const Color(0xff72d8bf);
   final Duration animDuration = const Duration(milliseconds: 1000);
 
-  int touchedIndex = -1;
+  int touchedIndex = -1; //유저가 바를 건들이면 바 색상이 바뀜
 
-  bool isPlaying = false;
+  bool isPlaying = false; // 플레이 버튼을 누르면 차트에 바가 생성됨
 
   @override
   Widget build(BuildContext context) {
@@ -61,8 +62,8 @@ class LeftoverBarchartState extends State<LeftoverBarchart> {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: 
-                        BarChart(
-                        isPlaying ? mainBarData() : initData(),
+                        BarChart( //플레이버튼이 안눌린 상태면 초기데이터 0으로 바가 생성안됨
+                        isPlaying ? mainBarData() : initData(), 
                         swapAnimationDuration: animDuration,
                       ),
                     ),
@@ -78,7 +79,7 @@ class LeftoverBarchartState extends State<LeftoverBarchart> {
               child: Align(
                 alignment: Alignment.topRight,
                 child: isPlaying ? SizedBox(height: 0) : 
-                ShakeAnimatedWidget(
+                ShakeAnimatedWidget( // 유저의 탭 유도를 위해 플레이버튼에 애니메이션을 더함
                   enabled: true,
                   shakeAngle: Rotation.deg(z: 30),
                   curve: Curves.linear,
