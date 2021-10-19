@@ -164,9 +164,8 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
     </tr>
 </table>
 
-|사용한 오픈소스 패키지|용도 
-|:---:|:---:|
-|provider (^5.0.0)| 용도
+Back-End Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/APP(Android)/README.md) 확인하세요.
+
 <br>
 
 ### **FRONTEND**
