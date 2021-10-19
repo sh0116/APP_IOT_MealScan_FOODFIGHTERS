@@ -5,35 +5,38 @@
 </div>
 
 <h2>🔧3D Printing 설계 및 출력</h2>
-STL파일 제작 및 3D 도면 제작은 오픈소스 Tinkercad를 사용해서 제작했다. <br><br>
+<br>
+                                                                    
 
-> **설계를 할때 주요 고려해던 사항** <br>
->>  ● 출력의 속도를 고려한 설계 <br>
->>  ● 빛이 잘 통하는 구조 <br>
->>  ● 전용 카메라와 바닥의 수직상 거리 <br><br>
->>  ● 장기간(24시간 이상) 사용 시 노즐의 손상으로 정상적인 출력이 불가한 경우 고려 <br>
->>  ● 부품 결합을 고려 <br>
->>  
-> **출력 세부사항** <br>
->>  ● 채움의 정도 0% <br>
->>  ● 외벽의 두깨 1~0.5 mm <br>
->>  ● 출력 속도는 해당 기계의 최고 속도 <br>
+✨ **설계를 할때 주요 고려해던 사항**
+* 출력의 속도를 고려한 설계
+* 빛이 잘 통하는 구조
+* 장기간(24시간 이상) 사용 시 노즐의 손상으로 정상적인 출력이 불가한 경우 고려
+* 부품 결합을 고려
+* 전용 카메라와 바닥의 수직상 거리    
+                                                                    
+🎨 **출력의 세부 사항**
+* 채움의 정도 0%
+* 외벽의 두깨 1~0.5 mm
+* 출력 속도는 해당 기계의 최고 속도
+                                                                    
+🖨 **출력 환경**
+* STL 제작 : Tinkercad 사용
+* G-code생성 : CURA 사용 
+* 3D Printer : Ultimaker社
+* Total Time : 36h                                                                    
+
+
 
 
 <h2>🔨부속품 소개</h2>
+                                                                    
+|종류|세부 부속물
+|:-----:|:-----:|
+|TOP(4ea)|TOP_center, TOP_center_front, TOP_left, TOP_right
+|BOTTOM(3ea)|BOTTOM_center, BOTTOM_left, BOTTOM_right
+|PILLAR(8ea)| PILLAR x 8
 
->TOP
->>TOP_center<br>
->>TOP_center_front<br>
->>TOP_left<br>
->>TOP_right<br>
->>
->BOTTOM
->>BOTTOM_center<br>
->>BOTTOM_left<br>
->>BOTTOM_right<br>
->>
->PILLAR
 
 <br><br>
 <h3>top_center.stl</h3>
