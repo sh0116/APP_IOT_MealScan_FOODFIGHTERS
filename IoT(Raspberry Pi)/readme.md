@@ -1,7 +1,12 @@
 <h1> 📡IoT Part</h1>
-장병들의 잔반을 측정하고 Back-End 서버 DB에 데이터를 넣어주는 IoT System
+
 <div align="center">
-<img src="../asset/rasp.png">
+ 
+![Logo](../asset/readme/logo.jpg)
+
+![RPi](https://img.shields.io/badge/Raspberry%20Pi-4B-brightgreen)
+![Python](https://img.shields.io/badge/Python-3.7.4-blue)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.1.2-orange)
 </div>
 
 ## 🗃목차
