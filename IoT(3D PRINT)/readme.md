@@ -5,7 +5,8 @@
 </div>
 
 <h2>🔧3D Printing 설계 및 출력</h2>
-STL파일 제작 및 3D 도면 제작은 오픈소스 Tinkercad를 사용해서 제작했다. <br><br>
+<br>
+                                                                    
 
 ✨ **설계를 할때 주요 고려해던 사항**
 * 출력의 속도를 고려한 설계
@@ -18,6 +19,13 @@ STL파일 제작 및 3D 도면 제작은 오픈소스 Tinkercad를 사용해서 
 * 채움의 정도 0%
 * 외벽의 두깨 1~0.5 mm
 * 출력 속도는 해당 기계의 최고 속도
+                                                                    
+🖨 **출력 환경**
+* STL 제작 : Tinkercad 사용
+* G-code생성 : CURA 사용 
+* 3D Printer : Ultimaker社
+* Total Time : 36h                                                                    
+
 
 
 
