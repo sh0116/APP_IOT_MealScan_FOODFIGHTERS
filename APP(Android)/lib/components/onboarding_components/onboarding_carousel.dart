@@ -1,3 +1,5 @@
+//온보딩 첫 화면에 나오는 밀스캔 소개 carousel.
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';

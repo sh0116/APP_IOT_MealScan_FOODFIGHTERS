@@ -1,3 +1,4 @@
+//온보딩 첫화면에서 '시작하기'를 누르면 나오는 가입화면
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:cool_stepper/cool_stepper.dart';
