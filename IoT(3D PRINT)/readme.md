@@ -1,4 +1,7 @@
 <h1> 🧱3D Modeling & Printing </h1>
+
+🎈 **IoT System의 정확한 알고리즘 동작을 위한 환경 조성과 IoT(Raspberry Pi)를 거치할 구조물을 만들기 위해 3D Print기술을 사용했습니다.**
+
 <div align="center">
 <img src="/IoT(3D PRINT)/asset/new_all2.png" width="450 height="450">
  <img src="/IoT(3D PRINT)/asset/3d_gif.gif" width="450" height="450">

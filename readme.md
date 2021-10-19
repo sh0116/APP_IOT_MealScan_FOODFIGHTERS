@@ -18,7 +18,7 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 
 
 
-## 기능 세부 설명
+## APP 기능 세부 설명
 
 
 
@@ -164,7 +164,7 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
     </tr>
 </table>
 
-Back-End Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/APP(Android)/README.md) 확인하세요.
+Backend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/APP(Android)/README.md) 확인하세요.
 
 <br>
 
@@ -193,7 +193,7 @@ Back-End Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
     </tr>
 </table>
 
-Front-End Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/APP(Android)/README.md) 확인하세요.
+Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/APP(Android)/README.md) 확인하세요.
 
 <br>
 
@@ -202,6 +202,7 @@ Front-End Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack
 |Raspberry Pi|Python|OpenCV|
 |:---:|:---:|:---:|
 |<a href="https://www.raspberrypi.org/"><img src="asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="asset/python.png" height="30px"></a>|<a href="https://www.https://opencv.org/"><img src="asset/OpenCV_Logo.png" height="50px"></a>|
+
 <br>
 
 < 여기다가 iot 서비스 플로우 표 넣으면 좋을듯 >
@@ -215,6 +216,28 @@ Front-End Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack
 **오픈소스 및 테스트**\
 [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/IoT(Raspberry%20Pi)/test_ImageProcess_.ipynb) 또는 [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing)에서 실행해보세요! <br>
 더 자세한 내용과 알고리즘 관련 내용은 [IoT readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(Raspberry%20Pi)) 참고
+
+<br>
+
+### **3D Modeling & Printing**
+|Tinkercad|Cura|Ultimaker
+|:---:|:---:|:---:|
+|<a href="https://www.tinkercad.com/"><img src="asset/tinkercad_logo.png" height="30px"></a>|<a href="https://ultimaker.com/software/ultimaker-cura"><img src="asset/Cura_logo.jpg" height="70px"></a>|<a href="https://ultimaker.com//"><img src="asset/Ultimaker%20logo.png" height="50px"></a>|
+
+<table>
+    <tr>
+        <td width="100%">
+             <img src="/IoT(3D PRINT)/asset/3d_gif.gif" width="450" height="450">
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <a>3D Model Structure</a>
+        </td>
+    </tr>
+</table>
+
+3D Modeling & Printing의 더 자세한 내용 관련 내용은 [이곳](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(3D%20PRINT)) 에서
 
 <br>
 
