@@ -79,7 +79,7 @@
 &nbsp; - USER_FOOD_WASTE: 유저 별 잔반량 정보 평균 모음
 
 * Firebase Cloud Storage\
-&nbsp; - FOLDER(SERVICE_NUMBER): 군번 별 폴더를 통해 잔반 식판 사진 모음\
+&nbsp; - FOLDER(SERVICE_NUMBER): 군번 별 폴더를 통해 잔반 식판 사진 모음
 
 ### 사용 중인 오픈소스 Dependency 모음
 
