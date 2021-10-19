@@ -223,6 +223,7 @@ Front-End Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack
 |:---:|:---:|:---:|
 |<a href="https://www.tinkercad.com/"><img src="asset/tinkercad_logo.png" height="30px"></a>|<a href="https://ultimaker.com/software/ultimaker-cura"><img src="asset/Cura_logo.png" height="30px"></a>|<a href="https://ultimaker.com//"><img src="asset/Ultimaker%20logo.png" height="50px"></a>|
 
+3D Modeling & Printing의 더 자세한 내용 관련 내용은 [이곳](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(3D%20PRINT))에서
 
 ### **COMMUNICATIONS/PROJECT MANAGEMENT**
 
