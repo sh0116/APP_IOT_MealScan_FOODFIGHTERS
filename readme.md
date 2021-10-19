@@ -2,8 +2,24 @@
 
 <H3 align="center"> <i> 잔반 줄이기, 이제 즐기세요 </i></H3>
 
+## Table of contents
+1. [프로젝트 소개](#introduction)
+2. [App 기능 세부 설명](#detailedexp)
+3. [기대효과](#goals)
+4. [발전방향](#forward)
+5. [기술스택](#techstack)
+    1. [Backend](#backend)
+    2. [Frontend](#frontend)
+    3. [IOT + Image Processing](#IOT)
+    4. [3D Modeling & Printing](#3d)
+    5. [Communications/Project Management](#comm)
+6. [안드로이드 필수 조건 안내](#prereqs)
+7. [설치 안내](#install)
+8. [프로젝트 사용법](#start)
+9. [팀 정보](#team)
+10. [저작권 및 사용권 정보](#license)
 
-## 프로젝트 소개
+## 프로젝트 소개 <a name="introduction"></a>
 밀스캔 (MealScan)은 식판 이미지를 이용한 장병들의 잔반 데이터 분석 및 이를 기반으로 한 잔반 챌린지 이벤트를 통해 군 내 잔반 문제를 해결하기 위하여 만들어진 모바일 애플리케이션입니다. 처리비용만 [연 142억원](http://www.urinews.org/120112), 군 음식물 쓰레기가 [역대 최대치](https://www.edaily.co.kr/news/read?newsId=02223846625936528&mediaCodeNo=257)를 경신한 지금, 기존 방식보다 더 편리하고 재치있는 방식으로 잔반 문제 해결에 한 발짝 더 다가가고자 합니다. 
 
 밀스캔은 세가지 Task로 이루어져 있습니다.
@@ -18,7 +34,7 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 
 
 
-## APP 기능 세부 설명
+## APP 기능 세부 설명 <a name="detailedexp"></a>
 
 
 
@@ -113,7 +129,7 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 
 <br>
 
-## 기대효과
+## 기대효과 <a name="goals"></a>
 
 ✨ **장병들의 자발적, 적극적 참여**
 * 식단별 배식량을 추천해줌으로서 자연스럽게 병사들의 올바른 배식문화 유도 (넛지효과)
@@ -126,7 +142,7 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 * 스캔만 하면 완료되는 선호도 조사로 기존 종이 설문조사 필요없이 과정을 무인화, 자동화하여 간부 및 병사의 수고로움를 덜고, 설문조사에 사용되는 종이 낭비를 막아 환경보호까지 일석이조의 효과
 
 
-## 발전방향
+## 발전방향 <a name="forward"></a>
 
 [온실가스 주범 음식물 쓰레기...연간 885만톤 배출](http://www.greenpostkorea.co.kr/news/articleView.html?idxno=127566)\
 [음식물 쓰레기 처리로 연간 8000억 낭비](http://www.hkbs.co.kr/news/articleView.html?idxno=530572)\
@@ -138,9 +154,9 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 
 <br>
 
-## 기술 스택 (Tech Stack) 💻 
+## 기술 스택 (Tech Stack) 💻 <a name="techstack"></a>
 
-### **Backend**
+### **Backend** <a name="backend"></a>
 
 |Firebase|
 |:---:|
@@ -163,7 +179,7 @@ Backend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack20
 
 <br>
 
-### **Frontend**
+### **Frontend** <a name="frontend"></a>
 
 |Dart|Flutter UI Framework|Figma
 |:---:|:---:|:---:|
@@ -192,7 +208,7 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
 
 <br>
 
-### **IOT + Image Processing**
+### **IOT + Image Processing** <a name="IOT"></a>
 
 |Raspberry Pi|Python|OpenCV|
 |:---:|:---:|:---:|
@@ -232,7 +248,7 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
 
 <br>
 
-### **3D Modeling & Printing**
+### **3D Modeling & Printing** <a name="3d"></a>
 |Tinkercad|Cura|Ultimaker
 |:---:|:---:|:---:|
 |<a href="https://www.tinkercad.com/"><img src="asset/tinkercad_logo.png" height="30px"></a>|<a href="https://ultimaker.com/software/ultimaker-cura"><img src="asset/Cura_logo.jpg" height="70px"></a>|<a href="https://ultimaker.com//"><img src="asset/Ultimaker%20logo.png" height="50px"></a>|
@@ -254,7 +270,7 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
 
 <br>
 
-### **Communications/Project Management**
+### **Communications/Project Management** <a name="comm"></a>
 
 |Github Projects|Slack|
 |:---:|:---:|
@@ -281,11 +297,11 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
 <br>
 
 
-## 안드로이드 필수 조건 안내 (Prerequisites)
+## 안드로이드 필수 조건 안내 (Prerequisites) <a name="prereqs"></a>
 * Android 5.0 (Lollipop: API level 21)
 * 권장: Android 10.0 (Q: API level 29)
 
-## 설치 안내 (Installation Process)
+## 설치 안내 (Installation Process) <a name="install"></a>
 ```bash
 $ git clone https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS.git
 
@@ -300,12 +316,12 @@ http://0.0.0.0:XXXXX
 ```
 해당 링크 Ctrl/Command + Click
 
-## 프로젝트 사용법 (Getting Started)
+## 프로젝트 사용법 (Getting Started) <a name="start"></a>
 * App은 Web에서 Run하여 사용해보세요!
 * Image Processing은 [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/IoT(Raspberry%20Pi)/test_ImageProcess_.ipynb) 또는 [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing)에서 실행해보세요!
 
  
-## 팀 정보 (Team Information)
+## 팀 정보 (Team Information) <a name="team"></a>
 
 - [김석현 일병](https://github.com/sh0116) E-mail : [seokhyeon116@naver.com](mailto:seokhyeon116@naver.com), **팀장 및 IOT**
 
@@ -316,5 +332,5 @@ http://0.0.0.0:XXXXX
 - [박세연 상병](https://github.com/seanpark98) E-mail : [seanpark98@gmail.com](mailto:seyeonpark@berkeley.edu), **Backend-IOT**
 
 
-## 저작권 및 사용권 정보 (Copyleft / End User License)
+## 저작권 및 사용권 정보 (Copyleft / End User License) <a name="license"></a>
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
