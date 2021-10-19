@@ -8,10 +8,7 @@ class ChallengeDataBase {
 
    Future getChallengeData() async {
     try {
-      //to get data from a single/particular document alone.
-      // var temp = await collectionRef.doc("<your document ID here>").get();
-
-      // to get data from all documents sequentially
+      // Firebase "CHALLENGES" collection에 있는 모든 챌린지들을 읽어서 리스트에 저장후 리턴함.
       await collectionRef.get().then((querySnapshot) {
         for (var result in querySnapshot.docs) {
           challengesList.add(result.data());

@@ -53,6 +53,8 @@ class _ChallengeMenuState extends State<ChallengeMenu> {
     final String noChallengeText = "참가 중인 챌린지가 없네요.\n" // 참가중인 챌린지가 없을시 보이는 참가독려 텍스트
         "지금 참가하여 상점, 전투휴무 등 다양한\n"
         "포상 획득하세요.\n";
+    // 앱을 실행 후 처음으로 챌린지들을 Firebase 서버로부터 읽어서 저장함.
+    
     if (!notifiers.initialized) {
       initializeNotifier(dataList, notifiers);
     }
