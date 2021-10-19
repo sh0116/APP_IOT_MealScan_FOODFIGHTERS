@@ -120,6 +120,15 @@
 
 </div>
 
+## 💻 Reference 
 |Raspberry Pi|Python|OpenCV|
 |:---:|:---:|:---:|
-|<a href="https://www.raspberrypi.org/"><img src="asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="asset/python.png" height="30px"></a>|<a href="https://www.https://opencv.org/"><img src="asset/OpenCV_Logo.png" height="50px"></a>|
+|<a href="https://www.raspberrypi.org/"><img src="/asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="/asset/python.png" height="30px"></a>|<a href="https://www.https://opencv.org/"><img src="/asset/OpenCV_Logo.png" height="50px"></a>|
+
+|사용한 오픈소스 기술|용도 
+|:---:|:---:|
+|[BackProjection](https://docs.opencv.org/3.4.15/da/d7f/tutorial_back_projection.html)| 잔반 측정 및 Classification 알고리즘에 들어가는 역투영 기술
+|[opencv Webcam](https://docs.opencv.org/4.5.3/d8/dfe/classcv_1_1VideoCapture.html)| 라즈베리파이 실시간 잔반 측정을 위한 기술
+|[opencv Class index](https://docs.opencv.org/master/annotated.html)| Transfer Colorspace Class (HSV,GRAY,GRB ...)
+
+
