@@ -23,7 +23,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              //Text("잔반 줄이기, \이제 즐기세요.", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
               OnboardingCarousel(),
               Container(height: 60),
               MaterialButton(
