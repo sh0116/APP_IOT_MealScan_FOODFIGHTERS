@@ -136,11 +136,6 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 위와 같이 음식물 쓰레기 배출량 문제는 비단 군대에서만이 아니라 사회 전반에서 주목하는 이슈입니다. 사회 다양한 곳에서 이루어지고 있는 잔반 줄이기 캠페인에도 불구하고, 매일 1만4400톤 가량의 음식물쓰레기가 배출되고 있고, 매년 상승하는 처리비용으로 연간 8000억의 혈세낭비가 있고 더 증가할 것으로 예상됩니다. 이런 현실 속에 밀스캔은 군대, 학교 등 국내 다양한 공공기관에서 잔반 챌린지와 데이터 분석을 개시하는 초석이 될 수 있습니다. 기존 포스터 배포나 교육 위주의 방식에서 탈피하면서 2021년에 알맞고 MZ세대의 눈높이에 맞춘, 데이터 기반의 챌린지 기능과 모바일 앱으로서의 접근성을 가진 밀스캔이 대한민국 음식물 쓰레기 감축의 미래라고 믿어 의심치 않습니다.
 
 
-
-## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
-* ECMAScript 6 지원 브라우저 사용
-* 권장: Google Chrome 버젼 77 이상
-
 <br>
 
 ## 기술 스택 (Technique Used) 💻 
@@ -267,6 +262,13 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
 </table>
 <br>
 
+
+## 안드로이드 필수 조건 안내 (Prerequisites)
+* Android 5.0 (Lollipop: API level 21)
+* 권장: Android 10.0 (Q: API level 29)
+
+<br>
+
 ## 설치 안내 (Installation Process)
 ```bash
 $ git clone https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS.git
@@ -283,14 +285,9 @@ http://0.0.0.0:XXXXX
 해당 링크 Ctrl/Command + Click
 
 ## 프로젝트 사용법 (Getting Started)
-**마크다운 문법을 이용하여 자유롭게 기재**
+* App은 Web에서 Run하여 실행해보세요!
+* Image Processing은 [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/IoT(Raspberry%20Pi)/test_ImageProcess_.ipynb) 또는 [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing)에서 실행해보세요!
 
-잘 모를 경우
-구글 검색 - 마크다운 문법
-[https://post.naver.com/viewer/postView.nhn?volumeNo=24627214&memberNo=42458017](https://post.naver.com/viewer/postView.nhn?volumeNo=24627214&memberNo=42458017)
-
- 편한 마크다운 에디터를 찾아서 사용
- 샘플 에디터 [https://stackedit.io/app#](https://stackedit.io/app#)
  
 ## 팀 정보 (Team Information)
 
