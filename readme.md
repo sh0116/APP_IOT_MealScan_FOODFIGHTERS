@@ -222,7 +222,7 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
 ### **3D Modeling & Printing**
 |Tinkercad|Cura|Ultimaker
 |:---:|:---:|:---:|
-|<a href="https://www.tinkercad.com/"><img src="asset/tinkercad_logo.png" height="30px"></a>|<a href="https://ultimaker.com/software/ultimaker-cura"><img src="asset/Cura_logo.jpg" height="30px"></a>|<a href="https://ultimaker.com//"><img src="asset/Ultimaker%20logo.png" height="50px"></a>|
+|<a href="https://www.tinkercad.com/"><img src="asset/tinkercad_logo.png" height="30px"></a>|<a href="https://ultimaker.com/software/ultimaker-cura"><img src="asset/Cura_logo.jpg" height="70px"></a>|<a href="https://ultimaker.com//"><img src="asset/Ultimaker%20logo.png" height="50px"></a>|
 
 <table>
     <tr>
