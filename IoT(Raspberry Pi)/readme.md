@@ -99,10 +99,10 @@
  
 <h3> 음식 분류 알고리즘 및 양 측정 알고리즘 테스트 결과 </h3>
  
- >>[Test Data](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/tree/master/IoT(3D PRINT)/asset/test_image)  를 대상으로 알고리즘 실행 결과  <br>
+ >>[Test Data](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/tree/master/IoT(Raspberry%20Pi)/asset/test_image)  를 대상으로 알고리즘 실행 결과  <br>
  <img src="../asset/jupyter_img1.png">
  
- >>알고리즘을 적용한 [Result](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/tree/master/IoT(3D PRINT)/asset/result_test_image) 값 (잔반 이외의 부분은 검정색(#000000)으로 Masking)<br>
+ >>알고리즘을 적용한 [Result](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/tree/master/IoT(Raspberry%20Pi)/asset/result_test_image) 값 (잔반 이외의 부분은 검정색(#000000)으로 Masking)<br>
  <img src="../asset/jupyter_img2.png">
  <img src="../asset/jupyter_img3.png">
  
