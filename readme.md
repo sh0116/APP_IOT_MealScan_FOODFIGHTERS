@@ -279,7 +279,7 @@ http://0.0.0.0:XXXXX
 
 - [이승준 상병](https://github.com/seansungjoonlee) E-mail : [slee1040@gmail.com](mailto:slee1040@gmail.com), **Frontend**
 
-- [이형민 상병](https://github.com/alee2022) E-mail : [jackli0373@gmail.com](mailto:jackli0373@gmail.com), **Backend**
+- [이형민 일병](https://github.com/alee2022) E-mail : [alee19825@gmail.com](mailto:alee19825@gmail.com), **Backend**
 
 - [박세연 상병](https://github.com/seanpark98) E-mail : [seanpark98@gmail.com](mailto:seyeonpark@berkeley.edu), **Backend-IOT**
 
