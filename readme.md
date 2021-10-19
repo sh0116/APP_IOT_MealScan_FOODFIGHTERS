@@ -249,6 +249,7 @@ Front-End Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack
     </tr>
 </table>
 <br>
+3D모델링에 대해 더 자세한 내용을 알고싶다면 [3D Modeling & Printing readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(IoT(3D%20PRINT))) 참고
 
 ## 설치 안내 (Installation Process)
 ```bash
