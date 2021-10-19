@@ -140,7 +140,7 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 
 ## 기술 스택 (Tech Stack) 💻 
 
-### **BACKEND**
+### **Backend**
 
 |Firebase|
 |:---:|
@@ -163,7 +163,7 @@ Backend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack20
 
 <br>
 
-### **FRONTEND**
+### **Frontend**
 
 |Dart|Flutter UI Framework|Figma
 |:---:|:---:|:---:|
@@ -200,7 +200,25 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
 
 <br>
 
-< 여기다가 iot 서비스 플로우 표 넣으면 좋을듯 >
+<table>
+    <tr>
+        <td width="60%">
+            <img src="asset/flow_chart.png">
+        </td>
+        <td width="40%">
+            <img src="asset/plate_image.png">
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <a>IOT Flow Chart</a>
+        </td>
+        <td align="center">
+            <a>Image Processing</a>
+        </td>
+    </tr>
+</table>
+
 
 |사용한 오픈소스 기술|용도 
 |:---:|:---:|
@@ -236,7 +254,7 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
 
 <br>
 
-### **COMMUNICATIONS/PROJECT MANAGEMENT**
+### **Communications/Project Management**
 
 |Github Projects|Slack|
 |:---:|:---:|
