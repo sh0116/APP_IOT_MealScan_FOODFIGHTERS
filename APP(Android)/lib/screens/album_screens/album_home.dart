@@ -1,3 +1,4 @@
+//유저가 지금까지 스캔한 식판들의 사진을 불러옴
 import 'package:flutter/material.dart';
 import 'package:osam2021/firebase/database_images.dart';
 import 'album_details.dart';
@@ -28,7 +29,7 @@ class AlbumHome extends StatelessWidget {
 
 Widget buildPhotos() {
   List photoList = [];
-  return FutureBuilder(
+  return FutureBuilder( //Firebase에서 FutureBuilder를 통해 사진 받기
     future: ImageDataBase().getImageData(),
     builder: (context, snapshot) {
           if (snapshot.hasError) {
