@@ -32,12 +32,12 @@ dependencies:
   fl_chart: ^0.40.0
   animated_widgets: ^1.1.0
   cool_stepper: ^1.2.1
-  flutter_swiper_plus:
+  flutter_swiper_plus: ^2.0.4
   carousel_slider: ^4.0.0
   firebase_core:
   cloud_firestore: 
   firebase_web:
-  syncfusion_flutter_gauges: 
+  syncfusion_flutter_gauges: ^19.3.45
   photo_view: ^0.13.0
   dropbox_client: ^0.8.0
   connectivity: ^3.0.6

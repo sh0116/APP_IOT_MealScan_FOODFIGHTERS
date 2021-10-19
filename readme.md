@@ -4,7 +4,7 @@
 
 
 ## 프로젝트 소개
-밀스캔 (MealScan)은 식판 이미지를 이용한 장병들의 잔반 데이터 분석 및 이를 기반으로 한 잔반 챌린지 이벤트를 통해 군 내 잔반 문제를 해결하기 위하여 만들어진 모바일 애플리케이션입니다. 처리비용만 연 142억원, 군 음식물 쓰레기가 [역대 최대치](https://www.edaily.co.kr/news/read?newsId=02223846625936528&mediaCodeNo=257)를 경신한 지금, 기존 방식보다 더 편리하고 재치있는 방식으로 잔반 문제 해결에 한 발짝 더 다가가고자 합니다. 
+밀스캔 (MealScan)은 식판 이미지를 이용한 장병들의 잔반 데이터 분석 및 이를 기반으로 한 잔반 챌린지 이벤트를 통해 군 내 잔반 문제를 해결하기 위하여 만들어진 모바일 애플리케이션입니다. 처리비용만 [연 142억원](http://www.urinews.org/120112), 군 음식물 쓰레기가 [역대 최대치](https://www.edaily.co.kr/news/read?newsId=02223846625936528&mediaCodeNo=257)를 경신한 지금, 기존 방식보다 더 편리하고 재치있는 방식으로 잔반 문제 해결에 한 발짝 더 다가가고자 합니다. 
 
 밀스캔은 세가지 Task로 이루어져 있습니다.
 1. 📷 **Scan**\
@@ -176,7 +176,7 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
     </tr>
 </table>
 
-|사용한 오픈소스 패키지 이름|용도 
+|사용한 오픈소스 패키지|용도 
 |:---:|:---:|
 |provider (^5.0.0)| 용도
 <br>
@@ -206,33 +206,28 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
     </tr>
 </table>
 
-|사용한 오픈소스 패키지 이름|용도 
-|:---:|:---:|
-|font_awesome_flutter (^9.0.0)| 아이콘 사용
-|fl_chart (^0.40.0) | Explore를 위한 데이터 시각화
-|animated_widgets (^1.1.0) | 챌린지 및 데이터 화면에서 아이콘 탭 유도
-|cool_stepper (^1.2.1) | 온보딩 화면 제작
-|flutter_swiper_plus () | 데이터 화면 갤러리 형태의 배식추천
-|carousel_slider (^4.0.0) | 온보딩 첫 화면 튜토리얼
-|photo_view (^0.13.0) | 앨범 탭에서 식판 사진 줌인 줌아웃 가능
+Front-End Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/APP(Android)/README.md) 확인하세요.
+
 <br>
 
-### **IOT**
+### **IOT + Image Processing**
 
 |Raspberry Pi|Python|
 |:---:|:---:|
 |<a href="https://www.raspberrypi.org/"><img src="asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="asset/python.png" height="30px"></a>|
 <br>
 
-### **IMAGE PROCESSING**  
+< 여기다가 iot 서비스 플로우 표 넣으면 좋을듯 >
 
-BackProjection     : (https://docs.opencv.org/3.4.15/da/d7f/tutorial_back_projection.html) <br>
-opencv Webcam      : (https://docs.opencv.org/4.5.3/d8/dfe/classcv_1_1VideoCapture.html) <br>
-opencv Class index : (https://docs.opencv.org/master/annotated.html) <br>
+|사용한 오픈소스 기술|용도 
+|:---:|:---:|
+|[BackProjection](https://docs.opencv.org/3.4.15/da/d7f/tutorial_back_projection.html)| 용도1
+|[opencv Webcam](https://docs.opencv.org/4.5.3/d8/dfe/classcv_1_1VideoCapture.html)| 용도2
+|[opencv Class index](https://docs.opencv.org/master/annotated.html)| 용도3
 
 **오픈소스 및 테스트**\
 [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/IoT(Raspberry%20Pi)/test_ImageProcess_.ipynb) 또는 [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing)에서 실행해보세요! <br>
-더 자세한 내용과 알고리즘의 관련 내용은 [IoT readme!](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(Raspberry%20Pi)) 참고
+더 자세한 내용과 알고리즘 관련 내용은 [IoT readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(Raspberry%20Pi)) 참고
 
 <br>
 
