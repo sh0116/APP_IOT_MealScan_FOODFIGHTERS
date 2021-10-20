@@ -27,12 +27,14 @@
  
 ## ✔**How to Run**
 
+### 라즈베리파이 환경
 ```bash
 $ git clone https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS.git
 $ cd APP_IOT_MealScan_FOODFIGHTERS.git/IoT(Raspberry Pi)
 $ python main.py
 ```
-
+### Jupyter Notebook 환경
+[Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/IoT(Raspberry%20Pi)/test_ImageProcess_.ipynb) 또는 [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing)에서 실행해보세요!
  
  
 ## 📋Jupyter Notebook(colab) 
