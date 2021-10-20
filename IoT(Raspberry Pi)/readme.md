@@ -133,7 +133,7 @@ $ python main.py
 ## 💻 Reference 
 |Raspberry Pi|Python|OpenCV|
 |:---:|:---:|:---:|
-|<a href="https://www.raspberrypi.org/"><img src="/asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="/asset/python.png" height="30px"></a>|<a href="https://www.https://opencv.org/"><img src="/asset/OpenCV_Logo.png" height="50px"></a>|
+|<a href="https://www.raspberrypi.org/"><img src="/asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="/asset/python.png" height="30px"></a>|<a href="https://www.opencv.org/"><img src="/asset/OpenCV_Logo.png" height="50px"></a>|
 
 |사용한 오픈소스 기술|용도 
 |:---:|:---:|
