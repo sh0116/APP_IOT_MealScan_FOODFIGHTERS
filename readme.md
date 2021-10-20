@@ -394,5 +394,89 @@ http://0.0.0.0:XXXXX
 - [박세연 육군 상병](https://github.com/seanpark98) E-mail : [seanpark98@gmail.com](mailto:seyeonpark@berkeley.edu), **Backend-IOT**
 
 
+<table align="center" width="788">
+<thead>
+<tr>
+<th width="100" align="center">사진</th>
+<th width="100" align="center">성명</th>
+<th width="150" align="center">역할</th>
+<th width="100" align="center">깃허브</th>
+<th width="175" align="center">이메일</th>
+</tr> 
+</thead>
+<tbody>
+<tr>
+<td width="100" align="center">
+	<img src="/asset/1.png">
+</td>
+<td width="100" align="center">김석현<br/>(팀장)</td>
+<td width="150">image Process<br>IoT<br></td>
+<td width="100" align="center">
+	<a href="https://github.com/sh0116">
+		<img src="https://img.shields.io/badge/sh0116-655ced?style=social&logo=github"/>
+	</a>
+</td>
+<td width="175" align="center">
+	<a href="mailto:seokhyeon116@naver.com">
+                <img src="https://img.shields.io/static/v1?label=&message=seokhyeon116@naver.com&color=green&style=flat-square&logo=naver"/>
+        </a>
+</td>
+</tr>
+<tr>
+<td width="100" align="center">
+	<img src="/asset/2.png">
+</td>
+<td width="100" align="center">이승준</td>
+<td width="150">Frontend<br></td>
+<td width="100" align="center">
+	<a href="https://github.com/seansungjoonlee">
+		<img src="https://img.shields.io/badge/seansungjoonlee-655ced?style=social&logo=github"/>
+	</a>
+</td>
+<td width="175" align="center">
+	<a href="mailto:slee1040@gmail.com">
+                <img src="https://img.shields.io/static/v1?label=&message=slee1040@gmail.com&color=orange&style=flat-square&logo=gmail"/>
+        </a>
+</td>
+</tr>
+<tr>
+<td width="100" align="center">
+	<img src="/asset/3.png">
+</td>
+<td width="100" align="center">이형민</td>
+<td width="150">Backend<br></td>
+<td width="100" align="center">
+	<a href="https://github.com/alee2022">
+		<img src="https://img.shields.io/badge/alee2022-655ced?style=social&logo=github"/>
+	</a>
+</td>
+<td width="175" align="center">
+	<a href="mailto:alee19825@gmail.com">
+                <img src="https://img.shields.io/static/v1?label=&message=alee19825@gmail.com&color=orange&style=flat-square&logo=gmail"/>
+        </a>
+</td>
+</tr>
+	<tr>
+<td width="100" align="center">
+	<img src="/asset/4.png">
+</td>
+<td width="100" align="center">박세연</td>
+<td width="150">Backend<br>IoT<br></td>
+<td width="100" align="center">
+	<a href="https://github.com/seanpark98">
+		<img src="https://img.shields.io/badge/seanpark98-655ced?style=social&logo=github"/>
+	</a>
+</td>
+<td width="175" align="center">
+	<a href="mailto:seyeonpark@berkeley.edu">
+                <img src="https://img.shields.io/static/v1?label=&message=seyeonpark@berkeley.edu&color=orange&style=flat-square&logo=gmail"/>
+        </a>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+
 ## 저작권 및 사용권 정보 (Copyleft / End User License) <a name="license"></a>
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
