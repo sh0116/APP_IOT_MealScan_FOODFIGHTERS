@@ -2,6 +2,29 @@
 
 <H3 align="center"> <i> 잔반 줄이기, 이제 즐기세요 </i></H3>
 
+<h2 align="center">프로젝트 설명 영상</h2>
+
+<table>
+	<tr>
+		<td>
+			<a href="https://www.youtube.com/watch?v=suvEYpgqv18"><img src="/image/INTRO_THUMBNAIL.png"></a>
+		</td>
+		<td>
+			<a href="https://www.youtube.com/watch?v=Oh-SFOLAom0"><img src="/image/GUIDE_THUMBNAIL.png"></a>
+		</td>
+	</tr>
+	<tr>
+		<td align="center">
+			<b>소개 영상</b>
+		</td>
+		<td align="center">
+			<b>가이드 영상</b>
+		</td>
+	</tr>
+</table>
+
+<br>
+
 ## 목차(Table of Contents)
 1. [프로젝트 소개](#introduction)
 2. [APP 기능 세부 설명](#detailedexp)
@@ -19,6 +42,8 @@
 9. [팀 정보](#team)
 10. [저작권 및 사용권 정보](#license)
 
+<br>
+
 ## 프로젝트 소개 <a name="introduction"></a>
 밀스캔 (MealScan)은 식판 이미지를 이용한 장병들의 잔반 데이터 분석 및 이를 기반으로 한 잔반 챌린지 이벤트를 통해 군 내 잔반 문제를 해결하기 위하여 만들어진 모바일 애플리케이션입니다. 처리비용만 [연 142억원](http://www.urinews.org/120112), 군 음식물 쓰레기가 [역대 최대치](https://www.edaily.co.kr/news/read?newsId=02223846625936528&mediaCodeNo=257)를 경신한 지금, 기존 방식보다 더 편리하고 재치있는 방식으로 잔반 문제 해결에 한 발짝 더 다가가고자 합니다. 
 
@@ -33,6 +58,16 @@
 Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게 시각화되어 확인하실 수 있습니다. 또한 반찬별 클리어률을 바탕으로 매 끼니별 배식 추천을 제공하여 배식받을 때 (또는 자율배식 할 때) 필요 이상을 받지 않고, 적게 배식받을 메뉴를 추천합니다. 밀스캔 데이터는 국방부와 공유되어 각 군단별 영양사분들이 더 효율적인 식단을 짤 수 있게도 합니다.
 
 
+### **전체적인 서비스 플로우**
+<table>
+    <tr>
+        <td width="100%">
+            <img src="./asset/readme/service_flow.png">
+        </td>
+    </tr>
+</table>
+
+<br>
 
 ## APP 기능 세부 설명 <a name="detailedexp"></a>
 
@@ -187,11 +222,14 @@ Backend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack20
 
 <table>
     <tr>
-        <td width="50%">
+        <td width="40%">
             <img src="./asset/readme/figma_screenshot.png">
         </td>
-        <td width="50%">
+        <td width="20%">
             <img src="./asset/readme/figma_prototype.png">
+        </td>
+	<td width="40%">
+            <img src="asset/ServiceFlowChart.jpg">
         </td>
     </tr>
     <tr>
@@ -200,6 +238,9 @@ Backend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack20
         </td>
         <td align="center">
             <a href="https://www.figma.com/proto/p1Ln3TPyICmkYXUJTXS2bI/MealScan?node-id=9%3A39&scaling=scale-down&page-id=0%3A1&starting-point-node-id=9%3A39&show-proto-sidebar=1">Figma Prototype</a>
+        </td>
+	<td align="center">
+            <a>User Flow</a>
         </td>
     </tr>
 </table>
