@@ -1,24 +1,26 @@
 ![Logo](./asset/readme/logo.jpg)
 
 <H3 align="center"> <i> 잔반 줄이기, 이제 즐기세요 </i></H3>
+<br>
+<br>
 
-<h2 align="center">프로젝트 설명 영상</h2>
+<h2 align="center">프로젝트 설명 자료</h2>
 
 <table>
 	<tr>
-		<td>
-			<a href="https://www.youtube.com/watch?v=suvEYpgqv18"><img src="/image/INTRO_THUMBNAIL.png"></a>
+		<td width="50%">
+			<a href="https://www.youtube.com/watch?v=qXpAsFlGKac&ab_channel=%EA%B9%80%EC%84%9D%ED%98%84"><img src="./asset/readme/movie_final.png"></a>
 		</td>
-		<td>
-			<a href="https://www.youtube.com/watch?v=Oh-SFOLAom0"><img src="/image/GUIDE_THUMBNAIL.png"></a>
+		<td width="50%">
+			<a href="https://www.youtube.com/watch?v=Oh-SFOLAom0"><img src="./asset/readme/movie_size2.png"></a>
 		</td>
 	</tr>
 	<tr>
 		<td align="center">
-			<b>소개 영상</b>
+			<a href="https://www.youtube.com/watch?v=qXpAsFlGKac&ab_channel=%EA%B9%80%EC%84%9D%ED%98%84">프로젝트 소개 영상</a>
 		</td>
 		<td align="center">
-			<b>가이드 영상</b>
+			<a>프로젝트 소개 프레젠테이션</a>
 		</td>
 	</tr>
 </table>
