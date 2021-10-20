@@ -220,7 +220,7 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
     </tr>
 </table>
 
-Backend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/APP(Android)/README.md) 확인하세요.
+Backend Dependencies 및 Dir 분류는 [APP readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/APP(Android)/README.md)에서 확인하세요.
 
 <br>
 
@@ -255,13 +255,13 @@ Backend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack20
     </tr>
 </table>
 
-Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/APP(Android)/README.md) 확인하세요.
+Frontend Dependencies 및 Dir 분류는 [APP readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/APP(Android)/README.md)에서 확인하세요.
 
 <br>
 
 ### **IOT + Image Processing** <a name="IOT"></a>
 
-#### ☑️☑️☑️더 자세한 내용과 알고리즘 관련 내용은 [IoT readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(Raspberry%20Pi))를 참고하세요❕❕❕
+#### ☑️☑️☑️더 자세한 내용과 알고리즘 관련 내용은 [IoT -Raspberry Pi readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(Raspberry%20Pi))를 참고하세요❕❕❕
 
 
 |Raspberry Pi|Python|OpenCV|
@@ -311,7 +311,7 @@ $ python main.py
 
 ### **3D Modeling & Printing** <a name="3d"></a>
 
-#### ☑️☑️☑️3D Modeling & Printing 관련 자세한 내용은 [Readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(3D%20PRINT))를 참고하세요❕❕❕
+#### ☑️☑️☑️3D Modeling & Printing 관련 자세한 내용은 [IoT - 3D Print readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(3D%20PRINT))를 참고하세요❕❕❕
 
 |Tinkercad|Cura|Ultimaker
 |:---:|:---:|:---:|
