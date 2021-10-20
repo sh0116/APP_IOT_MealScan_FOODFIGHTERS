@@ -3,14 +3,6 @@
 <H3 align="center"> <i> 잔반 줄이기, 이제 즐기세요 </i></H3>
 <br>
 <br>
-</p>
-
-<p align="center">
-	<a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/search?l=TSX&type=code"><img alt="GitHub language count" src="https://img.shields.io/github/languages/count/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS"></a>
-	<a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS?color=success"></a>
-	<a href="https://github.com/osamhack2020/WEB_KookbangFriends_Woowahan/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS"></a>
-	<a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/license.md"><img alt="GitHub license" src="https://img.shields.io/github/license/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS"></a>
-</p>
 
 <h2 align="center">프로젝트 설명 자료</h2>
 
@@ -25,7 +17,7 @@
 	</tr>
 	<tr>
 		<td align="center">
-			<a href="https://www.youtube.com/watch?v=qXpAsFlGKac&ab_channel=%EA%B9%80%EC%84%9D%ED%98%84">프로젝트 소개 영상</a>
+			<a href="https://www.youtube.com/watch?v=qXpAsFlGKac&ab_channel=%EA%B9%80%EC%84%9D%ED%98%84">프로젝트 소개 및 시연영상</a>
 		</td>
 		<td align="center">
 			<a>프로젝트 소개 프레젠테이션</a>
@@ -179,12 +171,14 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 ✨ **장병들의 자발적, 적극적 참여**
 * 식단별 배식량을 추천해줌으로서 자연스럽게 병사들의 올바른 배식문화 유도 (넛지효과)
 * 챌린지 포상을 통해 동기부여 제공
+* 잔반 줄이기를 게임화하여 장병들이 잔반 감축을 즐기고 하나의 문화로 인식
 * 이런 명확한 동기부여로 앱의 지속가능성 확립 (잔반 데이터만 제공하면 사용자 유지율(리텐션)이 낮아질 수 밖에 없음)
 
 💖 **식판 데이터 기반 장병 선호도 파악**
 * 매 끼니 데이터를 기반으로하여 기존 월 1회 설문조사 방식보다 정확함
 * 해당 데이터를 국방부와 공유하여 호응도에 부응하는 효과적인 식단 편성
 * 스캔만 하면 완료되는 선호도 조사로 기존 종이 설문조사 필요없이 과정을 무인화, 자동화하여 간부 및 병사의 수고로움를 덜고, 설문조사에 사용되는 종이 낭비를 막아 환경보호까지 일석이조의 효과
+* 급식 만족도를 높이고 급식 관련 논란 및 갈등을 해결하려는 국방부의 의지를 보여줄 수 있음
 
 
 ## 발전방향 <a name="forward"></a>
