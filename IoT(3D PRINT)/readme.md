@@ -89,4 +89,7 @@
 
 <h3> 결합 완료 </h3>
 <img src="/IoT(3D PRINT)/asset/3d_gif.gif">
+
+<h3> 3D 프린트된 최종 모델 </h3>
+<img src="/IoT(3D PRINT)/asset/modelinreal.jpg" width="40%" height="30%">
 </div>
