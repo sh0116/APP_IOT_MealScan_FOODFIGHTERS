@@ -309,6 +309,9 @@ $ python main.py
 <br>
 
 ### **3D Modeling & Printing** <a name="3d"></a>
+
+#### 3D Modeling & Printing의 더 자세한 내용 관련 내용은 [이곳](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(3D%20PRINT)) 에서
+
 |Tinkercad|Cura|Ultimaker
 |:---:|:---:|:---:|
 |<a href="https://www.tinkercad.com/"><img src="asset/tinkercad_logo.png" height="30px"></a>|<a href="https://ultimaker.com/software/ultimaker-cura"><img src="asset/Cura_logo.jpg" height="70px"></a>|<a href="https://ultimaker.com//"><img src="asset/Ultimaker%20logo.png" height="50px"></a>|
@@ -325,8 +328,6 @@ $ python main.py
         </td>
     </tr>
 </table>
-
-3D Modeling & Printing의 더 자세한 내용 관련 내용은 [이곳](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(3D%20PRINT)) 에서
 
 <br>
 
