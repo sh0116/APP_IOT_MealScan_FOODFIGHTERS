@@ -261,7 +261,7 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
 
 ### **IOT + Image Processing** <a name="IOT"></a>
 
-## 더 자세한 내용과 알고리즘 관련 내용은 [IoT readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(Raspberry%20Pi)) 참고
+#### 더 자세한 내용과 알고리즘 관련 내용은 [IoT readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(Raspberry%20Pi)) 참고
 
 
 |Raspberry Pi|Python|OpenCV|
