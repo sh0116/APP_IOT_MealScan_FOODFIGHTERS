@@ -261,7 +261,7 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
 
 ### **IOT + Image Processing** <a name="IOT"></a>
 
-#### ☑️☑️☑️더 자세한 내용과 알고리즘 관련 내용은 [IoT readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(Raspberry%20Pi)) 참고 ❕❕❕
+#### ☑️☑️☑️더 자세한 내용과 알고리즘 관련 내용은 [IoT readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(Raspberry%20Pi)) 참고하세요❕❕❕
 
 
 |Raspberry Pi|Python|OpenCV|
@@ -310,7 +310,7 @@ $ python main.py
 
 ### **3D Modeling & Printing** <a name="3d"></a>
 
-#### ☑️☑️☑️3D Modeling & Printing의 더 자세한 내용은 [Readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(3D%20PRINT)) 참고 ❕❕❕
+#### ☑️☑️☑️3D Modeling & Printing 관련 자세한 내용은 [Readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(3D%20PRINT)) 에서 확인하세요❕❕❕
 
 |Tinkercad|Cura|Ultimaker
 |:---:|:---:|:---:|
