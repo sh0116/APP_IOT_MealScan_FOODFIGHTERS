@@ -35,7 +35,7 @@
 
 ## 목차(Table of Contents)
 1. [프로젝트 소개](#introduction)
-2. [APP 기능 세부 설명](#detailedexp)
+2. [앱 기능 세부 설명](#detailedexp)
 3. [기대효과](#goals)
 4. [발전방향](#forward)
 5. [기술스택](#techstack)
