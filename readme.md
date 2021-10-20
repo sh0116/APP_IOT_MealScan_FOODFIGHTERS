@@ -199,7 +199,7 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 
 <br>
 
-## 기술 스택 (Tech Stack) 💻 <a name="techstack"></a>
+## 기술 스택 (Tech Stack) <a name="techstack"></a>
 
 ### **Backend** <a name="backend"></a>
 
