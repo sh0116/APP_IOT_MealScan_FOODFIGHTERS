@@ -401,7 +401,7 @@ http://0.0.0.0:XXXXX
 	<img src="/asset/1.png">
 </td>
 <td width="100" align="center">김석현<br/>(팀장)</td>
-<td width="150">mage Process<br>IoT<br></td>
+<td width="150">Image Process<br>IoT<br></td>
 <td width="100" align="center">
 	<a href="https://github.com/sh0116">
 		<img src="https://img.shields.io/badge/sh0116-655ced?style=social&logo=github"/>
