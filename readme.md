@@ -303,6 +303,7 @@ $ python main.py
 |[opencv Webcam](https://docs.opencv.org/4.5.3/d8/dfe/classcv_1_1VideoCapture.html)| 라즈베리파이 실시간 잔반 측정을 위한 기술
 |[opencv Class index](https://docs.opencv.org/master/annotated.html)| Transfer Colorspace Class (HSV,GRAY,GRB ...)
 
+
 **오픈소스 및 테스트**\
 [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/IoT(Raspberry%20Pi)/test_ImageProcess_.ipynb) 또는 [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing)에서 실행해보세요! <br>
 
@@ -384,13 +385,13 @@ http://0.0.0.0:XXXXX
  
 ## 팀 정보 (Team Information) <a name="team"></a>
 
-- [김석현 일병](https://github.com/sh0116) E-mail : [seokhyeon116@naver.com](mailto:seokhyeon116@naver.com), **팀장 및 IOT**
+- [김석현 육군 일병](https://github.com/sh0116) E-mail : [seokhyeon116@naver.com](mailto:seokhyeon116@naver.com), **팀장 및 IOT**
 
-- [이승준 상병](https://github.com/seansungjoonlee) E-mail : [slee1040@gmail.com](mailto:slee1040@gmail.com), **Frontend**
+- [이승준 육군 상병](https://github.com/seansungjoonlee) E-mail : [slee1040@gmail.com](mailto:slee1040@gmail.com), **Frontend**
 
-- [이형민 일병](https://github.com/alee2022) E-mail : [alee19825@gmail.com](mailto:alee19825@gmail.com), **Backend**
+- [이형민 육군 일병](https://github.com/alee2022) E-mail : [alee19825@gmail.com](mailto:alee19825@gmail.com), **Backend**
 
-- [박세연 상병](https://github.com/seanpark98) E-mail : [seanpark98@gmail.com](mailto:seyeonpark@berkeley.edu), **Backend-IOT**
+- [박세연 육군 상병](https://github.com/seanpark98) E-mail : [seanpark98@gmail.com](mailto:seyeonpark@berkeley.edu), **Backend-IOT**
 
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License) <a name="license"></a>
