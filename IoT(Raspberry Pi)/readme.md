@@ -13,7 +13,7 @@
 ### [1.🛠Process 구조](#flow-chart)
 ### [2.📋Jupyter Notebook(colab)](#음식-분류-알고리즘)
 ### [3.📊Sequence Diagram](#sequence-diagram)
-
+### [3.💻 Reference ](#sequence-diagram)
 <div align="left">
 
  
@@ -24,6 +24,16 @@
  ### Flow Chart
  <img src="/asset/flow_chart.png">
  </div>
+ 
+## ✔**How to Run**
+
+```bash
+$ git clone https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS.git
+$ cd APP_IOT_MealScan_FOODFIGHTERS.git/IoT(Raspberry Pi)
+$ python main.py
+```
+
+ 
  
 ## 📋Jupyter Notebook(colab) 
 ### 음식 분류 알고리즘
@@ -99,10 +109,10 @@
  
 <h3> 음식 분류 알고리즘 및 양 측정 알고리즘 테스트 결과 </h3>
  
- >>[Test Data](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/tree/master/IoT(3D PRINT)/asset/test_image)  를 대상으로 알고리즘 실행 결과  <br>
+ >>[Test Data](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/tree/master/IoT(Raspberry%20Pi)/asset/test_image)  를 대상으로 알고리즘 실행 결과  <br>
  <img src="../asset/jupyter_img1.png">
  
- >>알고리즘을 적용한 [Result](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/tree/master/IoT(3D PRINT)/asset/result_test_image) 값 (잔반 이외의 부분은 검정색(#000000)으로 Masking)<br>
+ >>알고리즘을 적용한 [Result](https://github.com/osamhack2021/APP_IOT_AI_Meal-Mil-Scan_FOODFIGHTERS/tree/master/IoT(Raspberry%20Pi)/asset/result_test_image) 값 (잔반 이외의 부분은 검정색(#000000)으로 Masking)<br>
  <img src="../asset/jupyter_img2.png">
  <img src="../asset/jupyter_img3.png">
  
@@ -119,3 +129,16 @@
 </div>
 
 </div>
+
+## 💻 Reference 
+|Raspberry Pi|Python|OpenCV|
+|:---:|:---:|:---:|
+|<a href="https://www.raspberrypi.org/"><img src="/asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="/asset/python.png" height="30px"></a>|<a href="https://www.https://opencv.org/"><img src="/asset/OpenCV_Logo.png" height="50px"></a>|
+
+|사용한 오픈소스 기술|용도 
+|:---:|:---:|
+|[BackProjection](https://docs.opencv.org/3.4.15/da/d7f/tutorial_back_projection.html)| 잔반 측정 및 Classification 알고리즘에 들어가는 역투영 기술
+|[opencv Webcam](https://docs.opencv.org/4.5.3/d8/dfe/classcv_1_1VideoCapture.html)| 라즈베리파이 실시간 잔반 측정을 위한 기술
+|[opencv Class index](https://docs.opencv.org/master/annotated.html)| Transfer Colorspace Class (HSV,GRAY,GRB ...)
+
+

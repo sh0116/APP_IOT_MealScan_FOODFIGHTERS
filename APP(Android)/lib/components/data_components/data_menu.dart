@@ -1,3 +1,4 @@
+//오늘의 식단편성과 각 식단별 추천 배식량을 보여주는 swiper
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
 
@@ -38,9 +39,6 @@ class DataMenu extends StatelessWidget {
             SizedBox(height: 15),
             Text('$menu'),
             SizedBox(height: 25),
-            Text('\u{1F616} 적게 받으세요: $disliked',
-                style:
-                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold))
           ],
         ),
         decoration: BoxDecoration(

@@ -1,3 +1,4 @@
+//탭 내비게이터에 따라 유저에게 보이는 스크린을 지정함.
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'challenge_screens/challenge_screen.dart';

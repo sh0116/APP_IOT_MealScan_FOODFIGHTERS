@@ -1,3 +1,5 @@
+//데이터 스크린의 누적 잔반클리어률을 보여주는 gauge
+
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';

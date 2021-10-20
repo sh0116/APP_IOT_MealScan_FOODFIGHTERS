@@ -1,9 +1,52 @@
 ![Logo](./asset/readme/logo.jpg)
 
 <H3 align="center"> <i> 잔반 줄이기, 이제 즐기세요 </i></H3>
+<br>
+<br>
 
+<h2 align="center">프로젝트 설명 자료</h2>
 
-## 프로젝트 소개
+<table>
+	<tr>
+		<td width="50%">
+			<a href="https://www.youtube.com/watch?v=qXpAsFlGKac&ab_channel=%EA%B9%80%EC%84%9D%ED%98%84"><img src="./asset/readme/movie_final.png"></a>
+		</td>
+		<td width="50%">
+			<a href="https://www.youtube.com/watch?v=Oh-SFOLAom0"><img src="./asset/readme/movie_size2.png"></a>
+		</td>
+	</tr>
+	<tr>
+		<td align="center">
+			<a href="https://www.youtube.com/watch?v=qXpAsFlGKac&ab_channel=%EA%B9%80%EC%84%9D%ED%98%84">프로젝트 소개 영상</a>
+		</td>
+		<td align="center">
+			<a>프로젝트 소개 프레젠테이션</a>
+		</td>
+	</tr>
+</table>
+
+<br>
+
+## 목차(Table of Contents)
+1. [프로젝트 소개](#introduction)
+2. [APP 기능 세부 설명](#detailedexp)
+3. [기대효과](#goals)
+4. [발전방향](#forward)
+5. [기술스택](#techstack)
+    1. [Backend](#backend)
+    2. [Frontend](#frontend)
+    3. [IOT + Image Processing](#IOT)
+    4. [3D Modeling & Printing](#3d)
+    5. [Communications/Project Management](#comm)
+6. [안드로이드 필수 조건 안내](#prereqs)
+7. [설치 안내](#install)
+8. [프로젝트 사용법](#start)
+9. [팀 정보](#team)
+10. [저작권 및 사용권 정보](#license)
+
+<br>
+
+## 프로젝트 소개 <a name="introduction"></a>
 밀스캔 (MealScan)은 식판 이미지를 이용한 장병들의 잔반 데이터 분석 및 이를 기반으로 한 잔반 챌린지 이벤트를 통해 군 내 잔반 문제를 해결하기 위하여 만들어진 모바일 애플리케이션입니다. 처리비용만 [연 142억원](http://www.urinews.org/120112), 군 음식물 쓰레기가 [역대 최대치](https://www.edaily.co.kr/news/read?newsId=02223846625936528&mediaCodeNo=257)를 경신한 지금, 기존 방식보다 더 편리하고 재치있는 방식으로 잔반 문제 해결에 한 발짝 더 다가가고자 합니다. 
 
 밀스캔은 세가지 Task로 이루어져 있습니다.
@@ -17,8 +60,18 @@
 Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게 시각화되어 확인하실 수 있습니다. 또한 반찬별 클리어률을 바탕으로 매 끼니별 배식 추천을 제공하여 배식받을 때 (또는 자율배식 할 때) 필요 이상을 받지 않고, 적게 배식받을 메뉴를 추천합니다. 밀스캔 데이터는 국방부와 공유되어 각 군단별 영양사분들이 더 효율적인 식단을 짤 수 있게도 합니다.
 
 
+### **전체적인 서비스 플로우**
+<table>
+    <tr>
+        <td width="100%">
+            <img src="./asset/readme/service_flow.png">
+        </td>
+    </tr>
+</table>
 
-## APP 기능 세부 설명
+<br>
+
+## APP 기능 세부 설명 <a name="detailedexp"></a>
 
 
 
@@ -113,7 +166,7 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 
 <br>
 
-## 기대효과
+## 기대효과 <a name="goals"></a>
 
 ✨ **장병들의 자발적, 적극적 참여**
 * 식단별 배식량을 추천해줌으로서 자연스럽게 병사들의 올바른 배식문화 유도 (넛지효과)
@@ -126,7 +179,7 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 * 스캔만 하면 완료되는 선호도 조사로 기존 종이 설문조사 필요없이 과정을 무인화, 자동화하여 간부 및 병사의 수고로움를 덜고, 설문조사에 사용되는 종이 낭비를 막아 환경보호까지 일석이조의 효과
 
 
-## 발전방향
+## 발전방향 <a name="forward"></a>
 
 [온실가스 주범 음식물 쓰레기...연간 885만톤 배출](http://www.greenpostkorea.co.kr/news/articleView.html?idxno=127566)\
 [음식물 쓰레기 처리로 연간 8000억 낭비](http://www.hkbs.co.kr/news/articleView.html?idxno=530572)\
@@ -136,16 +189,11 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
 위와 같이 음식물 쓰레기 배출량 문제는 비단 군대에서만이 아니라 사회 전반에서 주목하는 이슈입니다. 사회 다양한 곳에서 이루어지고 있는 잔반 줄이기 캠페인에도 불구하고, 매일 1만4400톤 가량의 음식물쓰레기가 배출되고 있고, 매년 상승하는 처리비용으로 연간 8000억의 혈세낭비가 있고 더 증가할 것으로 예상됩니다. 이런 현실 속에 밀스캔은 군대, 학교 등 국내 다양한 공공기관에서 잔반 챌린지와 데이터 분석을 개시하는 초석이 될 수 있습니다. 기존 포스터 배포나 교육 위주의 방식에서 탈피하면서 2021년에 알맞고 MZ세대의 눈높이에 맞춘, 데이터 기반의 챌린지 기능과 모바일 앱으로서의 접근성을 가진 밀스캔이 대한민국 음식물 쓰레기 감축의 미래라고 믿어 의심치 않습니다.
 
 
-
-## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
-* ECMAScript 6 지원 브라우저 사용
-* 권장: Google Chrome 버젼 77 이상
-
 <br>
 
-## 기술 스택 (Technique Used) 💻 
+## 기술 스택 (Tech Stack) 💻 <a name="techstack"></a>
 
-### **BACKEND**
+### **Backend** <a name="backend"></a>
 
 |Firebase|
 |:---:|
@@ -168,7 +216,7 @@ Backend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack20
 
 <br>
 
-### **FRONTEND**
+### **Frontend** <a name="frontend"></a>
 
 |Dart|Flutter UI Framework|Figma
 |:---:|:---:|:---:|
@@ -176,11 +224,14 @@ Backend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack20
 
 <table>
     <tr>
-        <td width="50%">
+        <td width="40%">
             <img src="./asset/readme/figma_screenshot.png">
         </td>
-        <td width="50%">
+        <td width="20%">
             <img src="./asset/readme/figma_prototype.png">
+        </td>
+	<td width="40%">
+            <img src="asset/ServiceFlowChart.jpg">
         </td>
     </tr>
     <tr>
@@ -190,6 +241,9 @@ Backend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack20
         <td align="center">
             <a href="https://www.figma.com/proto/p1Ln3TPyICmkYXUJTXS2bI/MealScan?node-id=9%3A39&scaling=scale-down&page-id=0%3A1&starting-point-node-id=9%3A39&show-proto-sidebar=1">Figma Prototype</a>
         </td>
+	<td align="center">
+            <a>User Flow</a>
+        </td>
     </tr>
 </table>
 
@@ -197,15 +251,40 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
 
 <br>
 
-### **IOT + Image Processing**
+### **IOT + Image Processing** <a name="IOT"></a>
 
 |Raspberry Pi|Python|OpenCV|
 |:---:|:---:|:---:|
 |<a href="https://www.raspberrypi.org/"><img src="asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="asset/python.png" height="30px"></a>|<a href="https://www.https://opencv.org/"><img src="asset/OpenCV_Logo.png" height="50px"></a>|
-
 <br>
 
-< 여기다가 iot 서비스 플로우 표 넣으면 좋을듯 >
+**How to Run**
+
+```bash
+$ git clone https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS.git
+$ cd APP_IOT_MealScan_FOODFIGHTERS.git/IoT(Raspberry Pi)
+$ python main.py
+```
+
+<table>
+    <tr>
+        <td width="60%">
+            <img src="asset/flow_chart.png">
+        </td>
+        <td width="40%">
+            <img src="asset/plate_image.png">
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <a>IOT Flow Chart</a>
+        </td>
+        <td align="center">
+            <a>Image Processing</a>
+        </td>
+    </tr>
+</table>
+
 
 |사용한 오픈소스 기술|용도 
 |:---:|:---:|
@@ -219,7 +298,7 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
 
 <br>
 
-### **3D Modeling & Printing**
+### **3D Modeling & Printing** <a name="3d"></a>
 |Tinkercad|Cura|Ultimaker
 |:---:|:---:|:---:|
 |<a href="https://www.tinkercad.com/"><img src="asset/tinkercad_logo.png" height="30px"></a>|<a href="https://ultimaker.com/software/ultimaker-cura"><img src="asset/Cura_logo.jpg" height="70px"></a>|<a href="https://ultimaker.com//"><img src="asset/Ultimaker%20logo.png" height="50px"></a>|
@@ -241,7 +320,7 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
 
 <br>
 
-### **COMMUNICATIONS/PROJECT MANAGEMENT**
+### **Communications/Project Management** <a name="comm"></a>
 
 |Github Projects|Slack|
 |:---:|:---:|
@@ -267,11 +346,16 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
 </table>
 <br>
 
-## 설치 안내 (Installation Process)
+
+## 안드로이드 필수 조건 안내 (Prerequisites) <a name="prereqs"></a>
+* Android 5.0 (Lollipop: API level 21)
+* 권장: Android 10.0 (Q: API level 29)
+
+## 설치 안내 (Installation Process) <a name="install"></a>
 ```bash
 $ git clone https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS.git
 
-$ cd Meal_Mil_Scan
+$ cd "APP(Android)"
 
 $ flutter run --web-renderer html -v -d web-server --web-hostname=0.0.0.0
 
@@ -282,17 +366,12 @@ http://0.0.0.0:XXXXX
 ```
 해당 링크 Ctrl/Command + Click
 
-## 프로젝트 사용법 (Getting Started)
-**마크다운 문법을 이용하여 자유롭게 기재**
+## 프로젝트 사용법 (Getting Started) <a name="start"></a>
+* App은 Web에서 Run하여 사용해보세요!
+* Image Processing은 [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/IoT(Raspberry%20Pi)/test_ImageProcess_.ipynb) 또는 [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing)에서 실행해보세요!
 
-잘 모를 경우
-구글 검색 - 마크다운 문법
-[https://post.naver.com/viewer/postView.nhn?volumeNo=24627214&memberNo=42458017](https://post.naver.com/viewer/postView.nhn?volumeNo=24627214&memberNo=42458017)
-
- 편한 마크다운 에디터를 찾아서 사용
- 샘플 에디터 [https://stackedit.io/app#](https://stackedit.io/app#)
  
-## 팀 정보 (Team Information)
+## 팀 정보 (Team Information) <a name="team"></a>
 
 - [김석현 일병](https://github.com/sh0116) E-mail : [seokhyeon116@naver.com](mailto:seokhyeon116@naver.com), **팀장 및 IOT**
 
@@ -303,13 +382,5 @@ http://0.0.0.0:XXXXX
 - [박세연 상병](https://github.com/seanpark98) E-mail : [seanpark98@gmail.com](mailto:seyeonpark@berkeley.edu), **Backend-IOT**
 
 
-## 저작권 및 사용권 정보 (Copyleft / End User License)
+## 저작권 및 사용권 정보 (Copyleft / End User License) <a name="license"></a>
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
-
-This project is licensed under the terms of the MIT license.
-
-※ [라이선스 비교표(클릭)](https://olis.or.kr/license/compareGuide.do)
-
-※ [Github 내 라이선스 키워드(클릭)](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository)
-
-※ [\[참조\] Github license의 종류와 나에게 맞는 라이선스 선택하기(클릭)](https://flyingsquirrel.medium.com/github-license%EC%9D%98-%EC%A2%85%EB%A5%98%EC%99%80-%EB%82%98%EC%97%90%EA%B2%8C-%EB%A7%9E%EB%8A%94-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EC%84%A0%ED%83%9D%ED%95%98%EA%B8%B0-ae29925e8ff4)

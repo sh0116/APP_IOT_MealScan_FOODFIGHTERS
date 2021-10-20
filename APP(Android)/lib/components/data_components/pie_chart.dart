@@ -1,3 +1,4 @@
+// 전 달 비선호메뉴 top4를 파이차트로 보여줌
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'indicator.dart';
@@ -9,7 +10,7 @@ class LeftoverPieChart extends StatefulWidget {
 }
 
 class LeftoverPieChartState extends State {
-  int touchedIndex = -1;
+  int touchedIndex = -1; //터치여부에 따라 파이차트의 파이가 강조되는 효과
 
   @override
   Widget build(BuildContext context) {

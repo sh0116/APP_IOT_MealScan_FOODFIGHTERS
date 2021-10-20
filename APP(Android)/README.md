@@ -3,7 +3,7 @@
 ## Frontend
 
 
-### 서비스 플로우
+### 유저 플로우
 
 <table>
     <tr>
@@ -13,7 +13,7 @@
     </tr>
     <tr>
         <td align="center">
-            <a>Service Flowchart (via Miro)</a>
+            <a>User Flowchart (via Miro)</a>
         </td>
     </tr>
 </table>
