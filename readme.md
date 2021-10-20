@@ -18,7 +18,7 @@
 			<a href="https://www.youtube.com/watch?v=qXpAsFlGKac&ab_channel=%EA%B9%80%EC%84%9D%ED%98%84"><img src="./asset/readme/movie_final.png"></a>
 		</td>
 		<td width="50%">
-			<a href="https://www.youtube.com/watch?v=Oh-SFOLAom0"><img src="./asset/readme/movie_size2.png"></a>
+			<a href="./asset/readme/MealScan PPT.pdf"><img src="./asset/readme/movie_size2.png"></a>
 		</td>
 	</tr>
 	<tr>
@@ -26,7 +26,7 @@
 			<a href="https://www.youtube.com/watch?v=qXpAsFlGKac&ab_channel=%EA%B9%80%EC%84%9D%ED%98%84">프로젝트 소개 및 시연영상</a>
 		</td>
 		<td align="center">
-			<a>프로젝트 소개 프레젠테이션</a>
+			<a href="./asset/readme/MealScan PPT.pdf">프로젝트 소개 및 발표자료</a>
 		</td>
 	</tr>
 </table>
