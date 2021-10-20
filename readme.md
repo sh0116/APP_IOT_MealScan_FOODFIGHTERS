@@ -4,6 +4,12 @@
 <br>
 <br>
 
+<p align="center">
+	<a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/search?l=TSX&type=code"><img alt="GitHub language count" src="https://img.shields.io/github/languages/count/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS"></a>
+	<a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS?color=success"></a>
+	<a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS"></a>
+	<a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS"></a>
+	
 <h2 align="center">프로젝트 설명 자료</h2>
 
 <table>
