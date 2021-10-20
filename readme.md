@@ -312,7 +312,7 @@ $ python main.py
 ```bash
 $ git clone https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS.git
 
-$ cd Meal_Mil_Scan
+$ cd "APP(Android)"
 
 $ flutter run --web-renderer html -v -d web-server --web-hostname=0.0.0.0
 
