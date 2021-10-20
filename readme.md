@@ -261,6 +261,9 @@ Frontend Dependencies 및 Dir 분류는 [여기서](https://github.com/osamhack2
 
 ### **IOT + Image Processing** <a name="IOT"></a>
 
+## 더 자세한 내용과 알고리즘 관련 내용은 [IoT readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(Raspberry%20Pi)) 참고
+
+
 |Raspberry Pi|Python|OpenCV|
 |:---:|:---:|:---:|
 |<a href="https://www.raspberrypi.org/"><img src="asset/raspberrypi_logo_icon_168030.png" height="50px"></a>|<a href="https://www.python.org/"><img src="asset/python.png" height="30px"></a>|<a href="https://www.https://opencv.org/"><img src="asset/OpenCV_Logo.png" height="50px"></a>|
@@ -302,7 +305,6 @@ $ python main.py
 
 **오픈소스 및 테스트**\
 [Jupyter Notebook](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/IoT(Raspberry%20Pi)/test_ImageProcess_.ipynb) 또는 [Colab](https://colab.research.google.com/drive/18UU9G10e4-TagV8DNqqpHqynXzzTFJOD?usp=sharing)에서 실행해보세요! <br>
-더 자세한 내용과 알고리즘 관련 내용은 [IoT readme](https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/tree/master/IoT(Raspberry%20Pi)) 참고
 
 <br>
 
