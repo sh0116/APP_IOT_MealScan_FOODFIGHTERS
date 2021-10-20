@@ -26,8 +26,8 @@
 &nbsp; - MEALPLANS: 각 급양대 별 메뉴 정보 모음\
 &nbsp; - USERS: 유저 정보 모음\
 &nbsp; - USER_CHALLENGES: 유저 별 참여하고 있는 챌린지 정보 모음\
-&nbsp; - USER_FOOD_WASTE: 유저 별 잔반량 정보 모음
-&nbsp; - USER_FOOD_WASTE: 유저 별 잔반량 정보 평균 모음
+&nbsp; - USER_FOOD_WASTE: 유저 별 잔반량 정보 모음\
+&nbsp; - USER_FOOD_WASTE_AVG: 유저 별 잔반량 정보 평균 모음
 
 * Firebase Cloud Storage\
 &nbsp; - FOLDER(SERVICE_NUMBER): 군번 별 폴더를 통해 잔반 식판 사진 모음
