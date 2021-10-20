@@ -385,7 +385,7 @@ http://0.0.0.0:XXXXX
  
 ## 팀 정보 (Team Information) <a name="team"></a>
 
-<table align="center" width="788">
+<table align="left" width="788">
 <thead>
 <tr>
 <th width="100" align="center">사진</th>
@@ -467,7 +467,10 @@ http://0.0.0.0:XXXXX
 
 </tbody>
 </table>
-
-
-## 저작권 및 사용권 정보 (Copyleft / End User License) <a name="license"></a>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+<div align="left">
+	
+## 저작권 및 사용권 정보 (Copyleft / End User License)  <a name="license"></a>
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
+	
+</div>
