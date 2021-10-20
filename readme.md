@@ -100,7 +100,7 @@ Scan 단계에서의 데이터가 밀스캔을 통해 간편하고 보기 쉽게
            <td>2. (병사) 식사 후 본인식별용 QR코드 스캔</td>
         </tr>
         <tr>
-            <td rowspan="1"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/APP(Android)/assets/images/finished_meal.gif"><img src="./asset/readme/finished_meal.gif" width="60%" height="60%"></a></div></td>
+            <td rowspan="1"><div align="center"><a href="https://github.com/osamhack2021/APP_IOT_MealScan_FOODFIGHTERS/blob/master/asset/readme/finished_meal.gif"><img src="./asset/readme/finished_meal.gif" width="60%" height="60%"></a></div></td>
            <td>3. (병사) 잔반 버리기 전 화면 속 규격에 식판 맞추고 스캔 </td>
         </tr>
    </tbody>
