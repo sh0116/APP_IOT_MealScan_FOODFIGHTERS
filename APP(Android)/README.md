@@ -19,7 +19,7 @@
 </table>
 
 ### 주요 Collection 분류
-* Firebase Firestore\
+* Firebase Firestore:\
 &nbsp; - CHALLENGES: 현재 진행되고 있는 챌린지 정보 모음\
 &nbsp; - CHALLENGE_RANK: 챌린지 별 순위표, 참가자 별 잔반량 모음\
 &nbsp; - IMAGES: Cloud Storage에 들어가있는 사진들의 링크 및 정보 모음\
@@ -29,7 +29,7 @@
 &nbsp; - USER_FOOD_WASTE: 유저 별 잔반량 정보 모음\
 &nbsp; - USER_FOOD_WASTE_AVG: 유저 별 잔반량 정보 평균 모음
 
-* Firebase Cloud Storage\
+* Firebase Cloud Storage:\
 &nbsp; - FOLDER(SERVICE_NUMBER): 군번 별 폴더를 통해 잔반 식판 사진 모음
 
 ### 사용 중인 오픈소스 Dependency 모음
