@@ -2,11 +2,34 @@
 
 🎈 **IoT System의 정확한 알고리즘 동작을 위한 환경 조성과 IoT(Raspberry Pi)를 거치할 구조물을 만들기 위해 3D Print기술을 사용했습니다.**
 
-<div align="center">
-<img src="/IoT(3D PRINT)/asset/new_all2.png" width="450 height="450">
- <img src="/IoT(3D PRINT)/asset/3d_gif.gif" width="450" height="450">
-</div>
+<table>
+    <tr>
+        <td width="30%">
+            <img src="/IoT(3D PRINT)/asset/new_all2.png">
+        </td>
+        <td width="35%">
+            <img src="/IoT(3D PRINT)/asset/3d_gif.gif">
+        </td>
+	       <td width="30%">
+            <img src="/IoT(3D PRINT)/asset/modelreal.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            3D Model
+        </td>
+        <td align="center">
+            3D Model Flow GIF
+        </td>
+	<td align="center">
+            Real 3D Print 
+        </td>
+    </tr>
+</table>
 
+                                                                      
+                                                                      
+                                                                      
 <h2>🔧3D Printing 설계 및 출력</h2>
 <br>
                                                                     
@@ -78,18 +101,15 @@
 
 >Top Center & Top Left & Top Right & Top Center2 결합 <br>
 >Top의 4가지 부속품을 결합하는 과정
-<img src="/IoT(3D PRINT)/asset/new_top3.png" width="30%" height="30%">
-<img src="/IoT(3D PRINT)/asset/new_top2.png" width="30%" height="30%">
-<img src="/IoT(3D PRINT)/asset/new_top4.png" width="30%" height="30%">
+<img src="/IoT(3D PRINT)/asset/bottom_all.png" width="100%" height="100%">
 
 >bottom Center & bottom Left & bottom Right 결합 <br>
 >bottom의 3가지 부속품을 결합하는 과정
-<img src="/IoT(3D PRINT)/asset/new_bottom1.png" width="30%" height="30%">
-<img src="/IoT(3D PRINT)/asset/new_bottom2.png" width="30%" height="30%">
+<img src="/IoT(3D PRINT)/asset/top_all.png" width="100%" height="100%">
 
 <h3> 결합 완료 </h3>
-<img src="/IoT(3D PRINT)/asset/3d_gif.gif">
-
-<h3> 3D 프린트된 최종 모델 </h3>
-<img src="/IoT(3D PRINT)/asset/modelinreal.jpg" width="40%" height="30%">
-</div>
+<div align="center">
+<img src="/IoT(3D PRINT)/asset/new_all2.png" width="40% height="40%">
+<img src="/IoT(3D PRINT)/asset/3d_gif.gif" width="47% height="47%">
+</div>                                                                     
+                                                                      
