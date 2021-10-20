@@ -385,15 +385,6 @@ http://0.0.0.0:XXXXX
  
 ## 팀 정보 (Team Information) <a name="team"></a>
 
-- [김석현 육군 일병](https://github.com/sh0116) E-mail : [seokhyeon116@naver.com](mailto:seokhyeon116@naver.com), **팀장 및 IOT**
-
-- [이승준 육군 상병](https://github.com/seansungjoonlee) E-mail : [slee1040@gmail.com](mailto:slee1040@gmail.com), **Frontend**
-
-- [이형민 육군 일병](https://github.com/alee2022) E-mail : [alee19825@gmail.com](mailto:alee19825@gmail.com), **Backend**
-
-- [박세연 육군 상병](https://github.com/seanpark98) E-mail : [seanpark98@gmail.com](mailto:seyeonpark@berkeley.edu), **Backend-IOT**
-
-
 <table align="center" width="788">
 <thead>
 <tr>
