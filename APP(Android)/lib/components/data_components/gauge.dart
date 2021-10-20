@@ -4,7 +4,7 @@ import 'package:syncfusion_flutter_gauges/gauges.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-final serviceNumber = '20-14339655';
+final serviceNumber = '20-71209928';
 
 class Gauge extends StatelessWidget {
   //Firebase Firestore USER_FOOD_WASTE_AVG Collection을 선언
